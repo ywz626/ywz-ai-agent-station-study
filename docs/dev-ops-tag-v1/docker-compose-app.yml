@@ -1,0 +1,55 @@
+# /usr/local/bin/docker-compose -f /docs/dev-ops/environment/environment-docker-compose-2.4.yml up -d
+version: '3.8'
+# docker-compose -f docker-compose-app.yml up -d
+# 你需要修改system为你自身系统的仓库名
+services:
+  mcp-server-csdn-app:
+    #    image: fuzhengwei/mcp-server-csdn-app:1.1
+    image: ywz626/ywz-mcp-server-csdn:1.1
+    container_name: mcp-server-csdn-app
+    restart: always
+    ports:
+      - "8101:8101"
+    volumes:
+      - ./log:/data/log
+    environment:
+      - TZ=PRC
+      - SERVER_PORT=8101
+      - CSDN_API_CATEGORIES=程序员场景面试宝典
+      - CSDN_API_COOKIE=uuid_tt_dd=10_18856961100-1726450903757-768668; fid=20_64795191887-1726450905558-946854; Hm_lvt_6bcd52f51e9b3dce32bec4a3997715ac=1743404971; ssxmod_itna=CqfxRD0ieGqquDl4iqYI76GQIjhlWhGx7uaPDsaerDSxGKidDqxBWWleu7R54uDWeiYOcqbA7i8+31Ki=744WT5240aDbqGkNQeoreDxaq0rD74irDDxD3cD7PGmDimC2D7O1lSyHHKGRD0YDzqDgD7QDHqDEDG3D08=EYxhctqG0DDtDAwi=VqDADA3yiDDliic=7Y=eDYpcAddqxertsGU3f7=DjqGgDBd449b=PI7enwUCyZaW3wi4xBQD7krg94rDC2=/jTjHxwoqIY4z7Y44WoeKDY5EtRlPi7+wWcl542ZNKA4K/RPKhDqpYUGgfGDD===; ssxmod_itna2=CqfxRD0ieGqquDl4iqYI76GQIjhlWhGx7TPikvaKTDlaartDjReituNme96D6i8K+Oq/2iY2sxsmn5=IaCgj9j3KEFh0coa=CpiuwCdSTCTta5/g57qulSqCpIQOb9Z0MYoyU3Esu=WPZBqWv6yNC=HPNlqTqZvNC=ehRcWiWzcCm1mk8gqt4/otk4A8uiBrpFFau0DGUxamN9n+XOpNxIqxbg9CXIkLu+7CYPPGGoAW5pyNhFPU0GWwgtmGWd4bDv=mIbQuhEZNnnQiewELHPlGtbQ6SEQGujt9+5C01YsyxHUUm2nSGwk49VIyXmH0DKztmA85x1B+m4DHP7zAmYKHj7PHcekRmAwxv20K40AcvzH+4o0iH4GYn8y/SA4o94whdowUR+/fcnzci0Hw/gC7rde8afHDrBCYini+o9g3txDKu49AYOuKTitQfKqSfuoLkP3Y0POkDYDjVSx=b8v=61xxD7=DYK4eD===; csdn_newcert_2401_87169405=1; c_segment=12; c_adb=1; dc_sid=43d38e84ad15e0c9f97df4e3cc0c9af0; c_ins_fpage=/index.html; c_ins_um=-; ins_first_time=1757336878999; c_ins_prid=1757336877672_163103; c_ins_rid=1757336885273_700865; c_ins_fref=https://blog.csdn.net/qq_22017479/article/details/148834583; x_inscode_token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJjcmVkZW50aWFsIjoiIiwiY3NkblVzZXJuYW1lIjoiMjQwMV84NzE2OTQwNSIsInVzZXJJZCI6IjY4YmVkNTI5ZjU3MTNiMzJhMWQ2N2VhZSIsInVzZXJuYW1lIjoiMjQwMV84NzE2OTQwNSJ9.uV3DrZIFKTJEcCDABMHbqjKeq1L3Flkq_6Fyl_FZk6c; c_ab_test=1; historyList-new=%5B%5D; p_uid=U010000; csdn_newcert_2504_93398205=1; csdn_newcert_ywzTest=1; c_dl_prid=1750056687157_456435; c_dl_rid=1757945596659_799010; c_dl_fref=https://blog.csdn.net/qq_35904026/article/details/128782345; c_dl_fpage=/download/u012034207/9924602; c_dl_um=-; SESSION=6abdb803-c611-4d81-b3c9-8ce5c8a98589; hide_login=1; creative_btn_mp=3; loginbox_strategy=%7B%22taskId%22%3A317%2C%22abCheckTime%22%3A1758022415127%2C%22version%22%3A%22ExpA%22%2C%22nickName%22%3A%222504_93398205%22%2C%22blog-threeH-dialog-expa%22%3A1758022443188%7D; UserName=ywzTest; UserInfo=2d95b0d361ec4bb4960f9eb683702650; UserToken=2d95b0d361ec4bb4960f9eb683702650; UserNick=ywzTest; AU=15B; UN=ywzTest; BT=1758022563138; dc_session_id=11_1758082832060.191232; c_first_ref=default; c_first_page=https%3A//editor.csdn.net/md/%3FarticleId%3D151763382; c_dsid=11_1758082996513.215897; c_pref=https%3A//mp.csdn.net/; c_ref=https%3A//editor.csdn.net/; c_page_id=default; log_Id_pv=10; log_Id_view=211; log_Id_click=3; dc_tos=t2ptrj
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+    networks:
+      - my-network
+
+  mcp-server-weixin-app:
+    #    image: fuzhengwei/  mcp-server-weixin-app:1.1
+    image: ywz626/ywz-mcp-server-weixin-app:1.1
+    container_name: mcp-server-weixin-app
+    restart: always
+    ports:
+      - "8102:8102"
+    volumes:
+      - ./log:/data/log
+    environment:
+      - TZ=PRC
+      - SERVER_PORT=8102
+      - WEIXIN_API_ORIGINAL_ID=gh_4bd1f55836b4
+      - WEIXIN_API_APP_ID=wx23221df21e5a3e8f
+      - WEIXIN_API_APP_SECRET=89bba8e10bf06cbbd8d5f43438020016
+      - WEIXIN_API_TEMPLATE_ID=8uQ-2rhg9HjifVSTFT3K1p2XRnS1m3aWdqdvi3EwE0s
+      - WEIXIN_API_TOUSER=oM3ts6itlenZwsCGlzEy4ddJXIQ0
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+    networks:
+      - my-network
+
+networks:
+  my-network:
+    driver: bridge
