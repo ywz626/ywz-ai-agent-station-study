@@ -17,22 +17,16 @@
         VALUES(#{agentId}, #{clientId}, #{sequence}, NOW())
     </insert>
 
-    <update id="update" parameterType="com.ywzai.infrastructure.dao.po.AiAgentFlowConfig">
-        UPDATE ai_agent_flow_config SET
-            sequence = #{sequence},
-            status = #{status}
-        WHERE id = #{id}
-    </update>
 
     <select id="queryByAgentId" parameterType="java.lang.Long" resultMap="AiAgentFlowConfigMap">
-        SELECT id, agent_id, client_id, sequence, status, create_time, update_time
+        SELECT id, agent_id, client_id, sequence,  create_time, update_time
         FROM ai_agent_flow_config
         WHERE agent_id = #{agentId}
         ORDER BY sequence ASC
     </select>
 
     <select id="queryByAgentIdAndClientId" resultMap="AiAgentFlowConfigMap">
-        SELECT id, agent_id, client_id, sequence, status, create_time, update_time
+        SELECT id, agent_id, client_id, sequence, create_time, update_time
         FROM ai_agent_flow_config
         WHERE agent_id = #{agentId} AND client_id = #{clientId}
     </select>

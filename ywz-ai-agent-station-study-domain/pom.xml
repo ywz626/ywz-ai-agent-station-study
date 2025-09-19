@@ -43,6 +43,11 @@
             <groupId>com.ywzai</groupId>
             <artifactId>ywz-ai-agent-station-study-types</artifactId>
         </dependency>
+        <!-- xfg wrench dcc 动态配置中心 -->
+        <dependency>
+            <groupId>cn.bugstack.wrench</groupId>
+            <artifactId>xfg-wrench-starter-design-framework</artifactId>
+        </dependency>
     </dependencies>
 
     <build>

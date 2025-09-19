@@ -51,6 +51,22 @@
         WHERE target_type = #{targetType} AND target_id = #{targetId}
         ORDER BY create_time DESC
     </select>
+    <select id="queryModelIdByClientId" resultType="java.lang.String">
+        select target_id
+        from ai_client_config
+        where source_id = #{clientId} and source_type = 'client' and target_type = 'model' and status = 1
+    </select>
+    <select id="queryPromptIdsByClientId" resultType="java.lang.String">
+        select target_id
+        from ai_client_config
+        where source_id = #{clientId} and source_type = 'client' and target_type = 'prompt' and status = 1
+    </select>
+    <select id="queryAdvisorsByClientId" resultType="java.lang.String">
+        select target_id
+        from ai_client_config
+        where source_id = #{clientId} and source_type = 'client' and target_type = 'advisor' and status = 1
+    </select>
+
 
     <delete id="deleteById" parameterType="java.lang.Long">
         DELETE FROM ai_client_config WHERE id = #{id}

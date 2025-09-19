@@ -57,4 +57,10 @@ public interface IAiClientConfigDao {
      * @return 影响行数
      */
     int deleteById(Long id);
+
+    String queryModelIdByClientId(String clientId);
+
+    List<String> queryPromptIdsByClientId(String clientId);
+
+    List<String> queryAdvisorsByClientId(String clientId);
 }

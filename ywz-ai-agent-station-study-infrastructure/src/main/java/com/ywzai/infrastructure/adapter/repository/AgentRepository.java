@@ -1,0 +1,392 @@
+package com.ywzai.infrastructure.adapter.repository;
+
+
+import com.alibaba.fastjson2.JSON;
+import com.ywzai.domain.agent.adapter.repository.IAgentRepository;
+import com.ywzai.domain.agent.model.valobj.*;
+import com.ywzai.infrastructure.dao.*;
+import com.ywzai.infrastructure.dao.po.*;
+import jakarta.annotation.Resource;
+import org.springframework.stereotype.Repository;
+
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
+import static com.ywzai.domain.agent.model.valobj.AiAgentEnumVO.AI_CLIENT;
+
+/**
+ * @Author: ywz
+ * @CreateTime: 2025-09-19
+ * @Description: Agent仓储服务实现类
+ * @Version: 1.0
+ */
+@Repository
+public class AgentRepository implements IAgentRepository {
+    @Resource
+    private IAiClientApiDao aiClientApiDao;
+    @Resource
+    private IAiClientModelDao aiClientModelDao;
+    @Resource
+    private IAiClientConfigDao aiClientConfigDao;
+    @Resource
+    private IAiClientSystemPromptDao aiClientSystemPromptDao;
+    @Resource
+    private IAiClientAdvisorDao aiClientAdvisorDao;
+    @Resource
+    private IAiClientToolMcpDao aiClientToolMcpDao;
+    @Resource
+    private IAiClientDao aiClientDao;
+
+    @Override
+    public List<AiClientVO> getAiClientVOListByClientIds(List<String> clientIds) {
+        if (clientIds == null || clientIds.isEmpty()) {
+            return List.of();
+        }
+
+        List<AiClientVO> result = new ArrayList<>();
+        Set<String> processedClientIds = new HashSet<>();
+
+        for (String clientId : clientIds) {
+            if (processedClientIds.contains(clientId)) {
+                continue;
+            }
+            processedClientIds.add(clientId);
+
+            // 1. 查询客户端基本信息
+            AiClient aiClient = aiClientDao.queryByClientId(clientId);
+            if (aiClient == null || aiClient.getStatus() != 1) {
+                continue;
+            }
+
+            // 2. 查询客户端相关配置
+            List<AiClientConfig> configs = aiClientConfigDao.queryBySourceTypeAndId("client", clientId);
+
+            String modelId = null;
+            List<String> promptIdList = new ArrayList<>();
+            List<String> mcpIdList = new ArrayList<>();
+            List<String> advisorIdList = new ArrayList<>();
+
+            for (AiClientConfig config : configs) {
+                if (config.getStatus() != 1) {
+                    continue;
+                }
+
+                switch (config.getTargetType()) {
+                    case "model":
+                        modelId = config.getTargetId();
+                        break;
+                    case "prompt":
+                        promptIdList.add(config.getTargetId());
+                        break;
+                    case "tool_mcp":
+                        mcpIdList.add(config.getTargetId());
+                        break;
+                    case "advisor":
+                        advisorIdList.add(config.getTargetId());
+                        break;
+                }
+            }
+
+            // 3. 构建AiClientVO对象
+            AiClientVO aiClientVO = AiClientVO.builder()
+                    .clientId(aiClient.getClientId())
+                    .clientName(aiClient.getClientName())
+                    .description(aiClient.getDescription())
+                    .modelId(modelId)
+                    .promptIdList(promptIdList)
+                    .mcpIdList(mcpIdList)
+                    .advisorIdList(advisorIdList)
+                    .build();
+
+            result.add(aiClientVO);
+        }
+
+        return result;
+    }
+
+    /**
+     * 根据客户端ID列表获取工具MCP信息
+     *
+     * @param clientIds 客户端ID列表
+     * @return 工具MCP信息列表
+     */
+    @Override
+    public List<AiClientToolMcpVO> getAiClientToolMcpVOListByClientIds(List<String> clientIds) {
+        if (clientIds == null || clientIds.isEmpty()) {
+            return List.of();
+        }
+
+        List<AiClientToolMcpVO> result = new ArrayList<>();
+        Set<String> processedMcpIds = new HashSet<>();
+
+        for (String clientId : clientIds) {
+            // 1. 通过clientId查询关联的tool_mcp配置
+            List<AiClientConfig> configs = aiClientConfigDao.queryBySourceTypeAndId(AI_CLIENT.getCode(), clientId);
+
+            for (AiClientConfig config : configs) {
+                if ("tool_mcp".equals(config.getTargetType()) && config.getStatus() == 1) {
+                    String mcpId = config.getTargetId();
+
+                    // 避免重复处理相同的mcpId
+                    if (processedMcpIds.contains(mcpId)) {
+                        continue;
+                    }
+                    processedMcpIds.add(mcpId);
+
+                    // 2. 通过mcpId查询ai_client_tool_mcp表获取MCP工具配置
+                    AiClientToolMcp toolMcp = aiClientToolMcpDao.queryByMcpId(mcpId);
+                    if (toolMcp != null && toolMcp.getStatus() == 1) {
+                        // 3. 转换为VO对象
+                        AiClientToolMcpVO mcpVO = AiClientToolMcpVO.builder()
+                                .mcpId(toolMcp.getMcpId())
+                                .mcpName(toolMcp.getMcpName())
+                                .transportType(toolMcp.getTransportType())
+                                .transportConfig(toolMcp.getTransportConfig())
+                                .requestTimeout(toolMcp.getRequestTimeout())
+                                .build();
+
+                        result.add(mcpVO);
+                    }
+                }
+            }
+        }
+
+        return result;
+    }
+
+
+
+    /**
+     * 根据客户端ID列表获取顾问信息
+     *
+     * @param clientIds 客户端ID列表
+     * @return 顾问信息列表
+     */
+    @Override
+    public List<AiClientAdvisorVO> getAiClientAdvisorVOListByClientIds(List<String> clientIds) {
+        if (clientIds == null || clientIds.isEmpty()) {
+            return List.of();
+        }
+        List<AiClientAdvisorVO> result = new ArrayList<>();
+        Set<String> advisorIdSet = new HashSet<>();
+        for (String clientId : clientIds) {
+            List<String> advisorIds = aiClientConfigDao.queryAdvisorsByClientId(clientId);
+            for (String advisorId : advisorIds) {
+                if (advisorIdSet.contains(advisorId)) {
+                    continue;
+                }
+                advisorIdSet.add(advisorId);
+                AiClientAdvisor advisor = aiClientAdvisorDao.queryByAdvisorId(advisorId);
+                if (advisor != null && advisor.getStatus() == 1) {
+                    AiClientAdvisorVO.RagAnswer ragAnswer = null;
+                    AiClientAdvisorVO.ChatMemory chatMemory = null;
+                    if (advisor.getAdvisorType().equals("ChatMemory")) {
+                        chatMemory = JSON.parseObject(advisor.getExtParam(), AiClientAdvisorVO.ChatMemory.class);
+                    } else if (advisor.getAdvisorType().equals("RagAnswer")) {
+                        ragAnswer = JSON.parseObject(advisor.getExtParam(), AiClientAdvisorVO.RagAnswer.class);
+                    }
+                    AiClientAdvisorVO advisorVO = AiClientAdvisorVO.builder()
+                            .advisorId(advisor.getAdvisorId())
+                            .advisorName(advisor.getAdvisorName())
+                            .advisorType(advisor.getAdvisorType())
+                            .orderNum(advisor.getOrderNum())
+                            .chatMemory(chatMemory)
+                            .ragAnswer(ragAnswer)
+                            .build();
+                    result.add(advisorVO);
+                }
+
+            }
+        }
+
+        return result;
+    }
+
+
+
+    /**
+     * 根据客户端ID列表获取提示词信息
+     *
+     * @param clientIds 客户端ID列表
+     * @return 提示词信息列表
+     */
+    @Override
+    public List<AiClientPromptVO> getAiClientPromptVOListByClientIds(List<String> clientIds) {
+        //TODO 优化
+        // 先判空
+        if (clientIds == null || clientIds.isEmpty()) {
+            return List.of();
+        }
+        List<AiClientPromptVO> result = new ArrayList<>();
+        for (String clientId : clientIds) {
+            // 首先从ai_client_config中获取prompt_id,然后再根据prompt_id获取提示词信息
+            List<String> promptIds = aiClientConfigDao.queryPromptIdsByClientId(clientId);
+            for (String promptId : promptIds) {
+                AiClientSystemPrompt aiClientSystemPrompt = aiClientSystemPromptDao.queryByPromptId(promptId);
+                if (aiClientSystemPrompt != null && aiClientSystemPrompt.getStatus() == 1) {
+                    // 构建AiClientPromptVO对象
+                    AiClientPromptVO aiClientPromptVO = AiClientPromptVO.builder()
+                            .promptId(aiClientSystemPrompt.getPromptId())
+                            .promptName(aiClientSystemPrompt.getPromptName())
+                            .promptContent(aiClientSystemPrompt.getPromptContent())
+                            .description(aiClientSystemPrompt.getDescription())
+                            .build();
+                    // 避免重复添加相同的模型配置
+                    if (result.stream().noneMatch(vo -> vo.getPromptId().equals(aiClientPromptVO.getPromptId()))) {
+                        result.add(aiClientPromptVO);
+                    }
+                }
+            }
+        }
+        return result;
+    }
+
+
+    /**
+     * 根据客户端ID列表获取模型信息
+     *
+     * @param clientIds 客户端ID列表
+     * @return 模型信息列表
+     */
+    @Override
+    public List<AiClientModelVO> getAiClientModelVOListByClientIds(List<String> clientIds) {
+        // 先判空
+        if (clientIds == null || clientIds.isEmpty()) {
+            return List.of();
+        }
+        List<AiClientModelVO> result = new ArrayList<>();
+        for (String clientId : clientIds) {
+            // 首先从ai_client_config中获取modelId,然后再根据modelId获取模型信息
+            String modelId = aiClientConfigDao.queryModelIdByClientId(clientId);
+            AiClientModel model = aiClientModelDao.queryByModelId(modelId);
+            if (model != null && model.getStatus() == 1) {
+                // 构建AiClientModelVO对象
+                AiClientModelVO aiClientModelVO = AiClientModelVO.builder()
+                        .modelId(model.getModelId())
+                        .apiId(model.getApiId())
+                        .modelName(model.getModelName())
+                        .modelType(model.getModelType())
+                        .build();
+                // 避免重复添加相同的模型配置
+                if (result.stream().noneMatch(vo -> vo.getApiId().equals(aiClientModelVO.getApiId()))) {
+                    result.add(aiClientModelVO);
+                }
+
+            }
+        }
+        return result;
+    }
+
+
+    /**
+     * 根据客户端ID列表获取api信息
+     *
+     * @param clientIds 客户端ID列表
+     * @return api信息列表
+     */
+    @Override
+    public List<AiClientApiVO> getAiClientApiVOListByClientIds(List<String> clientIds) {
+        // 先判空
+        if (clientIds == null || clientIds.isEmpty()) {
+            return List.of();
+        }
+        List<AiClientApiVO> result = new ArrayList<>();
+        for (String clientId : clientIds) {
+            // 首先从ai_client_config中获取modelId,然后再根据modelId获取api信息
+            String modelId = aiClientConfigDao.queryModelIdByClientId(clientId);
+            AiClientModel model = aiClientModelDao.queryByModelId(modelId);
+            if (model != null && model.getStatus() == 1) {
+                AiClientApi aiClientApi = aiClientApiDao.queryByApiId(model.getApiId());
+                if (aiClientApi != null && aiClientApi.getStatus() == 1) {
+                    // 构建AiClientApiVO对象
+                    AiClientApiVO aiClientApiVO = AiClientApiVO.builder()
+                            .apiId(aiClientApi.getApiId())
+                            .baseUrl(aiClientApi.getBaseUrl())
+                            .apiKey(aiClientApi.getApiKey())
+                            .completionsPath(aiClientApi.getCompletionsPath())
+                            .embeddingsPath(aiClientApi.getEmbeddingsPath())
+                            .build();
+                    // 避免重复添加相同的模型信息
+                    if (result.stream().noneMatch(vo -> vo.getApiId().equals(aiClientApiVO.getApiId()))) {
+                        result.add(aiClientApiVO);
+                    }
+                }
+
+            }
+        }
+        return result;
+    }
+
+    /**
+     * 根据模型ID列表获取模型信息
+     *
+     * @param modelIds 模型ID列表
+     * @return 模型信息列表
+     */
+    @Override
+    public List<AiClientModelVO> getAiClientModelVOListByModelIds(List<String> modelIds) {
+        if (modelIds == null || modelIds.isEmpty()) {
+            return List.of();
+        }
+        List<AiClientModelVO> result = new ArrayList<>();
+        for (String modelId : modelIds) {
+            AiClientModel model = aiClientModelDao.queryByModelId(modelId);
+            if (model != null && model.getStatus() == 1) {
+                // 构建AiClientModelVO对象
+                AiClientModelVO aiClientModelVO = AiClientModelVO.builder()
+                        .modelId(model.getModelId())
+                        .apiId(model.getApiId())
+                        .modelName(model.getModelName())
+                        .modelType(model.getModelType())
+                        .build();
+                // 避免重复添加相同的模型信息
+                if (result.stream().noneMatch(vo -> vo.getApiId().equals(aiClientModelVO.getApiId()))) {
+                    result.add(aiClientModelVO);
+                }
+            }
+        }
+        return result;
+    }
+
+
+    /**
+     * 根据模型ID列表获取API信息
+     *
+     * @param modelIds 模型ID列表
+     * @return API信息列表
+     */
+    @Override
+    public List<AiClientApiVO> getAiClientApiVOListByModelIds(List<String> modelIds) {
+        if (modelIds == null || modelIds.isEmpty()) {
+            return List.of();
+        }
+
+        List<AiClientApiVO> result = new ArrayList<>();
+        for (String modelId : modelIds) {
+            // 首先根据modelId查询对应的model信息
+            AiClientModel model = aiClientModelDao.queryByModelId(modelId);
+            if (model != null && model.getStatus() == 1) {
+                // 从model信息中获取对应的apiId,然后根据apiId查询对应的api信息
+                String apiId = model.getApiId();
+                AiClientApi aiClientApi = aiClientApiDao.queryByApiId(apiId);
+                if (aiClientApi != null && aiClientApi.getStatus() == 1) {
+                    // 构建AiClientApiVO对象
+                    AiClientApiVO aiClientApiVO = AiClientApiVO.builder()
+                            .apiId(aiClientApi.getApiId())
+                            .baseUrl(aiClientApi.getBaseUrl())
+                            .apiKey(aiClientApi.getApiKey())
+                            .completionsPath(aiClientApi.getCompletionsPath())
+                            .embeddingsPath(aiClientApi.getEmbeddingsPath())
+                            .build();
+                    // 避免重复添加相同的API配置
+                    if (result.stream().noneMatch(vo -> vo.getApiId().equals(aiClientApiVO.getApiId()))) {
+                        result.add(aiClientApiVO);
+                    }
+                }
+            }
+        }
+        return result;
+    }
+}
