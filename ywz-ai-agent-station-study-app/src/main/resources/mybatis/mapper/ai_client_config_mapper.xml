@@ -66,6 +66,11 @@
         from ai_client_config
         where source_id = #{clientId} and source_type = 'client' and target_type = 'advisor' and status = 1
     </select>
+    <select id="queryToolMcpIdsByModelId" resultType="java.lang.String">
+        select target_id
+        from ai_client_config
+        where source_id = #{modelId} and status = 1 and target_type = 'tool_mcp' and source_type = 'model'
+    </select>
 
 
     <delete id="deleteById" parameterType="java.lang.Long">

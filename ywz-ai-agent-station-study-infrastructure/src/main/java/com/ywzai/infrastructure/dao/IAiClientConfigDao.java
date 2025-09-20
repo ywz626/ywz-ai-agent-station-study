@@ -1,6 +1,7 @@
 package com.ywzai.infrastructure.dao;
 
 import com.ywzai.infrastructure.dao.po.AiClientConfig;
+import com.ywzai.infrastructure.dao.po.AiClientToolMcp;
 import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;
@@ -63,4 +64,6 @@ public interface IAiClientConfigDao {
     List<String> queryPromptIdsByClientId(String clientId);
 
     List<String> queryAdvisorsByClientId(String clientId);
+
+    List<String> queryToolMcpIdsByModelId(String modelId);
 }

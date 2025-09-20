@@ -6,6 +6,8 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
+
 /**
  * @Author: ywz
  * @CreateTime: 2025-09-19
@@ -21,4 +23,8 @@ public class AiClientModelVO {
     private String apiId;
     private String modelName;
     private String modelType;
+    /**
+     * 工具 mcp ids
+     */
+    private List<String> toolMcpIds;
 }
