@@ -15,8 +15,6 @@ import org.springframework.stereotype.Repository;
 
 import java.util.*;
 
-import static com.ywzai.domain.agent.model.valobj.AiAgentEnumVO.AI_CLIENT;
-
 /**
  * @Author: ywz
  * @CreateTime: 2025-09-19
@@ -233,17 +231,21 @@ public class AgentRepository implements IAgentRepository {
      * @return 提示词信息列表
      */
     @Override
-    public List<AiClientPromptVO> getAiClientPromptVOListByClientIds(List<String> clientIds) {
-        //TODO 优化
+    public Map<String, AiClientPromptVO> getAiClientPromptVOListByClientIds(List<String> clientIds) {
         // 先判空
         if (clientIds == null || clientIds.isEmpty()) {
-            return List.of();
+            return Map.of();
         }
-        List<AiClientPromptVO> result = new ArrayList<>();
+        Map<String, AiClientPromptVO> result = new HashMap<>();
+        Set<String> promptIdSet = new HashSet<>();
         for (String clientId : clientIds) {
             // 首先从ai_client_config中获取prompt_id,然后再根据prompt_id获取提示词信息
             List<String> promptIds = aiClientConfigDao.queryPromptIdsByClientId(clientId);
             for (String promptId : promptIds) {
+                if (promptIdSet.contains(promptId)) {
+                    continue;
+                }
+                promptIdSet.add(promptId);
                 AiClientSystemPrompt aiClientSystemPrompt = aiClientSystemPromptDao.queryByPromptId(promptId);
                 if (aiClientSystemPrompt != null && aiClientSystemPrompt.getStatus() == 1) {
                     // 构建AiClientPromptVO对象
@@ -254,9 +256,7 @@ public class AgentRepository implements IAgentRepository {
                             .description(aiClientSystemPrompt.getDescription())
                             .build();
                     // 避免重复添加相同的模型配置
-                    if (result.stream().noneMatch(vo -> vo.getPromptId().equals(aiClientPromptVO.getPromptId()))) {
-                        result.add(aiClientPromptVO);
-                    }
+                    result.put(aiClientPromptVO.getPromptId(),aiClientPromptVO);
                 }
             }
         }

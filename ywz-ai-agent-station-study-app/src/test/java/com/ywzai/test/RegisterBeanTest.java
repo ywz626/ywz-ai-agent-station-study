@@ -10,6 +10,7 @@ import jakarta.annotation.Resource;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.ai.chat.messages.UserMessage;
 import org.springframework.ai.chat.model.ChatResponse;
 import org.springframework.ai.chat.prompt.Prompt;
@@ -71,6 +72,23 @@ public class RegisterBeanTest {
         System.out.println("测试结果: " + chatModel);
         ChatResponse call = chatModel.call(prompt);
         log.info("输出内容:{}",call.getResult().getOutput().getText());
+    }
+    @Test
+    public void testAiClientAdvisorNode() throws Exception {
+        StrategyHandler<ArmoryCommendEntity, DefaultArmoryStrategyFactory.DynamicContext, String> rootNode = defaultArmoryStrategyFactory.get();
+        String apply = rootNode.apply(
+                ArmoryCommendEntity.builder()
+                        .commendType(AiAgentEnumVO.AI_CLIENT.getCode())
+                        .commendList(Arrays.asList("3001"))
+                        .build(),
+                new DefaultArmoryStrategyFactory.DynamicContext()
+        );
+        ChatClient chatClient = (ChatClient) applicationContext.getBean(AiAgentEnumVO.AI_CLIENT.getBeanName("3001"));
+        String content = chatClient.prompt(Prompt.builder()
+                        .messages(new UserMessage("告诉我大连市今天的天气"))
+                        .build())
+                .call().content();
+        System.out.println("测试结果: " + content);
     }
 
 }

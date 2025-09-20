@@ -3,6 +3,7 @@ package com.ywzai.domain.agent.adapter.repository;
 import com.ywzai.domain.agent.model.valobj.*;
 
 import java.util.List;
+import java.util.Map;
 
 public interface IAgentRepository {
     List<AiClientApiVO> getAiClientApiVOListByModelIds(List<String> modelIds);
@@ -13,7 +14,7 @@ public interface IAgentRepository {
 
     List<AiClientModelVO> getAiClientModelVOListByClientIds(List<String> clientIds);
 
-    List<AiClientPromptVO> getAiClientPromptVOListByClientIds(List<String> clientIds);
+    Map<String, AiClientPromptVO> getAiClientPromptVOListByClientIds(List<String> clientIds);
 
     List<AiClientAdvisorVO> getAiClientAdvisorVOListByClientIds(List<String> clientIds);
 

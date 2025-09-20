@@ -1,6 +1,7 @@
 package com.ywzai.domain.agent.model.entity;
 
 
+import com.ywzai.domain.agent.model.valobj.AiAgentEnumVO;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -21,4 +22,10 @@ import java.util.List;
 public class ArmoryCommendEntity {
     private String commendType;
     private List<String> commendList;
+
+
+
+    public String getLoadDataStrategy(){
+        return AiAgentEnumVO.getByCode(commendType).getLoadDataStrategy();
+    }
 }

@@ -4,6 +4,9 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * Agent 通用枚举
  *
@@ -49,17 +52,24 @@ public enum AiAgentEnumVO {
      */
     private String loadDataStrategy;
 
+    private static final Map<String ,AiAgentEnumVO> CODE_MAP = new HashMap<>();
+
+    static {
+        for (AiAgentEnumVO value : values()){
+            CODE_MAP.put(value.code, value);
+        }
+    }
+
 
     public static AiAgentEnumVO getByCode(String code) {
         if (code == null) {
             return null;
         }
-        for (AiAgentEnumVO value : values()) {
-            if (value.code.equals(code)) {
-                return value;
-            }
+        AiAgentEnumVO result = CODE_MAP.get(code);
+        if (result == null) {
+            throw new RuntimeException("code value " + code + " not exist!");
         }
-        throw new RuntimeException("code value " + code + " not exist!");
+        return result;
     }
 
 

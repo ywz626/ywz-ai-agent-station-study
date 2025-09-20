@@ -30,6 +30,8 @@ import java.util.List;
 @Slf4j
 public class AiClientModelNode extends AbstractArmorySupport {
 
+    @Resource
+    private AiClientAdvisorNode aiClientAdvisorNode;
 
 
     @Override
@@ -68,6 +70,6 @@ public class AiClientModelNode extends AbstractArmorySupport {
 
     @Override
     public StrategyHandler<ArmoryCommendEntity, DefaultArmoryStrategyFactory.DynamicContext, String> get(ArmoryCommendEntity armoryCommendEntity, DefaultArmoryStrategyFactory.DynamicContext dynamicContext) throws Exception {
-        return defaultStrategyHandler;
+        return aiClientAdvisorNode;
     }
 }
