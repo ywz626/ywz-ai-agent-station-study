@@ -63,14 +63,14 @@ public class RegisterBeanTest {
                 new DefaultArmoryStrategyFactory.DynamicContext()
         );
         Prompt prompt = Prompt.builder()
-                .messages(new UserMessage("大庆今天的天气"))
+                .messages(new UserMessage("告诉我辽宁省丹东市凤城市今日天气"))
                 .build();
         System.out.println(apply);
         OpenAiChatModel chatModel = (OpenAiChatModel) applicationContext.getBean(AiAgentEnumVO.AI_CLIENT_MODEL.getBeanName("2001"));
 
         System.out.println("测试结果: " + chatModel);
         ChatResponse call = chatModel.call(prompt);
-        log.info("输出内容:{}",JSON.toJSONString(call));
+        log.info("输出内容:{}",call.getResult().getOutput().getText());
     }
 
 }

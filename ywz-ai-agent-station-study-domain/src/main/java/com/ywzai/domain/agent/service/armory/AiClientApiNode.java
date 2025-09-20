@@ -35,8 +35,8 @@ public class AiClientApiNode extends AbstractArmorySupport {
             OpenAiApi openAiApi = OpenAiApi.builder()
                     .apiKey(api.getApiKey())
                     .baseUrl(api.getBaseUrl())
-//                    .completionsPath(api.getCompletionsPath())
-//                    .embeddingsPath(api.getEmbeddingsPath())
+                    .completionsPath(api.getCompletionsPath())
+                    .embeddingsPath(api.getEmbeddingsPath())
                     .build();
             registerBean(AiAgentEnumVO.AI_CLIENT_API.getBeanName(api.getApiId()), OpenAiApi.class, openAiApi);
         }
