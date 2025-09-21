@@ -65,6 +65,9 @@ mybatis:
   mapper-locations: classpath:/mybatis/mapper/*.xml
   config-location:  classpath:/mybatis/config/mybatis-config.xml
 
+baidu:
+  api-key: ${baidu.apikey}
+
 # 日志
 logging:
   level:
