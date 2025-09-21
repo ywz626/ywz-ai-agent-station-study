@@ -3,18 +3,16 @@ package com.ywzai.domain.agent.service.armory;
 
 import cn.bugstack.wrench.design.framework.tree.StrategyHandler;
 import com.ywzai.domain.agent.model.entity.ArmoryCommendEntity;
-import com.ywzai.domain.agent.model.valobj.AiAgentEnumVO;
+import com.ywzai.domain.agent.model.valobj.enums.AiAgentEnumVO;
 import com.ywzai.domain.agent.model.valobj.AiClientModelVO;
 import com.ywzai.domain.agent.service.armory.factory.DefaultArmoryStrategyFactory;
 import io.modelcontextprotocol.client.McpSyncClient;
 import jakarta.annotation.Resource;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.ai.mcp.SyncMcpToolCallback;
 import org.springframework.ai.mcp.SyncMcpToolCallbackProvider;
 import org.springframework.ai.openai.OpenAiChatModel;
 import org.springframework.ai.openai.OpenAiChatOptions;
 import org.springframework.ai.openai.api.OpenAiApi;
-import org.springframework.context.ApplicationContext;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;

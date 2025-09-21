@@ -21,4 +21,6 @@ public interface IAgentRepository {
     List<AiClientToolMcpVO> getAiClientToolMcpVOListByClientIds(List<String> clientIds);
 
     List<AiClientVO> getAiClientVOListByClientIds(List<String> clientIds);
+
+    Map<String, AiAgentClientFlowConfigVO> getAiAgentFlowConfigMapByAgentId(String aiAgentId);
 }

@@ -1,4 +1,4 @@
-package com.ywzai.domain.agent.model.valobj;
+package com.ywzai.domain.agent.model.valobj.enums;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

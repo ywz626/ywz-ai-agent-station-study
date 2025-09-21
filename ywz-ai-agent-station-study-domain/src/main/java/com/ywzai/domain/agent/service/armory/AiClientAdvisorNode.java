@@ -3,15 +3,13 @@ package com.ywzai.domain.agent.service.armory;
 
 import cn.bugstack.wrench.design.framework.tree.StrategyHandler;
 import com.ywzai.domain.agent.model.entity.ArmoryCommendEntity;
-import com.ywzai.domain.agent.model.valobj.AiAgentEnumVO;
-import com.ywzai.domain.agent.model.valobj.AiClientAdvisorTypeEnumVO;
+import com.ywzai.domain.agent.model.valobj.enums.AiAgentEnumVO;
+import com.ywzai.domain.agent.model.valobj.enums.AiClientAdvisorTypeEnumVO;
 import com.ywzai.domain.agent.model.valobj.AiClientAdvisorVO;
 import com.ywzai.domain.agent.service.armory.factory.DefaultArmoryStrategyFactory;
 import jakarta.annotation.Resource;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.ai.chat.client.advisor.api.Advisor;
-import org.springframework.ai.chat.memory.MessageWindowChatMemory;
-import org.springframework.ai.vectorstore.SearchRequest;
 import org.springframework.ai.vectorstore.VectorStore;
 import org.springframework.stereotype.Service;
 

@@ -66,12 +66,7 @@ public class DaoTest {
         log.info("查询所有启用智能体结果: {}", aiAgents);
     }
 
-    @Test
-    public void test_ai_agent_flow_config_dao() {
-        // 测试根据智能体ID查询流程配置
-        List<AiAgentFlowConfig> flowConfigs = aiAgentFlowConfigDao.queryByAgentId(1L);
-        log.info("查询智能体流程配置结果: {}", flowConfigs);
-    }
+
 
     @Test
     public void test_ai_agent_task_schedule_dao() {

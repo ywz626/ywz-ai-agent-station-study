@@ -48,7 +48,7 @@ public class AiAgentConfig {
                 .build();
         OpenAiEmbeddingOptions options = OpenAiEmbeddingOptions.builder()
                 .model(embeddingModel)
-                .dimensions(1536)
+                .dimensions(dimensions)
                 .build();
         return new OpenAiEmbeddingModel(openAiApi, MetadataMode.EMBED, options);
     }

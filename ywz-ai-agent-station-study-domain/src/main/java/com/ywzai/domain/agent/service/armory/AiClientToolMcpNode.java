@@ -3,7 +3,7 @@ package com.ywzai.domain.agent.service.armory;
 
 import cn.bugstack.wrench.design.framework.tree.StrategyHandler;
 import com.ywzai.domain.agent.model.entity.ArmoryCommendEntity;
-import com.ywzai.domain.agent.model.valobj.AiAgentEnumVO;
+import com.ywzai.domain.agent.model.valobj.enums.AiAgentEnumVO;
 import com.ywzai.domain.agent.model.valobj.AiClientToolMcpVO;
 import com.ywzai.domain.agent.service.armory.factory.DefaultArmoryStrategyFactory;
 import io.modelcontextprotocol.client.McpClient;
@@ -11,7 +11,6 @@ import io.modelcontextprotocol.client.McpSyncClient;
 import io.modelcontextprotocol.client.transport.HttpClientSseClientTransport;
 import io.modelcontextprotocol.client.transport.ServerParameters;
 import io.modelcontextprotocol.client.transport.StdioClientTransport;
-import io.modelcontextprotocol.spec.McpSchema;
 import jakarta.annotation.Resource;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;

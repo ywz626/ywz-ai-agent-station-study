@@ -12,8 +12,10 @@ import com.ywzai.infrastructure.dao.po.*;
 import jakarta.annotation.Resource;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Repository;
+import org.springframework.util.StringUtils;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 /**
  * @Author: ywz
@@ -40,7 +42,41 @@ public class AgentRepository implements IAgentRepository {
     private IAiClientDao aiClientDao;
     @Resource
     private ObjectMapper mapper;
+    @Resource
+    private IAiAgentFlowConfigDao aiAgentFlowConfigDao;
 
+
+    @Override
+    public Map<String, AiAgentClientFlowConfigVO> getAiAgentFlowConfigMapByAgentId(String aiAgentId) {
+        if (aiAgentId == null || aiAgentId.trim().isEmpty()){
+            return Map.of();
+        }
+        List<AiAgentFlowConfig> aiAgentFlowConfigs = aiAgentFlowConfigDao.queryByAgentId(aiAgentId);
+        if(aiAgentFlowConfigs == null || aiAgentFlowConfigs.isEmpty()){
+            return Map.of();
+        }
+        // 使用 Stream API 将 aiAgentFlowConfigs 转换为 Map
+        return aiAgentFlowConfigs.stream()
+                .collect(Collectors.toMap(
+                        AiAgentFlowConfig::getClientType,  // key: clientId
+                        config -> new AiAgentClientFlowConfigVO(  // value: 转换成 AiAgentClientFlowConfigVO
+                                config.getClientId(),
+                                config.getClientName(),
+                                config.getClientType(),
+                                config.getSequence()
+                        )
+                ));
+    }
+
+
+    /**
+     * 根据客户端ID列表获取对应的AiClientVO对象列表。
+     *
+     * @param clientIds 客户端ID列表，用于查询对应的客户端信息及其相关配置。
+     *                  如果该参数为null或空列表，则直接返回空列表。
+     * @return 返回与输入客户端ID对应的有效AiClientVO对象列表。
+     * 每个AiClientVO包含客户端基本信息以及关联的模型、提示词、工具和顾问ID列表。
+     */
     @Override
     public List<AiClientVO> getAiClientVOListByClientIds(List<String> clientIds) {
         if (clientIds == null || clientIds.isEmpty()) {
@@ -107,6 +143,7 @@ public class AgentRepository implements IAgentRepository {
 
         return result;
     }
+
 
     /**
      * 根据客户端ID列表获取工具MCP信息
@@ -256,7 +293,7 @@ public class AgentRepository implements IAgentRepository {
                             .description(aiClientSystemPrompt.getDescription())
                             .build();
                     // 避免重复添加相同的模型配置
-                    result.put(aiClientPromptVO.getPromptId(),aiClientPromptVO);
+                    result.put(aiClientPromptVO.getPromptId(), aiClientPromptVO);
                 }
             }
         }

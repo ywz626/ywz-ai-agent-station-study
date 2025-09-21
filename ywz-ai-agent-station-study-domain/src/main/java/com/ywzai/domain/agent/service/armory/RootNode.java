@@ -3,7 +3,6 @@ package com.ywzai.domain.agent.service.armory;
 
 import cn.bugstack.wrench.design.framework.tree.StrategyHandler;
 import com.ywzai.domain.agent.model.entity.ArmoryCommendEntity;
-import com.ywzai.domain.agent.model.valobj.AiAgentEnumVO;
 import com.ywzai.domain.agent.service.armory.business.data.ILoadDataStrategy;
 import com.ywzai.domain.agent.service.armory.factory.DefaultArmoryStrategyFactory;
 import jakarta.annotation.Resource;
@@ -19,7 +18,7 @@ import java.util.concurrent.TimeoutException;
  * @Description: 策略模式根节点
  * @Version: 1.0
  */
-@Service
+@Service("armoryRootNode")
 public class RootNode extends AbstractArmorySupport {
     @Resource
     private AiClientApiNode aiClientApiNode;

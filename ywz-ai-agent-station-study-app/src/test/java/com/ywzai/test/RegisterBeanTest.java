@@ -2,9 +2,8 @@ package com.ywzai.test;
 
 
 import cn.bugstack.wrench.design.framework.tree.StrategyHandler;
-import com.alibaba.fastjson2.JSON;
 import com.ywzai.domain.agent.model.entity.ArmoryCommendEntity;
-import com.ywzai.domain.agent.model.valobj.AiAgentEnumVO;
+import com.ywzai.domain.agent.model.valobj.enums.AiAgentEnumVO;
 import com.ywzai.domain.agent.service.armory.factory.DefaultArmoryStrategyFactory;
 import jakarta.annotation.Resource;
 import lombok.extern.slf4j.Slf4j;
@@ -85,7 +84,7 @@ public class RegisterBeanTest {
         );
         ChatClient chatClient = (ChatClient) applicationContext.getBean(AiAgentEnumVO.AI_CLIENT.getBeanName("3001"));
         String content = chatClient.prompt(Prompt.builder()
-                        .messages(new UserMessage("告诉我大连市今天的天气"))
+                        .messages(new UserMessage("E:\\computersoftware\\geektime-docs\\后端-架构,对这个目录中的所有文件夹进行操作,把每个文件夹中的docs目录中的md文档移动到和该文件夹同级然后删除docs目录,在操作过程中删除目录中所有格式不是.md的文件"))
                         .build())
                 .call().content();
         System.out.println("测试结果: " + content);

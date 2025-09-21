@@ -3,7 +3,7 @@ package com.ywzai.domain.agent.service.armory;
 
 import cn.bugstack.wrench.design.framework.tree.StrategyHandler;
 import com.ywzai.domain.agent.model.entity.ArmoryCommendEntity;
-import com.ywzai.domain.agent.model.valobj.AiAgentEnumVO;
+import com.ywzai.domain.agent.model.valobj.enums.AiAgentEnumVO;
 import com.ywzai.domain.agent.model.valobj.AiClientApiVO;
 import com.ywzai.domain.agent.service.armory.factory.DefaultArmoryStrategyFactory;
 import jakarta.annotation.Resource;

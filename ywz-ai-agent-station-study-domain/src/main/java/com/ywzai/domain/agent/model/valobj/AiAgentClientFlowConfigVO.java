@@ -1,4 +1,4 @@
-package com.ywzai.infrastructure.dao.po;
+package com.ywzai.domain.agent.model.valobj;
 
 
 import lombok.AllArgsConstructor;
@@ -6,24 +6,34 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.time.LocalDateTime;
-
 /**
  * @Author: ywz
- * @CreateTime: 2025-09-18
- * @Description: 智能体-客户端关联表PO
+ * @CreateTime: 2025-09-21
+ * @Description: AiAgent执行策略配置VO
  * @Version: 1.0
  */
 @Data
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class AiAgentFlowConfig {
-    private Long id;
-    private String agentId;
+public class AiAgentClientFlowConfigVO {
+    /**
+     * 客户端ID
+     */
     private String clientId;
+
+    /**
+     * 客户端名称
+     */
     private String clientName;
+
+    /**
+     * 客户端枚举
+     */
     private String clientType;
+
+    /**
+     * 序列号(执行顺序)
+     */
     private Integer sequence;
-    private LocalDateTime createTime;
 }
