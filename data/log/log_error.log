@@ -583,3 +583,82 @@ java.lang.IllegalStateException: Error calling tool: [TextContent[audience=null,
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
 	at java.base/java.lang.Thread.run(Thread.java:842)
+25-09-22.14:08:06.576 [ForkJoinPool.commonPool-worker-2] WARN  StdioClientTransport   - Process terminated with code 1
+25-09-22.14:08:23.699 [pool-2-thread-7 ] ERROR AiAgentController      - AutoAgent执行异常：No bean named 'ai_client_4101' available
+org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'ai_client_4101' available
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanDefinition(DefaultListableBeanFactory.java:951)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getMergedLocalBeanDefinition(AbstractBeanFactory.java:1382)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1272)
+	at com.ywzai.domain.agent.service.execute.auto.step.AbstractExecuteSupport.getChatClientById(AbstractExecuteSupport.java:47)
+	at com.ywzai.domain.agent.service.execute.auto.step.Step1AnalyzerNode.doApply(Step1AnalyzerNode.java:30)
+	at com.ywzai.domain.agent.service.execute.auto.step.Step1AnalyzerNode.doApply(Step1AnalyzerNode.java:21)
+	at cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter.apply(AbstractMultiThreadStrategyRouter.java:31)
+	at cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter.router(AbstractMultiThreadStrategyRouter.java:22)
+	at com.ywzai.domain.agent.service.execute.auto.step.RootNode.doApply(RootNode.java:38)
+	at com.ywzai.domain.agent.service.execute.auto.step.RootNode.doApply(RootNode.java:21)
+	at cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter.apply(AbstractMultiThreadStrategyRouter.java:31)
+	at com.ywzai.domain.agent.service.execute.auto.AutoAgentExecuteStrategy.execute(AutoAgentExecuteStrategy.java:42)
+	at com.ywzai.trigger.http.AiAgentController.lambda$autoAgent$0(AiAgentController.java:61)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+25-09-22.14:08:52.018 [ForkJoinPool.commonPool-worker-1] WARN  StdioClientTransport   - Process terminated with code 1
+25-09-22.14:09:02.738 [main            ] ERROR LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+A component required a bean named 'ai_client_model_2003' that could not be found.
+
+
+Action:
+
+Consider defining a bean named 'ai_client_model_2003' in your configuration.
+
+25-09-22.14:09:03.192 [ForkJoinPool.commonPool-worker-1] WARN  StdioClientTransport   - Process terminated with code 1
+25-09-22.14:15:11.894 [main            ] ERROR LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+A component required a bean named 'ai_client_model_2001' that could not be found.
+
+
+Action:
+
+Consider defining a bean named 'ai_client_model_2001' in your configuration.
+
+25-09-22.14:15:12.356 [ForkJoinPool.commonPool-worker-1] WARN  StdioClientTransport   - Process terminated with code 1
+25-09-22.14:23:02.703 [ForkJoinPool.commonPool-worker-2] WARN  StdioClientTransport   - Process terminated with code 1
+25-09-22.14:28:19.342 [pool-2-thread-7 ] ERROR Step4LogExecutionSummaryNode - 生成最终总结报告时出现异常: Format specifier '%s'
+java.util.MissingFormatArgumentException: Format specifier '%s'
+	at java.base/java.util.Formatter.format(Formatter.java:2688)
+	at java.base/java.util.Formatter.format(Formatter.java:2625)
+	at java.base/java.lang.String.format(String.java:4147)
+	at com.ywzai.domain.agent.service.execute.auto.step.Step4LogExecutionSummaryNode.getSummaryPrompt(Step4LogExecutionSummaryNode.java:103)
+	at com.ywzai.domain.agent.service.execute.auto.step.Step4LogExecutionSummaryNode.generateFinalReport(Step4LogExecutionSummaryNode.java:75)
+	at com.ywzai.domain.agent.service.execute.auto.step.Step4LogExecutionSummaryNode.doApply(Step4LogExecutionSummaryNode.java:35)
+	at com.ywzai.domain.agent.service.execute.auto.step.Step4LogExecutionSummaryNode.doApply(Step4LogExecutionSummaryNode.java:20)
+	at cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter.apply(AbstractMultiThreadStrategyRouter.java:31)
+	at cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter.router(AbstractMultiThreadStrategyRouter.java:22)
+	at com.ywzai.domain.agent.service.execute.auto.step.Step1AnalyzerNode.doApply(Step1AnalyzerNode.java:57)
+	at com.ywzai.domain.agent.service.execute.auto.step.Step1AnalyzerNode.doApply(Step1AnalyzerNode.java:21)
+	at cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter.apply(AbstractMultiThreadStrategyRouter.java:31)
+	at cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter.router(AbstractMultiThreadStrategyRouter.java:22)
+	at com.ywzai.domain.agent.service.execute.auto.step.RootNode.doApply(RootNode.java:38)
+	at com.ywzai.domain.agent.service.execute.auto.step.RootNode.doApply(RootNode.java:21)
+	at cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter.apply(AbstractMultiThreadStrategyRouter.java:31)
+	at com.ywzai.domain.agent.service.execute.auto.AutoAgentExecuteStrategy.execute(AutoAgentExecuteStrategy.java:42)
+	at com.ywzai.trigger.http.AiAgentController.lambda$autoAgent$0(AiAgentController.java:61)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+25-09-22.14:41:59.167 [ForkJoinPool.commonPool-worker-4] WARN  StdioClientTransport   - Process terminated with code 1

@@ -1,5 +1,5 @@
 server:
-  port: 8091
+  port: 8099
 
 # 线程池配置
 thread:
@@ -61,7 +61,7 @@ spring:
     agent:
       auto-config:
         enabled: true
-        client-ids: 3101,3102,3103,3104
+        client-ids: 3101,3102,3103,3104,4101,4102,4103,4104
 
 
 # MyBatis 配置【如需使用记得打开】

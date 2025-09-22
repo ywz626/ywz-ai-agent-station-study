@@ -24,6 +24,7 @@ public class AiAgentFlowConfig {
     private String clientId;
     private String clientName;
     private String clientType;
+    private String stepPrompt;
     private Integer sequence;
     private LocalDateTime createTime;
 }

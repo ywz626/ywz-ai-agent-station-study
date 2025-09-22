@@ -63,6 +63,7 @@ public class AgentRepository implements IAgentRepository {
                                 config.getClientId(),
                                 config.getClientName(),
                                 config.getClientType(),
+                                config.getStepPrompt(),
                                 config.getSequence()
                         )
                 ));
@@ -321,6 +322,7 @@ public class AgentRepository implements IAgentRepository {
             if (model != null && model.getStatus() == 1) {
                 List<String> toolMcpIdList = aiClientConfigDao.queryToolMcpIdsByModelId(modelId);
                 // 构建AiClientModelVO对象
+                log.info("AiClientModelNode: 获取模型信息成功: {}", modelId);
                 AiClientModelVO aiClientModelVO = AiClientModelVO.builder()
                         .modelId(model.getModelId())
                         .apiId(model.getApiId())
@@ -329,7 +331,7 @@ public class AgentRepository implements IAgentRepository {
                         .toolMcpIds(toolMcpIdList)
                         .build();
                 // 避免重复添加相同的模型配置
-                if (result.stream().noneMatch(vo -> vo.getApiId().equals(aiClientModelVO.getApiId()))) {
+                if (result.stream().noneMatch(vo -> vo.getModelId().equals(aiClientModelVO.getModelId()))) {
                     result.add(aiClientModelVO);
                 }
 

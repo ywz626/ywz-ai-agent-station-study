@@ -32,6 +32,8 @@ public class AiAgentClientFlowConfigVO {
      */
     private String clientType;
 
+    private String stepPrompt;
+
     /**
      * 序列号(执行顺序)
      */

@@ -9,12 +9,13 @@
         <result column="client_name" property="clientName"/>
         <result column="client_type" property="clientType"/>
         <result column="sequence" property="sequence"/>
+        <result column="step_prompt" property="stepPrompt"/>
         <result column="create_time" property="createTime"/>
     </resultMap>
 
     <insert id="insert" parameterType="com.ywzai.infrastructure.dao.po.AiAgentFlowConfig">
-        INSERT INTO ai_agent_flow_config(agent_id, client_id,client_name,client_type, sequence, create_time)
-        VALUES(#{agentId}, #{clientId}, #{clientName},#{clientType},#{sequence}, NOW())
+        INSERT INTO ai_agent_flow_config(agent_id, client_id,client_name,client_type, step_prompt,sequence, create_time)
+        VALUES(#{agentId}, #{clientId}, #{clientName},#{clientType},#{stepPrompt},#{sequence}, NOW())
     </insert>
     <update id="update">
         update ai_agent_flow_config
@@ -23,6 +24,7 @@
         client_id = #{clientId},
         client_name = #{clientName},
         client_type = #{clientType},
+        step_prompt = #{stepPrompt},
         sequence = #{sequence},
         create_time = NOW()
         <where>
@@ -30,6 +32,7 @@
             client_id = #{clientId} and
             client_name = #{clientName} and
             client_type = #{clientType} and
+            step_prompt = #{stepPrompt} and
             sequence = #{sequence}
         </where>
     </update>
@@ -37,14 +40,14 @@
 
 
     <select id="queryByAgentId" parameterType="java.lang.String" resultMap="AiAgentFlowConfigMap">
-        SELECT id, agent_id, client_id,client_name,client_type, sequence,  create_time
+        SELECT id, agent_id, client_id,client_name,client_type, ai_agent_flow_config.step_prompt,sequence,  create_time
         FROM ai_agent_flow_config
         WHERE agent_id = #{agentId}
         ORDER BY sequence ASC
     </select>
 
     <select id="queryByAgentIdAndClientId" resultMap="AiAgentFlowConfigMap">
-        SELECT id, agent_id, client_id, client_name,client_type,sequence, create_time
+        SELECT id, agent_id, client_id, client_name,client_type,ai_agent_flow_config.step_prompt,sequence, create_time
         FROM ai_agent_flow_config
         WHERE agent_id = #{agentId} AND client_id = #{clientId}
     </select>

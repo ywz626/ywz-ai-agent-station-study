@@ -98,24 +98,10 @@ public class Step4LogExecutionSummaryNode extends AbstractExecuteSupport {
 
     private static String getSummaryPrompt(ExecuteCommandEntity requestParameter, DefaultExecuteStrategyFactory.DynamicContext dynamicContext, boolean isCompleted) {
         String summaryPrompt;
+        AiAgentClientFlowConfigVO responseAgentClientFlowConfig = dynamicContext.getClientFlowConfigMap().get(AiClientTypeEnumVO.RESPONSE_ASSISTANT.getCode());
         if (isCompleted) {
-            summaryPrompt = String.format("""
-                    基于以下执行过程，请直接回答用户的原始问题，提供最终的答案和结果：
-                    
-                    **用户原始问题:** %s
-                    
-                    **执行历史和过程:**
-                    %s
-                    
-                    **要求:**
-                    1. 直接回答用户的原始问题
-                    2. 基于执行过程中获得的信息和结果
-                    3. 提供具体、实用的最终答案
-                    4. 如果是要求制定计划、列表等，请直接给出完整的内容
-                    5. 避免只描述执行过程，重点是最终答案
-                    
-                    请直接给出用户问题的最终答案：
-                    """,
+            log.info("检查字符串:{}",responseAgentClientFlowConfig.getStepPrompt());
+            summaryPrompt = String.format(responseAgentClientFlowConfig.getStepPrompt(),
                     requestParameter.getMessage(),
                     dynamicContext.getExecutionHistory().toString());
         } else {

@@ -39,6 +39,7 @@ public class AiClientModelNode extends AbstractArmorySupport {
             log.warn("没有需要被初始化的 ai client model");
             return null;
         }
+        log.info("开始初始化 ai client model");
         for (AiClientModelVO aiClientModelVO : aiClientModelVOList) {
             // 装配mcp工具
             List<String> toolMcpIds = aiClientModelVO.getToolMcpIds();

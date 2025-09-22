@@ -34,26 +34,7 @@ public class Step3QualitySupervisorNode extends AbstractExecuteSupport {
 
         // 第三阶段：质量监督
         log.info("\n🔍 阶段3: 质量监督检查");
-        String supervisionPrompt = String.format("""
-                **用户原始需求:** %s
-                
-                **执行结果:** %s
-                
-                **监督要求:**
-                请严格评估执行结果是否真正满足了用户的原始需求：
-                1. 检查是否直接回答了用户的问题
-                2. 评估内容的完整性和实用性
-                3. 确认是否提供了用户期望的具体结果（如学习计划、项目列表等） 只要质量评分没到100分就PASS
-                4. 判断是否只是描述过程而没有给出实际答案
-                
-                **输出格式:**
-                需求匹配度: [执行结果与用户原始需求的匹配程度分析]
-                内容完整性: [内容是否完整、具体、实用]
-                问题识别: [发现的问题和不足，特别是是否偏离了用户真正的需求]
-                改进建议: [具体的改进建议，确保能直接满足用户需求]
-                质量评分: [1-100分的质量评分]
-                是否通过: [PASS/FAIL/OPTIMIZE]
-                """, executeCommandEntity.getMessage(), executionResult);
+        String supervisionPrompt = String.format(qualityClientFlowConfig.getStepPrompt(), executeCommandEntity.getMessage(), executionResult);
 
         String supervisionResult = qualitySupervisorClient
                 .prompt(supervisionPrompt)
@@ -113,7 +94,7 @@ public class Step3QualitySupervisorNode extends AbstractExecuteSupport {
     }
 
     /**
-     * 解析监督结果
+     * 解析监督结果并上传给前端
      */
     private void parseSupervisionResult(DefaultExecuteStrategyFactory.DynamicContext dynamicContext, String supervisionResult, String sessionId) {
         int step = dynamicContext.getStep();
