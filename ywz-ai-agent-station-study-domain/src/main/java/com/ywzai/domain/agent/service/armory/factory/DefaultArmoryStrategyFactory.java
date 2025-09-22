@@ -2,7 +2,7 @@ package com.ywzai.domain.agent.service.armory.factory;
 
 
 import cn.bugstack.wrench.design.framework.tree.StrategyHandler;
-import com.ywzai.domain.agent.model.entity.ArmoryCommendEntity;
+import com.ywzai.domain.agent.model.entity.ArmoryCommandEntity;
 import com.ywzai.domain.agent.service.armory.RootNode;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -27,14 +27,14 @@ public class DefaultArmoryStrategyFactory {
         this.rootNode = rootNode;
     }
 
-    public StrategyHandler<ArmoryCommendEntity, DynamicContext, String> get() {
+    public StrategyHandler<ArmoryCommandEntity, DynamicContext, String> get() {
         return rootNode;
     }
 
     @Data
     @AllArgsConstructor
-    @NoArgsConstructor
     @Builder
+    @NoArgsConstructor
     public static class DynamicContext{
         private Map<String, Object> dataObjects = new HashMap<>();
 

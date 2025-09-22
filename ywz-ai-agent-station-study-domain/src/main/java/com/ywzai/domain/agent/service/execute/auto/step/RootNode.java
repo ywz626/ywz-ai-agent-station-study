@@ -3,13 +3,12 @@ package com.ywzai.domain.agent.service.execute.auto.step;
 
 import cn.bugstack.wrench.design.framework.tree.StrategyHandler;
 import com.ywzai.domain.agent.adapter.repository.IAgentRepository;
-import com.ywzai.domain.agent.model.entity.ExecuteCommentEntity;
+import com.ywzai.domain.agent.model.entity.ExecuteCommandEntity;
 import com.ywzai.domain.agent.model.valobj.AiAgentClientFlowConfigVO;
 import com.ywzai.domain.agent.service.execute.auto.step.factory.DefaultExecuteStrategyFactory;
 import jakarta.annotation.Resource;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
-import org.w3c.dom.stylesheets.LinkStyle;
 
 import java.util.Map;
 
@@ -27,20 +26,20 @@ public class RootNode extends AbstractExecuteSupport{
     private IAgentRepository agentRepository;
 
     @Override
-    protected String doApply(ExecuteCommentEntity executeCommentEntity, DefaultExecuteStrategyFactory.DynamicContext dynamicContext) throws Exception {
-        String aiAgentId = executeCommentEntity.getAiAgentId();
+    protected String doApply(ExecuteCommandEntity executeCommandEntity, DefaultExecuteStrategyFactory.DynamicContext dynamicContext) throws Exception {
+        String aiAgentId = executeCommandEntity.getAiAgentId();
         Map<String, AiAgentClientFlowConfigVO> aiAgentClientFlowConfigVOMap = agentRepository.getAiAgentFlowConfigMapByAgentId(aiAgentId);
-        dynamicContext.setMaxStep(executeCommentEntity.getMaxStep());
+        dynamicContext.setMaxStep(executeCommandEntity.getMaxStep());
         dynamicContext.setClientFlowConfigMap(aiAgentClientFlowConfigVOMap);
         // 上下文信息
         dynamicContext.setExecutionHistory(new StringBuilder());
         // 当前任务信息
-        dynamicContext.setCurrentTask(executeCommentEntity.getMessage());
-        return router(executeCommentEntity, dynamicContext);
+        dynamicContext.setCurrentTask(executeCommandEntity.getMessage());
+        return router(executeCommandEntity, dynamicContext);
     }
 
     @Override
-    public StrategyHandler<ExecuteCommentEntity, DefaultExecuteStrategyFactory.DynamicContext, String> get(ExecuteCommentEntity executeCommentEntity, DefaultExecuteStrategyFactory.DynamicContext dynamicContext) throws Exception {
+    public StrategyHandler<ExecuteCommandEntity, DefaultExecuteStrategyFactory.DynamicContext, String> get(ExecuteCommandEntity executeCommandEntity, DefaultExecuteStrategyFactory.DynamicContext dynamicContext) throws Exception {
         return getBean("step1AnalyzerNode");
     }
 }

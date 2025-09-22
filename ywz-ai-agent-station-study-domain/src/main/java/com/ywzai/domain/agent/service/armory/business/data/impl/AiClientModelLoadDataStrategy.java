@@ -2,7 +2,7 @@ package com.ywzai.domain.agent.service.armory.business.data.impl;
 
 
 import com.ywzai.domain.agent.adapter.repository.IAgentRepository;
-import com.ywzai.domain.agent.model.entity.ArmoryCommendEntity;
+import com.ywzai.domain.agent.model.entity.ArmoryCommandEntity;
 import com.ywzai.domain.agent.model.valobj.AiClientApiVO;
 import com.ywzai.domain.agent.model.valobj.AiClientModelVO;
 import com.ywzai.domain.agent.service.armory.business.data.ILoadDataStrategy;
@@ -31,8 +31,8 @@ public class AiClientModelLoadDataStrategy implements ILoadDataStrategy {
     private IAgentRepository agentRepository;
 
     @Override
-    public void loadData(ArmoryCommendEntity armoryCommendEntity, DefaultArmoryStrategyFactory.DynamicContext dynamicContext) {
-        List<String> modelIds = armoryCommendEntity.getCommendList();
+    public void loadData(ArmoryCommandEntity armoryCommandEntity, DefaultArmoryStrategyFactory.DynamicContext dynamicContext) {
+        List<String> modelIds = armoryCommandEntity.getCommendList();
         CompletableFuture<List<AiClientApiVO>> apiFuture = CompletableFuture.supplyAsync(() -> {
             log.info("查询配置数据(ai_client_api) {}", modelIds);
             return agentRepository.getAiClientApiVOListByModelIds(modelIds);

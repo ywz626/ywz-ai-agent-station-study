@@ -2,10 +2,8 @@ package com.ywzai.domain.agent.service.execute.auto.step.factory;
 
 
 import cn.bugstack.wrench.design.framework.tree.StrategyHandler;
-import com.ywzai.domain.agent.model.entity.ArmoryCommendEntity;
-import com.ywzai.domain.agent.model.entity.ExecuteCommentEntity;
+import com.ywzai.domain.agent.model.entity.ExecuteCommandEntity;
 import com.ywzai.domain.agent.model.valobj.AiAgentClientFlowConfigVO;
-import com.ywzai.domain.agent.service.armory.factory.DefaultArmoryStrategyFactory;
 import com.ywzai.domain.agent.service.execute.auto.step.RootNode;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -30,7 +28,7 @@ public class DefaultExecuteStrategyFactory {
         this.execRootNode = execRootNode;
     }
 
-    public StrategyHandler<ExecuteCommentEntity, DefaultExecuteStrategyFactory.DynamicContext, String> get() {
+    public StrategyHandler<ExecuteCommandEntity, DefaultExecuteStrategyFactory.DynamicContext, String> get() {
         return execRootNode;
     }
 

@@ -58,6 +58,10 @@ spring:
         options:
           model: text-embedding-v4
           dimensions: 1536
+    agent:
+      auto-config:
+        enabled: true
+        client-ids: 3101,3102,3103,3104
 
 
 # MyBatis 配置【如需使用记得打开】
@@ -67,6 +71,7 @@ mybatis:
 
 baidu:
   api-key: ${baidu.apikey}
+
 
 # 日志
 logging:

@@ -19,7 +19,7 @@ import java.util.List;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class ArmoryCommendEntity {
+public class ArmoryCommandEntity {
     private String commendType;
     private List<String> commendList;
 

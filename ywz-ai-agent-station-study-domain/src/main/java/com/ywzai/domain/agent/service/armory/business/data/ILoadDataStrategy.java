@@ -1,7 +1,7 @@
 package com.ywzai.domain.agent.service.armory.business.data;
 
 
-import com.ywzai.domain.agent.model.entity.ArmoryCommendEntity;
+import com.ywzai.domain.agent.model.entity.ArmoryCommandEntity;
 import com.ywzai.domain.agent.service.armory.factory.DefaultArmoryStrategyFactory;
 
 /**
@@ -12,5 +12,5 @@ import com.ywzai.domain.agent.service.armory.factory.DefaultArmoryStrategyFactor
  */
 public interface ILoadDataStrategy {
 
-    void loadData(ArmoryCommendEntity armoryCommendEntity, DefaultArmoryStrategyFactory.DynamicContext dynamicContext);
+    void loadData(ArmoryCommandEntity armoryCommandEntity, DefaultArmoryStrategyFactory.DynamicContext dynamicContext);
 }

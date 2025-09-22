@@ -2,7 +2,7 @@ package com.ywzai.domain.agent.service.armory;
 
 
 import cn.bugstack.wrench.design.framework.tree.StrategyHandler;
-import com.ywzai.domain.agent.model.entity.ArmoryCommendEntity;
+import com.ywzai.domain.agent.model.entity.ArmoryCommandEntity;
 import com.ywzai.domain.agent.model.valobj.enums.AiAgentEnumVO;
 import com.ywzai.domain.agent.model.valobj.enums.AiClientAdvisorTypeEnumVO;
 import com.ywzai.domain.agent.model.valobj.AiClientAdvisorVO;
@@ -31,7 +31,7 @@ public class AiClientAdvisorNode extends AbstractArmorySupport{
     private VectorStore vectorStore;
 
     @Override
-    protected String doApply(ArmoryCommendEntity armoryCommendEntity, DefaultArmoryStrategyFactory.DynamicContext dynamicContext) throws Exception {
+    protected String doApply(ArmoryCommandEntity armoryCommandEntity, DefaultArmoryStrategyFactory.DynamicContext dynamicContext) throws Exception {
         List<AiClientAdvisorVO> advisorVOList = dynamicContext.getValue(AiAgentEnumVO.AI_CLIENT_ADVISOR.getDataName());
         if(advisorVOList == null || advisorVOList.isEmpty()){
             log.warn("没有需要被初始化的顾问角色");
@@ -41,11 +41,11 @@ public class AiClientAdvisorNode extends AbstractArmorySupport{
             Advisor advisor1 = createAdvisor(advisor, vectorStore);
             registerBean(AiAgentEnumVO.AI_CLIENT_ADVISOR.getBeanName(advisor.getAdvisorId()), Advisor.class, advisor1);
         }
-        return router(armoryCommendEntity, dynamicContext);
+        return router(armoryCommandEntity, dynamicContext);
     }
 
     @Override
-    public StrategyHandler<ArmoryCommendEntity, DefaultArmoryStrategyFactory.DynamicContext, String> get(ArmoryCommendEntity armoryCommendEntity, DefaultArmoryStrategyFactory.DynamicContext dynamicContext) throws Exception {
+    public StrategyHandler<ArmoryCommandEntity, DefaultArmoryStrategyFactory.DynamicContext, String> get(ArmoryCommandEntity armoryCommandEntity, DefaultArmoryStrategyFactory.DynamicContext dynamicContext) throws Exception {
         return aiClientNode;
     }
 

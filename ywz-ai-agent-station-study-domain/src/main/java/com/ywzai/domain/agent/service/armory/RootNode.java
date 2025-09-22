@@ -2,7 +2,7 @@ package com.ywzai.domain.agent.service.armory;
 
 
 import cn.bugstack.wrench.design.framework.tree.StrategyHandler;
-import com.ywzai.domain.agent.model.entity.ArmoryCommendEntity;
+import com.ywzai.domain.agent.model.entity.ArmoryCommandEntity;
 import com.ywzai.domain.agent.service.armory.business.data.ILoadDataStrategy;
 import com.ywzai.domain.agent.service.armory.factory.DefaultArmoryStrategyFactory;
 import jakarta.annotation.Resource;
@@ -27,19 +27,19 @@ public class RootNode extends AbstractArmorySupport {
     private Map<String, ILoadDataStrategy> loadDataStrategyMap;
 
     @Override
-    protected void multiThread(ArmoryCommendEntity armoryCommendEntity, DefaultArmoryStrategyFactory.DynamicContext dynamicContext) throws ExecutionException, InterruptedException, TimeoutException {
-        String loadDataStrategy = armoryCommendEntity.getLoadDataStrategy();
+    protected void multiThread(ArmoryCommandEntity armoryCommandEntity, DefaultArmoryStrategyFactory.DynamicContext dynamicContext) throws ExecutionException, InterruptedException, TimeoutException {
+        String loadDataStrategy = armoryCommandEntity.getLoadDataStrategy();
         ILoadDataStrategy loadData = loadDataStrategyMap.get(loadDataStrategy);
-        loadData.loadData(armoryCommendEntity, dynamicContext);
+        loadData.loadData(armoryCommandEntity, dynamicContext);
     }
 
     @Override
-    protected String doApply(ArmoryCommendEntity armoryCommendEntity, DefaultArmoryStrategyFactory.DynamicContext dynamicContext) throws Exception {
-        return router(armoryCommendEntity, dynamicContext);
+    protected String doApply(ArmoryCommandEntity armoryCommandEntity, DefaultArmoryStrategyFactory.DynamicContext dynamicContext) throws Exception {
+        return router(armoryCommandEntity, dynamicContext);
     }
 
     @Override
-    public StrategyHandler<ArmoryCommendEntity, DefaultArmoryStrategyFactory.DynamicContext, String> get(ArmoryCommendEntity armoryCommendEntity, DefaultArmoryStrategyFactory.DynamicContext dynamicContext) throws Exception {
+    public StrategyHandler<ArmoryCommandEntity, DefaultArmoryStrategyFactory.DynamicContext, String> get(ArmoryCommandEntity armoryCommandEntity, DefaultArmoryStrategyFactory.DynamicContext dynamicContext) throws Exception {
         return aiClientApiNode;
     }
 }

@@ -2,7 +2,7 @@ package com.ywzai.test;
 
 
 import cn.bugstack.wrench.design.framework.tree.StrategyHandler;
-import com.ywzai.domain.agent.model.entity.ArmoryCommendEntity;
+import com.ywzai.domain.agent.model.entity.ArmoryCommandEntity;
 import com.ywzai.domain.agent.model.valobj.enums.AiAgentEnumVO;
 import com.ywzai.domain.agent.service.armory.factory.DefaultArmoryStrategyFactory;
 import jakarta.annotation.Resource;
@@ -39,9 +39,9 @@ public class RegisterBeanTest {
 
     @Test
     public void testAiClientApiNode() throws Exception {
-        StrategyHandler<ArmoryCommendEntity, DefaultArmoryStrategyFactory.DynamicContext, String> rootNode = defaultArmoryStrategyFactory.get();
+        StrategyHandler<ArmoryCommandEntity, DefaultArmoryStrategyFactory.DynamicContext, String> rootNode = defaultArmoryStrategyFactory.get();
         String apply = rootNode.apply(
-                ArmoryCommendEntity.builder()
+                ArmoryCommandEntity.builder()
                         .commendType(AiAgentEnumVO.AI_CLIENT.getCode())
                         .commendList(Arrays.asList("3001"))
                         .build(),
@@ -54,9 +54,9 @@ public class RegisterBeanTest {
 
     @Test
     public void testAiClientModelNode() throws Exception {
-        StrategyHandler<ArmoryCommendEntity, DefaultArmoryStrategyFactory.DynamicContext, String> rootNode = defaultArmoryStrategyFactory.get();
+        StrategyHandler<ArmoryCommandEntity, DefaultArmoryStrategyFactory.DynamicContext, String> rootNode = defaultArmoryStrategyFactory.get();
         String apply = rootNode.apply(
-                ArmoryCommendEntity.builder()
+                ArmoryCommandEntity.builder()
                         .commendType(AiAgentEnumVO.AI_CLIENT.getCode())
                         .commendList(Arrays.asList("3001"))
                         .build(),
@@ -74,9 +74,9 @@ public class RegisterBeanTest {
     }
     @Test
     public void testAiClientAdvisorNode() throws Exception {
-        StrategyHandler<ArmoryCommendEntity, DefaultArmoryStrategyFactory.DynamicContext, String> rootNode = defaultArmoryStrategyFactory.get();
+        StrategyHandler<ArmoryCommandEntity, DefaultArmoryStrategyFactory.DynamicContext, String> rootNode = defaultArmoryStrategyFactory.get();
         String apply = rootNode.apply(
-                ArmoryCommendEntity.builder()
+                ArmoryCommandEntity.builder()
                         .commendType(AiAgentEnumVO.AI_CLIENT.getCode())
                         .commendList(Arrays.asList("3001"))
                         .build(),

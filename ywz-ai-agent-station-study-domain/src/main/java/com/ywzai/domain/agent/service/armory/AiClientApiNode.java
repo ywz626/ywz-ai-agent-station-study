@@ -2,7 +2,7 @@ package com.ywzai.domain.agent.service.armory;
 
 
 import cn.bugstack.wrench.design.framework.tree.StrategyHandler;
-import com.ywzai.domain.agent.model.entity.ArmoryCommendEntity;
+import com.ywzai.domain.agent.model.entity.ArmoryCommandEntity;
 import com.ywzai.domain.agent.model.valobj.enums.AiAgentEnumVO;
 import com.ywzai.domain.agent.model.valobj.AiClientApiVO;
 import com.ywzai.domain.agent.service.armory.factory.DefaultArmoryStrategyFactory;
@@ -25,7 +25,7 @@ public class AiClientApiNode extends AbstractArmorySupport {
     @Resource
     private AiClientToolMcpNode aiClientToolMcpNode;
     @Override
-    protected String doApply(ArmoryCommendEntity armoryCommendEntity, DefaultArmoryStrategyFactory.DynamicContext dynamicContext) throws Exception {
+    protected String doApply(ArmoryCommandEntity armoryCommandEntity, DefaultArmoryStrategyFactory.DynamicContext dynamicContext) throws Exception {
         List<AiClientApiVO> apiList = dynamicContext.getValue(AiAgentEnumVO.AI_CLIENT_API.getDataName());
         if (apiList == null || apiList.isEmpty()) {
             log.warn("没有需要被初始化的 ai client api");
@@ -41,11 +41,11 @@ public class AiClientApiNode extends AbstractArmorySupport {
             registerBean(AiAgentEnumVO.AI_CLIENT_API.getBeanName(api.getApiId()), OpenAiApi.class, openAiApi);
         }
 //        return "调用成功";
-        return router(armoryCommendEntity, dynamicContext);
+        return router(armoryCommandEntity, dynamicContext);
     }
 
     @Override
-    public StrategyHandler<ArmoryCommendEntity, DefaultArmoryStrategyFactory.DynamicContext, String> get(ArmoryCommendEntity armoryCommendEntity, DefaultArmoryStrategyFactory.DynamicContext dynamicContext) throws Exception{
+    public StrategyHandler<ArmoryCommandEntity, DefaultArmoryStrategyFactory.DynamicContext, String> get(ArmoryCommandEntity armoryCommandEntity, DefaultArmoryStrategyFactory.DynamicContext dynamicContext) throws Exception{
         return aiClientToolMcpNode;
     }
 }

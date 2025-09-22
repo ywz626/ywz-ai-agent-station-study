@@ -2,7 +2,7 @@ package com.ywzai.domain.agent.service.armory;
 
 
 import cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter;
-import com.ywzai.domain.agent.model.entity.ArmoryCommendEntity;
+import com.ywzai.domain.agent.model.entity.ArmoryCommandEntity;
 import com.ywzai.domain.agent.service.armory.factory.DefaultArmoryStrategyFactory;
 import jakarta.annotation.Resource;
 import lombok.extern.slf4j.Slf4j;
@@ -21,14 +21,14 @@ import java.util.concurrent.TimeoutException;
  * @Version: 1.0
  */
 @Slf4j
-public abstract class AbstractArmorySupport extends AbstractMultiThreadStrategyRouter<ArmoryCommendEntity, DefaultArmoryStrategyFactory.DynamicContext, String> {
+public abstract class AbstractArmorySupport extends AbstractMultiThreadStrategyRouter<ArmoryCommandEntity, DefaultArmoryStrategyFactory.DynamicContext, String> {
 
     @Resource
     private ApplicationContext applicationContext;
 
 
     @Override
-    protected void multiThread(ArmoryCommendEntity armoryCommendEntity, DefaultArmoryStrategyFactory.DynamicContext dynamicContext) throws ExecutionException, InterruptedException, TimeoutException {
+    protected void multiThread(ArmoryCommandEntity armoryCommandEntity, DefaultArmoryStrategyFactory.DynamicContext dynamicContext) throws ExecutionException, InterruptedException, TimeoutException {
 
     }
 

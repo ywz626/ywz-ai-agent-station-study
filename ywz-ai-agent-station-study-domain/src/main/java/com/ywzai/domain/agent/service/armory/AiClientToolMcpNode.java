@@ -2,7 +2,7 @@ package com.ywzai.domain.agent.service.armory;
 
 
 import cn.bugstack.wrench.design.framework.tree.StrategyHandler;
-import com.ywzai.domain.agent.model.entity.ArmoryCommendEntity;
+import com.ywzai.domain.agent.model.entity.ArmoryCommandEntity;
 import com.ywzai.domain.agent.model.valobj.enums.AiAgentEnumVO;
 import com.ywzai.domain.agent.model.valobj.AiClientToolMcpVO;
 import com.ywzai.domain.agent.service.armory.factory.DefaultArmoryStrategyFactory;
@@ -35,7 +35,7 @@ public class AiClientToolMcpNode extends AbstractArmorySupport {
     private AiClientModelNode aiClientModelNode;
 
     @Override
-    protected String doApply(ArmoryCommendEntity armoryCommendEntity, DefaultArmoryStrategyFactory.DynamicContext dynamicContext) throws Exception {
+    protected String doApply(ArmoryCommandEntity armoryCommandEntity, DefaultArmoryStrategyFactory.DynamicContext dynamicContext) throws Exception {
         List<AiClientToolMcpVO> aiClientToolMcpVOList = dynamicContext.getValue(AiAgentEnumVO.AI_CLIENT_TOOL_MCP.getDataName());
         if (aiClientToolMcpVOList == null || aiClientToolMcpVOList.isEmpty()) {
             log.warn("没有需要被初始化的 ai client tool mcp");
@@ -45,7 +45,7 @@ public class AiClientToolMcpNode extends AbstractArmorySupport {
             McpSyncClient mcpSyncClient = armoryToolMcp(aiClientToolMcpVO);
             registerBean(AiAgentEnumVO.AI_CLIENT_TOOL_MCP.getBeanName(aiClientToolMcpVO.getMcpId()), McpSyncClient.class, mcpSyncClient);
         }
-        return router(armoryCommendEntity, dynamicContext);
+        return router(armoryCommandEntity, dynamicContext);
     }
 
     private McpSyncClient armoryToolMcp(AiClientToolMcpVO aiClientToolMcpVO) {
@@ -86,7 +86,7 @@ public class AiClientToolMcpNode extends AbstractArmorySupport {
     }
 
     @Override
-    public StrategyHandler<ArmoryCommendEntity, DefaultArmoryStrategyFactory.DynamicContext, String> get(ArmoryCommendEntity armoryCommendEntity, DefaultArmoryStrategyFactory.DynamicContext dynamicContext) throws Exception {
+    public StrategyHandler<ArmoryCommandEntity, DefaultArmoryStrategyFactory.DynamicContext, String> get(ArmoryCommandEntity armoryCommandEntity, DefaultArmoryStrategyFactory.DynamicContext dynamicContext) throws Exception {
         return aiClientModelNode;
     }
 }

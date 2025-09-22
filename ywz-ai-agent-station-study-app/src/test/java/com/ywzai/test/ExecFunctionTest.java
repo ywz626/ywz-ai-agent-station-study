@@ -2,8 +2,8 @@ package com.ywzai.test;
 
 
 import cn.bugstack.wrench.design.framework.tree.StrategyHandler;
-import com.ywzai.domain.agent.model.entity.ArmoryCommendEntity;
-import com.ywzai.domain.agent.model.entity.ExecuteCommentEntity;
+import com.ywzai.domain.agent.model.entity.ArmoryCommandEntity;
+import com.ywzai.domain.agent.model.entity.ExecuteCommandEntity;
 import com.ywzai.domain.agent.model.valobj.enums.AiAgentEnumVO;
 import com.ywzai.domain.agent.service.armory.factory.DefaultArmoryStrategyFactory;
 import com.ywzai.domain.agent.service.execute.auto.step.factory.DefaultExecuteStrategyFactory;
@@ -34,9 +34,9 @@ public class ExecFunctionTest {
 
     @Before
     public void init() throws Exception {
-        StrategyHandler<ArmoryCommendEntity, DefaultArmoryStrategyFactory.DynamicContext, String> rootNode = defaultArmoryStrategyFactory.get();
+        StrategyHandler<ArmoryCommandEntity, DefaultArmoryStrategyFactory.DynamicContext, String> rootNode = defaultArmoryStrategyFactory.get();
         String apply = rootNode.apply(
-                ArmoryCommendEntity.builder()
+                ArmoryCommandEntity.builder()
                         .commendType(AiAgentEnumVO.AI_CLIENT.getCode())
                         .commendList(Arrays.asList("3101", "3102","3103"))
                         .build(),
@@ -46,9 +46,9 @@ public class ExecFunctionTest {
 
     @Test
     public void test() throws Exception {
-        StrategyHandler<ExecuteCommentEntity, DefaultExecuteStrategyFactory.DynamicContext, String> rootNode = defaultExecuteStrategyFactory.get();
+        StrategyHandler<ExecuteCommandEntity, DefaultExecuteStrategyFactory.DynamicContext, String> rootNode = defaultExecuteStrategyFactory.get();
         String apply = rootNode.apply(
-                ExecuteCommentEntity.builder()
+                ExecuteCommandEntity.builder()
                         .aiAgentId("3")
                         .sessionId("session-id-" + System.currentTimeMillis())
                         .maxStep(5)
