@@ -33,7 +33,7 @@ public class AiClientNode extends AbstractArmorySupport{
         List<AiClientVO> aiClientVOList = dynamicContext.getValue(AiAgentEnumVO.AI_CLIENT.getDataName());
         if (aiClientVOList == null || aiClientVOList.isEmpty()){
             log.warn("没有需要被初始化的 ai client");
-            return null;
+            throw new Exception("没有需要被初始化的 ai client");
         }
         Map<String,AiClientPromptVO> promptVOList = dynamicContext.getValue(AiAgentEnumVO.AI_CLIENT_SYSTEM_PROMPT.getDataName());
         for (AiClientVO aiClientVO : aiClientVOList){

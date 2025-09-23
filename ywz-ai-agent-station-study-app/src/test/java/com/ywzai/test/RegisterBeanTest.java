@@ -78,13 +78,13 @@ public class RegisterBeanTest {
         String apply = rootNode.apply(
                 ArmoryCommandEntity.builder()
                         .commendType(AiAgentEnumVO.AI_CLIENT.getCode())
-                        .commendList(Arrays.asList("3001"))
+                        .commendList(Arrays.asList("10101"))
                         .build(),
                 new DefaultArmoryStrategyFactory.DynamicContext()
         );
-        ChatClient chatClient = (ChatClient) applicationContext.getBean(AiAgentEnumVO.AI_CLIENT.getBeanName("3001"));
+        ChatClient chatClient = (ChatClient) applicationContext.getBean(AiAgentEnumVO.AI_CLIENT.getBeanName("10101"));
         String content = chatClient.prompt(Prompt.builder()
-                        .messages(new UserMessage("E:\\computersoftware\\geektime-docs\\后端-架构,对这个目录中的所有文件夹进行操作,把每个文件夹中的docs目录中的md文档移动到和该文件夹同级然后删除docs目录,在操作过程中删除目录中所有格式不是.md的文件"))
+                        .messages(new UserMessage("给我讲讲GrafanaMcp工具的使用"))
                         .build())
                 .call().content();
         System.out.println("测试结果: " + content);

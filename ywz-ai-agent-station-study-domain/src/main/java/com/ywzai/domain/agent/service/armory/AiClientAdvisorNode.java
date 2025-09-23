@@ -35,7 +35,7 @@ public class AiClientAdvisorNode extends AbstractArmorySupport{
         List<AiClientAdvisorVO> advisorVOList = dynamicContext.getValue(AiAgentEnumVO.AI_CLIENT_ADVISOR.getDataName());
         if(advisorVOList == null || advisorVOList.isEmpty()){
             log.warn("没有需要被初始化的顾问角色");
-            return null;
+            return router(armoryCommandEntity, dynamicContext);
         }
         for (AiClientAdvisorVO advisor : advisorVOList){
             Advisor advisor1 = createAdvisor(advisor, vectorStore);

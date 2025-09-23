@@ -29,7 +29,7 @@ public class AiClientApiNode extends AbstractArmorySupport {
         List<AiClientApiVO> apiList = dynamicContext.getValue(AiAgentEnumVO.AI_CLIENT_API.getDataName());
         if (apiList == null || apiList.isEmpty()) {
             log.warn("没有需要被初始化的 ai client api");
-            return null;
+            return router(armoryCommandEntity, dynamicContext);
         }
         for (AiClientApiVO api : apiList) {
             OpenAiApi openAiApi = OpenAiApi.builder()

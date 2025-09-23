@@ -48,11 +48,11 @@ public class AgentRepository implements IAgentRepository {
 
     @Override
     public Map<String, AiAgentClientFlowConfigVO> getAiAgentFlowConfigMapByAgentId(String aiAgentId) {
-        if (aiAgentId == null || aiAgentId.trim().isEmpty()){
+        if (aiAgentId == null || aiAgentId.trim().isEmpty()) {
             return Map.of();
         }
         List<AiAgentFlowConfig> aiAgentFlowConfigs = aiAgentFlowConfigDao.queryByAgentId(aiAgentId);
-        if(aiAgentFlowConfigs == null || aiAgentFlowConfigs.isEmpty()){
+        if (aiAgentFlowConfigs == null || aiAgentFlowConfigs.isEmpty()) {
             return Map.of();
         }
         // 使用 Stream API 将 aiAgentFlowConfigs 转换为 Map

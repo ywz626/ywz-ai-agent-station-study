@@ -37,7 +37,7 @@ public class AiClientModelNode extends AbstractArmorySupport {
         List<AiClientModelVO> aiClientModelVOList = dynamicContext.getValue(AiAgentEnumVO.AI_CLIENT_MODEL.getDataName());
         if (aiClientModelVOList == null || aiClientModelVOList.isEmpty()) {
             log.warn("没有需要被初始化的 ai client model");
-            return null;
+            return router(armoryCommandEntity, dynamicContext);
         }
         log.info("开始初始化 ai client model");
         for (AiClientModelVO aiClientModelVO : aiClientModelVOList) {

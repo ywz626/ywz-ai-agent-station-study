@@ -39,6 +39,9 @@ public class AiAgentAutoConfiguration implements ApplicationListener<Application
     public void onApplicationEvent(ApplicationReadyEvent event) {
         List<String> clientIds = aiAgentAutoConfigProperties.getClientIds();
         List<String> clientIdList;
+        if (clientIds == null || clientIds.isEmpty()) {
+            return ;
+        }
         if (clientIds.size() == 1 && clientIds.get(0).contains(Constants.SPLIT)) {
             clientIdList = Arrays.stream(clientIds.get(0).split(Constants.SPLIT))
                     .map(String::trim)

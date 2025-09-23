@@ -2800,3 +2800,2267 @@ java.util.MissingFormatArgumentException: Format specifier '%s'
 25-09-22.14:41:59.060 [SpringApplicationShutdownHook] INFO  HikariDataSource       - MainHikariPool - Shutdown initiated...
 25-09-22.14:41:59.167 [ForkJoinPool.commonPool-worker-4] WARN  StdioClientTransport   - Process terminated with code 1
 25-09-22.14:41:59.536 [SpringApplicationShutdownHook] INFO  HikariDataSource       - MainHikariPool - Shutdown completed.
+25-09-22.21:22:45.891 [main            ] INFO  Application            - Starting Application using Java 17.0.14 with PID 40804 (D:\java\ideapublic\ywz-ai-agent-station-study\ywz-ai-agent-station-study-app\target\classes started by ywz in D:\java\ideapublic\ywz-ai-agent-station-study)
+25-09-22.21:22:45.893 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+25-09-22.21:22:47.531 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port 8099 (http)
+25-09-22.21:22:47.547 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8099"]
+25-09-22.21:22:47.549 [main            ] INFO  StandardService        - Starting service [Tomcat]
+25-09-22.21:22:47.549 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/10.1.36]
+25-09-22.21:22:47.667 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+25-09-22.21:22:47.668 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1742 ms
+25-09-22.21:22:48.141 [main            ] INFO  PgVectorStore          - Using the vector table name: vector_store_openai. Is empty: false
+25-09-22.21:22:48.145 [main            ] INFO  PgVectorStore          - Initializing PGVectorStore schema for table: vector_store_openai in schema: public
+25-09-22.21:22:48.145 [main            ] INFO  PgVectorStore          - vectorTableValidationsEnabled false
+25-09-22.21:22:48.675 [main            ] INFO  OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+25-09-22.21:22:49.116 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8099"]
+25-09-22.21:22:49.126 [main            ] INFO  TomcatWebServer        - Tomcat started on port 8099 (http) with context path '/'
+25-09-22.21:22:49.133 [main            ] INFO  Application            - Started Application in 3.771 seconds (process running for 4.545)
+25-09-22.21:22:49.139 [pool-2-thread-1 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_api) [5101, 5102, 5103, 5104]
+25-09-22.21:22:49.139 [pool-2-thread-2 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_model) [5101, 5102, 5103, 5104]
+25-09-22.21:22:49.139 [pool-2-thread-3 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_prompt) [5101, 5102, 5103, 5104]
+25-09-22.21:22:49.139 [pool-2-thread-4 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_advisor) [5101, 5102, 5103, 5104]
+25-09-22.21:22:49.139 [pool-2-thread-5 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_tool_mcp) [5101, 5102, 5103, 5104]
+25-09-22.21:22:49.140 [pool-2-thread-6 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client) [5101, 5102, 5103, 5104]
+25-09-22.21:22:49.155 [pool-2-thread-3 ] INFO  HikariDataSource       - MainHikariPool - Starting...
+25-09-22.21:22:49.696 [pool-2-thread-3 ] INFO  HikariPool             - MainHikariPool - Added connection com.mysql.cj.jdbc.ConnectionImpl@5716b6f9
+25-09-22.21:22:49.698 [pool-2-thread-3 ] INFO  HikariDataSource       - MainHikariPool - Start completed.
+25-09-22.21:22:50.084 [pool-2-thread-2 ] INFO  AgentRepository        - AiClientModelNode: 获取模型信息成功: 2004
+25-09-22.21:22:50.102 [pool-2-thread-5 ] INFO  AgentRepository        - 查询modelId对应的mcpId列表 [5008]
+25-09-22.21:22:50.376 [pool-2-thread-5 ] INFO  AgentRepository        - 查询modelId对应的mcpId列表 [5008]
+25-09-22.21:22:50.382 [pool-2-thread-2 ] INFO  AgentRepository        - AiClientModelNode: 获取模型信息成功: 2004
+25-09-22.21:22:50.466 [pool-2-thread-5 ] INFO  AgentRepository        - 查询modelId对应的mcpId列表 [5008]
+25-09-22.21:22:50.526 [pool-2-thread-2 ] INFO  AgentRepository        - AiClientModelNode: 获取模型信息成功: 2004
+25-09-22.21:22:50.562 [pool-2-thread-5 ] INFO  AgentRepository        - 查询modelId对应的mcpId列表 [5008]
+25-09-22.21:22:50.654 [pool-2-thread-2 ] INFO  AgentRepository        - AiClientModelNode: 获取模型信息成功: 2004
+25-09-22.21:22:50.659 [main            ] INFO  AbstractArmorySupport  - 成功注册Bean: ai_client_api_1001
+25-09-22.21:22:51.095 [pool-6-thread-1 ] INFO  StdioClientTransport   - STDERR Message received: time=2025-09-22T13:22:51.093Z level=INFO msg="Starting Grafana MCP server using stdio transport" version=(devel)
+25-09-22.21:22:51.096 [pool-6-thread-1 ] INFO  StdioClientTransport   - STDERR Message received: time=2025-09-22T13:22:51.094Z level=WARN msg="GRAFANA_API_KEY is deprecated, please use GRAFANA_SERVICE_ACCOUNT_TOKEN instead. See https://grafana.com/docs/grafana/latest/administration/service-accounts/#add-a-token-to-a-service-account-in-grafana for details on creating service account tokens."
+25-09-22.21:22:51.096 [pool-6-thread-1 ] INFO  StdioClientTransport   - STDERR Message received: time=2025-09-22T13:22:51.094Z level=INFO msg="Using Grafana configuration" url=http://localhost:9200 api_key_set=true basic_auth_set=false
+25-09-22.21:22:51.096 [pool-6-thread-1 ] INFO  StdioClientTransport   - STDERR Message received: time=2025-09-22T13:22:51.094Z level=WARN msg="GRAFANA_API_KEY is deprecated, please use GRAFANA_SERVICE_ACCOUNT_TOKEN instead. See https://grafana.com/docs/grafana/latest/administration/service-accounts/#add-a-token-to-a-service-account-in-grafana for details on creating service account tokens."
+25-09-22.21:22:51.096 [pool-6-thread-1 ] INFO  StdioClientTransport   - STDERR Message received: time=2025-09-22T13:22:51.094Z level=WARN msg="GRAFANA_API_KEY is deprecated, please use GRAFANA_SERVICE_ACCOUNT_TOKEN instead. See https://grafana.com/docs/grafana/latest/administration/service-accounts/#add-a-token-to-a-service-account-in-grafana for details on creating service account tokens."
+25-09-22.21:22:51.139 [pool-3-thread-1 ] INFO  McpAsyncClient         - Server response with Protocol: 2024-11-05, Capabilities: ServerCapabilities[completions=null, experimental=null, logging=null, prompts=null, resources=null, tools=ToolCapabilities[listChanged=true]], Info: Implementation[name=mcp-grafana, version=(devel)] and Instructions 
+	This server provides access to your Grafana instance and the surrounding ecosystem.
+
+	Available Capabilities:
+	- Dashboards: Search, retrieve, update, and create dashboards. Extract panel queries and datasource information.
+	- Datasources: List and fetch details for datasources.
+	- Prometheus & Loki: Run PromQL and LogQL queries, retrieve metric/log metadata, and explore label names/values.
+	- Incidents: Search, create, update, and resolve incidents in Grafana Incident.
+	- Sift Investigations: Start and manage Sift investigations, analyze logs/traces, find error patterns, and detect slow requests.
+	- Alerting: List and fetch alert rules and notification contact points.
+	- OnCall: View and manage on-call schedules, shifts, teams, and users.
+	- Admin: List teams and perform administrative tasks.
+	- Pyroscope: Profile applications and fetch profiling data.
+	- Navigation: Generate deeplink URLs for Grafana resources like dashboards, panels, and Explore queries.
+	
+25-09-22.21:22:51.146 [main            ] INFO  AiClientToolMcpNode    - Stdio Mcp Initialized: InitializeResult[protocolVersion=2024-11-05, capabilities=ServerCapabilities[completions=null, experimental=null, logging=null, prompts=null, resources=null, tools=ToolCapabilities[listChanged=true]], serverInfo=Implementation[name=mcp-grafana, version=(devel)], instructions=
+	This server provides access to your Grafana instance and the surrounding ecosystem.
+
+	Available Capabilities:
+	- Dashboards: Search, retrieve, update, and create dashboards. Extract panel queries and datasource information.
+	- Datasources: List and fetch details for datasources.
+	- Prometheus & Loki: Run PromQL and LogQL queries, retrieve metric/log metadata, and explore label names/values.
+	- Incidents: Search, create, update, and resolve incidents in Grafana Incident.
+	- Sift Investigations: Start and manage Sift investigations, analyze logs/traces, find error patterns, and detect slow requests.
+	- Alerting: List and fetch alert rules and notification contact points.
+	- OnCall: View and manage on-call schedules, shifts, teams, and users.
+	- Admin: List teams and perform administrative tasks.
+	- Pyroscope: Profile applications and fetch profiling data.
+	- Navigation: Generate deeplink URLs for Grafana resources like dashboards, panels, and Explore queries.
+	]
+25-09-22.21:22:51.148 [main            ] INFO  AbstractArmorySupport  - 成功注册Bean: ai_client_tool_mcp_5008
+25-09-22.21:22:51.148 [main            ] INFO  AiClientModelNode      - 开始初始化 ai client model
+25-09-22.21:22:51.183 [main            ] INFO  AbstractArmorySupport  - 成功注册Bean: ai_client_model_2004
+25-09-22.21:22:51.192 [main            ] INFO  AbstractArmorySupport  - 成功注册Bean: ai_client_advisor_4001
+25-09-22.21:22:51.271 [main            ] INFO  AbstractArmorySupport  - 成功注册Bean: ai_client_advisor_4003
+25-09-22.21:22:51.280 [main            ] INFO  AbstractArmorySupport  - 成功注册Bean: ai_client_5101
+25-09-22.21:22:51.280 [main            ] INFO  AbstractArmorySupport  - 成功注册Bean: ai_client_5102
+25-09-22.21:22:51.281 [main            ] INFO  AbstractArmorySupport  - 成功注册Bean: ai_client_5103
+25-09-22.21:22:51.281 [main            ] INFO  AbstractArmorySupport  - 成功注册Bean: ai_client_5104
+25-09-22.21:22:51.281 [main            ] INFO  AiAgentAutoConfiguration - 【AI-AGENT】启动成功，已加载客户端：null
+25-09-22.21:23:45.003 [http-nio-8099-exec-1] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
+25-09-22.21:23:45.003 [http-nio-8099-exec-1] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
+25-09-22.21:23:45.004 [http-nio-8099-exec-1] INFO  DispatcherServlet      - Completed initialization in 1 ms
+25-09-22.21:23:45.106 [http-nio-8099-exec-2] INFO  AiAgentController      - AutoAgent流式执行请求开始，请求信息：{"aiAgentId":"5","maxStep":5,"message":"分析 Grafana 普罗米修斯，group-buy-market-app 拼团系统，运行数据。展示出所有接口 TPS、QPS 响应数据。","sessionId":"session_1758547424923_5mribj46g"}
+25-09-22.21:23:45.109 [pool-2-thread-7 ] INFO  AutoAgentExecuteStrategy - 最大步数为:5
+25-09-22.21:23:45.109 [pool-2-thread-7 ] INFO  AutoAgentExecuteStrategy - agentId:5
+25-09-22.21:23:45.109 [pool-2-thread-7 ] INFO  AutoAgentExecuteStrategy - message:分析 Grafana 普罗米修斯，group-buy-market-app 拼团系统，运行数据。展示出所有接口 TPS、QPS 响应数据。
+25-09-22.21:23:45.109 [pool-2-thread-7 ] INFO  AutoAgentExecuteStrategy - sessionId:session_1758547424923_5mribj46g
+25-09-22.21:23:45.230 [pool-2-thread-7 ] INFO  Step1AnalyzerNode      - 
+📊 阶段1: 任务状态分析
+25-09-22.21:23:45.371 [pool-2-thread-7 ] ERROR AiAgentController      - AutoAgent执行异常：The template string is not valid.
+java.lang.IllegalArgumentException: The template string is not valid.
+	at org.springframework.ai.template.st.StTemplateRenderer.createST(StTemplateRenderer.java:118)
+	at org.springframework.ai.template.st.StTemplateRenderer.apply(StTemplateRenderer.java:103)
+	at org.springframework.ai.chat.prompt.PromptTemplate.render(PromptTemplate.java:121)
+	at com.ywzai.domain.agent.service.armory.factory.element.RagAnswerAdvisor.before(RagAnswerAdvisor.java:47)
+	at com.ywzai.domain.agent.service.armory.factory.element.RagAnswerAdvisor.adviseCall(RagAnswerAdvisor.java:77)
+	at org.springframework.ai.chat.client.advisor.DefaultAroundAdvisorChain.lambda$nextCall$1(DefaultAroundAdvisorChain.java:110)
+	at io.micrometer.observation.Observation.observe(Observation.java:564)
+	at org.springframework.ai.chat.client.advisor.DefaultAroundAdvisorChain.nextCall(DefaultAroundAdvisorChain.java:110)
+	at org.springframework.ai.chat.client.advisor.api.BaseAdvisor.adviseCall(BaseAdvisor.java:52)
+	at org.springframework.ai.chat.client.advisor.DefaultAroundAdvisorChain.lambda$nextCall$1(DefaultAroundAdvisorChain.java:110)
+	at io.micrometer.observation.Observation.observe(Observation.java:564)
+	at org.springframework.ai.chat.client.advisor.DefaultAroundAdvisorChain.nextCall(DefaultAroundAdvisorChain.java:110)
+	at org.springframework.ai.chat.client.DefaultChatClient$DefaultCallResponseSpec.lambda$doGetObservableChatClientResponse$1(DefaultChatClient.java:469)
+	at io.micrometer.observation.Observation.observe(Observation.java:564)
+	at org.springframework.ai.chat.client.DefaultChatClient$DefaultCallResponseSpec.doGetObservableChatClientResponse(DefaultChatClient.java:467)
+	at org.springframework.ai.chat.client.DefaultChatClient$DefaultCallResponseSpec.doGetObservableChatClientResponse(DefaultChatClient.java:446)
+	at org.springframework.ai.chat.client.DefaultChatClient$DefaultCallResponseSpec.content(DefaultChatClient.java:441)
+	at com.ywzai.domain.agent.service.execute.auto.step.Step1AnalyzerNode.doApply(Step1AnalyzerNode.java:47)
+	at com.ywzai.domain.agent.service.execute.auto.step.Step1AnalyzerNode.doApply(Step1AnalyzerNode.java:21)
+	at cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter.apply(AbstractMultiThreadStrategyRouter.java:31)
+	at cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter.router(AbstractMultiThreadStrategyRouter.java:22)
+	at com.ywzai.domain.agent.service.execute.auto.step.RootNode.doApply(RootNode.java:38)
+	at com.ywzai.domain.agent.service.execute.auto.step.RootNode.doApply(RootNode.java:21)
+	at cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter.apply(AbstractMultiThreadStrategyRouter.java:31)
+	at com.ywzai.domain.agent.service.execute.auto.AutoAgentExecuteStrategy.execute(AutoAgentExecuteStrategy.java:42)
+	at com.ywzai.trigger.http.AiAgentController.lambda$autoAgent$0(AiAgentController.java:61)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: org.stringtemplate.v4.compiler.STException: null
+	at org.stringtemplate.v4.compiler.Compiler.reportMessageAndThrowSTException(Compiler.java:224)
+	at org.stringtemplate.v4.compiler.Compiler.compile(Compiler.java:154)
+	at org.stringtemplate.v4.STGroup.compile(STGroup.java:514)
+	at org.stringtemplate.v4.ST.<init>(ST.java:162)
+	at org.stringtemplate.v4.ST.<init>(ST.java:156)
+	at org.springframework.ai.template.st.StTemplateRenderer.createST(StTemplateRenderer.java:115)
+	... 28 common frames omitted
+25-09-22.21:25:46.610 [SpringApplicationShutdownHook] INFO  GracefulShutdown       - Commencing graceful shutdown. Waiting for active requests to complete
+25-09-22.21:25:46.964 [tomcat-shutdown ] INFO  GracefulShutdown       - Graceful shutdown complete
+25-09-22.21:25:46.970 [SpringApplicationShutdownHook] INFO  HikariDataSource       - MainHikariPool - Shutdown initiated...
+25-09-22.21:25:47.081 [ForkJoinPool.commonPool-worker-1] WARN  StdioClientTransport   - Process terminated with code 1
+25-09-22.21:25:47.453 [SpringApplicationShutdownHook] INFO  HikariDataSource       - MainHikariPool - Shutdown completed.
+25-09-22.21:25:52.812 [main            ] INFO  Application            - Starting Application using Java 17.0.14 with PID 35484 (D:\java\ideapublic\ywz-ai-agent-station-study\ywz-ai-agent-station-study-app\target\classes started by ywz in D:\java\ideapublic\ywz-ai-agent-station-study)
+25-09-22.21:25:52.813 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+25-09-22.21:25:54.404 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port 8099 (http)
+25-09-22.21:25:54.419 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8099"]
+25-09-22.21:25:54.422 [main            ] INFO  StandardService        - Starting service [Tomcat]
+25-09-22.21:25:54.423 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/10.1.36]
+25-09-22.21:25:54.518 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+25-09-22.21:25:54.518 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1669 ms
+25-09-22.21:25:54.910 [main            ] INFO  PgVectorStore          - Using the vector table name: vector_store_openai. Is empty: false
+25-09-22.21:25:54.914 [main            ] INFO  PgVectorStore          - Initializing PGVectorStore schema for table: vector_store_openai in schema: public
+25-09-22.21:25:54.915 [main            ] INFO  PgVectorStore          - vectorTableValidationsEnabled false
+25-09-22.21:25:55.384 [main            ] INFO  OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+25-09-22.21:25:55.809 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8099"]
+25-09-22.21:25:55.819 [main            ] INFO  TomcatWebServer        - Tomcat started on port 8099 (http) with context path '/'
+25-09-22.21:25:55.826 [main            ] INFO  Application            - Started Application in 3.599 seconds (process running for 4.322)
+25-09-22.21:25:55.832 [pool-2-thread-1 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_api) [5101, 5102, 5103, 5104]
+25-09-22.21:25:55.832 [pool-2-thread-2 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_model) [5101, 5102, 5103, 5104]
+25-09-22.21:25:55.832 [pool-2-thread-3 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_prompt) [5101, 5102, 5103, 5104]
+25-09-22.21:25:55.832 [pool-2-thread-4 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_advisor) [5101, 5102, 5103, 5104]
+25-09-22.21:25:55.832 [pool-2-thread-6 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client) [5101, 5102, 5103, 5104]
+25-09-22.21:25:55.832 [pool-2-thread-5 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_tool_mcp) [5101, 5102, 5103, 5104]
+25-09-22.21:25:55.849 [pool-2-thread-2 ] INFO  HikariDataSource       - MainHikariPool - Starting...
+25-09-22.21:25:56.395 [pool-2-thread-2 ] INFO  HikariPool             - MainHikariPool - Added connection com.mysql.cj.jdbc.ConnectionImpl@3ea99fde
+25-09-22.21:25:56.396 [pool-2-thread-2 ] INFO  HikariDataSource       - MainHikariPool - Start completed.
+25-09-22.21:25:56.755 [pool-2-thread-5 ] INFO  AgentRepository        - 查询modelId对应的mcpId列表 [5008]
+25-09-22.21:25:56.796 [pool-2-thread-2 ] INFO  AgentRepository        - AiClientModelNode: 获取模型信息成功: 2004
+25-09-22.21:25:57.011 [pool-2-thread-2 ] INFO  AgentRepository        - AiClientModelNode: 获取模型信息成功: 2004
+25-09-22.21:25:57.102 [pool-2-thread-5 ] INFO  AgentRepository        - 查询modelId对应的mcpId列表 [5008]
+25-09-22.21:25:57.162 [pool-2-thread-2 ] INFO  AgentRepository        - AiClientModelNode: 获取模型信息成功: 2004
+25-09-22.21:25:57.260 [pool-2-thread-5 ] INFO  AgentRepository        - 查询modelId对应的mcpId列表 [5008]
+25-09-22.21:25:57.302 [pool-2-thread-2 ] INFO  AgentRepository        - AiClientModelNode: 获取模型信息成功: 2004
+25-09-22.21:25:57.320 [pool-2-thread-5 ] INFO  AgentRepository        - 查询modelId对应的mcpId列表 [5008]
+25-09-22.21:25:57.356 [main            ] INFO  AbstractArmorySupport  - 成功注册Bean: ai_client_api_1001
+25-09-22.21:25:57.800 [pool-6-thread-1 ] INFO  StdioClientTransport   - STDERR Message received: time=2025-09-22T13:25:57.799Z level=INFO msg="Starting Grafana MCP server using stdio transport" version=(devel)
+25-09-22.21:25:57.800 [pool-6-thread-1 ] INFO  StdioClientTransport   - STDERR Message received: time=2025-09-22T13:25:57.799Z level=WARN msg="GRAFANA_API_KEY is deprecated, please use GRAFANA_SERVICE_ACCOUNT_TOKEN instead. See https://grafana.com/docs/grafana/latest/administration/service-accounts/#add-a-token-to-a-service-account-in-grafana for details on creating service account tokens."
+25-09-22.21:25:57.800 [pool-6-thread-1 ] INFO  StdioClientTransport   - STDERR Message received: time=2025-09-22T13:25:57.799Z level=INFO msg="Using Grafana configuration" url=http://localhost:9200 api_key_set=true basic_auth_set=false
+25-09-22.21:25:57.800 [pool-6-thread-1 ] INFO  StdioClientTransport   - STDERR Message received: time=2025-09-22T13:25:57.799Z level=WARN msg="GRAFANA_API_KEY is deprecated, please use GRAFANA_SERVICE_ACCOUNT_TOKEN instead. See https://grafana.com/docs/grafana/latest/administration/service-accounts/#add-a-token-to-a-service-account-in-grafana for details on creating service account tokens."
+25-09-22.21:25:57.800 [pool-6-thread-1 ] INFO  StdioClientTransport   - STDERR Message received: time=2025-09-22T13:25:57.799Z level=WARN msg="GRAFANA_API_KEY is deprecated, please use GRAFANA_SERVICE_ACCOUNT_TOKEN instead. See https://grafana.com/docs/grafana/latest/administration/service-accounts/#add-a-token-to-a-service-account-in-grafana for details on creating service account tokens."
+25-09-22.21:25:57.849 [pool-3-thread-1 ] INFO  McpAsyncClient         - Server response with Protocol: 2024-11-05, Capabilities: ServerCapabilities[completions=null, experimental=null, logging=null, prompts=null, resources=null, tools=ToolCapabilities[listChanged=true]], Info: Implementation[name=mcp-grafana, version=(devel)] and Instructions 
+	This server provides access to your Grafana instance and the surrounding ecosystem.
+
+	Available Capabilities:
+	- Dashboards: Search, retrieve, update, and create dashboards. Extract panel queries and datasource information.
+	- Datasources: List and fetch details for datasources.
+	- Prometheus & Loki: Run PromQL and LogQL queries, retrieve metric/log metadata, and explore label names/values.
+	- Incidents: Search, create, update, and resolve incidents in Grafana Incident.
+	- Sift Investigations: Start and manage Sift investigations, analyze logs/traces, find error patterns, and detect slow requests.
+	- Alerting: List and fetch alert rules and notification contact points.
+	- OnCall: View and manage on-call schedules, shifts, teams, and users.
+	- Admin: List teams and perform administrative tasks.
+	- Pyroscope: Profile applications and fetch profiling data.
+	- Navigation: Generate deeplink URLs for Grafana resources like dashboards, panels, and Explore queries.
+	
+25-09-22.21:25:57.856 [main            ] INFO  AiClientToolMcpNode    - Stdio Mcp Initialized: InitializeResult[protocolVersion=2024-11-05, capabilities=ServerCapabilities[completions=null, experimental=null, logging=null, prompts=null, resources=null, tools=ToolCapabilities[listChanged=true]], serverInfo=Implementation[name=mcp-grafana, version=(devel)], instructions=
+	This server provides access to your Grafana instance and the surrounding ecosystem.
+
+	Available Capabilities:
+	- Dashboards: Search, retrieve, update, and create dashboards. Extract panel queries and datasource information.
+	- Datasources: List and fetch details for datasources.
+	- Prometheus & Loki: Run PromQL and LogQL queries, retrieve metric/log metadata, and explore label names/values.
+	- Incidents: Search, create, update, and resolve incidents in Grafana Incident.
+	- Sift Investigations: Start and manage Sift investigations, analyze logs/traces, find error patterns, and detect slow requests.
+	- Alerting: List and fetch alert rules and notification contact points.
+	- OnCall: View and manage on-call schedules, shifts, teams, and users.
+	- Admin: List teams and perform administrative tasks.
+	- Pyroscope: Profile applications and fetch profiling data.
+	- Navigation: Generate deeplink URLs for Grafana resources like dashboards, panels, and Explore queries.
+	]
+25-09-22.21:25:57.857 [main            ] INFO  AbstractArmorySupport  - 成功注册Bean: ai_client_tool_mcp_5008
+25-09-22.21:25:57.857 [main            ] INFO  AiClientModelNode      - 开始初始化 ai client model
+25-09-22.21:25:57.896 [main            ] INFO  AbstractArmorySupport  - 成功注册Bean: ai_client_model_2004
+25-09-22.21:25:57.907 [main            ] INFO  AbstractArmorySupport  - 成功注册Bean: ai_client_advisor_4001
+25-09-22.21:25:57.996 [main            ] INFO  AbstractArmorySupport  - 成功注册Bean: ai_client_advisor_4003
+25-09-22.21:25:58.005 [main            ] INFO  AbstractArmorySupport  - 成功注册Bean: ai_client_5101
+25-09-22.21:25:58.005 [main            ] INFO  AbstractArmorySupport  - 成功注册Bean: ai_client_5102
+25-09-22.21:25:58.005 [main            ] INFO  AbstractArmorySupport  - 成功注册Bean: ai_client_5103
+25-09-22.21:25:58.006 [main            ] INFO  AbstractArmorySupport  - 成功注册Bean: ai_client_5104
+25-09-22.21:25:58.006 [main            ] INFO  AiAgentAutoConfiguration - 【AI-AGENT】启动成功，已加载客户端：null
+25-09-22.21:26:25.401 [http-nio-8099-exec-1] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
+25-09-22.21:26:25.401 [http-nio-8099-exec-1] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
+25-09-22.21:26:25.402 [http-nio-8099-exec-1] INFO  DispatcherServlet      - Completed initialization in 1 ms
+25-09-22.21:26:25.497 [http-nio-8099-exec-1] INFO  AiAgentController      - AutoAgent流式执行请求开始，请求信息：{"aiAgentId":"5","maxStep":5,"message":"分析 Grafana 普罗米修斯，group-buy-market-app 拼团系统，运行数据。展示出所有接口 TPS、QPS 响应数据。","sessionId":"session_1758547585321_83y6js7ks"}
+25-09-22.21:26:25.501 [pool-2-thread-7 ] INFO  AutoAgentExecuteStrategy - 最大步数为:5
+25-09-22.21:26:25.501 [pool-2-thread-7 ] INFO  AutoAgentExecuteStrategy - agentId:5
+25-09-22.21:26:25.501 [pool-2-thread-7 ] INFO  AutoAgentExecuteStrategy - message:分析 Grafana 普罗米修斯，group-buy-market-app 拼团系统，运行数据。展示出所有接口 TPS、QPS 响应数据。
+25-09-22.21:26:25.501 [pool-2-thread-7 ] INFO  AutoAgentExecuteStrategy - sessionId:session_1758547585321_83y6js7ks
+25-09-22.21:26:25.612 [pool-2-thread-7 ] INFO  Step1AnalyzerNode      - 
+📊 阶段1: 任务状态分析
+25-09-22.21:26:25.761 [pool-2-thread-7 ] INFO  RagAnswerAdvisor       - RagAnswerAdvisor: userText=## 🚨 重要提醒：数据源UID获取
+**必须首先调用 list_datasources 获取实际的Prometheus数据源UID！**
+**绝对禁止硬编码"Prometheus"作为数据源UID！**
+**所有后续MCP工具调用都必须使用从list_datasources获取的实际UID！**
+
+**用户需求:** 分析 Grafana 普罗米修斯，group-buy-market-app 拼团系统，运行数据。展示出所有接口 TPS、QPS 响应数据。
+**执行步骤:** 第 1 步 (最大 5 步)
+**历史记录:**
+[首次执行]
+**当前任务:** 分析 Grafana 普罗米修斯，group-buy-market-app 拼团系统，运行数据。展示出所有接口 TPS、QPS 响应数据。
+
+# 🚨 强制MCP调用分析器 🚨
+
+## 🔥 强制执行指令 🔥
+**你必须在分析过程中调用MCP工具验证和获取数据！**
+**禁止仅仅基于历史记录进行分析，必须获取最新的真实数据！**
+**每次分析都必须包含至少一次MCP工具调用来验证当前状态！**
+
+## 核心使命
+作为强制MCP调用的动态智能分析专家，你具备根据用户需求和执行历史动态调整分析策略的能力，但更重要的是，你必须通过MCP工具调用获取真实的当前数据来支撑你的分析。
+
+## 🚀 强制MCP调用规则
+
+### 分析阶段必须执行的MCP验证
+**无论分析阶段如何，都必须调用MCP工具验证当前状态：**
+
+#### 🔍 环境状态验证
+```
+工具名称: run_mcp
+服务器: mcp.config.usrlocalmcp.grafana
+工具: list_datasources
+参数: {}
+目的: 验证当前Grafana数据源的可用性和状态
+```
+
+#### 📊 指标状态验证
+```
+工具名称: run_mcp
+服务器: mcp.config.usrlocalmcp.grafana
+工具: list_prometheus_metric_names
+参数: {"datasource": "<从list_datasources获取的实际数据源UID>"}
+目的: 验证当前可用的监控指标
+```
+
+#### 🎯 系统状态验证
+```
+工具名称: run_mcp
+服务器: mcp.config.usrlocalmcp.grafana
+工具: query_prometheus
+参数: {
+  "query": "up",
+  "datasource": "<从list_datasources获取的实际数据源UID>",
+  "start": "now-5m",
+  "end": "now"
+}
+目的: 验证系统当前的运行状态
+```
+
+## 动态分析能力（基于真实数据）
+
+### 1. 强制数据验证分析
+- **需求理解**: 深度理解用户的真实意图，但必须通过MCP调用验证当前状态
+- **历史学习**: 从执行历史中学习，但必须获取最新数据进行对比
+- **进度评估**: 通过MCP调用获取当前真实数据来评估分析进度
+- **策略调整**: 基于MCP获取的真实数据动态调整下一步策略
+
+### 2. 基于真实数据的探索策略
+- **分层探索**: 每一层都必须通过MCP调用获取真实数据
+- **假设验证**: 通过MCP工具调用验证所有假设
+- **问题驱动**: 基于MCP获取的真实数据发现和分析问题
+- **机会识别**: 通过真实数据识别分析机会和潜在价值点
+
+### 3. 数据驱动的决策机制
+- **优先级动态调整**: 基于MCP获取的真实数据调整分析优先级
+- **路径优化**: 根据真实数据选择最有效的分析路径
+- **深度控制**: 基于数据质量和可用性控制分析深度
+- **质量平衡**: 在数据获取成本和分析价值之间找到平衡
+
+## 🎯 强制MCP调用分析框架
+
+### 情境感知分析（必须包含MCP验证）
+```
+分析维度评估:
+- 如果是首次执行: 立即调用list_datasources验证环境，然后进行环境发现
+- 如果有执行历史: 立即调用相关MCP工具验证历史数据的当前状态
+- 如果接近完成: 立即调用MCP工具验证关键发现的当前状态
+- 如果遇到阻碍: 立即调用MCP工具获取最新数据，寻找新的分析路径
+```
+
+### 强制数据验证的深入策略
+```
+第一层: 环境概览 → 必须调用list_datasources了解当前环境
+第二层: 关键指标 → 必须调用list_prometheus_metric_names获取当前指标
+第三层: 深度分析 → 必须调用query_prometheus获取具体数据
+第四层: 综合评估 → 必须调用多个MCP工具交叉验证结论
+```
+
+### 🔧 强制工具选择策略
+```
+工具调用强制逻辑:
+无论什么阶段，都必须:
+1. 立即调用run_mcp工具
+2. 使用mcp.config.usrlocalmcp.grafana服务器
+3. 选择合适的Grafana工具
+4. 获取当前真实的监控数据
+5. 基于真实数据进行分析和策略制定
+```
+
+## 智能分析逻辑（强制MCP验证）
+
+### 基于真实数据的策略调整
+```
+历史分析逻辑（必须包含MCP验证）:
+IF 历史记录为空:
+    → 立即调用list_datasources和list_prometheus_metric_names建立基础认知
+ELSE IF 已发现数据源但需要验证当前状态:
+    → 立即调用list_datasources验证数据源状态，然后进行指标探索
+ELSE IF 已有指标但需要获取最新数据:
+    → 立即调用query_prometheus获取最新的关键数据
+ELSE IF 已有数据但需要验证当前状态:
+    → 立即调用相关MCP工具验证数据的时效性和准确性
+ELSE:
+    → 立即调用综合查询验证最终结论的准确性
+```
+
+### 基于真实数据的问题驱动分析
+- **性能问题**: 立即调用query_prometheus获取当前性能数据进行分析
+- **资源问题**: 立即调用相关查询获取当前资源使用情况
+- **业务问题**: 立即调用业务指标查询获取当前业务状态
+- **系统问题**: 立即调用系统健康检查获取当前系统状态
+
+## ⚡ 强制执行检查清单
+在每次分析中，你必须确保：
+- ✅ 至少调用一次run_mcp工具验证当前状态
+- ✅ 使用正确的服务器名称：mcp.config.usrlocalmcp.grafana
+- ✅ 选择合适的Grafana工具获取相关数据
+- ✅ 获取到真实的当前监控数据
+- ✅ 基于真实数据制定分析策略
+- ✅ 在策略中明确指出基于哪些真实数据
+
+## 🔥 强制MCP调用模板
+```
+你必须在分析过程中使用以下格式调用工具：
+
+工具名称: run_mcp
+参数: {
+  "server_name": "mcp.config.usrlocalmcp.grafana",
+  "tool_name": "[选择合适的工具]",
+  "args": {[根据分析需要设置参数]}
+}
+
+可用的工具包括：
+- list_datasources: 验证数据源状态
+- list_prometheus_metric_names: 获取当前可用指标
+- list_prometheus_label_values: 获取标签值信息
+- query_prometheus: 执行具体的数据查询
+```
+
+## 输出标准（必须包含MCP调用记录）
+
+**🔥 MCP验证记录:**
+[必须包含实际的run_mcp工具调用和返回的真实数据]
+
+**当前状况分析:**
+- 基于MCP获取的真实数据进行的当前状态评估
+- 已完成的分析内容和通过MCP发现的关键信息
+- 当前分析的优势和基于真实数据发现的不足之处
+
+**下一步策略:**
+- 基于MCP获取的真实数据制定的具体行动计划
+- 优先级排序和基于数据可用性的资源分配策略
+- 预期的分析结果和基于当前数据的价值评估
+
+**执行计划:**
+- 具体的MCP工具调用序列和参数设计
+- 基于真实数据的查询策略和数据获取方案
+- 基于当前数据状态的风险评估和备选方案
+
+**完成度评估:** [0-100]%
+**任务状态:** [CONTINUE/COMPLETED]
+**策略调整:** [基于MCP获取的真实数据进行的策略调整说明]
+
+## ⚠️ 重要提醒
+- 你不能仅仅基于历史记录进行分析
+- 你必须实际执行run_mcp工具调用获取当前数据
+- 你必须基于真实的当前数据制定分析策略
+- 你的所有分析结论都必须有MCP获取的真实数据支撑
+- 如果MCP调用失败，你必须尝试其他工具或调整策略
+25-09-22.21:26:25.766 [pool-2-thread-7 ] ERROR AiAgentController      - AutoAgent执行异常：The template string is not valid.
+java.lang.IllegalArgumentException: The template string is not valid.
+	at org.springframework.ai.template.st.StTemplateRenderer.createST(StTemplateRenderer.java:118)
+	at org.springframework.ai.template.st.StTemplateRenderer.apply(StTemplateRenderer.java:103)
+	at org.springframework.ai.chat.prompt.PromptTemplate.render(PromptTemplate.java:121)
+	at com.ywzai.domain.agent.service.armory.factory.element.RagAnswerAdvisor.before(RagAnswerAdvisor.java:51)
+	at com.ywzai.domain.agent.service.armory.factory.element.RagAnswerAdvisor.adviseCall(RagAnswerAdvisor.java:81)
+	at org.springframework.ai.chat.client.advisor.DefaultAroundAdvisorChain.lambda$nextCall$1(DefaultAroundAdvisorChain.java:110)
+	at io.micrometer.observation.Observation.observe(Observation.java:564)
+	at org.springframework.ai.chat.client.advisor.DefaultAroundAdvisorChain.nextCall(DefaultAroundAdvisorChain.java:110)
+	at org.springframework.ai.chat.client.advisor.api.BaseAdvisor.adviseCall(BaseAdvisor.java:52)
+	at org.springframework.ai.chat.client.advisor.DefaultAroundAdvisorChain.lambda$nextCall$1(DefaultAroundAdvisorChain.java:110)
+	at io.micrometer.observation.Observation.observe(Observation.java:564)
+	at org.springframework.ai.chat.client.advisor.DefaultAroundAdvisorChain.nextCall(DefaultAroundAdvisorChain.java:110)
+	at org.springframework.ai.chat.client.DefaultChatClient$DefaultCallResponseSpec.lambda$doGetObservableChatClientResponse$1(DefaultChatClient.java:469)
+	at io.micrometer.observation.Observation.observe(Observation.java:564)
+	at org.springframework.ai.chat.client.DefaultChatClient$DefaultCallResponseSpec.doGetObservableChatClientResponse(DefaultChatClient.java:467)
+	at org.springframework.ai.chat.client.DefaultChatClient$DefaultCallResponseSpec.doGetObservableChatClientResponse(DefaultChatClient.java:446)
+	at org.springframework.ai.chat.client.DefaultChatClient$DefaultCallResponseSpec.content(DefaultChatClient.java:441)
+	at com.ywzai.domain.agent.service.execute.auto.step.Step1AnalyzerNode.doApply(Step1AnalyzerNode.java:47)
+	at com.ywzai.domain.agent.service.execute.auto.step.Step1AnalyzerNode.doApply(Step1AnalyzerNode.java:21)
+	at cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter.apply(AbstractMultiThreadStrategyRouter.java:31)
+	at cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter.router(AbstractMultiThreadStrategyRouter.java:22)
+	at com.ywzai.domain.agent.service.execute.auto.step.RootNode.doApply(RootNode.java:38)
+	at com.ywzai.domain.agent.service.execute.auto.step.RootNode.doApply(RootNode.java:21)
+	at cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter.apply(AbstractMultiThreadStrategyRouter.java:31)
+	at com.ywzai.domain.agent.service.execute.auto.AutoAgentExecuteStrategy.execute(AutoAgentExecuteStrategy.java:42)
+	at com.ywzai.trigger.http.AiAgentController.lambda$autoAgent$0(AiAgentController.java:61)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: org.stringtemplate.v4.compiler.STException: null
+	at org.stringtemplate.v4.compiler.Compiler.reportMessageAndThrowSTException(Compiler.java:224)
+	at org.stringtemplate.v4.compiler.Compiler.compile(Compiler.java:154)
+	at org.stringtemplate.v4.STGroup.compile(STGroup.java:514)
+	at org.stringtemplate.v4.ST.<init>(ST.java:162)
+	at org.stringtemplate.v4.ST.<init>(ST.java:156)
+	at org.springframework.ai.template.st.StTemplateRenderer.createST(StTemplateRenderer.java:115)
+	... 28 common frames omitted
+25-09-22.21:34:08.668 [SpringApplicationShutdownHook] INFO  GracefulShutdown       - Commencing graceful shutdown. Waiting for active requests to complete
+25-09-22.21:34:09.008 [tomcat-shutdown ] INFO  GracefulShutdown       - Graceful shutdown complete
+25-09-22.21:34:09.013 [SpringApplicationShutdownHook] INFO  HikariDataSource       - MainHikariPool - Shutdown initiated...
+25-09-22.21:34:09.124 [parallel-4      ] WARN  StdioClientTransport   - Process terminated with code 1
+25-09-22.21:34:09.489 [SpringApplicationShutdownHook] INFO  HikariDataSource       - MainHikariPool - Shutdown completed.
+25-09-22.21:34:14.793 [main            ] INFO  Application            - Starting Application using Java 17.0.14 with PID 39268 (D:\java\ideapublic\ywz-ai-agent-station-study\ywz-ai-agent-station-study-app\target\classes started by ywz in D:\java\ideapublic\ywz-ai-agent-station-study)
+25-09-22.21:34:14.797 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+25-09-22.21:34:16.306 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port 8099 (http)
+25-09-22.21:34:16.319 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8099"]
+25-09-22.21:34:16.322 [main            ] INFO  StandardService        - Starting service [Tomcat]
+25-09-22.21:34:16.322 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/10.1.36]
+25-09-22.21:34:16.423 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+25-09-22.21:34:16.424 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1593 ms
+25-09-22.21:34:16.802 [main            ] INFO  PgVectorStore          - Using the vector table name: vector_store_openai. Is empty: false
+25-09-22.21:34:16.808 [main            ] INFO  PgVectorStore          - Initializing PGVectorStore schema for table: vector_store_openai in schema: public
+25-09-22.21:34:16.808 [main            ] INFO  PgVectorStore          - vectorTableValidationsEnabled false
+25-09-22.21:34:17.292 [main            ] INFO  OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+25-09-22.21:34:17.700 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8099"]
+25-09-22.21:34:17.707 [main            ] INFO  TomcatWebServer        - Tomcat started on port 8099 (http) with context path '/'
+25-09-22.21:34:17.714 [main            ] INFO  Application            - Started Application in 3.417 seconds (process running for 4.106)
+25-09-22.21:34:17.719 [pool-2-thread-2 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_model) [5101, 5102, 5103, 5104]
+25-09-22.21:34:17.719 [pool-2-thread-1 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_api) [5101, 5102, 5103, 5104]
+25-09-22.21:34:17.719 [pool-2-thread-3 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_prompt) [5101, 5102, 5103, 5104]
+25-09-22.21:34:17.719 [pool-2-thread-4 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_advisor) [5101, 5102, 5103, 5104]
+25-09-22.21:34:17.720 [pool-2-thread-5 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_tool_mcp) [5101, 5102, 5103, 5104]
+25-09-22.21:34:17.720 [pool-2-thread-6 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client) [5101, 5102, 5103, 5104]
+25-09-22.21:34:17.734 [pool-2-thread-3 ] INFO  HikariDataSource       - MainHikariPool - Starting...
+25-09-22.21:34:18.191 [pool-2-thread-3 ] INFO  HikariPool             - MainHikariPool - Added connection com.mysql.cj.jdbc.ConnectionImpl@26695d28
+25-09-22.21:34:18.192 [pool-2-thread-3 ] INFO  HikariDataSource       - MainHikariPool - Start completed.
+25-09-22.21:34:18.623 [pool-2-thread-2 ] INFO  AgentRepository        - AiClientModelNode: 获取模型信息成功: 2004
+25-09-22.21:34:18.636 [pool-2-thread-5 ] INFO  AgentRepository        - 查询modelId对应的mcpId列表 [5008]
+25-09-22.21:34:18.854 [pool-2-thread-2 ] INFO  AgentRepository        - AiClientModelNode: 获取模型信息成功: 2004
+25-09-22.21:34:18.883 [pool-2-thread-5 ] INFO  AgentRepository        - 查询modelId对应的mcpId列表 [5008]
+25-09-22.21:34:19.007 [pool-2-thread-5 ] INFO  AgentRepository        - 查询modelId对应的mcpId列表 [5008]
+25-09-22.21:34:19.007 [pool-2-thread-2 ] INFO  AgentRepository        - AiClientModelNode: 获取模型信息成功: 2004
+25-09-22.21:34:19.070 [pool-2-thread-5 ] INFO  AgentRepository        - 查询modelId对应的mcpId列表 [5008]
+25-09-22.21:34:19.104 [pool-2-thread-2 ] INFO  AgentRepository        - AiClientModelNode: 获取模型信息成功: 2004
+25-09-22.21:34:19.109 [main            ] INFO  AbstractArmorySupport  - 成功注册Bean: ai_client_api_1001
+25-09-22.21:34:19.553 [pool-6-thread-1 ] INFO  StdioClientTransport   - STDERR Message received: time=2025-09-22T13:34:19.554Z level=INFO msg="Starting Grafana MCP server using stdio transport" version=(devel)
+25-09-22.21:34:19.554 [pool-6-thread-1 ] INFO  StdioClientTransport   - STDERR Message received: time=2025-09-22T13:34:19.554Z level=WARN msg="GRAFANA_API_KEY is deprecated, please use GRAFANA_SERVICE_ACCOUNT_TOKEN instead. See https://grafana.com/docs/grafana/latest/administration/service-accounts/#add-a-token-to-a-service-account-in-grafana for details on creating service account tokens."
+25-09-22.21:34:19.554 [pool-6-thread-1 ] INFO  StdioClientTransport   - STDERR Message received: time=2025-09-22T13:34:19.554Z level=INFO msg="Using Grafana configuration" url=http://localhost:9200 api_key_set=true basic_auth_set=false
+25-09-22.21:34:19.554 [pool-6-thread-1 ] INFO  StdioClientTransport   - STDERR Message received: time=2025-09-22T13:34:19.554Z level=WARN msg="GRAFANA_API_KEY is deprecated, please use GRAFANA_SERVICE_ACCOUNT_TOKEN instead. See https://grafana.com/docs/grafana/latest/administration/service-accounts/#add-a-token-to-a-service-account-in-grafana for details on creating service account tokens."
+25-09-22.21:34:19.554 [pool-6-thread-1 ] INFO  StdioClientTransport   - STDERR Message received: time=2025-09-22T13:34:19.554Z level=WARN msg="GRAFANA_API_KEY is deprecated, please use GRAFANA_SERVICE_ACCOUNT_TOKEN instead. See https://grafana.com/docs/grafana/latest/administration/service-accounts/#add-a-token-to-a-service-account-in-grafana for details on creating service account tokens."
+25-09-22.21:34:19.598 [pool-3-thread-1 ] INFO  McpAsyncClient         - Server response with Protocol: 2024-11-05, Capabilities: ServerCapabilities[completions=null, experimental=null, logging=null, prompts=null, resources=null, tools=ToolCapabilities[listChanged=true]], Info: Implementation[name=mcp-grafana, version=(devel)] and Instructions 
+	This server provides access to your Grafana instance and the surrounding ecosystem.
+
+	Available Capabilities:
+	- Dashboards: Search, retrieve, update, and create dashboards. Extract panel queries and datasource information.
+	- Datasources: List and fetch details for datasources.
+	- Prometheus & Loki: Run PromQL and LogQL queries, retrieve metric/log metadata, and explore label names/values.
+	- Incidents: Search, create, update, and resolve incidents in Grafana Incident.
+	- Sift Investigations: Start and manage Sift investigations, analyze logs/traces, find error patterns, and detect slow requests.
+	- Alerting: List and fetch alert rules and notification contact points.
+	- OnCall: View and manage on-call schedules, shifts, teams, and users.
+	- Admin: List teams and perform administrative tasks.
+	- Pyroscope: Profile applications and fetch profiling data.
+	- Navigation: Generate deeplink URLs for Grafana resources like dashboards, panels, and Explore queries.
+	
+25-09-22.21:34:19.604 [main            ] INFO  AiClientToolMcpNode    - Stdio Mcp Initialized: InitializeResult[protocolVersion=2024-11-05, capabilities=ServerCapabilities[completions=null, experimental=null, logging=null, prompts=null, resources=null, tools=ToolCapabilities[listChanged=true]], serverInfo=Implementation[name=mcp-grafana, version=(devel)], instructions=
+	This server provides access to your Grafana instance and the surrounding ecosystem.
+
+	Available Capabilities:
+	- Dashboards: Search, retrieve, update, and create dashboards. Extract panel queries and datasource information.
+	- Datasources: List and fetch details for datasources.
+	- Prometheus & Loki: Run PromQL and LogQL queries, retrieve metric/log metadata, and explore label names/values.
+	- Incidents: Search, create, update, and resolve incidents in Grafana Incident.
+	- Sift Investigations: Start and manage Sift investigations, analyze logs/traces, find error patterns, and detect slow requests.
+	- Alerting: List and fetch alert rules and notification contact points.
+	- OnCall: View and manage on-call schedules, shifts, teams, and users.
+	- Admin: List teams and perform administrative tasks.
+	- Pyroscope: Profile applications and fetch profiling data.
+	- Navigation: Generate deeplink URLs for Grafana resources like dashboards, panels, and Explore queries.
+	]
+25-09-22.21:34:19.606 [main            ] INFO  AbstractArmorySupport  - 成功注册Bean: ai_client_tool_mcp_5008
+25-09-22.21:34:19.606 [main            ] INFO  AiClientModelNode      - 开始初始化 ai client model
+25-09-22.21:34:19.642 [main            ] INFO  AbstractArmorySupport  - 成功注册Bean: ai_client_model_2004
+25-09-22.21:34:19.652 [main            ] INFO  AbstractArmorySupport  - 成功注册Bean: ai_client_advisor_4001
+25-09-22.21:34:19.731 [main            ] INFO  AbstractArmorySupport  - 成功注册Bean: ai_client_advisor_4003
+25-09-22.21:34:19.738 [main            ] INFO  AbstractArmorySupport  - 成功注册Bean: ai_client_5101
+25-09-22.21:34:19.739 [main            ] INFO  AbstractArmorySupport  - 成功注册Bean: ai_client_5102
+25-09-22.21:34:19.739 [main            ] INFO  AbstractArmorySupport  - 成功注册Bean: ai_client_5103
+25-09-22.21:34:19.739 [main            ] INFO  AbstractArmorySupport  - 成功注册Bean: ai_client_5104
+25-09-22.21:34:19.739 [main            ] INFO  AiAgentAutoConfiguration - 【AI-AGENT】启动成功，已加载客户端：null
+25-09-22.21:34:29.782 [http-nio-8099-exec-1] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
+25-09-22.21:34:29.782 [http-nio-8099-exec-1] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
+25-09-22.21:34:29.783 [http-nio-8099-exec-1] INFO  DispatcherServlet      - Completed initialization in 0 ms
+25-09-22.21:34:29.847 [http-nio-8099-exec-1] INFO  AiAgentController      - AutoAgent流式执行请求开始，请求信息：{"aiAgentId":"5","maxStep":5,"message":"分析 Grafana 普罗米修斯，group-buy-market-app 拼团系统，运行数据。展示出所有接口 TPS、QPS 响应数据。","sessionId":"session_1758548069729_6n59b1804"}
+25-09-22.21:34:29.850 [pool-2-thread-7 ] INFO  AutoAgentExecuteStrategy - 最大步数为:5
+25-09-22.21:34:29.850 [pool-2-thread-7 ] INFO  AutoAgentExecuteStrategy - agentId:5
+25-09-22.21:34:29.850 [pool-2-thread-7 ] INFO  AutoAgentExecuteStrategy - message:分析 Grafana 普罗米修斯，group-buy-market-app 拼团系统，运行数据。展示出所有接口 TPS、QPS 响应数据。
+25-09-22.21:34:29.850 [pool-2-thread-7 ] INFO  AutoAgentExecuteStrategy - sessionId:session_1758548069729_6n59b1804
+25-09-22.21:34:29.970 [pool-2-thread-7 ] INFO  Step1AnalyzerNode      - 
+📊 阶段1: 任务状态分析
+25-09-22.21:34:30.066 [pool-2-thread-7 ] INFO  RagAnswerAdvisor       - RagAnswerAdvisor: userText=## 🚨 重要提醒：数据源UID获取
+**必须首先调用 list_datasources 获取实际的Prometheus数据源UID！**
+**绝对禁止硬编码"Prometheus"作为数据源UID！**
+**所有后续MCP工具调用都必须使用从list_datasources获取的实际UID！**
+
+**用户需求:** 分析 Grafana 普罗米修斯，group-buy-market-app 拼团系统，运行数据。展示出所有接口 TPS、QPS 响应数据。
+**执行步骤:** 第 1 步 (最大 5 步)
+**历史记录:**
+[首次执行]
+**当前任务:** 分析 Grafana 普罗米修斯，group-buy-market-app 拼团系统，运行数据。展示出所有接口 TPS、QPS 响应数据。
+
+# 🚨 强制MCP调用分析器 🚨
+
+## 🔥 强制执行指令 🔥
+**你必须在分析过程中调用MCP工具验证和获取数据！**
+**禁止仅仅基于历史记录进行分析，必须获取最新的真实数据！**
+**每次分析都必须包含至少一次MCP工具调用来验证当前状态！**
+
+## 核心使命
+作为强制MCP调用的动态智能分析专家，你具备根据用户需求和执行历史动态调整分析策略的能力，但更重要的是，你必须通过MCP工具调用获取真实的当前数据来支撑你的分析。
+
+## 🚀 强制MCP调用规则
+
+### 分析阶段必须执行的MCP验证
+**无论分析阶段如何，都必须调用MCP工具验证当前状态：**
+
+#### 🔍 环境状态验证
+```
+工具名称: run_mcp
+服务器: mcp.config.usrlocalmcp.grafana
+工具: list_datasources
+参数: {}
+目的: 验证当前Grafana数据源的可用性和状态
+```
+
+#### 📊 指标状态验证
+```
+工具名称: run_mcp
+服务器: mcp.config.usrlocalmcp.grafana
+工具: list_prometheus_metric_names
+参数: {"datasource": "<从list_datasources获取的实际数据源UID>"}
+目的: 验证当前可用的监控指标
+```
+
+#### 🎯 系统状态验证
+```
+工具名称: run_mcp
+服务器: mcp.config.usrlocalmcp.grafana
+工具: query_prometheus
+参数: {
+  "query": "up",
+  "datasource": "<从list_datasources获取的实际数据源UID>",
+  "start": "now-5m",
+  "end": "now"
+}
+目的: 验证系统当前的运行状态
+```
+
+## 动态分析能力（基于真实数据）
+
+### 1. 强制数据验证分析
+- **需求理解**: 深度理解用户的真实意图，但必须通过MCP调用验证当前状态
+- **历史学习**: 从执行历史中学习，但必须获取最新数据进行对比
+- **进度评估**: 通过MCP调用获取当前真实数据来评估分析进度
+- **策略调整**: 基于MCP获取的真实数据动态调整下一步策略
+
+### 2. 基于真实数据的探索策略
+- **分层探索**: 每一层都必须通过MCP调用获取真实数据
+- **假设验证**: 通过MCP工具调用验证所有假设
+- **问题驱动**: 基于MCP获取的真实数据发现和分析问题
+- **机会识别**: 通过真实数据识别分析机会和潜在价值点
+
+### 3. 数据驱动的决策机制
+- **优先级动态调整**: 基于MCP获取的真实数据调整分析优先级
+- **路径优化**: 根据真实数据选择最有效的分析路径
+- **深度控制**: 基于数据质量和可用性控制分析深度
+- **质量平衡**: 在数据获取成本和分析价值之间找到平衡
+
+## 🎯 强制MCP调用分析框架
+
+### 情境感知分析（必须包含MCP验证）
+```
+分析维度评估:
+- 如果是首次执行: 立即调用list_datasources验证环境，然后进行环境发现
+- 如果有执行历史: 立即调用相关MCP工具验证历史数据的当前状态
+- 如果接近完成: 立即调用MCP工具验证关键发现的当前状态
+- 如果遇到阻碍: 立即调用MCP工具获取最新数据，寻找新的分析路径
+```
+
+### 强制数据验证的深入策略
+```
+第一层: 环境概览 → 必须调用list_datasources了解当前环境
+第二层: 关键指标 → 必须调用list_prometheus_metric_names获取当前指标
+第三层: 深度分析 → 必须调用query_prometheus获取具体数据
+第四层: 综合评估 → 必须调用多个MCP工具交叉验证结论
+```
+
+### 🔧 强制工具选择策略
+```
+工具调用强制逻辑:
+无论什么阶段，都必须:
+1. 立即调用run_mcp工具
+2. 使用mcp.config.usrlocalmcp.grafana服务器
+3. 选择合适的Grafana工具
+4. 获取当前真实的监控数据
+5. 基于真实数据进行分析和策略制定
+```
+
+## 智能分析逻辑（强制MCP验证）
+
+### 基于真实数据的策略调整
+```
+历史分析逻辑（必须包含MCP验证）:
+IF 历史记录为空:
+    → 立即调用list_datasources和list_prometheus_metric_names建立基础认知
+ELSE IF 已发现数据源但需要验证当前状态:
+    → 立即调用list_datasources验证数据源状态，然后进行指标探索
+ELSE IF 已有指标但需要获取最新数据:
+    → 立即调用query_prometheus获取最新的关键数据
+ELSE IF 已有数据但需要验证当前状态:
+    → 立即调用相关MCP工具验证数据的时效性和准确性
+ELSE:
+    → 立即调用综合查询验证最终结论的准确性
+```
+
+### 基于真实数据的问题驱动分析
+- **性能问题**: 立即调用query_prometheus获取当前性能数据进行分析
+- **资源问题**: 立即调用相关查询获取当前资源使用情况
+- **业务问题**: 立即调用业务指标查询获取当前业务状态
+- **系统问题**: 立即调用系统健康检查获取当前系统状态
+
+## ⚡ 强制执行检查清单
+在每次分析中，你必须确保：
+- ✅ 至少调用一次run_mcp工具验证当前状态
+- ✅ 使用正确的服务器名称：mcp.config.usrlocalmcp.grafana
+- ✅ 选择合适的Grafana工具获取相关数据
+- ✅ 获取到真实的当前监控数据
+- ✅ 基于真实数据制定分析策略
+- ✅ 在策略中明确指出基于哪些真实数据
+
+## 🔥 强制MCP调用模板
+```
+你必须在分析过程中使用以下格式调用工具：
+
+工具名称: run_mcp
+参数: {
+  "server_name": "mcp.config.usrlocalmcp.grafana",
+  "tool_name": "[选择合适的工具]",
+  "args": {[根据分析需要设置参数]}
+}
+
+可用的工具包括：
+- list_datasources: 验证数据源状态
+- list_prometheus_metric_names: 获取当前可用指标
+- list_prometheus_label_values: 获取标签值信息
+- query_prometheus: 执行具体的数据查询
+```
+
+## 输出标准（必须包含MCP调用记录）
+
+**🔥 MCP验证记录:**
+[必须包含实际的run_mcp工具调用和返回的真实数据]
+
+**当前状况分析:**
+- 基于MCP获取的真实数据进行的当前状态评估
+- 已完成的分析内容和通过MCP发现的关键信息
+- 当前分析的优势和基于真实数据发现的不足之处
+
+**下一步策略:**
+- 基于MCP获取的真实数据制定的具体行动计划
+- 优先级排序和基于数据可用性的资源分配策略
+- 预期的分析结果和基于当前数据的价值评估
+
+**执行计划:**
+- 具体的MCP工具调用序列和参数设计
+- 基于真实数据的查询策略和数据获取方案
+- 基于当前数据状态的风险评估和备选方案
+
+**完成度评估:** [0-100]%
+**任务状态:** [CONTINUE/COMPLETED]
+**策略调整:** [基于MCP获取的真实数据进行的策略调整说明]
+
+## ⚠️ 重要提醒
+- 你不能仅仅基于历史记录进行分析
+- 你必须实际执行run_mcp工具调用获取当前数据
+- 你必须基于真实的当前数据制定分析策略
+- 你的所有分析结论都必须有MCP获取的真实数据支撑
+- 如果MCP调用失败，你必须尝试其他工具或调整策略
+25-09-22.21:34:30.987 [pool-2-thread-7 ] INFO  HikariDataSource       - PgVectorHikariPool - Starting...
+25-09-22.21:34:31.440 [pool-2-thread-7 ] INFO  HikariPool             - PgVectorHikariPool - Added connection org.postgresql.jdbc.PgConnection@4f2670
+25-09-22.21:34:31.440 [pool-2-thread-7 ] INFO  HikariDataSource       - PgVectorHikariPool - Start completed.
+25-09-22.21:34:35.667 [pool-2-thread-7 ] INFO  Step1AnalyzerNode      - 
+📊 === 第 1 步分析结果 ===
+25-09-22.21:34:35.668 [pool-2-thread-7 ] INFO  Step2PrecisionExecutorNode - 
+⚡ 阶段2: 精准任务执行
+25-09-22.21:34:35.668 [pool-2-thread-7 ] WARN  Step2PrecisionExecutorNode - ⚠️ 分析结果为空，使用默认执行策略
+25-09-22.21:34:35.670 [pool-2-thread-7 ] INFO  RagAnswerAdvisor       - RagAnswerAdvisor: userText=## 🚨 重要提醒：数据源UID获取
+**必须首先调用 list_datasources 获取实际的Prometheus数据源UID！**
+**绝对禁止硬编码"Prometheus"作为数据源UID！**
+**所有后续MCP工具调用都必须使用从list_datasources获取的实际UID！**
+
+**用户需求:** 分析 Grafana 普罗米修斯，group-buy-market-app 拼团系统，运行数据。展示出所有接口 TPS、QPS 响应数据。
+**分析策略:** 执行当前任务步骤
+
+# 动态智能执行引擎
+
+## 🚨 强制执行指令 🚨
+**你必须立即执行MCP工具调用，获取真实的监控数据！**
+**禁止仅仅描述或计划，必须实际调用工具！**
+**每次执行都必须包含至少一次MCP工具调用！**
+
+## 核心能力
+作为动态智能执行引擎，你具备：
+1. **强制MCP调用**: 每次执行必须调用MCP工具获取真实数据
+2. **智能工具调用**: 基于当前需求和发现智能选择最优工具组合
+3. **渐进式数据获取**: 根据分析进展逐步深入获取所需数据
+4. **质量驱动执行**: 以数据质量和分析价值为导向的执行策略
+
+## 🔥 强制MCP调用规则 🔥
+
+### 必须执行的MCP工具调用序列
+**第一步：必须调用数据源发现**
+```
+工具名称: run_mcp
+服务器: mcp.config.usrlocalmcp.grafana
+工具: list_datasources
+参数: {}
+目的: 发现可用的Prometheus数据源
+```
+
+**第二步：必须调用指标探索**
+```
+工具名称: run_mcp
+服务器: mcp.config.usrlocalmcp.grafana
+工具: list_prometheus_metric_names
+参数: {"datasource": "<从list_datasources获取的实际数据源UID>"}
+目的: 获取所有可用的监控指标
+```
+
+**第三步：必须调用数据查询**
+```
+工具名称: run_mcp
+服务器: mcp.config.usrlocalmcp.grafana
+工具: query_prometheus
+参数: {
+  "query": "up",
+  "datasource": "<从list_datasources获取的实际数据源UID>",
+  "start": "now-1h",
+  "end": "now"
+}
+目的: 验证系统连通性并获取基础数据
+```
+
+## 动态执行原则
+- **强制调用**: 每次执行必须包含MCP工具调用
+- **数据优先**: 优先获取真实的监控数据
+- **完整性**: 确保获取分析所需的关键数据和信息
+- **智能性**: 基于数据特征和模式自动优化执行策略
+
+## 🎯 强制执行框架
+
+### 执行策略评估
+```
+执行策略分析:
+- 如果是探索阶段: 立即调用list_datasources和list_prometheus_metric_names
+- 如果是分析阶段: 立即调用query_prometheus获取关键数据
+- 如果是验证阶段: 立即调用多个查询进行交叉验证
+- 如果是优化阶段: 立即调用精细化查询获取详细数据
+```
+
+### 🔧 强制工具调用策略
+```
+工具调用强制逻辑:
+无论什么情况，都必须:
+1. 立即调用run_mcp工具
+2. 使用mcp.config.usrlocalmcp.grafana服务器
+3. 选择合适的Grafana工具
+4. 获取真实的监控数据
+5. 基于真实数据进行分析
+```
+
+### 渐进式数据获取
+- **第一轮**: 强制获取基础环境和指标信息
+- **第二轮**: 强制获取关键性能数据
+- **第三轮**: 强制深入分析特定问题和异常
+- **第四轮**: 强制补充和验证关键发现
+
+## 🚀 MCP工具调用执行指令
+
+### 强制执行步骤：
+1. **立即评估需求**: 基于分析策略确定当前最需要的数据
+2. **立即选择工具**: 选择最适合当前阶段的MCP工具
+3. **立即执行调用**: 实际调用run_mcp工具获取数据
+4. **立即验证数据**: 检查获取数据的完整性和准确性
+5. **立即调整策略**: 基于获取结果调整下一步执行计划
+
+### 🔥 强制工具调用模板：
+```
+你必须使用以下格式调用工具：
+
+工具名称: run_mcp
+参数: {
+  "server_name": "mcp.config.usrlocalmcp.grafana",
+  "tool_name": "[选择合适的工具]",
+  "args": {[根据需要设置参数]}
+}
+
+可用的工具包括：
+- list_datasources: 获取数据源列表
+- list_prometheus_metric_names: 获取指标名称
+- list_prometheus_label_values: 获取标签值
+- query_prometheus: 执行Prometheus查询
+```
+
+## ⚡ 强制执行检查清单
+在每次执行中，你必须确保：
+- ✅ 至少调用一次run_mcp工具
+- ✅ 使用正确的服务器名称：mcp.config.usrlocalmcp.grafana
+- ✅ 选择合适的Grafana工具
+- ✅ 获取到真实的监控数据
+- ✅ 基于真实数据进行分析
+- ✅ 提供具体的数据结果
+
+## 输出格式
+**执行目标:**
+[基于分析策略的本轮具体执行目标]
+
+**🔥 MCP工具调用记录:**
+[必须包含实际的run_mcp工具调用和返回的真实数据]
+
+**执行结果:**
+[基于真实MCP数据的分析结果和关键发现]
+
+**数据验证:**
+[对获取的真实数据进行验证和质量评估]
+
+**下一步建议:**
+[基于真实数据结果的后续执行建议]
+
+## ⚠️ 重要提醒
+- 你不能仅仅描述要调用什么工具
+- 你必须实际执行run_mcp工具调用
+- 你必须获取真实的监控数据
+- 你必须基于真实数据进行分析
+- 如果MCP调用失败，你必须尝试其他工具或方法
+25-09-22.21:34:39.813 [pool-2-thread-7 ] INFO  Step2PrecisionExecutorNode - 
+⚡ === 第 1 步执行结果 ===
+25-09-22.21:34:39.814 [pool-2-thread-7 ] WARN  Step3QualitySupervisorNode - ⚠️ 执行结果为空，跳过质量监督
+25-09-22.21:34:39.814 [pool-2-thread-7 ] INFO  AutoAgentExecuteStrategy - 测试结果:质量监督跳过
+25-09-22.21:37:38.020 [SpringApplicationShutdownHook] INFO  GracefulShutdown       - Commencing graceful shutdown. Waiting for active requests to complete
+25-09-22.21:37:38.382 [tomcat-shutdown ] INFO  GracefulShutdown       - Graceful shutdown complete
+25-09-22.21:37:38.387 [SpringApplicationShutdownHook] INFO  HikariDataSource       - PgVectorHikariPool - Shutdown initiated...
+25-09-22.21:37:38.390 [SpringApplicationShutdownHook] INFO  HikariDataSource       - PgVectorHikariPool - Shutdown completed.
+25-09-22.21:37:38.390 [SpringApplicationShutdownHook] INFO  HikariDataSource       - MainHikariPool - Shutdown initiated...
+25-09-22.21:37:38.500 [parallel-4      ] WARN  StdioClientTransport   - Process terminated with code 1
+25-09-22.21:37:38.859 [SpringApplicationShutdownHook] INFO  HikariDataSource       - MainHikariPool - Shutdown completed.
+25-09-22.21:37:44.901 [main            ] INFO  Application            - Starting Application using Java 17.0.14 with PID 36728 (D:\java\ideapublic\ywz-ai-agent-station-study\ywz-ai-agent-station-study-app\target\classes started by ywz in D:\java\ideapublic\ywz-ai-agent-station-study)
+25-09-22.21:37:44.902 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+25-09-22.21:37:46.430 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port 8099 (http)
+25-09-22.21:37:46.445 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8099"]
+25-09-22.21:37:46.447 [main            ] INFO  StandardService        - Starting service [Tomcat]
+25-09-22.21:37:46.448 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/10.1.36]
+25-09-22.21:37:46.547 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+25-09-22.21:37:46.547 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1611 ms
+25-09-22.21:37:46.989 [main            ] INFO  PgVectorStore          - Using the vector table name: vector_store_openai. Is empty: false
+25-09-22.21:37:47.006 [main            ] INFO  PgVectorStore          - Initializing PGVectorStore schema for table: vector_store_openai in schema: public
+25-09-22.21:37:47.006 [main            ] INFO  PgVectorStore          - vectorTableValidationsEnabled false
+25-09-22.21:37:47.495 [main            ] INFO  OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+25-09-22.21:37:47.934 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8099"]
+25-09-22.21:37:47.943 [main            ] INFO  TomcatWebServer        - Tomcat started on port 8099 (http) with context path '/'
+25-09-22.21:37:47.949 [main            ] INFO  Application            - Started Application in 3.568 seconds (process running for 4.627)
+25-09-22.21:37:47.955 [pool-2-thread-2 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_model) [5101, 5102, 5103, 5104]
+25-09-22.21:37:47.955 [pool-2-thread-1 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_api) [5101, 5102, 5103, 5104]
+25-09-22.21:37:47.955 [pool-2-thread-3 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_prompt) [5101, 5102, 5103, 5104]
+25-09-22.21:37:47.955 [pool-2-thread-4 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_advisor) [5101, 5102, 5103, 5104]
+25-09-22.21:37:47.956 [pool-2-thread-5 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_tool_mcp) [5101, 5102, 5103, 5104]
+25-09-22.21:37:47.956 [pool-2-thread-6 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client) [5101, 5102, 5103, 5104]
+25-09-22.21:37:47.972 [pool-2-thread-3 ] INFO  HikariDataSource       - MainHikariPool - Starting...
+25-09-22.21:37:48.465 [pool-2-thread-3 ] INFO  HikariPool             - MainHikariPool - Added connection com.mysql.cj.jdbc.ConnectionImpl@167e36fc
+25-09-22.21:37:48.466 [pool-2-thread-3 ] INFO  HikariDataSource       - MainHikariPool - Start completed.
+25-09-22.21:37:48.802 [pool-2-thread-5 ] INFO  AgentRepository        - 查询modelId对应的mcpId列表 [5008]
+25-09-22.21:37:48.904 [pool-2-thread-2 ] INFO  AgentRepository        - AiClientModelNode: 获取模型信息成功: 2004
+25-09-22.21:37:49.126 [pool-2-thread-2 ] INFO  AgentRepository        - AiClientModelNode: 获取模型信息成功: 2004
+25-09-22.21:37:49.190 [pool-2-thread-5 ] INFO  AgentRepository        - 查询modelId对应的mcpId列表 [5008]
+25-09-22.21:37:49.288 [pool-2-thread-5 ] INFO  AgentRepository        - 查询modelId对应的mcpId列表 [5008]
+25-09-22.21:37:49.317 [pool-2-thread-2 ] INFO  AgentRepository        - AiClientModelNode: 获取模型信息成功: 2004
+25-09-22.21:37:49.381 [pool-2-thread-5 ] INFO  AgentRepository        - 查询modelId对应的mcpId列表 [5008]
+25-09-22.21:37:49.414 [pool-2-thread-2 ] INFO  AgentRepository        - AiClientModelNode: 获取模型信息成功: 2004
+25-09-22.21:37:49.419 [main            ] INFO  AbstractArmorySupport  - 成功注册Bean: ai_client_api_1001
+25-09-22.21:37:49.840 [pool-6-thread-1 ] INFO  StdioClientTransport   - STDERR Message received: time=2025-09-22T13:37:49.839Z level=INFO msg="Starting Grafana MCP server using stdio transport" version=(devel)
+25-09-22.21:37:49.840 [pool-6-thread-1 ] INFO  StdioClientTransport   - STDERR Message received: time=2025-09-22T13:37:49.839Z level=WARN msg="GRAFANA_API_KEY is deprecated, please use GRAFANA_SERVICE_ACCOUNT_TOKEN instead. See https://grafana.com/docs/grafana/latest/administration/service-accounts/#add-a-token-to-a-service-account-in-grafana for details on creating service account tokens."
+25-09-22.21:37:49.840 [pool-6-thread-1 ] INFO  StdioClientTransport   - STDERR Message received: time=2025-09-22T13:37:49.839Z level=INFO msg="Using Grafana configuration" url=http://localhost:9200 api_key_set=true basic_auth_set=false
+25-09-22.21:37:49.840 [pool-6-thread-1 ] INFO  StdioClientTransport   - STDERR Message received: time=2025-09-22T13:37:49.839Z level=WARN msg="GRAFANA_API_KEY is deprecated, please use GRAFANA_SERVICE_ACCOUNT_TOKEN instead. See https://grafana.com/docs/grafana/latest/administration/service-accounts/#add-a-token-to-a-service-account-in-grafana for details on creating service account tokens."
+25-09-22.21:37:49.840 [pool-6-thread-1 ] INFO  StdioClientTransport   - STDERR Message received: time=2025-09-22T13:37:49.839Z level=WARN msg="GRAFANA_API_KEY is deprecated, please use GRAFANA_SERVICE_ACCOUNT_TOKEN instead. See https://grafana.com/docs/grafana/latest/administration/service-accounts/#add-a-token-to-a-service-account-in-grafana for details on creating service account tokens."
+25-09-22.21:37:49.887 [pool-3-thread-1 ] INFO  McpAsyncClient         - Server response with Protocol: 2024-11-05, Capabilities: ServerCapabilities[completions=null, experimental=null, logging=null, prompts=null, resources=null, tools=ToolCapabilities[listChanged=true]], Info: Implementation[name=mcp-grafana, version=(devel)] and Instructions 
+	This server provides access to your Grafana instance and the surrounding ecosystem.
+
+	Available Capabilities:
+	- Dashboards: Search, retrieve, update, and create dashboards. Extract panel queries and datasource information.
+	- Datasources: List and fetch details for datasources.
+	- Prometheus & Loki: Run PromQL and LogQL queries, retrieve metric/log metadata, and explore label names/values.
+	- Incidents: Search, create, update, and resolve incidents in Grafana Incident.
+	- Sift Investigations: Start and manage Sift investigations, analyze logs/traces, find error patterns, and detect slow requests.
+	- Alerting: List and fetch alert rules and notification contact points.
+	- OnCall: View and manage on-call schedules, shifts, teams, and users.
+	- Admin: List teams and perform administrative tasks.
+	- Pyroscope: Profile applications and fetch profiling data.
+	- Navigation: Generate deeplink URLs for Grafana resources like dashboards, panels, and Explore queries.
+	
+25-09-22.21:37:49.893 [main            ] INFO  AiClientToolMcpNode    - Stdio Mcp Initialized: InitializeResult[protocolVersion=2024-11-05, capabilities=ServerCapabilities[completions=null, experimental=null, logging=null, prompts=null, resources=null, tools=ToolCapabilities[listChanged=true]], serverInfo=Implementation[name=mcp-grafana, version=(devel)], instructions=
+	This server provides access to your Grafana instance and the surrounding ecosystem.
+
+	Available Capabilities:
+	- Dashboards: Search, retrieve, update, and create dashboards. Extract panel queries and datasource information.
+	- Datasources: List and fetch details for datasources.
+	- Prometheus & Loki: Run PromQL and LogQL queries, retrieve metric/log metadata, and explore label names/values.
+	- Incidents: Search, create, update, and resolve incidents in Grafana Incident.
+	- Sift Investigations: Start and manage Sift investigations, analyze logs/traces, find error patterns, and detect slow requests.
+	- Alerting: List and fetch alert rules and notification contact points.
+	- OnCall: View and manage on-call schedules, shifts, teams, and users.
+	- Admin: List teams and perform administrative tasks.
+	- Pyroscope: Profile applications and fetch profiling data.
+	- Navigation: Generate deeplink URLs for Grafana resources like dashboards, panels, and Explore queries.
+	]
+25-09-22.21:37:49.895 [main            ] INFO  AbstractArmorySupport  - 成功注册Bean: ai_client_tool_mcp_5008
+25-09-22.21:37:49.895 [main            ] INFO  AiClientModelNode      - 开始初始化 ai client model
+25-09-22.21:37:49.933 [main            ] INFO  AbstractArmorySupport  - 成功注册Bean: ai_client_model_2004
+25-09-22.21:37:49.943 [main            ] INFO  AbstractArmorySupport  - 成功注册Bean: ai_client_advisor_4001
+25-09-22.21:37:50.030 [main            ] INFO  AbstractArmorySupport  - 成功注册Bean: ai_client_advisor_4003
+25-09-22.21:37:50.038 [main            ] INFO  AbstractArmorySupport  - 成功注册Bean: ai_client_5101
+25-09-22.21:37:50.039 [main            ] INFO  AbstractArmorySupport  - 成功注册Bean: ai_client_5102
+25-09-22.21:37:50.039 [main            ] INFO  AbstractArmorySupport  - 成功注册Bean: ai_client_5103
+25-09-22.21:37:50.039 [main            ] INFO  AbstractArmorySupport  - 成功注册Bean: ai_client_5104
+25-09-22.21:37:50.039 [main            ] INFO  AiAgentAutoConfiguration - 【AI-AGENT】启动成功，已加载客户端：null
+25-09-22.21:39:19.112 [http-nio-8099-exec-1] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
+25-09-22.21:39:19.112 [http-nio-8099-exec-1] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
+25-09-22.21:39:19.113 [http-nio-8099-exec-1] INFO  DispatcherServlet      - Completed initialization in 1 ms
+25-09-22.21:39:19.204 [http-nio-8099-exec-1] INFO  AiAgentController      - AutoAgent流式执行请求开始，请求信息：{"aiAgentId":"5","maxStep":5,"message":"分析 Grafana 普罗米修斯，group-buy-market-app 拼团系统，运行数据。展示出所有接口 TPS、QPS 响应数据。","sessionId":"session_1758548359014_piigao172"}
+25-09-22.21:39:19.209 [pool-2-thread-7 ] INFO  AutoAgentExecuteStrategy - 最大步数为:5
+25-09-22.21:39:19.209 [pool-2-thread-7 ] INFO  AutoAgentExecuteStrategy - agentId:5
+25-09-22.21:39:19.209 [pool-2-thread-7 ] INFO  AutoAgentExecuteStrategy - message:分析 Grafana 普罗米修斯，group-buy-market-app 拼团系统，运行数据。展示出所有接口 TPS、QPS 响应数据。
+25-09-22.21:39:19.209 [pool-2-thread-7 ] INFO  AutoAgentExecuteStrategy - sessionId:session_1758548359014_piigao172
+25-09-22.21:39:19.321 [pool-2-thread-7 ] INFO  Step1AnalyzerNode      - 
+📊 阶段1: 任务状态分析
+25-09-22.21:39:19.495 [pool-2-thread-7 ] INFO  RagAnswerAdvisor       - RagAnswerAdvisor: userText=## 🚨 重要提醒：数据源UID获取
+**必须首先调用 list_datasources 获取实际的Prometheus数据源UID！**
+**绝对禁止硬编码"Prometheus"作为数据源UID！**
+**所有后续MCP工具调用都必须使用从list_datasources获取的实际UID！**
+
+**用户需求:** 分析 Grafana 普罗米修斯，group-buy-market-app 拼团系统，运行数据。展示出所有接口 TPS、QPS 响应数据。
+**执行步骤:** 第 1 步 (最大 5 步)
+**历史记录:**
+[首次执行]
+**当前任务:** 分析 Grafana 普罗米修斯，group-buy-market-app 拼团系统，运行数据。展示出所有接口 TPS、QPS 响应数据。
+
+# 🚨 强制MCP调用分析器 🚨
+
+## 🔥 强制执行指令 🔥
+**你必须在分析过程中调用MCP工具验证和获取数据！**
+**禁止仅仅基于历史记录进行分析，必须获取最新的真实数据！**
+**每次分析都必须包含至少一次MCP工具调用来验证当前状态！**
+
+## 核心使命
+作为强制MCP调用的动态智能分析专家，你具备根据用户需求和执行历史动态调整分析策略的能力，但更重要的是，你必须通过MCP工具调用获取真实的当前数据来支撑你的分析。
+
+## 🚀 强制MCP调用规则
+
+### 分析阶段必须执行的MCP验证
+**无论分析阶段如何，都必须调用MCP工具验证当前状态：**
+
+#### 🔍 环境状态验证
+```
+工具名称: run_mcp
+服务器: mcp.config.usrlocalmcp.grafana
+工具: list_datasources
+参数: {}
+目的: 验证当前Grafana数据源的可用性和状态
+```
+
+#### 📊 指标状态验证
+```
+工具名称: run_mcp
+服务器: mcp.config.usrlocalmcp.grafana
+工具: list_prometheus_metric_names
+参数: {"datasource": "<从list_datasources获取的实际数据源UID>"}
+目的: 验证当前可用的监控指标
+```
+
+#### 🎯 系统状态验证
+```
+工具名称: run_mcp
+服务器: mcp.config.usrlocalmcp.grafana
+工具: query_prometheus
+参数: {
+  "query": "up",
+  "datasource": "<从list_datasources获取的实际数据源UID>",
+  "start": "now-5m",
+  "end": "now"
+}
+目的: 验证系统当前的运行状态
+```
+
+## 动态分析能力（基于真实数据）
+
+### 1. 强制数据验证分析
+- **需求理解**: 深度理解用户的真实意图，但必须通过MCP调用验证当前状态
+- **历史学习**: 从执行历史中学习，但必须获取最新数据进行对比
+- **进度评估**: 通过MCP调用获取当前真实数据来评估分析进度
+- **策略调整**: 基于MCP获取的真实数据动态调整下一步策略
+
+### 2. 基于真实数据的探索策略
+- **分层探索**: 每一层都必须通过MCP调用获取真实数据
+- **假设验证**: 通过MCP工具调用验证所有假设
+- **问题驱动**: 基于MCP获取的真实数据发现和分析问题
+- **机会识别**: 通过真实数据识别分析机会和潜在价值点
+
+### 3. 数据驱动的决策机制
+- **优先级动态调整**: 基于MCP获取的真实数据调整分析优先级
+- **路径优化**: 根据真实数据选择最有效的分析路径
+- **深度控制**: 基于数据质量和可用性控制分析深度
+- **质量平衡**: 在数据获取成本和分析价值之间找到平衡
+
+## 🎯 强制MCP调用分析框架
+
+### 情境感知分析（必须包含MCP验证）
+```
+分析维度评估:
+- 如果是首次执行: 立即调用list_datasources验证环境，然后进行环境发现
+- 如果有执行历史: 立即调用相关MCP工具验证历史数据的当前状态
+- 如果接近完成: 立即调用MCP工具验证关键发现的当前状态
+- 如果遇到阻碍: 立即调用MCP工具获取最新数据，寻找新的分析路径
+```
+
+### 强制数据验证的深入策略
+```
+第一层: 环境概览 → 必须调用list_datasources了解当前环境
+第二层: 关键指标 → 必须调用list_prometheus_metric_names获取当前指标
+第三层: 深度分析 → 必须调用query_prometheus获取具体数据
+第四层: 综合评估 → 必须调用多个MCP工具交叉验证结论
+```
+
+### 🔧 强制工具选择策略
+```
+工具调用强制逻辑:
+无论什么阶段，都必须:
+1. 立即调用run_mcp工具
+2. 使用mcp.config.usrlocalmcp.grafana服务器
+3. 选择合适的Grafana工具
+4. 获取当前真实的监控数据
+5. 基于真实数据进行分析和策略制定
+```
+
+## 智能分析逻辑（强制MCP验证）
+
+### 基于真实数据的策略调整
+```
+历史分析逻辑（必须包含MCP验证）:
+IF 历史记录为空:
+    → 立即调用list_datasources和list_prometheus_metric_names建立基础认知
+ELSE IF 已发现数据源但需要验证当前状态:
+    → 立即调用list_datasources验证数据源状态，然后进行指标探索
+ELSE IF 已有指标但需要获取最新数据:
+    → 立即调用query_prometheus获取最新的关键数据
+ELSE IF 已有数据但需要验证当前状态:
+    → 立即调用相关MCP工具验证数据的时效性和准确性
+ELSE:
+    → 立即调用综合查询验证最终结论的准确性
+```
+
+### 基于真实数据的问题驱动分析
+- **性能问题**: 立即调用query_prometheus获取当前性能数据进行分析
+- **资源问题**: 立即调用相关查询获取当前资源使用情况
+- **业务问题**: 立即调用业务指标查询获取当前业务状态
+- **系统问题**: 立即调用系统健康检查获取当前系统状态
+
+## ⚡ 强制执行检查清单
+在每次分析中，你必须确保：
+- ✅ 至少调用一次run_mcp工具验证当前状态
+- ✅ 使用正确的服务器名称：mcp.config.usrlocalmcp.grafana
+- ✅ 选择合适的Grafana工具获取相关数据
+- ✅ 获取到真实的当前监控数据
+- ✅ 基于真实数据制定分析策略
+- ✅ 在策略中明确指出基于哪些真实数据
+
+## 🔥 强制MCP调用模板
+```
+你必须在分析过程中使用以下格式调用工具：
+
+工具名称: run_mcp
+参数: {
+  "server_name": "mcp.config.usrlocalmcp.grafana",
+  "tool_name": "[选择合适的工具]",
+  "args": {[根据分析需要设置参数]}
+}
+
+可用的工具包括：
+- list_datasources: 验证数据源状态
+- list_prometheus_metric_names: 获取当前可用指标
+- list_prometheus_label_values: 获取标签值信息
+- query_prometheus: 执行具体的数据查询
+```
+
+## 输出标准（必须包含MCP调用记录）
+
+**🔥 MCP验证记录:**
+[必须包含实际的run_mcp工具调用和返回的真实数据]
+
+**当前状况分析:**
+- 基于MCP获取的真实数据进行的当前状态评估
+- 已完成的分析内容和通过MCP发现的关键信息
+- 当前分析的优势和基于真实数据发现的不足之处
+
+**下一步策略:**
+- 基于MCP获取的真实数据制定的具体行动计划
+- 优先级排序和基于数据可用性的资源分配策略
+- 预期的分析结果和基于当前数据的价值评估
+
+**执行计划:**
+- 具体的MCP工具调用序列和参数设计
+- 基于真实数据的查询策略和数据获取方案
+- 基于当前数据状态的风险评估和备选方案
+
+**完成度评估:** [0-100]%
+**任务状态:** [CONTINUE/COMPLETED]
+**策略调整:** [基于MCP获取的真实数据进行的策略调整说明]
+
+## ⚠️ 重要提醒
+- 你不能仅仅基于历史记录进行分析
+- 你必须实际执行run_mcp工具调用获取当前数据
+- 你必须基于真实的当前数据制定分析策略
+- 你的所有分析结论都必须有MCP获取的真实数据支撑
+- 如果MCP调用失败，你必须尝试其他工具或调整策略
+25-09-22.21:39:20.382 [pool-2-thread-7 ] INFO  HikariDataSource       - PgVectorHikariPool - Starting...
+25-09-22.21:39:20.922 [pool-2-thread-7 ] INFO  HikariPool             - PgVectorHikariPool - Added connection org.postgresql.jdbc.PgConnection@7a310670
+25-09-22.21:39:20.922 [pool-2-thread-7 ] INFO  HikariDataSource       - PgVectorHikariPool - Start completed.
+25-09-22.21:39:26.261 [pool-2-thread-7 ] INFO  Step1AnalyzerNode      - 
+📊 === 第 1 步分析结果 ===
+25-09-22.21:39:26.261 [pool-2-thread-7 ] INFO  Step2PrecisionExecutorNode - 
+⚡ 阶段2: 精准任务执行
+25-09-22.21:39:26.261 [pool-2-thread-7 ] WARN  Step2PrecisionExecutorNode - ⚠️ 分析结果为空，使用默认执行策略
+25-09-22.21:40:25.716 [MainHikariPool housekeeper] WARN  HikariPool             - MainHikariPool - Thread starvation or clock leap detected (housekeeper delta=1m7s112ms556µs).
+25-09-22.21:40:25.716 [PgVectorHikariPool housekeeper] WARN  HikariPool             - PgVectorHikariPool - Thread starvation or clock leap detected (housekeeper delta=1m4s683ms758µs100ns).
+25-09-22.21:40:27.689 [pool-2-thread-7 ] INFO  RagAnswerAdvisor       - RagAnswerAdvisor: userText=## 🚨 重要提醒：数据源UID获取
+**必须首先调用 list_datasources 获取实际的Prometheus数据源UID！**
+**绝对禁止硬编码"Prometheus"作为数据源UID！**
+**所有后续MCP工具调用都必须使用从list_datasources获取的实际UID！**
+
+**用户需求:** 分析 Grafana 普罗米修斯，group-buy-market-app 拼团系统，运行数据。展示出所有接口 TPS、QPS 响应数据。
+**分析策略:** 执行当前任务步骤
+
+# 动态智能执行引擎
+
+## 🚨 强制执行指令 🚨
+**你必须立即执行MCP工具调用，获取真实的监控数据！**
+**禁止仅仅描述或计划，必须实际调用工具！**
+**每次执行都必须包含至少一次MCP工具调用！**
+
+## 核心能力
+作为动态智能执行引擎，你具备：
+1. **强制MCP调用**: 每次执行必须调用MCP工具获取真实数据
+2. **智能工具调用**: 基于当前需求和发现智能选择最优工具组合
+3. **渐进式数据获取**: 根据分析进展逐步深入获取所需数据
+4. **质量驱动执行**: 以数据质量和分析价值为导向的执行策略
+
+## 🔥 强制MCP调用规则 🔥
+
+### 必须执行的MCP工具调用序列
+**第一步：必须调用数据源发现**
+```
+工具名称: run_mcp
+服务器: mcp.config.usrlocalmcp.grafana
+工具: list_datasources
+参数: {}
+目的: 发现可用的Prometheus数据源
+```
+
+**第二步：必须调用指标探索**
+```
+工具名称: run_mcp
+服务器: mcp.config.usrlocalmcp.grafana
+工具: list_prometheus_metric_names
+参数: {"datasource": "<从list_datasources获取的实际数据源UID>"}
+目的: 获取所有可用的监控指标
+```
+
+**第三步：必须调用数据查询**
+```
+工具名称: run_mcp
+服务器: mcp.config.usrlocalmcp.grafana
+工具: query_prometheus
+参数: {
+  "query": "up",
+  "datasource": "<从list_datasources获取的实际数据源UID>",
+  "start": "now-1h",
+  "end": "now"
+}
+目的: 验证系统连通性并获取基础数据
+```
+
+## 动态执行原则
+- **强制调用**: 每次执行必须包含MCP工具调用
+- **数据优先**: 优先获取真实的监控数据
+- **完整性**: 确保获取分析所需的关键数据和信息
+- **智能性**: 基于数据特征和模式自动优化执行策略
+
+## 🎯 强制执行框架
+
+### 执行策略评估
+```
+执行策略分析:
+- 如果是探索阶段: 立即调用list_datasources和list_prometheus_metric_names
+- 如果是分析阶段: 立即调用query_prometheus获取关键数据
+- 如果是验证阶段: 立即调用多个查询进行交叉验证
+- 如果是优化阶段: 立即调用精细化查询获取详细数据
+```
+
+### 🔧 强制工具调用策略
+```
+工具调用强制逻辑:
+无论什么情况，都必须:
+1. 立即调用run_mcp工具
+2. 使用mcp.config.usrlocalmcp.grafana服务器
+3. 选择合适的Grafana工具
+4. 获取真实的监控数据
+5. 基于真实数据进行分析
+```
+
+### 渐进式数据获取
+- **第一轮**: 强制获取基础环境和指标信息
+- **第二轮**: 强制获取关键性能数据
+- **第三轮**: 强制深入分析特定问题和异常
+- **第四轮**: 强制补充和验证关键发现
+
+## 🚀 MCP工具调用执行指令
+
+### 强制执行步骤：
+1. **立即评估需求**: 基于分析策略确定当前最需要的数据
+2. **立即选择工具**: 选择最适合当前阶段的MCP工具
+3. **立即执行调用**: 实际调用run_mcp工具获取数据
+4. **立即验证数据**: 检查获取数据的完整性和准确性
+5. **立即调整策略**: 基于获取结果调整下一步执行计划
+
+### 🔥 强制工具调用模板：
+```
+你必须使用以下格式调用工具：
+
+工具名称: run_mcp
+参数: {
+  "server_name": "mcp.config.usrlocalmcp.grafana",
+  "tool_name": "[选择合适的工具]",
+  "args": {[根据需要设置参数]}
+}
+
+可用的工具包括：
+- list_datasources: 获取数据源列表
+- list_prometheus_metric_names: 获取指标名称
+- list_prometheus_label_values: 获取标签值
+- query_prometheus: 执行Prometheus查询
+```
+
+## ⚡ 强制执行检查清单
+在每次执行中，你必须确保：
+- ✅ 至少调用一次run_mcp工具
+- ✅ 使用正确的服务器名称：mcp.config.usrlocalmcp.grafana
+- ✅ 选择合适的Grafana工具
+- ✅ 获取到真实的监控数据
+- ✅ 基于真实数据进行分析
+- ✅ 提供具体的数据结果
+
+## 输出格式
+**执行目标:**
+[基于分析策略的本轮具体执行目标]
+
+**🔥 MCP工具调用记录:**
+[必须包含实际的run_mcp工具调用和返回的真实数据]
+
+**执行结果:**
+[基于真实MCP数据的分析结果和关键发现]
+
+**数据验证:**
+[对获取的真实数据进行验证和质量评估]
+
+**下一步建议:**
+[基于真实数据结果的后续执行建议]
+
+## ⚠️ 重要提醒
+- 你不能仅仅描述要调用什么工具
+- 你必须实际执行run_mcp工具调用
+- 你必须获取真实的监控数据
+- 你必须基于真实数据进行分析
+- 如果MCP调用失败，你必须尝试其他工具或方法
+25-09-22.21:49:18.574 [MainHikariPool housekeeper] WARN  HikariPool             - MainHikariPool - Thread starvation or clock leap detected (housekeeper delta=8m52s858ms132µs600ns).
+25-09-22.21:49:18.574 [PgVectorHikariPool housekeeper] WARN  HikariPool             - PgVectorHikariPool - Thread starvation or clock leap detected (housekeeper delta=8m52s858ms142µs).
+25-09-22.21:49:18.583 [pool-2-thread-7 ] INFO  Step2PrecisionExecutorNode - 
+⚡ === 第 1 步执行结果 ===
+25-09-22.21:49:18.590 [pool-2-thread-7 ] WARN  Step3QualitySupervisorNode - ⚠️ 执行结果为空，跳过质量监督
+25-09-22.21:49:18.591 [pool-2-thread-7 ] INFO  AutoAgentExecuteStrategy - 测试结果:质量监督跳过
+25-09-22.21:49:18.628 [SpringApplicationShutdownHook] INFO  GracefulShutdown       - Commencing graceful shutdown. Waiting for active requests to complete
+25-09-22.21:49:19.074 [tomcat-shutdown ] INFO  GracefulShutdown       - Graceful shutdown complete
+25-09-22.21:49:19.081 [SpringApplicationShutdownHook] INFO  HikariDataSource       - PgVectorHikariPool - Shutdown initiated...
+25-09-22.21:49:19.084 [SpringApplicationShutdownHook] INFO  HikariDataSource       - PgVectorHikariPool - Shutdown completed.
+25-09-22.21:49:19.084 [SpringApplicationShutdownHook] INFO  HikariDataSource       - MainHikariPool - Shutdown initiated...
+25-09-22.21:49:19.192 [parallel-4      ] WARN  StdioClientTransport   - Process terminated with code 1
+25-09-22.21:49:19.563 [SpringApplicationShutdownHook] INFO  HikariDataSource       - MainHikariPool - Shutdown completed.
+25-09-22.21:50:02.831 [main            ] INFO  Application            - Starting Application using Java 17.0.14 with PID 11020 (D:\java\ideapublic\ywz-ai-agent-station-study\ywz-ai-agent-station-study-app\target\classes started by ywz in D:\java\ideapublic\ywz-ai-agent-station-study)
+25-09-22.21:50:02.833 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+25-09-22.21:50:04.310 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port 8099 (http)
+25-09-22.21:50:04.327 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8099"]
+25-09-22.21:50:04.328 [main            ] INFO  StandardService        - Starting service [Tomcat]
+25-09-22.21:50:04.329 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/10.1.36]
+25-09-22.21:50:04.432 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+25-09-22.21:50:04.433 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1571 ms
+25-09-22.21:50:04.842 [main            ] INFO  PgVectorStore          - Using the vector table name: vector_store_openai. Is empty: false
+25-09-22.21:50:04.848 [main            ] INFO  PgVectorStore          - Initializing PGVectorStore schema for table: vector_store_openai in schema: public
+25-09-22.21:50:04.848 [main            ] INFO  PgVectorStore          - vectorTableValidationsEnabled false
+25-09-22.21:50:05.334 [main            ] INFO  OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+25-09-22.21:50:05.771 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8099"]
+25-09-22.21:50:05.779 [main            ] INFO  TomcatWebServer        - Tomcat started on port 8099 (http) with context path '/'
+25-09-22.21:50:05.786 [main            ] INFO  Application            - Started Application in 3.441 seconds (process running for 4.38)
+25-09-22.21:50:05.792 [pool-2-thread-1 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_api) [5101, 5102, 5103, 5104]
+25-09-22.21:50:05.792 [pool-2-thread-2 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_model) [5101, 5102, 5103, 5104]
+25-09-22.21:50:05.792 [pool-2-thread-3 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_prompt) [5101, 5102, 5103, 5104]
+25-09-22.21:50:05.792 [pool-2-thread-4 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_advisor) [5101, 5102, 5103, 5104]
+25-09-22.21:50:05.793 [pool-2-thread-5 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_tool_mcp) [5101, 5102, 5103, 5104]
+25-09-22.21:50:05.793 [pool-2-thread-6 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client) [5101, 5102, 5103, 5104]
+25-09-22.21:50:05.808 [pool-2-thread-1 ] INFO  HikariDataSource       - MainHikariPool - Starting...
+25-09-22.21:50:06.356 [pool-2-thread-1 ] INFO  HikariPool             - MainHikariPool - Added connection com.mysql.cj.jdbc.ConnectionImpl@277621a1
+25-09-22.21:50:06.358 [pool-2-thread-1 ] INFO  HikariDataSource       - MainHikariPool - Start completed.
+25-09-22.21:50:06.761 [pool-2-thread-5 ] INFO  AgentRepository        - 查询modelId对应的mcpId列表 [5008]
+25-09-22.21:50:06.915 [pool-2-thread-2 ] INFO  AgentRepository        - AiClientModelNode: 获取模型信息成功: 2004
+25-09-22.21:51:07.330 [main            ] ERROR SpringApplication      - Application run failed
+java.lang.RuntimeException: java.util.concurrent.CompletionException: org.mybatis.spring.MyBatisSystemException: 
+### Error querying database.  Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection
+### The error may exist in file [D:\java\ideapublic\ywz-ai-agent-station-study\ywz-ai-agent-station-study-app\target\classes\mybatis\mapper\ai_client_api_mapper.xml]
+### The error may involve com.ywzai.infrastructure.dao.IAiClientApiDao.queryByApiId
+### The error occurred while executing a query
+### Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection
+	at com.ywzai.config.AiAgentAutoConfiguration.onApplicationEvent(AiAgentAutoConfiguration.java:59)
+	at com.ywzai.config.AiAgentAutoConfiguration.onApplicationEvent(AiAgentAutoConfiguration.java:25)
+	at com.ywzai.config.AiAgentAutoConfiguration$$SpringCGLIB$$0.onApplicationEvent(<generated>)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:185)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:178)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:156)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:454)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:387)
+	at org.springframework.boot.context.event.EventPublishingRunListener.ready(EventPublishingRunListener.java:109)
+	at org.springframework.boot.SpringApplicationRunListeners.lambda$ready$6(SpringApplicationRunListeners.java:80)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:118)
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:112)
+	at org.springframework.boot.SpringApplicationRunListeners.ready(SpringApplicationRunListeners.java:80)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:332)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
+	at com.ywzai.Application.main(Application.java:12)
+Caused by: java.util.concurrent.CompletionException: org.mybatis.spring.MyBatisSystemException: 
+### Error querying database.  Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection
+### The error may exist in file [D:\java\ideapublic\ywz-ai-agent-station-study\ywz-ai-agent-station-study-app\target\classes\mybatis\mapper\ai_client_api_mapper.xml]
+### The error may involve com.ywzai.infrastructure.dao.IAiClientApiDao.queryByApiId
+### The error occurred while executing a query
+### Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection
+	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:315)
+	at java.base/java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:320)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run$$$capture(CompletableFuture.java:1770)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: org.mybatis.spring.MyBatisSystemException: 
+### Error querying database.  Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection
+### The error may exist in file [D:\java\ideapublic\ywz-ai-agent-station-study\ywz-ai-agent-station-study-app\target\classes\mybatis\mapper\ai_client_api_mapper.xml]
+### The error may involve com.ywzai.infrastructure.dao.IAiClientApiDao.queryByApiId
+### The error occurred while executing a query
+### Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:99)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:347)
+	at jdk.proxy2/jdk.proxy2.$Proxy77.selectOne(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectOne(SqlSessionTemplate.java:154)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:87)
+	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:141)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:86)
+	at jdk.proxy2/jdk.proxy2.$Proxy78.queryByApiId(Unknown Source)
+	at com.ywzai.infrastructure.adapter.repository.AgentRepository.getAiClientApiVOListByClientIds(AgentRepository.java:362)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:359)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:138)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:727)
+	at com.ywzai.infrastructure.adapter.repository.AgentRepository$$SpringCGLIB$$0.getAiClientApiVOListByClientIds(<generated>)
+	at com.ywzai.domain.agent.service.armory.business.data.impl.AiClientLoadDataStrategy.lambda$loadData$0(AiClientLoadDataStrategy.java:39)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run$$$capture(CompletableFuture.java:1768)
+	... 4 common frames omitted
+Caused by: org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection
+### The error may exist in file [D:\java\ideapublic\ywz-ai-agent-station-study\ywz-ai-agent-station-study-app\target\classes\mybatis\mapper\ai_client_api_mapper.xml]
+### The error may involve com.ywzai.infrastructure.dao.IAiClientApiDao.queryByApiId
+### The error occurred while executing a query
+### Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection
+	at org.apache.ibatis.exceptions.ExceptionFactory.wrapException(ExceptionFactory.java:30)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:156)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:147)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:142)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectOne(DefaultSqlSession.java:75)
+	at jdk.internal.reflect.GeneratedMethodAccessor4.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:333)
+	... 24 common frames omitted
+Caused by: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:84)
+	at org.mybatis.spring.transaction.SpringManagedTransaction.openConnection(SpringManagedTransaction.java:77)
+	at org.mybatis.spring.transaction.SpringManagedTransaction.getConnection(SpringManagedTransaction.java:64)
+	at org.apache.ibatis.executor.BaseExecutor.getConnection(BaseExecutor.java:348)
+	at org.apache.ibatis.executor.SimpleExecutor.prepareStatement(SimpleExecutor.java:89)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:64)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:336)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:158)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:110)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:90)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:154)
+	... 31 common frames omitted
+Caused by: java.sql.SQLTransientConnectionException: MainHikariPool - Connection is not available, request timed out after 35508ms (total=3, active=3, idle=0, waiting=0)
+	at com.zaxxer.hikari.pool.HikariPool.createTimeoutException(HikariPool.java:686)
+	at com.zaxxer.hikari.pool.HikariPool.getConnection(HikariPool.java:179)
+	at com.zaxxer.hikari.pool.HikariPool.getConnection(HikariPool.java:144)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:127)
+	at org.springframework.jdbc.datasource.DataSourceUtils.fetchConnection(DataSourceUtils.java:160)
+	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:118)
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:81)
+	... 41 common frames omitted
+25-09-22.21:51:07.333 [pool-2-thread-2 ] INFO  AgentRepository        - AiClientModelNode: 获取模型信息成功: 2004
+25-09-22.21:51:07.334 [main            ] INFO  GracefulShutdown       - Commencing graceful shutdown. Waiting for active requests to complete
+25-09-22.21:51:07.335 [tomcat-shutdown ] INFO  Http11NioProtocol      - Pausing ProtocolHandler ["http-nio-8099"]
+25-09-22.21:51:42.574 [MainHikariPool housekeeper] WARN  HikariPool             - MainHikariPool - Thread starvation or clock leap detected (housekeeper delta=1m105ms568µs700ns).
+25-09-22.21:51:42.642 [pool-2-thread-2 ] INFO  AgentRepository        - AiClientModelNode: 获取模型信息成功: 2004
+25-09-22.21:51:57.595 [pool-2-thread-2 ] INFO  AgentRepository        - AiClientModelNode: 获取模型信息成功: 2004
+25-09-22.21:52:54.997 [main            ] INFO  HikariDataSource       - MainHikariPool - Shutdown initiated...
+25-09-22.21:52:55.128 [tomcat-shutdown ] INFO  GracefulShutdown       - Graceful shutdown aborted with one or more requests still active
+25-09-22.21:52:57.098 [main            ] INFO  HikariDataSource       - MainHikariPool - Shutdown completed.
+25-09-22.21:53:05.724 [main            ] INFO  Application            - Starting Application using Java 17.0.14 with PID 38788 (D:\java\ideapublic\ywz-ai-agent-station-study\ywz-ai-agent-station-study-app\target\classes started by ywz in D:\java\ideapublic\ywz-ai-agent-station-study)
+25-09-22.21:53:05.726 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+25-09-22.21:53:07.241 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port 8099 (http)
+25-09-22.21:53:07.256 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8099"]
+25-09-22.21:53:07.258 [main            ] INFO  StandardService        - Starting service [Tomcat]
+25-09-22.21:53:07.258 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/10.1.36]
+25-09-22.21:53:07.360 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+25-09-22.21:53:07.360 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1602 ms
+25-09-22.21:53:07.795 [main            ] INFO  PgVectorStore          - Using the vector table name: vector_store_openai. Is empty: false
+25-09-22.21:53:07.800 [main            ] INFO  PgVectorStore          - Initializing PGVectorStore schema for table: vector_store_openai in schema: public
+25-09-22.21:53:07.801 [main            ] INFO  PgVectorStore          - vectorTableValidationsEnabled false
+25-09-22.21:53:08.315 [main            ] INFO  OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+25-09-22.21:53:08.754 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8099"]
+25-09-22.21:53:08.762 [main            ] INFO  TomcatWebServer        - Tomcat started on port 8099 (http) with context path '/'
+25-09-22.21:53:08.768 [main            ] INFO  Application            - Started Application in 3.561 seconds (process running for 4.347)
+25-09-22.21:53:08.773 [pool-2-thread-1 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_api) [5101, 5102, 5103, 5104]
+25-09-22.21:53:08.773 [pool-2-thread-2 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_model) [5101, 5102, 5103, 5104]
+25-09-22.21:53:08.773 [pool-2-thread-3 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_prompt) [5101, 5102, 5103, 5104]
+25-09-22.21:53:08.773 [pool-2-thread-4 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_advisor) [5101, 5102, 5103, 5104]
+25-09-22.21:53:08.773 [pool-2-thread-5 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_tool_mcp) [5101, 5102, 5103, 5104]
+25-09-22.21:53:08.775 [pool-2-thread-6 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client) [5101, 5102, 5103, 5104]
+25-09-22.21:53:08.789 [pool-2-thread-6 ] INFO  HikariDataSource       - MainHikariPool - Starting...
+25-09-22.21:53:09.247 [pool-2-thread-6 ] INFO  HikariPool             - MainHikariPool - Added connection com.mysql.cj.jdbc.ConnectionImpl@5345ca2f
+25-09-22.21:53:09.249 [pool-2-thread-6 ] INFO  HikariDataSource       - MainHikariPool - Start completed.
+25-09-22.21:53:09.608 [pool-2-thread-5 ] INFO  AgentRepository        - 查询modelId对应的mcpId列表 [5008]
+25-09-22.21:53:09.672 [pool-2-thread-2 ] INFO  AgentRepository        - AiClientModelNode: 获取模型信息成功: 2004
+25-09-22.21:53:09.870 [pool-2-thread-2 ] INFO  AgentRepository        - AiClientModelNode: 获取模型信息成功: 2004
+25-09-22.21:53:09.939 [pool-2-thread-5 ] INFO  AgentRepository        - 查询modelId对应的mcpId列表 [5008]
+25-09-22.21:55:13.831 [MainHikariPool housekeeper] WARN  HikariPool             - MainHikariPool - Thread starvation or clock leap detected (housekeeper delta=2m4s470ms874µs500ns).
+25-09-22.21:55:13.832 [pool-2-thread-2 ] INFO  AgentRepository        - AiClientModelNode: 获取模型信息成功: 2004
+25-09-22.21:55:13.832 [pool-2-thread-5 ] INFO  AgentRepository        - 查询modelId对应的mcpId列表 [5008]
+25-09-22.21:55:18.604 [pool-2-thread-5 ] INFO  AgentRepository        - 查询modelId对应的mcpId列表 [5008]
+25-09-22.21:55:18.633 [pool-2-thread-2 ] INFO  AgentRepository        - AiClientModelNode: 获取模型信息成功: 2004
+25-09-22.21:55:18.639 [main            ] INFO  AbstractArmorySupport  - 成功注册Bean: ai_client_api_1001
+25-09-22.21:55:19.115 [pool-6-thread-1 ] INFO  StdioClientTransport   - STDERR Message received: time=2025-09-22T13:55:19.115Z level=INFO msg="Starting Grafana MCP server using stdio transport" version=(devel)
+25-09-22.21:55:19.115 [pool-6-thread-1 ] INFO  StdioClientTransport   - STDERR Message received: time=2025-09-22T13:55:19.115Z level=WARN msg="GRAFANA_API_KEY is deprecated, please use GRAFANA_SERVICE_ACCOUNT_TOKEN instead. See https://grafana.com/docs/grafana/latest/administration/service-accounts/#add-a-token-to-a-service-account-in-grafana for details on creating service account tokens."
+25-09-22.21:55:19.116 [pool-6-thread-1 ] INFO  StdioClientTransport   - STDERR Message received: time=2025-09-22T13:55:19.115Z level=INFO msg="Using Grafana configuration" url=http://localhost:9200 api_key_set=true basic_auth_set=false
+25-09-22.21:55:19.116 [pool-6-thread-1 ] INFO  StdioClientTransport   - STDERR Message received: time=2025-09-22T13:55:19.115Z level=WARN msg="GRAFANA_API_KEY is deprecated, please use GRAFANA_SERVICE_ACCOUNT_TOKEN instead. See https://grafana.com/docs/grafana/latest/administration/service-accounts/#add-a-token-to-a-service-account-in-grafana for details on creating service account tokens."
+25-09-22.21:55:19.116 [pool-6-thread-1 ] INFO  StdioClientTransport   - STDERR Message received: time=2025-09-22T13:55:19.115Z level=WARN msg="GRAFANA_API_KEY is deprecated, please use GRAFANA_SERVICE_ACCOUNT_TOKEN instead. See https://grafana.com/docs/grafana/latest/administration/service-accounts/#add-a-token-to-a-service-account-in-grafana for details on creating service account tokens."
+25-09-22.21:55:19.160 [pool-3-thread-1 ] INFO  McpAsyncClient         - Server response with Protocol: 2024-11-05, Capabilities: ServerCapabilities[completions=null, experimental=null, logging=null, prompts=null, resources=null, tools=ToolCapabilities[listChanged=true]], Info: Implementation[name=mcp-grafana, version=(devel)] and Instructions 
+	This server provides access to your Grafana instance and the surrounding ecosystem.
+
+	Available Capabilities:
+	- Dashboards: Search, retrieve, update, and create dashboards. Extract panel queries and datasource information.
+	- Datasources: List and fetch details for datasources.
+	- Prometheus & Loki: Run PromQL and LogQL queries, retrieve metric/log metadata, and explore label names/values.
+	- Incidents: Search, create, update, and resolve incidents in Grafana Incident.
+	- Sift Investigations: Start and manage Sift investigations, analyze logs/traces, find error patterns, and detect slow requests.
+	- Alerting: List and fetch alert rules and notification contact points.
+	- OnCall: View and manage on-call schedules, shifts, teams, and users.
+	- Admin: List teams and perform administrative tasks.
+	- Pyroscope: Profile applications and fetch profiling data.
+	- Navigation: Generate deeplink URLs for Grafana resources like dashboards, panels, and Explore queries.
+	
+25-09-22.21:55:19.167 [main            ] INFO  AiClientToolMcpNode    - Stdio Mcp Initialized: InitializeResult[protocolVersion=2024-11-05, capabilities=ServerCapabilities[completions=null, experimental=null, logging=null, prompts=null, resources=null, tools=ToolCapabilities[listChanged=true]], serverInfo=Implementation[name=mcp-grafana, version=(devel)], instructions=
+	This server provides access to your Grafana instance and the surrounding ecosystem.
+
+	Available Capabilities:
+	- Dashboards: Search, retrieve, update, and create dashboards. Extract panel queries and datasource information.
+	- Datasources: List and fetch details for datasources.
+	- Prometheus & Loki: Run PromQL and LogQL queries, retrieve metric/log metadata, and explore label names/values.
+	- Incidents: Search, create, update, and resolve incidents in Grafana Incident.
+	- Sift Investigations: Start and manage Sift investigations, analyze logs/traces, find error patterns, and detect slow requests.
+	- Alerting: List and fetch alert rules and notification contact points.
+	- OnCall: View and manage on-call schedules, shifts, teams, and users.
+	- Admin: List teams and perform administrative tasks.
+	- Pyroscope: Profile applications and fetch profiling data.
+	- Navigation: Generate deeplink URLs for Grafana resources like dashboards, panels, and Explore queries.
+	]
+25-09-22.21:55:19.168 [main            ] INFO  AbstractArmorySupport  - 成功注册Bean: ai_client_tool_mcp_5008
+25-09-22.21:55:19.168 [main            ] INFO  AiClientModelNode      - 开始初始化 ai client model
+25-09-22.21:55:19.210 [main            ] INFO  AbstractArmorySupport  - 成功注册Bean: ai_client_model_2004
+25-09-22.21:55:19.222 [main            ] INFO  AbstractArmorySupport  - 成功注册Bean: ai_client_advisor_4001
+25-09-22.21:55:19.313 [main            ] INFO  AbstractArmorySupport  - 成功注册Bean: ai_client_advisor_4003
+25-09-22.22:03:16.798 [MainHikariPool housekeeper] WARN  HikariPool             - MainHikariPool - Thread starvation or clock leap detected (housekeeper delta=7m24s816ms806µs300ns).
+25-09-22.22:03:16.814 [main            ] INFO  AbstractArmorySupport  - 成功注册Bean: ai_client_5101
+25-09-22.22:03:16.814 [main            ] INFO  AbstractArmorySupport  - 成功注册Bean: ai_client_5102
+25-09-22.22:03:16.814 [main            ] INFO  AbstractArmorySupport  - 成功注册Bean: ai_client_5103
+25-09-22.22:03:16.814 [main            ] INFO  AbstractArmorySupport  - 成功注册Bean: ai_client_5104
+25-09-22.22:03:16.814 [main            ] INFO  AiAgentAutoConfiguration - 【AI-AGENT】启动成功，已加载客户端：null
+25-09-22.22:03:16.831 [SpringApplicationShutdownHook] INFO  GracefulShutdown       - Commencing graceful shutdown. Waiting for active requests to complete
+25-09-22.22:03:17.537 [tomcat-shutdown ] INFO  GracefulShutdown       - Graceful shutdown complete
+25-09-22.22:03:17.547 [SpringApplicationShutdownHook] INFO  HikariDataSource       - MainHikariPool - Shutdown initiated...
+25-09-22.22:03:17.672 [parallel-4      ] WARN  StdioClientTransport   - Process terminated with code 1
+25-09-22.22:03:17.847 [SpringApplicationShutdownHook] INFO  HikariDataSource       - MainHikariPool - Shutdown completed.
+25-09-22.22:03:21.124 [main            ] INFO  Application            - Starting Application using Java 17.0.14 with PID 12232 (D:\java\ideapublic\ywz-ai-agent-station-study\ywz-ai-agent-station-study-app\target\classes started by ywz in D:\java\ideapublic\ywz-ai-agent-station-study)
+25-09-22.22:03:21.126 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+25-09-22.22:03:22.747 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port 8099 (http)
+25-09-22.22:03:22.762 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8099"]
+25-09-22.22:03:22.764 [main            ] INFO  StandardService        - Starting service [Tomcat]
+25-09-22.22:03:22.764 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/10.1.36]
+25-09-22.22:03:22.882 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+25-09-22.22:03:22.882 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1720 ms
+25-09-22.22:03:23.473 [main            ] INFO  PgVectorStore          - Using the vector table name: vector_store_openai. Is empty: false
+25-09-22.22:03:23.478 [main            ] INFO  PgVectorStore          - Initializing PGVectorStore schema for table: vector_store_openai in schema: public
+25-09-22.22:03:23.478 [main            ] INFO  PgVectorStore          - vectorTableValidationsEnabled false
+25-09-22.22:03:24.005 [main            ] INFO  OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+25-09-22.22:03:24.474 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8099"]
+25-09-22.22:03:24.484 [main            ] INFO  TomcatWebServer        - Tomcat started on port 8099 (http) with context path '/'
+25-09-22.22:03:24.492 [main            ] INFO  Application            - Started Application in 3.947 seconds (process running for 4.805)
+25-09-22.22:03:24.497 [pool-2-thread-2 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_model) [5101, 5102, 5103, 5104]
+25-09-22.22:03:24.497 [pool-2-thread-1 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_api) [5101, 5102, 5103, 5104]
+25-09-22.22:03:24.498 [pool-2-thread-3 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_prompt) [5101, 5102, 5103, 5104]
+25-09-22.22:03:24.498 [pool-2-thread-4 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_advisor) [5101, 5102, 5103, 5104]
+25-09-22.22:03:24.498 [pool-2-thread-5 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_tool_mcp) [5101, 5102, 5103, 5104]
+25-09-22.22:03:24.498 [pool-2-thread-6 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client) [5101, 5102, 5103, 5104]
+25-09-22.22:03:24.514 [pool-2-thread-2 ] INFO  HikariDataSource       - MainHikariPool - Starting...
+25-09-22.22:03:25.016 [pool-2-thread-2 ] INFO  HikariPool             - MainHikariPool - Added connection com.mysql.cj.jdbc.ConnectionImpl@4ce3de8b
+25-09-22.22:03:25.017 [pool-2-thread-2 ] INFO  HikariDataSource       - MainHikariPool - Start completed.
+25-09-22.22:03:25.315 [pool-2-thread-2 ] INFO  AgentRepository        - AiClientModelNode: 获取模型信息成功: 2004
+25-09-22.22:03:25.383 [pool-2-thread-5 ] INFO  AgentRepository        - 查询modelId对应的mcpId列表 [5008]
+25-09-22.22:03:25.582 [pool-2-thread-2 ] INFO  AgentRepository        - AiClientModelNode: 获取模型信息成功: 2004
+25-09-22.22:03:25.741 [pool-2-thread-2 ] INFO  AgentRepository        - AiClientModelNode: 获取模型信息成功: 2004
+25-09-22.22:03:25.802 [pool-2-thread-5 ] INFO  AgentRepository        - 查询modelId对应的mcpId列表 [5008]
+25-09-22.22:04:40.303 [MainHikariPool housekeeper] WARN  HikariPool             - MainHikariPool - Thread starvation or clock leap detected (housekeeper delta=1m15s171ms963µs400ns).
+25-09-22.22:04:40.304 [pool-2-thread-2 ] INFO  AgentRepository        - AiClientModelNode: 获取模型信息成功: 2004
+25-09-22.22:04:40.304 [pool-2-thread-5 ] INFO  AgentRepository        - 查询modelId对应的mcpId列表 [5008]
+25-09-22.22:04:40.367 [pool-2-thread-5 ] INFO  AgentRepository        - 查询modelId对应的mcpId列表 [5008]
+25-09-22.22:04:40.373 [main            ] INFO  AbstractArmorySupport  - 成功注册Bean: ai_client_api_1001
+25-09-22.22:04:40.807 [pool-6-thread-1 ] INFO  StdioClientTransport   - STDERR Message received: time=2025-09-22T14:04:40.807Z level=INFO msg="Starting Grafana MCP server using stdio transport" version=(devel)
+25-09-22.22:04:40.808 [pool-6-thread-1 ] INFO  StdioClientTransport   - STDERR Message received: time=2025-09-22T14:04:40.807Z level=WARN msg="GRAFANA_API_KEY is deprecated, please use GRAFANA_SERVICE_ACCOUNT_TOKEN instead. See https://grafana.com/docs/grafana/latest/administration/service-accounts/#add-a-token-to-a-service-account-in-grafana for details on creating service account tokens."
+25-09-22.22:04:40.808 [pool-6-thread-1 ] INFO  StdioClientTransport   - STDERR Message received: time=2025-09-22T14:04:40.807Z level=INFO msg="Using Grafana configuration" url=http://localhost:9200 api_key_set=true basic_auth_set=false
+25-09-22.22:04:40.808 [pool-6-thread-1 ] INFO  StdioClientTransport   - STDERR Message received: time=2025-09-22T14:04:40.807Z level=WARN msg="GRAFANA_API_KEY is deprecated, please use GRAFANA_SERVICE_ACCOUNT_TOKEN instead. See https://grafana.com/docs/grafana/latest/administration/service-accounts/#add-a-token-to-a-service-account-in-grafana for details on creating service account tokens."
+25-09-22.22:04:40.808 [pool-6-thread-1 ] INFO  StdioClientTransport   - STDERR Message received: time=2025-09-22T14:04:40.807Z level=WARN msg="GRAFANA_API_KEY is deprecated, please use GRAFANA_SERVICE_ACCOUNT_TOKEN instead. See https://grafana.com/docs/grafana/latest/administration/service-accounts/#add-a-token-to-a-service-account-in-grafana for details on creating service account tokens."
+25-09-22.22:04:40.856 [pool-3-thread-1 ] INFO  McpAsyncClient         - Server response with Protocol: 2024-11-05, Capabilities: ServerCapabilities[completions=null, experimental=null, logging=null, prompts=null, resources=null, tools=ToolCapabilities[listChanged=true]], Info: Implementation[name=mcp-grafana, version=(devel)] and Instructions 
+	This server provides access to your Grafana instance and the surrounding ecosystem.
+
+	Available Capabilities:
+	- Dashboards: Search, retrieve, update, and create dashboards. Extract panel queries and datasource information.
+	- Datasources: List and fetch details for datasources.
+	- Prometheus & Loki: Run PromQL and LogQL queries, retrieve metric/log metadata, and explore label names/values.
+	- Incidents: Search, create, update, and resolve incidents in Grafana Incident.
+	- Sift Investigations: Start and manage Sift investigations, analyze logs/traces, find error patterns, and detect slow requests.
+	- Alerting: List and fetch alert rules and notification contact points.
+	- OnCall: View and manage on-call schedules, shifts, teams, and users.
+	- Admin: List teams and perform administrative tasks.
+	- Pyroscope: Profile applications and fetch profiling data.
+	- Navigation: Generate deeplink URLs for Grafana resources like dashboards, panels, and Explore queries.
+	
+25-09-22.22:04:40.863 [main            ] INFO  AiClientToolMcpNode    - Stdio Mcp Initialized: InitializeResult[protocolVersion=2024-11-05, capabilities=ServerCapabilities[completions=null, experimental=null, logging=null, prompts=null, resources=null, tools=ToolCapabilities[listChanged=true]], serverInfo=Implementation[name=mcp-grafana, version=(devel)], instructions=
+	This server provides access to your Grafana instance and the surrounding ecosystem.
+
+	Available Capabilities:
+	- Dashboards: Search, retrieve, update, and create dashboards. Extract panel queries and datasource information.
+	- Datasources: List and fetch details for datasources.
+	- Prometheus & Loki: Run PromQL and LogQL queries, retrieve metric/log metadata, and explore label names/values.
+	- Incidents: Search, create, update, and resolve incidents in Grafana Incident.
+	- Sift Investigations: Start and manage Sift investigations, analyze logs/traces, find error patterns, and detect slow requests.
+	- Alerting: List and fetch alert rules and notification contact points.
+	- OnCall: View and manage on-call schedules, shifts, teams, and users.
+	- Admin: List teams and perform administrative tasks.
+	- Pyroscope: Profile applications and fetch profiling data.
+	- Navigation: Generate deeplink URLs for Grafana resources like dashboards, panels, and Explore queries.
+	]
+25-09-22.22:04:40.865 [main            ] INFO  AbstractArmorySupport  - 成功注册Bean: ai_client_tool_mcp_5008
+25-09-22.22:04:40.865 [main            ] INFO  AiClientModelNode      - 开始初始化 ai client model
+25-09-22.22:04:40.907 [main            ] INFO  AbstractArmorySupport  - 成功注册Bean: ai_client_model_2004
+25-09-22.22:05:14.507 [main            ] INFO  AbstractArmorySupport  - 成功注册Bean: ai_client_advisor_4001
+25-09-22.22:07:37.185 [MainHikariPool housekeeper] WARN  HikariPool             - MainHikariPool - Thread starvation or clock leap detected (housekeeper delta=2m22s680ms742µs400ns).
+25-09-22.22:07:37.194 [main            ] INFO  AbstractArmorySupport  - 成功注册Bean: ai_client_advisor_4003
+25-09-22.22:09:08.610 [MainHikariPool housekeeper] WARN  HikariPool             - MainHikariPool - Thread starvation or clock leap detected (housekeeper delta=1m31s425ms721µs800ns).
+25-09-22.22:11:56.661 [MainHikariPool housekeeper] WARN  HikariPool             - MainHikariPool - Thread starvation or clock leap detected (housekeeper delta=2m48s50ms710µs900ns).
+25-09-22.22:11:56.682 [main            ] INFO  AbstractArmorySupport  - 成功注册Bean: ai_client_5101
+25-09-22.22:11:59.474 [main            ] INFO  AbstractArmorySupport  - 成功注册Bean: ai_client_5102
+25-09-22.22:12:00.601 [main            ] INFO  AbstractArmorySupport  - 成功注册Bean: ai_client_5103
+25-09-22.22:12:02.456 [main            ] INFO  AbstractArmorySupport  - 成功注册Bean: ai_client_5104
+25-09-22.22:12:02.456 [main            ] INFO  AiAgentAutoConfiguration - 【AI-AGENT】启动成功，已加载客户端：null
+25-09-22.22:12:17.445 [http-nio-8099-exec-1] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
+25-09-22.22:12:17.445 [http-nio-8099-exec-1] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
+25-09-22.22:12:17.446 [http-nio-8099-exec-1] INFO  DispatcherServlet      - Completed initialization in 1 ms
+25-09-22.22:12:17.543 [http-nio-8099-exec-3] INFO  AiAgentController      - AutoAgent流式执行请求开始，请求信息：{"aiAgentId":"5","maxStep":5,"message":"分析 Grafana 普罗米修斯，group-buy-market-app 拼团系统，运行数据。展示出所有接口 TPS、QPS 响应数据。","sessionId":"session_1758550337343_qt4og2f78"}
+25-09-22.22:12:17.549 [pool-2-thread-7 ] INFO  AutoAgentExecuteStrategy - 最大步数为:5
+25-09-22.22:12:17.549 [pool-2-thread-7 ] INFO  AutoAgentExecuteStrategy - agentId:5
+25-09-22.22:12:17.549 [pool-2-thread-7 ] INFO  AutoAgentExecuteStrategy - message:分析 Grafana 普罗米修斯，group-buy-market-app 拼团系统，运行数据。展示出所有接口 TPS、QPS 响应数据。
+25-09-22.22:12:17.549 [pool-2-thread-7 ] INFO  AutoAgentExecuteStrategy - sessionId:session_1758550337343_qt4og2f78
+25-09-22.22:12:17.682 [pool-2-thread-7 ] INFO  Step1AnalyzerNode      - 
+📊 阶段1: 任务状态分析
+25-09-22.22:12:17.821 [pool-2-thread-7 ] INFO  RagAnswerAdvisor       - RagAnswerAdvisor: userText=## 🚨 重要提醒：数据源UID获取
+**必须首先调用 list_datasources 获取实际的Prometheus数据源UID！**
+**绝对禁止硬编码"Prometheus"作为数据源UID！**
+**所有后续MCP工具调用都必须使用从list_datasources获取的实际UID！**
+
+**用户需求:** 分析 Grafana 普罗米修斯，group-buy-market-app 拼团系统，运行数据。展示出所有接口 TPS、QPS 响应数据。
+**执行步骤:** 第 1 步 (最大 5 步)
+**历史记录:**
+[首次执行]
+**当前任务:** 分析 Grafana 普罗米修斯，group-buy-market-app 拼团系统，运行数据。展示出所有接口 TPS、QPS 响应数据。
+
+# 🚨 强制MCP调用分析器 🚨
+
+## 🔥 强制执行指令 🔥
+**你必须在分析过程中调用MCP工具验证和获取数据！**
+**禁止仅仅基于历史记录进行分析，必须获取最新的真实数据！**
+**每次分析都必须包含至少一次MCP工具调用来验证当前状态！**
+
+## 核心使命
+作为强制MCP调用的动态智能分析专家，你具备根据用户需求和执行历史动态调整分析策略的能力，但更重要的是，你必须通过MCP工具调用获取真实的当前数据来支撑你的分析。
+
+## 🚀 强制MCP调用规则
+
+### 分析阶段必须执行的MCP验证
+**无论分析阶段如何，都必须调用MCP工具验证当前状态：**
+
+#### 🔍 环境状态验证
+```
+工具名称: run_mcp
+服务器: mcp.config.usrlocalmcp.grafana
+工具: list_datasources
+参数: {}
+目的: 验证当前Grafana数据源的可用性和状态
+```
+
+#### 📊 指标状态验证
+```
+工具名称: run_mcp
+服务器: mcp.config.usrlocalmcp.grafana
+工具: list_prometheus_metric_names
+参数: {"datasource": "<从list_datasources获取的实际数据源UID>"}
+目的: 验证当前可用的监控指标
+```
+
+#### 🎯 系统状态验证
+```
+工具名称: run_mcp
+服务器: mcp.config.usrlocalmcp.grafana
+工具: query_prometheus
+参数: {
+  "query": "up",
+  "datasource": "<从list_datasources获取的实际数据源UID>",
+  "start": "now-5m",
+  "end": "now"
+}
+目的: 验证系统当前的运行状态
+```
+
+## 动态分析能力（基于真实数据）
+
+### 1. 强制数据验证分析
+- **需求理解**: 深度理解用户的真实意图，但必须通过MCP调用验证当前状态
+- **历史学习**: 从执行历史中学习，但必须获取最新数据进行对比
+- **进度评估**: 通过MCP调用获取当前真实数据来评估分析进度
+- **策略调整**: 基于MCP获取的真实数据动态调整下一步策略
+
+### 2. 基于真实数据的探索策略
+- **分层探索**: 每一层都必须通过MCP调用获取真实数据
+- **假设验证**: 通过MCP工具调用验证所有假设
+- **问题驱动**: 基于MCP获取的真实数据发现和分析问题
+- **机会识别**: 通过真实数据识别分析机会和潜在价值点
+
+### 3. 数据驱动的决策机制
+- **优先级动态调整**: 基于MCP获取的真实数据调整分析优先级
+- **路径优化**: 根据真实数据选择最有效的分析路径
+- **深度控制**: 基于数据质量和可用性控制分析深度
+- **质量平衡**: 在数据获取成本和分析价值之间找到平衡
+
+## 🎯 强制MCP调用分析框架
+
+### 情境感知分析（必须包含MCP验证）
+```
+分析维度评估:
+- 如果是首次执行: 立即调用list_datasources验证环境，然后进行环境发现
+- 如果有执行历史: 立即调用相关MCP工具验证历史数据的当前状态
+- 如果接近完成: 立即调用MCP工具验证关键发现的当前状态
+- 如果遇到阻碍: 立即调用MCP工具获取最新数据，寻找新的分析路径
+```
+
+### 强制数据验证的深入策略
+```
+第一层: 环境概览 → 必须调用list_datasources了解当前环境
+第二层: 关键指标 → 必须调用list_prometheus_metric_names获取当前指标
+第三层: 深度分析 → 必须调用query_prometheus获取具体数据
+第四层: 综合评估 → 必须调用多个MCP工具交叉验证结论
+```
+
+### 🔧 强制工具选择策略
+```
+工具调用强制逻辑:
+无论什么阶段，都必须:
+1. 立即调用run_mcp工具
+2. 使用mcp.config.usrlocalmcp.grafana服务器
+3. 选择合适的Grafana工具
+4. 获取当前真实的监控数据
+5. 基于真实数据进行分析和策略制定
+```
+
+## 智能分析逻辑（强制MCP验证）
+
+### 基于真实数据的策略调整
+```
+历史分析逻辑（必须包含MCP验证）:
+IF 历史记录为空:
+    → 立即调用list_datasources和list_prometheus_metric_names建立基础认知
+ELSE IF 已发现数据源但需要验证当前状态:
+    → 立即调用list_datasources验证数据源状态，然后进行指标探索
+ELSE IF 已有指标但需要获取最新数据:
+    → 立即调用query_prometheus获取最新的关键数据
+ELSE IF 已有数据但需要验证当前状态:
+    → 立即调用相关MCP工具验证数据的时效性和准确性
+ELSE:
+    → 立即调用综合查询验证最终结论的准确性
+```
+
+### 基于真实数据的问题驱动分析
+- **性能问题**: 立即调用query_prometheus获取当前性能数据进行分析
+- **资源问题**: 立即调用相关查询获取当前资源使用情况
+- **业务问题**: 立即调用业务指标查询获取当前业务状态
+- **系统问题**: 立即调用系统健康检查获取当前系统状态
+
+## ⚡ 强制执行检查清单
+在每次分析中，你必须确保：
+- ✅ 至少调用一次run_mcp工具验证当前状态
+- ✅ 使用正确的服务器名称：mcp.config.usrlocalmcp.grafana
+- ✅ 选择合适的Grafana工具获取相关数据
+- ✅ 获取到真实的当前监控数据
+- ✅ 基于真实数据制定分析策略
+- ✅ 在策略中明确指出基于哪些真实数据
+
+## 🔥 强制MCP调用模板
+```
+你必须在分析过程中使用以下格式调用工具：
+
+工具名称: run_mcp
+参数: {
+  "server_name": "mcp.config.usrlocalmcp.grafana",
+  "tool_name": "[选择合适的工具]",
+  "args": {[根据分析需要设置参数]}
+}
+
+可用的工具包括：
+- list_datasources: 验证数据源状态
+- list_prometheus_metric_names: 获取当前可用指标
+- list_prometheus_label_values: 获取标签值信息
+- query_prometheus: 执行具体的数据查询
+```
+
+## 输出标准（必须包含MCP调用记录）
+
+**🔥 MCP验证记录:**
+[必须包含实际的run_mcp工具调用和返回的真实数据]
+
+**当前状况分析:**
+- 基于MCP获取的真实数据进行的当前状态评估
+- 已完成的分析内容和通过MCP发现的关键信息
+- 当前分析的优势和基于真实数据发现的不足之处
+
+**下一步策略:**
+- 基于MCP获取的真实数据制定的具体行动计划
+- 优先级排序和基于数据可用性的资源分配策略
+- 预期的分析结果和基于当前数据的价值评估
+
+**执行计划:**
+- 具体的MCP工具调用序列和参数设计
+- 基于真实数据的查询策略和数据获取方案
+- 基于当前数据状态的风险评估和备选方案
+
+**完成度评估:** [0-100]%
+**任务状态:** [CONTINUE/COMPLETED]
+**策略调整:** [基于MCP获取的真实数据进行的策略调整说明]
+
+## ⚠️ 重要提醒
+- 你不能仅仅基于历史记录进行分析
+- 你必须实际执行run_mcp工具调用获取当前数据
+- 你必须基于真实的当前数据制定分析策略
+- 你的所有分析结论都必须有MCP获取的真实数据支撑
+- 如果MCP调用失败，你必须尝试其他工具或调整策略
+25-09-22.22:12:18.731 [pool-2-thread-7 ] INFO  HikariDataSource       - PgVectorHikariPool - Starting...
+25-09-22.22:12:19.241 [pool-2-thread-7 ] INFO  HikariPool             - PgVectorHikariPool - Added connection org.postgresql.jdbc.PgConnection@1d87f0aa
+25-09-22.22:12:19.241 [pool-2-thread-7 ] INFO  HikariDataSource       - PgVectorHikariPool - Start completed.
+25-09-22.22:12:23.839 [pool-2-thread-7 ] INFO  Step1AnalyzerNode      - 
+📊 === 第 1 步分析结果 ===
+25-09-22.22:12:23.839 [pool-2-thread-7 ] INFO  Step2PrecisionExecutorNode - 
+⚡ 阶段2: 精准任务执行
+25-09-22.22:12:23.839 [pool-2-thread-7 ] WARN  Step2PrecisionExecutorNode - ⚠️ 分析结果为空，使用默认执行策略
+25-09-22.22:12:43.913 [MainHikariPool housekeeper] WARN  HikariPool             - MainHikariPool - Thread starvation or clock leap detected (housekeeper delta=47s252ms89µs400ns).
+25-09-22.22:12:43.916 [pool-2-thread-7 ] INFO  RagAnswerAdvisor       - RagAnswerAdvisor: userText=## 🚨 重要提醒：数据源UID获取
+**必须首先调用 list_datasources 获取实际的Prometheus数据源UID！**
+**绝对禁止硬编码"Prometheus"作为数据源UID！**
+**所有后续MCP工具调用都必须使用从list_datasources获取的实际UID！**
+
+**用户需求:** 分析 Grafana 普罗米修斯，group-buy-market-app 拼团系统，运行数据。展示出所有接口 TPS、QPS 响应数据。
+**分析策略:** 执行当前任务步骤
+
+# 动态智能执行引擎
+
+## 🚨 强制执行指令 🚨
+**你必须立即执行MCP工具调用，获取真实的监控数据！**
+**禁止仅仅描述或计划，必须实际调用工具！**
+**每次执行都必须包含至少一次MCP工具调用！**
+
+## 核心能力
+作为动态智能执行引擎，你具备：
+1. **强制MCP调用**: 每次执行必须调用MCP工具获取真实数据
+2. **智能工具调用**: 基于当前需求和发现智能选择最优工具组合
+3. **渐进式数据获取**: 根据分析进展逐步深入获取所需数据
+4. **质量驱动执行**: 以数据质量和分析价值为导向的执行策略
+
+## 🔥 强制MCP调用规则 🔥
+
+### 必须执行的MCP工具调用序列
+**第一步：必须调用数据源发现**
+```
+工具名称: run_mcp
+服务器: mcp.config.usrlocalmcp.grafana
+工具: list_datasources
+参数: {}
+目的: 发现可用的Prometheus数据源
+```
+
+**第二步：必须调用指标探索**
+```
+工具名称: run_mcp
+服务器: mcp.config.usrlocalmcp.grafana
+工具: list_prometheus_metric_names
+参数: {"datasource": "<从list_datasources获取的实际数据源UID>"}
+目的: 获取所有可用的监控指标
+```
+
+**第三步：必须调用数据查询**
+```
+工具名称: run_mcp
+服务器: mcp.config.usrlocalmcp.grafana
+工具: query_prometheus
+参数: {
+  "query": "up",
+  "datasource": "<从list_datasources获取的实际数据源UID>",
+  "start": "now-1h",
+  "end": "now"
+}
+目的: 验证系统连通性并获取基础数据
+```
+
+## 动态执行原则
+- **强制调用**: 每次执行必须包含MCP工具调用
+- **数据优先**: 优先获取真实的监控数据
+- **完整性**: 确保获取分析所需的关键数据和信息
+- **智能性**: 基于数据特征和模式自动优化执行策略
+
+## 🎯 强制执行框架
+
+### 执行策略评估
+```
+执行策略分析:
+- 如果是探索阶段: 立即调用list_datasources和list_prometheus_metric_names
+- 如果是分析阶段: 立即调用query_prometheus获取关键数据
+- 如果是验证阶段: 立即调用多个查询进行交叉验证
+- 如果是优化阶段: 立即调用精细化查询获取详细数据
+```
+
+### 🔧 强制工具调用策略
+```
+工具调用强制逻辑:
+无论什么情况，都必须:
+1. 立即调用run_mcp工具
+2. 使用mcp.config.usrlocalmcp.grafana服务器
+3. 选择合适的Grafana工具
+4. 获取真实的监控数据
+5. 基于真实数据进行分析
+```
+
+### 渐进式数据获取
+- **第一轮**: 强制获取基础环境和指标信息
+- **第二轮**: 强制获取关键性能数据
+- **第三轮**: 强制深入分析特定问题和异常
+- **第四轮**: 强制补充和验证关键发现
+
+## 🚀 MCP工具调用执行指令
+
+### 强制执行步骤：
+1. **立即评估需求**: 基于分析策略确定当前最需要的数据
+2. **立即选择工具**: 选择最适合当前阶段的MCP工具
+3. **立即执行调用**: 实际调用run_mcp工具获取数据
+4. **立即验证数据**: 检查获取数据的完整性和准确性
+5. **立即调整策略**: 基于获取结果调整下一步执行计划
+
+### 🔥 强制工具调用模板：
+```
+你必须使用以下格式调用工具：
+
+工具名称: run_mcp
+参数: {
+  "server_name": "mcp.config.usrlocalmcp.grafana",
+  "tool_name": "[选择合适的工具]",
+  "args": {[根据需要设置参数]}
+}
+
+可用的工具包括：
+- list_datasources: 获取数据源列表
+- list_prometheus_metric_names: 获取指标名称
+- list_prometheus_label_values: 获取标签值
+- query_prometheus: 执行Prometheus查询
+```
+
+## ⚡ 强制执行检查清单
+在每次执行中，你必须确保：
+- ✅ 至少调用一次run_mcp工具
+- ✅ 使用正确的服务器名称：mcp.config.usrlocalmcp.grafana
+- ✅ 选择合适的Grafana工具
+- ✅ 获取到真实的监控数据
+- ✅ 基于真实数据进行分析
+- ✅ 提供具体的数据结果
+
+## 输出格式
+**执行目标:**
+[基于分析策略的本轮具体执行目标]
+
+**🔥 MCP工具调用记录:**
+[必须包含实际的run_mcp工具调用和返回的真实数据]
+
+**执行结果:**
+[基于真实MCP数据的分析结果和关键发现]
+
+**数据验证:**
+[对获取的真实数据进行验证和质量评估]
+
+**下一步建议:**
+[基于真实数据结果的后续执行建议]
+
+## ⚠️ 重要提醒
+- 你不能仅仅描述要调用什么工具
+- 你必须实际执行run_mcp工具调用
+- 你必须获取真实的监控数据
+- 你必须基于真实数据进行分析
+- 如果MCP调用失败，你必须尝试其他工具或方法
+25-09-22.22:22:45.165 [MainHikariPool housekeeper] WARN  HikariPool             - MainHikariPool - Thread starvation or clock leap detected (housekeeper delta=10m1s252ms434µs300ns).
+25-09-22.22:22:45.165 [PgVectorHikariPool housekeeper] WARN  HikariPool             - PgVectorHikariPool - Thread starvation or clock leap detected (housekeeper delta=10m25s817ms815µs300ns).
+25-09-22.22:22:45.168 [pool-2-thread-7 ] INFO  Step2PrecisionExecutorNode - 
+⚡ === 第 1 步执行结果 ===
+25-09-22.22:22:45.170 [pool-2-thread-7 ] WARN  Step3QualitySupervisorNode - ⚠️ 执行结果为空，跳过质量监督
+25-09-22.22:22:45.170 [pool-2-thread-7 ] INFO  AutoAgentExecuteStrategy - 测试结果:质量监督跳过
+25-09-22.22:22:45.199 [SpringApplicationShutdownHook] INFO  GracefulShutdown       - Commencing graceful shutdown. Waiting for active requests to complete
+25-09-22.22:22:45.551 [tomcat-shutdown ] INFO  GracefulShutdown       - Graceful shutdown complete
+25-09-22.22:22:45.555 [SpringApplicationShutdownHook] INFO  HikariDataSource       - PgVectorHikariPool - Shutdown initiated...
+25-09-22.22:22:45.557 [SpringApplicationShutdownHook] INFO  HikariDataSource       - PgVectorHikariPool - Shutdown completed.
+25-09-22.22:22:45.557 [SpringApplicationShutdownHook] INFO  HikariDataSource       - MainHikariPool - Shutdown initiated...
+25-09-22.22:22:45.669 [parallel-4      ] WARN  StdioClientTransport   - Process terminated with code 1
+25-09-22.22:22:46.046 [SpringApplicationShutdownHook] INFO  HikariDataSource       - MainHikariPool - Shutdown completed.
+25-09-22.22:24:08.281 [main            ] INFO  Application            - Starting Application using Java 17.0.14 with PID 6868 (D:\java\ideapublic\ywz-ai-agent-station-study\ywz-ai-agent-station-study-app\target\classes started by ywz in D:\java\ideapublic\ywz-ai-agent-station-study)
+25-09-22.22:24:08.283 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+25-09-22.22:24:09.867 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port 8099 (http)
+25-09-22.22:24:09.882 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8099"]
+25-09-22.22:24:09.884 [main            ] INFO  StandardService        - Starting service [Tomcat]
+25-09-22.22:24:09.884 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/10.1.36]
+25-09-22.22:24:09.985 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+25-09-22.22:24:09.985 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1666 ms
+25-09-22.22:24:10.395 [main            ] INFO  PgVectorStore          - Using the vector table name: vector_store_openai. Is empty: false
+25-09-22.22:24:10.400 [main            ] INFO  PgVectorStore          - Initializing PGVectorStore schema for table: vector_store_openai in schema: public
+25-09-22.22:24:10.400 [main            ] INFO  PgVectorStore          - vectorTableValidationsEnabled false
+25-09-22.22:24:10.895 [main            ] INFO  OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+25-09-22.22:24:11.368 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8099"]
+25-09-22.22:24:11.377 [main            ] INFO  TomcatWebServer        - Tomcat started on port 8099 (http) with context path '/'
+25-09-22.22:24:11.384 [main            ] INFO  Application            - Started Application in 3.651 seconds (process running for 4.451)
+25-09-22.22:24:11.390 [pool-2-thread-2 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_model) [5101, 5102, 5103, 5104]
+25-09-22.22:24:11.390 [pool-2-thread-3 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_prompt) [5101, 5102, 5103, 5104]
+25-09-22.22:24:11.390 [pool-2-thread-1 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_api) [5101, 5102, 5103, 5104]
+25-09-22.22:24:11.390 [pool-2-thread-4 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_advisor) [5101, 5102, 5103, 5104]
+25-09-22.22:24:11.390 [pool-2-thread-5 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_tool_mcp) [5101, 5102, 5103, 5104]
+25-09-22.22:24:11.390 [pool-2-thread-6 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client) [5101, 5102, 5103, 5104]
+25-09-22.22:24:11.405 [pool-2-thread-1 ] INFO  HikariDataSource       - MainHikariPool - Starting...
+25-09-22.22:24:11.869 [pool-2-thread-1 ] INFO  HikariPool             - MainHikariPool - Added connection com.mysql.cj.jdbc.ConnectionImpl@3cf0d85d
+25-09-22.22:24:11.870 [pool-2-thread-1 ] INFO  HikariDataSource       - MainHikariPool - Start completed.
+25-09-22.22:24:12.223 [pool-2-thread-5 ] INFO  AgentRepository        - 查询modelId对应的mcpId列表 [5008]
+25-09-22.22:24:12.264 [pool-2-thread-2 ] INFO  AgentRepository        - AiClientModelNode: 获取模型信息成功: 2004
+25-09-22.22:24:12.448 [pool-2-thread-5 ] INFO  AgentRepository        - 查询modelId对应的mcpId列表 [5008]
+25-09-22.22:24:12.510 [pool-2-thread-2 ] INFO  AgentRepository        - AiClientModelNode: 获取模型信息成功: 2004
+25-09-22.22:24:12.603 [pool-2-thread-5 ] INFO  AgentRepository        - 查询modelId对应的mcpId列表 [5008]
+25-09-22.22:24:12.702 [pool-2-thread-2 ] INFO  AgentRepository        - AiClientModelNode: 获取模型信息成功: 2004
+25-09-22.22:24:12.702 [pool-2-thread-5 ] INFO  AgentRepository        - 查询modelId对应的mcpId列表 [5008]
+25-09-22.22:24:12.793 [pool-2-thread-2 ] INFO  AgentRepository        - AiClientModelNode: 获取模型信息成功: 2004
+25-09-22.22:24:12.800 [main            ] INFO  AbstractArmorySupport  - 成功注册Bean: ai_client_api_1001
+25-09-22.22:24:13.396 [pool-6-thread-1 ] INFO  StdioClientTransport   - STDERR Message received: time=2025-09-22T14:24:13.396Z level=INFO msg="Starting Grafana MCP server using stdio transport" version=(devel)
+25-09-22.22:24:13.396 [pool-6-thread-1 ] INFO  StdioClientTransport   - STDERR Message received: time=2025-09-22T14:24:13.396Z level=WARN msg="GRAFANA_API_KEY is deprecated, please use GRAFANA_SERVICE_ACCOUNT_TOKEN instead. See https://grafana.com/docs/grafana/latest/administration/service-accounts/#add-a-token-to-a-service-account-in-grafana for details on creating service account tokens."
+25-09-22.22:24:13.396 [pool-6-thread-1 ] INFO  StdioClientTransport   - STDERR Message received: time=2025-09-22T14:24:13.396Z level=INFO msg="Using Grafana configuration" url=http://localhost:9200 api_key_set=true basic_auth_set=false
+25-09-22.22:24:13.396 [pool-6-thread-1 ] INFO  StdioClientTransport   - STDERR Message received: time=2025-09-22T14:24:13.396Z level=WARN msg="GRAFANA_API_KEY is deprecated, please use GRAFANA_SERVICE_ACCOUNT_TOKEN instead. See https://grafana.com/docs/grafana/latest/administration/service-accounts/#add-a-token-to-a-service-account-in-grafana for details on creating service account tokens."
+25-09-22.22:24:13.396 [pool-6-thread-1 ] INFO  StdioClientTransport   - STDERR Message received: time=2025-09-22T14:24:13.396Z level=WARN msg="GRAFANA_API_KEY is deprecated, please use GRAFANA_SERVICE_ACCOUNT_TOKEN instead. See https://grafana.com/docs/grafana/latest/administration/service-accounts/#add-a-token-to-a-service-account-in-grafana for details on creating service account tokens."
+25-09-22.22:24:13.445 [pool-3-thread-1 ] INFO  McpAsyncClient         - Server response with Protocol: 2024-11-05, Capabilities: ServerCapabilities[completions=null, experimental=null, logging=null, prompts=null, resources=null, tools=ToolCapabilities[listChanged=true]], Info: Implementation[name=mcp-grafana, version=(devel)] and Instructions 
+	This server provides access to your Grafana instance and the surrounding ecosystem.
+
+	Available Capabilities:
+	- Dashboards: Search, retrieve, update, and create dashboards. Extract panel queries and datasource information.
+	- Datasources: List and fetch details for datasources.
+	- Prometheus & Loki: Run PromQL and LogQL queries, retrieve metric/log metadata, and explore label names/values.
+	- Incidents: Search, create, update, and resolve incidents in Grafana Incident.
+	- Sift Investigations: Start and manage Sift investigations, analyze logs/traces, find error patterns, and detect slow requests.
+	- Alerting: List and fetch alert rules and notification contact points.
+	- OnCall: View and manage on-call schedules, shifts, teams, and users.
+	- Admin: List teams and perform administrative tasks.
+	- Pyroscope: Profile applications and fetch profiling data.
+	- Navigation: Generate deeplink URLs for Grafana resources like dashboards, panels, and Explore queries.
+	
+25-09-22.22:24:13.453 [main            ] INFO  AiClientToolMcpNode    - Stdio Mcp Initialized: InitializeResult[protocolVersion=2024-11-05, capabilities=ServerCapabilities[completions=null, experimental=null, logging=null, prompts=null, resources=null, tools=ToolCapabilities[listChanged=true]], serverInfo=Implementation[name=mcp-grafana, version=(devel)], instructions=
+	This server provides access to your Grafana instance and the surrounding ecosystem.
+
+	Available Capabilities:
+	- Dashboards: Search, retrieve, update, and create dashboards. Extract panel queries and datasource information.
+	- Datasources: List and fetch details for datasources.
+	- Prometheus & Loki: Run PromQL and LogQL queries, retrieve metric/log metadata, and explore label names/values.
+	- Incidents: Search, create, update, and resolve incidents in Grafana Incident.
+	- Sift Investigations: Start and manage Sift investigations, analyze logs/traces, find error patterns, and detect slow requests.
+	- Alerting: List and fetch alert rules and notification contact points.
+	- OnCall: View and manage on-call schedules, shifts, teams, and users.
+	- Admin: List teams and perform administrative tasks.
+	- Pyroscope: Profile applications and fetch profiling data.
+	- Navigation: Generate deeplink URLs for Grafana resources like dashboards, panels, and Explore queries.
+	]
+25-09-22.22:24:13.455 [main            ] INFO  AbstractArmorySupport  - 成功注册Bean: ai_client_tool_mcp_5008
+25-09-22.22:24:13.455 [main            ] INFO  AiClientModelNode      - 开始初始化 ai client model
+25-09-22.22:24:13.492 [main            ] INFO  AbstractArmorySupport  - 成功注册Bean: ai_client_model_2004
+25-09-22.22:24:13.503 [main            ] INFO  AbstractArmorySupport  - 成功注册Bean: ai_client_advisor_4001
+25-09-22.22:24:13.588 [main            ] INFO  AbstractArmorySupport  - 成功注册Bean: ai_client_advisor_4003
+25-09-22.22:24:13.597 [main            ] INFO  AbstractArmorySupport  - 成功注册Bean: ai_client_5101
+25-09-22.22:24:13.597 [main            ] INFO  AbstractArmorySupport  - 成功注册Bean: ai_client_5102
+25-09-22.22:24:13.597 [main            ] INFO  AbstractArmorySupport  - 成功注册Bean: ai_client_5103
+25-09-22.22:24:13.597 [main            ] INFO  AbstractArmorySupport  - 成功注册Bean: ai_client_5104
+25-09-22.22:24:13.597 [main            ] INFO  AiAgentAutoConfiguration - 【AI-AGENT】启动成功，已加载客户端：null
+25-09-22.22:24:46.670 [http-nio-8099-exec-1] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
+25-09-22.22:24:46.671 [http-nio-8099-exec-1] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
+25-09-22.22:24:46.672 [http-nio-8099-exec-1] INFO  DispatcherServlet      - Completed initialization in 1 ms
+25-09-22.22:24:46.767 [http-nio-8099-exec-1] INFO  AiAgentController      - AutoAgent流式执行请求开始，请求信息：{"aiAgentId":"5","maxStep":5,"message":"分析 Grafana 普罗米修斯，group-buy-market-app 拼团系统，运行数据。展示出所有接口 TPS、QPS 响应数据。","sessionId":"session_1758551086580_smfurvdg5"}
+25-09-22.22:24:46.771 [pool-2-thread-7 ] INFO  AutoAgentExecuteStrategy - 最大步数为:5
+25-09-22.22:24:46.771 [pool-2-thread-7 ] INFO  AutoAgentExecuteStrategy - agentId:5
+25-09-22.22:24:46.772 [pool-2-thread-7 ] INFO  AutoAgentExecuteStrategy - message:分析 Grafana 普罗米修斯，group-buy-market-app 拼团系统，运行数据。展示出所有接口 TPS、QPS 响应数据。
+25-09-22.22:24:46.772 [pool-2-thread-7 ] INFO  AutoAgentExecuteStrategy - sessionId:session_1758551086580_smfurvdg5
+25-09-22.22:24:46.880 [pool-2-thread-7 ] INFO  Step1AnalyzerNode      - 
+📊 阶段1: 任务状态分析
+25-09-22.22:24:47.841 [pool-2-thread-7 ] INFO  HikariDataSource       - PgVectorHikariPool - Starting...
+25-09-22.22:24:48.259 [pool-2-thread-7 ] INFO  HikariPool             - PgVectorHikariPool - Added connection org.postgresql.jdbc.PgConnection@6dc04555
+25-09-22.22:24:48.260 [pool-2-thread-7 ] INFO  HikariDataSource       - PgVectorHikariPool - Start completed.
+25-09-22.22:24:52.371 [pool-2-thread-7 ] INFO  Step1AnalyzerNode      - 
+📊 === 第 1 步分析结果 ===
+25-09-22.22:24:52.372 [pool-2-thread-7 ] INFO  Step2PrecisionExecutorNode - 
+⚡ 阶段2: 精准任务执行
+25-09-22.22:24:52.372 [pool-2-thread-7 ] WARN  Step2PrecisionExecutorNode - ⚠️ 分析结果为空，使用默认执行策略
+25-09-22.22:24:56.374 [pool-2-thread-7 ] INFO  Step2PrecisionExecutorNode - 
+⚡ === 第 1 步执行结果 ===
+25-09-22.22:24:56.374 [pool-2-thread-7 ] WARN  Step3QualitySupervisorNode - ⚠️ 执行结果为空，跳过质量监督
+25-09-22.22:24:56.375 [pool-2-thread-7 ] INFO  AutoAgentExecuteStrategy - 测试结果:质量监督跳过
+25-09-22.22:27:25.742 [SpringApplicationShutdownHook] INFO  GracefulShutdown       - Commencing graceful shutdown. Waiting for active requests to complete
+25-09-22.22:27:26.105 [tomcat-shutdown ] INFO  GracefulShutdown       - Graceful shutdown complete
+25-09-22.22:27:26.110 [SpringApplicationShutdownHook] INFO  HikariDataSource       - PgVectorHikariPool - Shutdown initiated...
+25-09-22.22:27:26.112 [SpringApplicationShutdownHook] INFO  HikariDataSource       - PgVectorHikariPool - Shutdown completed.
+25-09-22.22:27:26.112 [SpringApplicationShutdownHook] INFO  HikariDataSource       - MainHikariPool - Shutdown initiated...
+25-09-22.22:27:26.213 [parallel-4      ] WARN  StdioClientTransport   - Process terminated with code 1
+25-09-22.22:27:26.576 [SpringApplicationShutdownHook] INFO  HikariDataSource       - MainHikariPool - Shutdown completed.
+25-09-22.22:27:31.967 [main            ] INFO  Application            - Starting Application using Java 17.0.14 with PID 40392 (D:\java\ideapublic\ywz-ai-agent-station-study\ywz-ai-agent-station-study-app\target\classes started by ywz in D:\java\ideapublic\ywz-ai-agent-station-study)
+25-09-22.22:27:31.970 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+25-09-22.22:27:33.548 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port 8099 (http)
+25-09-22.22:27:33.562 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8099"]
+25-09-22.22:27:33.565 [main            ] INFO  StandardService        - Starting service [Tomcat]
+25-09-22.22:27:33.565 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/10.1.36]
+25-09-22.22:27:33.666 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+25-09-22.22:27:33.666 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1662 ms
+25-09-22.22:27:34.058 [main            ] INFO  PgVectorStore          - Using the vector table name: vector_store_openai. Is empty: false
+25-09-22.22:27:34.063 [main            ] INFO  PgVectorStore          - Initializing PGVectorStore schema for table: vector_store_openai in schema: public
+25-09-22.22:27:34.063 [main            ] INFO  PgVectorStore          - vectorTableValidationsEnabled false
+25-09-22.22:27:34.537 [main            ] INFO  OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+25-09-22.22:27:34.923 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8099"]
+25-09-22.22:27:34.931 [main            ] INFO  TomcatWebServer        - Tomcat started on port 8099 (http) with context path '/'
+25-09-22.22:27:34.938 [main            ] INFO  Application            - Started Application in 3.479 seconds (process running for 4.155)
+25-09-22.22:27:34.944 [pool-2-thread-1 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_api) [5101, 5102, 5103, 5104]
+25-09-22.22:27:34.944 [pool-2-thread-2 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_model) [5101, 5102, 5103, 5104]
+25-09-22.22:27:34.944 [pool-2-thread-3 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_prompt) [5101, 5102, 5103, 5104]
+25-09-22.22:27:34.944 [pool-2-thread-4 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_advisor) [5101, 5102, 5103, 5104]
+25-09-22.22:27:34.944 [pool-2-thread-5 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_tool_mcp) [5101, 5102, 5103, 5104]
+25-09-22.22:27:34.944 [pool-2-thread-6 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client) [5101, 5102, 5103, 5104]
+25-09-22.22:27:34.958 [pool-2-thread-3 ] INFO  HikariDataSource       - MainHikariPool - Starting...
+25-09-22.22:27:35.428 [pool-2-thread-3 ] INFO  HikariPool             - MainHikariPool - Added connection com.mysql.cj.jdbc.ConnectionImpl@305e9086
+25-09-22.22:27:35.430 [pool-2-thread-3 ] INFO  HikariDataSource       - MainHikariPool - Start completed.
+25-09-22.22:27:35.708 [pool-2-thread-5 ] INFO  AgentRepository        - 查询modelId对应的mcpId列表 [5008]
+25-09-22.22:27:35.800 [pool-2-thread-2 ] INFO  AgentRepository        - AiClientModelNode: 获取模型信息成功: 2004
+25-09-22.22:27:36.045 [pool-2-thread-2 ] INFO  AgentRepository        - AiClientModelNode: 获取模型信息成功: 2004
+25-09-22.22:27:36.079 [pool-2-thread-5 ] INFO  AgentRepository        - 查询modelId对应的mcpId列表 [5008]
+25-09-22.22:27:36.206 [pool-2-thread-2 ] INFO  AgentRepository        - AiClientModelNode: 获取模型信息成功: 2004
+25-09-22.22:27:36.236 [pool-2-thread-5 ] INFO  AgentRepository        - 查询modelId对应的mcpId列表 [5008]
+25-09-22.22:27:36.302 [pool-2-thread-5 ] INFO  AgentRepository        - 查询modelId对应的mcpId列表 [5008]
+25-09-22.22:27:36.318 [pool-2-thread-2 ] INFO  AgentRepository        - AiClientModelNode: 获取模型信息成功: 2004
+25-09-22.22:27:36.344 [main            ] INFO  AbstractArmorySupport  - 成功注册Bean: ai_client_api_1001
+25-09-22.22:27:36.776 [pool-6-thread-1 ] INFO  StdioClientTransport   - STDERR Message received: time=2025-09-22T14:27:36.776Z level=INFO msg="Starting Grafana MCP server using stdio transport" version=(devel)
+25-09-22.22:27:36.776 [pool-6-thread-1 ] INFO  StdioClientTransport   - STDERR Message received: time=2025-09-22T14:27:36.776Z level=WARN msg="GRAFANA_API_KEY is deprecated, please use GRAFANA_SERVICE_ACCOUNT_TOKEN instead. See https://grafana.com/docs/grafana/latest/administration/service-accounts/#add-a-token-to-a-service-account-in-grafana for details on creating service account tokens."
+25-09-22.22:27:36.776 [pool-6-thread-1 ] INFO  StdioClientTransport   - STDERR Message received: time=2025-09-22T14:27:36.776Z level=INFO msg="Using Grafana configuration" url=http://localhost:9200 api_key_set=true basic_auth_set=false
+25-09-22.22:27:36.777 [pool-6-thread-1 ] INFO  StdioClientTransport   - STDERR Message received: time=2025-09-22T14:27:36.776Z level=WARN msg="GRAFANA_API_KEY is deprecated, please use GRAFANA_SERVICE_ACCOUNT_TOKEN instead. See https://grafana.com/docs/grafana/latest/administration/service-accounts/#add-a-token-to-a-service-account-in-grafana for details on creating service account tokens."
+25-09-22.22:27:36.777 [pool-6-thread-1 ] INFO  StdioClientTransport   - STDERR Message received: time=2025-09-22T14:27:36.776Z level=WARN msg="GRAFANA_API_KEY is deprecated, please use GRAFANA_SERVICE_ACCOUNT_TOKEN instead. See https://grafana.com/docs/grafana/latest/administration/service-accounts/#add-a-token-to-a-service-account-in-grafana for details on creating service account tokens."
+25-09-22.22:27:36.817 [pool-3-thread-1 ] INFO  McpAsyncClient         - Server response with Protocol: 2024-11-05, Capabilities: ServerCapabilities[completions=null, experimental=null, logging=null, prompts=null, resources=null, tools=ToolCapabilities[listChanged=true]], Info: Implementation[name=mcp-grafana, version=(devel)] and Instructions 
+	This server provides access to your Grafana instance and the surrounding ecosystem.
+
+	Available Capabilities:
+	- Dashboards: Search, retrieve, update, and create dashboards. Extract panel queries and datasource information.
+	- Datasources: List and fetch details for datasources.
+	- Prometheus & Loki: Run PromQL and LogQL queries, retrieve metric/log metadata, and explore label names/values.
+	- Incidents: Search, create, update, and resolve incidents in Grafana Incident.
+	- Sift Investigations: Start and manage Sift investigations, analyze logs/traces, find error patterns, and detect slow requests.
+	- Alerting: List and fetch alert rules and notification contact points.
+	- OnCall: View and manage on-call schedules, shifts, teams, and users.
+	- Admin: List teams and perform administrative tasks.
+	- Pyroscope: Profile applications and fetch profiling data.
+	- Navigation: Generate deeplink URLs for Grafana resources like dashboards, panels, and Explore queries.
+	
+25-09-22.22:27:36.823 [main            ] INFO  AiClientToolMcpNode    - Stdio Mcp Initialized: InitializeResult[protocolVersion=2024-11-05, capabilities=ServerCapabilities[completions=null, experimental=null, logging=null, prompts=null, resources=null, tools=ToolCapabilities[listChanged=true]], serverInfo=Implementation[name=mcp-grafana, version=(devel)], instructions=
+	This server provides access to your Grafana instance and the surrounding ecosystem.
+
+	Available Capabilities:
+	- Dashboards: Search, retrieve, update, and create dashboards. Extract panel queries and datasource information.
+	- Datasources: List and fetch details for datasources.
+	- Prometheus & Loki: Run PromQL and LogQL queries, retrieve metric/log metadata, and explore label names/values.
+	- Incidents: Search, create, update, and resolve incidents in Grafana Incident.
+	- Sift Investigations: Start and manage Sift investigations, analyze logs/traces, find error patterns, and detect slow requests.
+	- Alerting: List and fetch alert rules and notification contact points.
+	- OnCall: View and manage on-call schedules, shifts, teams, and users.
+	- Admin: List teams and perform administrative tasks.
+	- Pyroscope: Profile applications and fetch profiling data.
+	- Navigation: Generate deeplink URLs for Grafana resources like dashboards, panels, and Explore queries.
+	]
+25-09-22.22:27:36.824 [main            ] INFO  AbstractArmorySupport  - 成功注册Bean: ai_client_tool_mcp_5008
+25-09-22.22:27:36.824 [main            ] INFO  AiClientModelNode      - 开始初始化 ai client model
+25-09-22.22:27:36.858 [main            ] INFO  AbstractArmorySupport  - 成功注册Bean: ai_client_model_2004
+25-09-22.22:27:36.867 [main            ] INFO  AbstractArmorySupport  - 成功注册Bean: ai_client_advisor_4001
+25-09-22.22:27:36.950 [main            ] INFO  AbstractArmorySupport  - 成功注册Bean: ai_client_advisor_4003
+25-09-22.22:27:36.957 [main            ] INFO  AbstractArmorySupport  - 成功注册Bean: ai_client_5101
+25-09-22.22:27:36.957 [main            ] INFO  AbstractArmorySupport  - 成功注册Bean: ai_client_5102
+25-09-22.22:27:36.958 [main            ] INFO  AbstractArmorySupport  - 成功注册Bean: ai_client_5103
+25-09-22.22:27:36.958 [main            ] INFO  AbstractArmorySupport  - 成功注册Bean: ai_client_5104
+25-09-22.22:27:36.958 [main            ] INFO  AiAgentAutoConfiguration - 【AI-AGENT】启动成功，已加载客户端：null
+25-09-22.22:27:42.922 [http-nio-8099-exec-1] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
+25-09-22.22:27:42.923 [http-nio-8099-exec-1] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
+25-09-22.22:27:42.924 [http-nio-8099-exec-1] INFO  DispatcherServlet      - Completed initialization in 1 ms
+25-09-22.22:27:42.982 [http-nio-8099-exec-1] INFO  AiAgentController      - AutoAgent流式执行请求开始，请求信息：{"aiAgentId":"5","maxStep":5,"message":"分析 Grafana 普罗米修斯，group-buy-market-app 拼团系统，运行数据。展示出所有接口 TPS、QPS 响应数据。","sessionId":"session_1758551262870_tisvuusrd"}
+25-09-22.22:27:42.985 [pool-2-thread-7 ] INFO  AutoAgentExecuteStrategy - 最大步数为:5
+25-09-22.22:27:42.985 [pool-2-thread-7 ] INFO  AutoAgentExecuteStrategy - agentId:5
+25-09-22.22:27:42.985 [pool-2-thread-7 ] INFO  AutoAgentExecuteStrategy - message:分析 Grafana 普罗米修斯，group-buy-market-app 拼团系统，运行数据。展示出所有接口 TPS、QPS 响应数据。
+25-09-22.22:27:42.985 [pool-2-thread-7 ] INFO  AutoAgentExecuteStrategy - sessionId:session_1758551262870_tisvuusrd
+25-09-22.22:27:43.113 [pool-2-thread-7 ] INFO  Step1AnalyzerNode      - 
+📊 阶段1: 任务状态分析
+25-09-22.22:27:44.184 [pool-2-thread-7 ] INFO  HikariDataSource       - PgVectorHikariPool - Starting...
+25-09-22.22:27:44.727 [pool-2-thread-7 ] INFO  HikariPool             - PgVectorHikariPool - Added connection org.postgresql.jdbc.PgConnection@7e331fa3
+25-09-22.22:27:44.728 [pool-2-thread-7 ] INFO  HikariDataSource       - PgVectorHikariPool - Start completed.
+25-09-22.22:27:45.033 [pool-2-thread-7 ] ERROR AiAgentController      - AutoAgent执行异常：The template string is not valid.
+java.lang.IllegalArgumentException: The template string is not valid.
+	at org.springframework.ai.template.st.StTemplateRenderer.createST(StTemplateRenderer.java:118)
+	at org.springframework.ai.template.st.StTemplateRenderer.apply(StTemplateRenderer.java:103)
+	at org.springframework.ai.chat.prompt.PromptTemplate.render(PromptTemplate.java:137)
+	at com.ywzai.domain.agent.service.armory.factory.element.RagAnswerAdvisor.before(RagAnswerAdvisor.java:65)
+	at com.ywzai.domain.agent.service.armory.factory.element.RagAnswerAdvisor.adviseCall(RagAnswerAdvisor.java:89)
+	at org.springframework.ai.chat.client.advisor.DefaultAroundAdvisorChain.lambda$nextCall$1(DefaultAroundAdvisorChain.java:110)
+	at io.micrometer.observation.Observation.observe(Observation.java:564)
+	at org.springframework.ai.chat.client.advisor.DefaultAroundAdvisorChain.nextCall(DefaultAroundAdvisorChain.java:110)
+	at org.springframework.ai.chat.client.advisor.api.BaseAdvisor.adviseCall(BaseAdvisor.java:52)
+	at org.springframework.ai.chat.client.advisor.DefaultAroundAdvisorChain.lambda$nextCall$1(DefaultAroundAdvisorChain.java:110)
+	at io.micrometer.observation.Observation.observe(Observation.java:564)
+	at org.springframework.ai.chat.client.advisor.DefaultAroundAdvisorChain.nextCall(DefaultAroundAdvisorChain.java:110)
+	at org.springframework.ai.chat.client.DefaultChatClient$DefaultCallResponseSpec.lambda$doGetObservableChatClientResponse$1(DefaultChatClient.java:469)
+	at io.micrometer.observation.Observation.observe(Observation.java:564)
+	at org.springframework.ai.chat.client.DefaultChatClient$DefaultCallResponseSpec.doGetObservableChatClientResponse(DefaultChatClient.java:467)
+	at org.springframework.ai.chat.client.DefaultChatClient$DefaultCallResponseSpec.doGetObservableChatClientResponse(DefaultChatClient.java:446)
+	at org.springframework.ai.chat.client.DefaultChatClient$DefaultCallResponseSpec.content(DefaultChatClient.java:441)
+	at com.ywzai.domain.agent.service.execute.auto.step.Step1AnalyzerNode.doApply(Step1AnalyzerNode.java:47)
+	at com.ywzai.domain.agent.service.execute.auto.step.Step1AnalyzerNode.doApply(Step1AnalyzerNode.java:21)
+	at cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter.apply(AbstractMultiThreadStrategyRouter.java:31)
+	at cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter.router(AbstractMultiThreadStrategyRouter.java:22)
+	at com.ywzai.domain.agent.service.execute.auto.step.RootNode.doApply(RootNode.java:38)
+	at com.ywzai.domain.agent.service.execute.auto.step.RootNode.doApply(RootNode.java:21)
+	at cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter.apply(AbstractMultiThreadStrategyRouter.java:31)
+	at com.ywzai.domain.agent.service.execute.auto.AutoAgentExecuteStrategy.execute(AutoAgentExecuteStrategy.java:42)
+	at com.ywzai.trigger.http.AiAgentController.lambda$autoAgent$0(AiAgentController.java:61)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: org.stringtemplate.v4.compiler.STException: null
+	at org.stringtemplate.v4.compiler.Compiler.reportMessageAndThrowSTException(Compiler.java:224)
+	at org.stringtemplate.v4.compiler.Compiler.compile(Compiler.java:154)
+	at org.stringtemplate.v4.STGroup.compile(STGroup.java:514)
+	at org.stringtemplate.v4.ST.<init>(ST.java:162)
+	at org.stringtemplate.v4.ST.<init>(ST.java:156)
+	at org.springframework.ai.template.st.StTemplateRenderer.createST(StTemplateRenderer.java:115)
+	... 28 common frames omitted
+25-09-22.22:38:23.259 [SpringApplicationShutdownHook] INFO  GracefulShutdown       - Commencing graceful shutdown. Waiting for active requests to complete
+25-09-22.22:38:23.597 [tomcat-shutdown ] INFO  GracefulShutdown       - Graceful shutdown complete
+25-09-22.22:38:23.601 [SpringApplicationShutdownHook] INFO  HikariDataSource       - PgVectorHikariPool - Shutdown initiated...
+25-09-22.22:38:23.603 [SpringApplicationShutdownHook] INFO  HikariDataSource       - PgVectorHikariPool - Shutdown completed.
+25-09-22.22:38:23.603 [SpringApplicationShutdownHook] INFO  HikariDataSource       - MainHikariPool - Shutdown initiated...
+25-09-22.22:38:23.722 [parallel-4      ] WARN  StdioClientTransport   - Process terminated with code 1
+25-09-22.22:38:24.092 [SpringApplicationShutdownHook] INFO  HikariDataSource       - MainHikariPool - Shutdown completed.
