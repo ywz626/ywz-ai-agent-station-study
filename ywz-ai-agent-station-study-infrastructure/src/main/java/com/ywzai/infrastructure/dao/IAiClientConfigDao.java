@@ -3,6 +3,7 @@ package com.ywzai.infrastructure.dao;
 import com.ywzai.infrastructure.dao.po.AiClientConfig;
 import com.ywzai.infrastructure.dao.po.AiClientToolMcp;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
@@ -42,7 +43,7 @@ public interface IAiClientConfigDao {
      * @param sourceId 源ID
      * @return 配置列表
      */
-    List<AiClientConfig> queryBySourceTypeAndId(String sourceType, String sourceId);
+    List<AiClientConfig> queryBySourceTypeAndId(@Param("sourceType") String sourceType, @Param("sourceId") String sourceId);
 
     /**
      * 根据目标类型和目标ID查询
@@ -50,7 +51,7 @@ public interface IAiClientConfigDao {
      * @param targetId 目标ID
      * @return 配置列表
      */
-    List<AiClientConfig> queryByTargetTypeAndId(String targetType, String targetId);
+    List<AiClientConfig> queryByTargetTypeAndId(@Param("targetType") String targetType,@Param("targetId") String targetId);
 
     /**
      * 删除配置

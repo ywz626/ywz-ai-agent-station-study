@@ -1,765 +1,11 @@
-25-09-21.21:59:28.173 [main            ] ERROR SpringApplication      - Application run failed
-java.lang.RuntimeException: java.util.concurrent.CompletionException: java.lang.NullPointerException: Cannot invoke "java.util.Map.put(Object, Object)" because "this.dataObjects" is null
-	at com.ywzai.config.AiAgentAutoConfiguration.onApplicationEvent(AiAgentAutoConfiguration.java:60)
-	at com.ywzai.config.AiAgentAutoConfiguration.onApplicationEvent(AiAgentAutoConfiguration.java:25)
-	at com.ywzai.config.AiAgentAutoConfiguration$$SpringCGLIB$$0.onApplicationEvent(<generated>)
-	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:185)
-	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:178)
-	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:156)
-	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:454)
-	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:387)
-	at org.springframework.boot.context.event.EventPublishingRunListener.ready(EventPublishingRunListener.java:109)
-	at org.springframework.boot.SpringApplicationRunListeners.lambda$ready$6(SpringApplicationRunListeners.java:80)
-	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
-	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:118)
-	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:112)
-	at org.springframework.boot.SpringApplicationRunListeners.ready(SpringApplicationRunListeners.java:80)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:332)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
-	at com.ywzai.Application.main(Application.java:12)
-Caused by: java.util.concurrent.CompletionException: java.lang.NullPointerException: Cannot invoke "java.util.Map.put(Object, Object)" because "this.dataObjects" is null
-	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:315)
-	at java.base/java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:320)
-	at java.base/java.util.concurrent.CompletableFuture$UniRun.tryFire(CompletableFuture.java:791)
-	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
-	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1773)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:842)
-Caused by: java.lang.NullPointerException: Cannot invoke "java.util.Map.put(Object, Object)" because "this.dataObjects" is null
-	at com.ywzai.domain.agent.service.armory.factory.DefaultArmoryStrategyFactory$DynamicContext.setValue(DefaultArmoryStrategyFactory.java:42)
-	at com.ywzai.domain.agent.service.armory.business.data.impl.AiClientLoadDataStrategy.lambda$loadData$6(AiClientLoadDataStrategy.java:62)
-	at java.base/java.util.concurrent.CompletableFuture$UniRun.tryFire(CompletableFuture.java:787)
-	... 5 common frames omitted
-25-09-21.22:02:26.127 [main            ] ERROR SpringApplication      - Application run failed
-java.lang.RuntimeException: java.util.concurrent.CompletionException: java.lang.NullPointerException: Cannot invoke "java.util.Map.put(Object, Object)" because "this.dataObjects" is null
-	at com.ywzai.config.AiAgentAutoConfiguration.onApplicationEvent(AiAgentAutoConfiguration.java:60)
-	at com.ywzai.config.AiAgentAutoConfiguration.onApplicationEvent(AiAgentAutoConfiguration.java:25)
-	at com.ywzai.config.AiAgentAutoConfiguration$$SpringCGLIB$$0.onApplicationEvent(<generated>)
-	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:185)
-	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:178)
-	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:156)
-	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:454)
-	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:387)
-	at org.springframework.boot.context.event.EventPublishingRunListener.ready(EventPublishingRunListener.java:109)
-	at org.springframework.boot.SpringApplicationRunListeners.lambda$ready$6(SpringApplicationRunListeners.java:80)
-	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
-	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:118)
-	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:112)
-	at org.springframework.boot.SpringApplicationRunListeners.ready(SpringApplicationRunListeners.java:80)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:332)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
-	at com.ywzai.Application.main(Application.java:12)
-Caused by: java.util.concurrent.CompletionException: java.lang.NullPointerException: Cannot invoke "java.util.Map.put(Object, Object)" because "this.dataObjects" is null
-	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:315)
-	at java.base/java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:320)
-	at java.base/java.util.concurrent.CompletableFuture$UniRun.tryFire(CompletableFuture.java:791)
-	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
-	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1773)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:842)
-Caused by: java.lang.NullPointerException: Cannot invoke "java.util.Map.put(Object, Object)" because "this.dataObjects" is null
-	at com.ywzai.domain.agent.service.armory.factory.DefaultArmoryStrategyFactory$DynamicContext.setValue(DefaultArmoryStrategyFactory.java:41)
-	at com.ywzai.domain.agent.service.armory.business.data.impl.AiClientLoadDataStrategy.lambda$loadData$6(AiClientLoadDataStrategy.java:62)
-	at java.base/java.util.concurrent.CompletableFuture$UniRun.tryFire(CompletableFuture.java:787)
-	... 5 common frames omitted
-25-09-21.22:03:46.666 [main            ] ERROR SpringApplication      - Application run failed
-java.lang.RuntimeException: java.util.concurrent.CompletionException: java.lang.NullPointerException: Cannot invoke "java.util.Map.put(Object, Object)" because "this.dataObjects" is null
-	at com.ywzai.config.AiAgentAutoConfiguration.onApplicationEvent(AiAgentAutoConfiguration.java:60)
-	at com.ywzai.config.AiAgentAutoConfiguration.onApplicationEvent(AiAgentAutoConfiguration.java:25)
-	at com.ywzai.config.AiAgentAutoConfiguration$$SpringCGLIB$$0.onApplicationEvent(<generated>)
-	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:185)
-	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:178)
-	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:156)
-	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:454)
-	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:387)
-	at org.springframework.boot.context.event.EventPublishingRunListener.ready(EventPublishingRunListener.java:109)
-	at org.springframework.boot.SpringApplicationRunListeners.lambda$ready$6(SpringApplicationRunListeners.java:80)
-	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
-	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:118)
-	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:112)
-	at org.springframework.boot.SpringApplicationRunListeners.ready(SpringApplicationRunListeners.java:80)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:332)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
-	at com.ywzai.Application.main(Application.java:12)
-Caused by: java.util.concurrent.CompletionException: java.lang.NullPointerException: Cannot invoke "java.util.Map.put(Object, Object)" because "this.dataObjects" is null
-	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:315)
-	at java.base/java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:320)
-	at java.base/java.util.concurrent.CompletableFuture$UniRun.tryFire(CompletableFuture.java:791)
-	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
-	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1773)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:842)
-Caused by: java.lang.NullPointerException: Cannot invoke "java.util.Map.put(Object, Object)" because "this.dataObjects" is null
-	at com.ywzai.domain.agent.service.armory.factory.DefaultArmoryStrategyFactory$DynamicContext.setValue(DefaultArmoryStrategyFactory.java:41)
-	at com.ywzai.domain.agent.service.armory.business.data.impl.AiClientLoadDataStrategy.lambda$loadData$6(AiClientLoadDataStrategy.java:62)
-	at java.base/java.util.concurrent.CompletableFuture$UniRun.tryFire(CompletableFuture.java:787)
-	... 5 common frames omitted
-25-09-21.22:07:23.636 [pool-2-thread-7 ] ERROR AiAgentController      - AutoAgent执行异常：Cannot invoke "java.util.Map.put(Object, Object)" because "this.dataObjects" is null
-java.lang.NullPointerException: Cannot invoke "java.util.Map.put(Object, Object)" because "this.dataObjects" is null
-	at com.ywzai.domain.agent.service.execute.auto.step.factory.DefaultExecuteStrategyFactory$DynamicContext.setValue(DefaultExecuteStrategyFactory.java:49)
-	at com.ywzai.domain.agent.service.execute.auto.AutoAgentExecuteStrategy.execute(AutoAgentExecuteStrategy.java:39)
-	at com.ywzai.trigger.http.AiAgentController.lambda$autoAgent$0(AiAgentController.java:64)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:842)
-25-09-21.22:11:22.794 [pool-2-thread-7 ] ERROR AiAgentController      - AutoAgent执行异常：Cannot invoke "java.lang.Integer.intValue()" because the return value of "com.ywzai.domain.agent.model.entity.ExecuteCommandEntity.getMaxStep()" is null
-java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because the return value of "com.ywzai.domain.agent.model.entity.ExecuteCommandEntity.getMaxStep()" is null
-	at com.ywzai.domain.agent.service.execute.auto.step.RootNode.doApply(RootNode.java:32)
-	at com.ywzai.domain.agent.service.execute.auto.step.RootNode.doApply(RootNode.java:21)
-	at cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter.apply(AbstractMultiThreadStrategyRouter.java:31)
-	at com.ywzai.domain.agent.service.execute.auto.AutoAgentExecuteStrategy.execute(AutoAgentExecuteStrategy.java:38)
-	at com.ywzai.trigger.http.AiAgentController.lambda$autoAgent$0(AiAgentController.java:64)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:842)
-25-09-21.22:14:53.169 [pool-2-thread-7 ] ERROR AiAgentController      - AutoAgent执行异常：Cannot invoke "java.lang.Integer.intValue()" because the return value of "com.ywzai.domain.agent.model.entity.ExecuteCommandEntity.getMaxStep()" is null
-java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because the return value of "com.ywzai.domain.agent.model.entity.ExecuteCommandEntity.getMaxStep()" is null
-	at com.ywzai.domain.agent.service.execute.auto.step.RootNode.doApply(RootNode.java:32)
-	at com.ywzai.domain.agent.service.execute.auto.step.RootNode.doApply(RootNode.java:21)
-	at cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter.apply(AbstractMultiThreadStrategyRouter.java:31)
-	at com.ywzai.domain.agent.service.execute.auto.AutoAgentExecuteStrategy.execute(AutoAgentExecuteStrategy.java:39)
-	at com.ywzai.trigger.http.AiAgentController.lambda$autoAgent$0(AiAgentController.java:64)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:842)
-25-09-21.22:15:13.906 [pool-2-thread-8 ] ERROR AiAgentController      - AutoAgent执行异常：Cannot invoke "java.lang.Integer.intValue()" because the return value of "com.ywzai.domain.agent.model.entity.ExecuteCommandEntity.getMaxStep()" is null
-java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because the return value of "com.ywzai.domain.agent.model.entity.ExecuteCommandEntity.getMaxStep()" is null
-	at com.ywzai.domain.agent.service.execute.auto.step.RootNode.doApply(RootNode.java:32)
-	at com.ywzai.domain.agent.service.execute.auto.step.RootNode.doApply(RootNode.java:21)
-	at cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter.apply(AbstractMultiThreadStrategyRouter.java:31)
-	at com.ywzai.domain.agent.service.execute.auto.AutoAgentExecuteStrategy.execute(AutoAgentExecuteStrategy.java:39)
-	at com.ywzai.trigger.http.AiAgentController.lambda$autoAgent$0(AiAgentController.java:64)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:842)
-25-09-21.22:16:19.069 [pool-2-thread-7 ] ERROR AiAgentController      - AutoAgent执行异常：Cannot invoke "java.lang.Integer.intValue()" because the return value of "com.ywzai.domain.agent.model.entity.ExecuteCommandEntity.getMaxStep()" is null
-java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because the return value of "com.ywzai.domain.agent.model.entity.ExecuteCommandEntity.getMaxStep()" is null
-	at com.ywzai.domain.agent.service.execute.auto.step.RootNode.doApply(RootNode.java:32)
-	at com.ywzai.domain.agent.service.execute.auto.step.RootNode.doApply(RootNode.java:21)
-	at cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter.apply(AbstractMultiThreadStrategyRouter.java:31)
-	at com.ywzai.domain.agent.service.execute.auto.AutoAgentExecuteStrategy.execute(AutoAgentExecuteStrategy.java:42)
-	at com.ywzai.trigger.http.AiAgentController.lambda$autoAgent$0(AiAgentController.java:64)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:842)
-25-09-21.22:17:12.468 [pool-2-thread-7 ] WARN  RetryUtils             - Retry error. Retry count:1
-org.springframework.ai.retry.NonTransientAiException: 401 - {"error":{"message":"该令牌状态不可用 (request id: 2025092122171380317040311469782)","type":"one_api_error"}}
-	at org.springframework.ai.retry.RetryUtils$1.handleError(RetryUtils.java:63)
-	at org.springframework.web.client.ResponseErrorHandler.handleError(ResponseErrorHandler.java:58)
-	at org.springframework.web.client.StatusHandler.lambda$fromErrorHandler$1(StatusHandler.java:71)
-	at org.springframework.web.client.StatusHandler.handle(StatusHandler.java:146)
-	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.applyStatusHandlers(DefaultRestClient.java:826)
-	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.lambda$readBody$4(DefaultRestClient.java:815)
-	at org.springframework.web.client.DefaultRestClient.readWithMessageConverters(DefaultRestClient.java:215)
-	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.readBody(DefaultRestClient.java:814)
-	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.lambda$toEntityInternal$2(DefaultRestClient.java:770)
-	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.exchangeInternal(DefaultRestClient.java:574)
-	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.exchange(DefaultRestClient.java:535)
-	at org.springframework.web.client.RestClient$RequestHeadersSpec.exchange(RestClient.java:677)
-	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.executeAndExtract(DefaultRestClient.java:809)
-	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.toEntityInternal(DefaultRestClient.java:769)
-	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.toEntity(DefaultRestClient.java:758)
-	at org.springframework.ai.openai.api.OpenAiApi.chatCompletionEntity(OpenAiApi.java:187)
-	at org.springframework.ai.openai.OpenAiChatModel.lambda$internalCall$1(OpenAiChatModel.java:199)
-	at org.springframework.retry.support.RetryTemplate.doExecute(RetryTemplate.java:357)
-	at org.springframework.retry.support.RetryTemplate.execute(RetryTemplate.java:230)
-	at org.springframework.ai.openai.OpenAiChatModel.lambda$internalCall$3(OpenAiChatModel.java:199)
-	at io.micrometer.observation.Observation.observe(Observation.java:564)
-	at org.springframework.ai.openai.OpenAiChatModel.internalCall(OpenAiChatModel.java:196)
-	at org.springframework.ai.openai.OpenAiChatModel.call(OpenAiChatModel.java:181)
-	at org.springframework.ai.chat.client.advisor.ChatModelCallAdvisor.adviseCall(ChatModelCallAdvisor.java:54)
-	at org.springframework.ai.chat.client.advisor.DefaultAroundAdvisorChain.lambda$nextCall$1(DefaultAroundAdvisorChain.java:110)
-	at io.micrometer.observation.Observation.observe(Observation.java:564)
-	at org.springframework.ai.chat.client.advisor.DefaultAroundAdvisorChain.nextCall(DefaultAroundAdvisorChain.java:110)
-	at org.springframework.ai.chat.client.advisor.api.BaseAdvisor.adviseCall(BaseAdvisor.java:52)
-	at org.springframework.ai.chat.client.advisor.DefaultAroundAdvisorChain.lambda$nextCall$1(DefaultAroundAdvisorChain.java:110)
-	at io.micrometer.observation.Observation.observe(Observation.java:564)
-	at org.springframework.ai.chat.client.advisor.DefaultAroundAdvisorChain.nextCall(DefaultAroundAdvisorChain.java:110)
-	at org.springframework.ai.chat.client.DefaultChatClient$DefaultCallResponseSpec.lambda$doGetObservableChatClientResponse$1(DefaultChatClient.java:469)
-	at io.micrometer.observation.Observation.observe(Observation.java:564)
-	at org.springframework.ai.chat.client.DefaultChatClient$DefaultCallResponseSpec.doGetObservableChatClientResponse(DefaultChatClient.java:467)
-	at org.springframework.ai.chat.client.DefaultChatClient$DefaultCallResponseSpec.doGetObservableChatClientResponse(DefaultChatClient.java:446)
-	at org.springframework.ai.chat.client.DefaultChatClient$DefaultCallResponseSpec.content(DefaultChatClient.java:441)
-	at com.ywzai.domain.agent.service.execute.auto.step.Step1AnalyzerNode.doApply(Step1AnalyzerNode.java:69)
-	at com.ywzai.domain.agent.service.execute.auto.step.Step1AnalyzerNode.doApply(Step1AnalyzerNode.java:20)
-	at cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter.apply(AbstractMultiThreadStrategyRouter.java:31)
-	at cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter.router(AbstractMultiThreadStrategyRouter.java:22)
-	at com.ywzai.domain.agent.service.execute.auto.step.RootNode.doApply(RootNode.java:38)
-	at com.ywzai.domain.agent.service.execute.auto.step.RootNode.doApply(RootNode.java:21)
-	at cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter.apply(AbstractMultiThreadStrategyRouter.java:31)
-	at com.ywzai.domain.agent.service.execute.auto.AutoAgentExecuteStrategy.execute(AutoAgentExecuteStrategy.java:42)
-	at com.ywzai.trigger.http.AiAgentController.lambda$autoAgent$0(AiAgentController.java:61)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:842)
-25-09-21.22:17:12.469 [pool-2-thread-7 ] ERROR AiAgentController      - AutoAgent执行异常：401 - {"error":{"message":"该令牌状态不可用 (request id: 2025092122171380317040311469782)","type":"one_api_error"}}
-org.springframework.ai.retry.NonTransientAiException: 401 - {"error":{"message":"该令牌状态不可用 (request id: 2025092122171380317040311469782)","type":"one_api_error"}}
-	at org.springframework.ai.retry.RetryUtils$1.handleError(RetryUtils.java:63)
-	at org.springframework.web.client.ResponseErrorHandler.handleError(ResponseErrorHandler.java:58)
-	at org.springframework.web.client.StatusHandler.lambda$fromErrorHandler$1(StatusHandler.java:71)
-	at org.springframework.web.client.StatusHandler.handle(StatusHandler.java:146)
-	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.applyStatusHandlers(DefaultRestClient.java:826)
-	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.lambda$readBody$4(DefaultRestClient.java:815)
-	at org.springframework.web.client.DefaultRestClient.readWithMessageConverters(DefaultRestClient.java:215)
-	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.readBody(DefaultRestClient.java:814)
-	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.lambda$toEntityInternal$2(DefaultRestClient.java:770)
-	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.exchangeInternal(DefaultRestClient.java:574)
-	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.exchange(DefaultRestClient.java:535)
-	at org.springframework.web.client.RestClient$RequestHeadersSpec.exchange(RestClient.java:677)
-	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.executeAndExtract(DefaultRestClient.java:809)
-	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.toEntityInternal(DefaultRestClient.java:769)
-	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.toEntity(DefaultRestClient.java:758)
-	at org.springframework.ai.openai.api.OpenAiApi.chatCompletionEntity(OpenAiApi.java:187)
-	at org.springframework.ai.openai.OpenAiChatModel.lambda$internalCall$1(OpenAiChatModel.java:199)
-	at org.springframework.retry.support.RetryTemplate.doExecute(RetryTemplate.java:357)
-	at org.springframework.retry.support.RetryTemplate.execute(RetryTemplate.java:230)
-	at org.springframework.ai.openai.OpenAiChatModel.lambda$internalCall$3(OpenAiChatModel.java:199)
-	at io.micrometer.observation.Observation.observe(Observation.java:564)
-	at org.springframework.ai.openai.OpenAiChatModel.internalCall(OpenAiChatModel.java:196)
-	at org.springframework.ai.openai.OpenAiChatModel.call(OpenAiChatModel.java:181)
-	at org.springframework.ai.chat.client.advisor.ChatModelCallAdvisor.adviseCall(ChatModelCallAdvisor.java:54)
-	at org.springframework.ai.chat.client.advisor.DefaultAroundAdvisorChain.lambda$nextCall$1(DefaultAroundAdvisorChain.java:110)
-	at io.micrometer.observation.Observation.observe(Observation.java:564)
-	at org.springframework.ai.chat.client.advisor.DefaultAroundAdvisorChain.nextCall(DefaultAroundAdvisorChain.java:110)
-	at org.springframework.ai.chat.client.advisor.api.BaseAdvisor.adviseCall(BaseAdvisor.java:52)
-	at org.springframework.ai.chat.client.advisor.DefaultAroundAdvisorChain.lambda$nextCall$1(DefaultAroundAdvisorChain.java:110)
-	at io.micrometer.observation.Observation.observe(Observation.java:564)
-	at org.springframework.ai.chat.client.advisor.DefaultAroundAdvisorChain.nextCall(DefaultAroundAdvisorChain.java:110)
-	at org.springframework.ai.chat.client.DefaultChatClient$DefaultCallResponseSpec.lambda$doGetObservableChatClientResponse$1(DefaultChatClient.java:469)
-	at io.micrometer.observation.Observation.observe(Observation.java:564)
-	at org.springframework.ai.chat.client.DefaultChatClient$DefaultCallResponseSpec.doGetObservableChatClientResponse(DefaultChatClient.java:467)
-	at org.springframework.ai.chat.client.DefaultChatClient$DefaultCallResponseSpec.doGetObservableChatClientResponse(DefaultChatClient.java:446)
-	at org.springframework.ai.chat.client.DefaultChatClient$DefaultCallResponseSpec.content(DefaultChatClient.java:441)
-	at com.ywzai.domain.agent.service.execute.auto.step.Step1AnalyzerNode.doApply(Step1AnalyzerNode.java:69)
-	at com.ywzai.domain.agent.service.execute.auto.step.Step1AnalyzerNode.doApply(Step1AnalyzerNode.java:20)
-	at cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter.apply(AbstractMultiThreadStrategyRouter.java:31)
-	at cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter.router(AbstractMultiThreadStrategyRouter.java:22)
-	at com.ywzai.domain.agent.service.execute.auto.step.RootNode.doApply(RootNode.java:38)
-	at com.ywzai.domain.agent.service.execute.auto.step.RootNode.doApply(RootNode.java:21)
-	at cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter.apply(AbstractMultiThreadStrategyRouter.java:31)
-	at com.ywzai.domain.agent.service.execute.auto.AutoAgentExecuteStrategy.execute(AutoAgentExecuteStrategy.java:42)
-	at com.ywzai.trigger.http.AiAgentController.lambda$autoAgent$0(AiAgentController.java:61)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:842)
-25-09-21.22:20:49.361 [pool-2-thread-8 ] WARN  RetryUtils             - Retry error. Retry count:1
-org.springframework.ai.retry.NonTransientAiException: 401 - {"error":{"message":"该令牌状态不可用 (request id: 2025092122205071422257141710835)","type":"one_api_error"}}
-	at org.springframework.ai.retry.RetryUtils$1.handleError(RetryUtils.java:63)
-	at org.springframework.web.client.ResponseErrorHandler.handleError(ResponseErrorHandler.java:58)
-	at org.springframework.web.client.StatusHandler.lambda$fromErrorHandler$1(StatusHandler.java:71)
-	at org.springframework.web.client.StatusHandler.handle(StatusHandler.java:146)
-	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.applyStatusHandlers(DefaultRestClient.java:826)
-	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.lambda$readBody$4(DefaultRestClient.java:815)
-	at org.springframework.web.client.DefaultRestClient.readWithMessageConverters(DefaultRestClient.java:215)
-	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.readBody(DefaultRestClient.java:814)
-	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.lambda$toEntityInternal$2(DefaultRestClient.java:770)
-	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.exchangeInternal(DefaultRestClient.java:574)
-	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.exchange(DefaultRestClient.java:535)
-	at org.springframework.web.client.RestClient$RequestHeadersSpec.exchange(RestClient.java:677)
-	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.executeAndExtract(DefaultRestClient.java:809)
-	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.toEntityInternal(DefaultRestClient.java:769)
-	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.toEntity(DefaultRestClient.java:758)
-	at org.springframework.ai.openai.api.OpenAiApi.chatCompletionEntity(OpenAiApi.java:187)
-	at org.springframework.ai.openai.OpenAiChatModel.lambda$internalCall$1(OpenAiChatModel.java:199)
-	at org.springframework.retry.support.RetryTemplate.doExecute(RetryTemplate.java:357)
-	at org.springframework.retry.support.RetryTemplate.execute(RetryTemplate.java:230)
-	at org.springframework.ai.openai.OpenAiChatModel.lambda$internalCall$3(OpenAiChatModel.java:199)
-	at io.micrometer.observation.Observation.observe(Observation.java:564)
-	at org.springframework.ai.openai.OpenAiChatModel.internalCall(OpenAiChatModel.java:196)
-	at org.springframework.ai.openai.OpenAiChatModel.call(OpenAiChatModel.java:181)
-	at org.springframework.ai.chat.client.advisor.ChatModelCallAdvisor.adviseCall(ChatModelCallAdvisor.java:54)
-	at org.springframework.ai.chat.client.advisor.DefaultAroundAdvisorChain.lambda$nextCall$1(DefaultAroundAdvisorChain.java:110)
-	at io.micrometer.observation.Observation.observe(Observation.java:564)
-	at org.springframework.ai.chat.client.advisor.DefaultAroundAdvisorChain.nextCall(DefaultAroundAdvisorChain.java:110)
-	at org.springframework.ai.chat.client.advisor.api.BaseAdvisor.adviseCall(BaseAdvisor.java:52)
-	at org.springframework.ai.chat.client.advisor.DefaultAroundAdvisorChain.lambda$nextCall$1(DefaultAroundAdvisorChain.java:110)
-	at io.micrometer.observation.Observation.observe(Observation.java:564)
-	at org.springframework.ai.chat.client.advisor.DefaultAroundAdvisorChain.nextCall(DefaultAroundAdvisorChain.java:110)
-	at org.springframework.ai.chat.client.DefaultChatClient$DefaultCallResponseSpec.lambda$doGetObservableChatClientResponse$1(DefaultChatClient.java:469)
-	at io.micrometer.observation.Observation.observe(Observation.java:564)
-	at org.springframework.ai.chat.client.DefaultChatClient$DefaultCallResponseSpec.doGetObservableChatClientResponse(DefaultChatClient.java:467)
-	at org.springframework.ai.chat.client.DefaultChatClient$DefaultCallResponseSpec.doGetObservableChatClientResponse(DefaultChatClient.java:446)
-	at org.springframework.ai.chat.client.DefaultChatClient$DefaultCallResponseSpec.content(DefaultChatClient.java:441)
-	at com.ywzai.domain.agent.service.execute.auto.step.Step1AnalyzerNode.doApply(Step1AnalyzerNode.java:69)
-	at com.ywzai.domain.agent.service.execute.auto.step.Step1AnalyzerNode.doApply(Step1AnalyzerNode.java:20)
-	at cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter.apply(AbstractMultiThreadStrategyRouter.java:31)
-	at cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter.router(AbstractMultiThreadStrategyRouter.java:22)
-	at com.ywzai.domain.agent.service.execute.auto.step.RootNode.doApply(RootNode.java:38)
-	at com.ywzai.domain.agent.service.execute.auto.step.RootNode.doApply(RootNode.java:21)
-	at cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter.apply(AbstractMultiThreadStrategyRouter.java:31)
-	at com.ywzai.domain.agent.service.execute.auto.AutoAgentExecuteStrategy.execute(AutoAgentExecuteStrategy.java:42)
-	at com.ywzai.trigger.http.AiAgentController.lambda$autoAgent$0(AiAgentController.java:61)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:842)
-25-09-21.22:20:49.361 [pool-2-thread-8 ] ERROR AiAgentController      - AutoAgent执行异常：401 - {"error":{"message":"该令牌状态不可用 (request id: 2025092122205071422257141710835)","type":"one_api_error"}}
-org.springframework.ai.retry.NonTransientAiException: 401 - {"error":{"message":"该令牌状态不可用 (request id: 2025092122205071422257141710835)","type":"one_api_error"}}
-	at org.springframework.ai.retry.RetryUtils$1.handleError(RetryUtils.java:63)
-	at org.springframework.web.client.ResponseErrorHandler.handleError(ResponseErrorHandler.java:58)
-	at org.springframework.web.client.StatusHandler.lambda$fromErrorHandler$1(StatusHandler.java:71)
-	at org.springframework.web.client.StatusHandler.handle(StatusHandler.java:146)
-	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.applyStatusHandlers(DefaultRestClient.java:826)
-	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.lambda$readBody$4(DefaultRestClient.java:815)
-	at org.springframework.web.client.DefaultRestClient.readWithMessageConverters(DefaultRestClient.java:215)
-	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.readBody(DefaultRestClient.java:814)
-	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.lambda$toEntityInternal$2(DefaultRestClient.java:770)
-	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.exchangeInternal(DefaultRestClient.java:574)
-	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.exchange(DefaultRestClient.java:535)
-	at org.springframework.web.client.RestClient$RequestHeadersSpec.exchange(RestClient.java:677)
-	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.executeAndExtract(DefaultRestClient.java:809)
-	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.toEntityInternal(DefaultRestClient.java:769)
-	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.toEntity(DefaultRestClient.java:758)
-	at org.springframework.ai.openai.api.OpenAiApi.chatCompletionEntity(OpenAiApi.java:187)
-	at org.springframework.ai.openai.OpenAiChatModel.lambda$internalCall$1(OpenAiChatModel.java:199)
-	at org.springframework.retry.support.RetryTemplate.doExecute(RetryTemplate.java:357)
-	at org.springframework.retry.support.RetryTemplate.execute(RetryTemplate.java:230)
-	at org.springframework.ai.openai.OpenAiChatModel.lambda$internalCall$3(OpenAiChatModel.java:199)
-	at io.micrometer.observation.Observation.observe(Observation.java:564)
-	at org.springframework.ai.openai.OpenAiChatModel.internalCall(OpenAiChatModel.java:196)
-	at org.springframework.ai.openai.OpenAiChatModel.call(OpenAiChatModel.java:181)
-	at org.springframework.ai.chat.client.advisor.ChatModelCallAdvisor.adviseCall(ChatModelCallAdvisor.java:54)
-	at org.springframework.ai.chat.client.advisor.DefaultAroundAdvisorChain.lambda$nextCall$1(DefaultAroundAdvisorChain.java:110)
-	at io.micrometer.observation.Observation.observe(Observation.java:564)
-	at org.springframework.ai.chat.client.advisor.DefaultAroundAdvisorChain.nextCall(DefaultAroundAdvisorChain.java:110)
-	at org.springframework.ai.chat.client.advisor.api.BaseAdvisor.adviseCall(BaseAdvisor.java:52)
-	at org.springframework.ai.chat.client.advisor.DefaultAroundAdvisorChain.lambda$nextCall$1(DefaultAroundAdvisorChain.java:110)
-	at io.micrometer.observation.Observation.observe(Observation.java:564)
-	at org.springframework.ai.chat.client.advisor.DefaultAroundAdvisorChain.nextCall(DefaultAroundAdvisorChain.java:110)
-	at org.springframework.ai.chat.client.DefaultChatClient$DefaultCallResponseSpec.lambda$doGetObservableChatClientResponse$1(DefaultChatClient.java:469)
-	at io.micrometer.observation.Observation.observe(Observation.java:564)
-	at org.springframework.ai.chat.client.DefaultChatClient$DefaultCallResponseSpec.doGetObservableChatClientResponse(DefaultChatClient.java:467)
-	at org.springframework.ai.chat.client.DefaultChatClient$DefaultCallResponseSpec.doGetObservableChatClientResponse(DefaultChatClient.java:446)
-	at org.springframework.ai.chat.client.DefaultChatClient$DefaultCallResponseSpec.content(DefaultChatClient.java:441)
-	at com.ywzai.domain.agent.service.execute.auto.step.Step1AnalyzerNode.doApply(Step1AnalyzerNode.java:69)
-	at com.ywzai.domain.agent.service.execute.auto.step.Step1AnalyzerNode.doApply(Step1AnalyzerNode.java:20)
-	at cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter.apply(AbstractMultiThreadStrategyRouter.java:31)
-	at cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter.router(AbstractMultiThreadStrategyRouter.java:22)
-	at com.ywzai.domain.agent.service.execute.auto.step.RootNode.doApply(RootNode.java:38)
-	at com.ywzai.domain.agent.service.execute.auto.step.RootNode.doApply(RootNode.java:21)
-	at cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter.apply(AbstractMultiThreadStrategyRouter.java:31)
-	at com.ywzai.domain.agent.service.execute.auto.AutoAgentExecuteStrategy.execute(AutoAgentExecuteStrategy.java:42)
-	at com.ywzai.trigger.http.AiAgentController.lambda$autoAgent$0(AiAgentController.java:61)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:842)
-25-09-21.22:21:22.632 [pool-2-thread-7 ] WARN  RetryUtils             - Retry error. Retry count:1
-org.springframework.ai.retry.NonTransientAiException: 403 - {"error":{"code":"AllocationQuota.FreeTierOnly","param":null,"message":"The free tier of the model has been exhausted. If you wish to continue access the model on a paid basis, please disable the \"use free tier only\" mode in the management console.","type":"AllocationQuota.FreeTierOnly"},"id":"chatcmpl-0b4c2244-c156-4c30-85ae-10d47e230efe","request_id":"0b4c2244-c156-4c30-85ae-10d47e230efe"}
-	at org.springframework.ai.retry.RetryUtils$1.handleError(RetryUtils.java:63)
-	at org.springframework.web.client.ResponseErrorHandler.handleError(ResponseErrorHandler.java:58)
-	at org.springframework.web.client.StatusHandler.lambda$fromErrorHandler$1(StatusHandler.java:71)
-	at org.springframework.web.client.StatusHandler.handle(StatusHandler.java:146)
-	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.applyStatusHandlers(DefaultRestClient.java:826)
-	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.lambda$readBody$4(DefaultRestClient.java:815)
-	at org.springframework.web.client.DefaultRestClient.readWithMessageConverters(DefaultRestClient.java:215)
-	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.readBody(DefaultRestClient.java:814)
-	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.lambda$toEntityInternal$2(DefaultRestClient.java:770)
-	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.exchangeInternal(DefaultRestClient.java:574)
-	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.exchange(DefaultRestClient.java:535)
-	at org.springframework.web.client.RestClient$RequestHeadersSpec.exchange(RestClient.java:677)
-	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.executeAndExtract(DefaultRestClient.java:809)
-	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.toEntityInternal(DefaultRestClient.java:769)
-	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.toEntity(DefaultRestClient.java:758)
-	at org.springframework.ai.openai.api.OpenAiApi.chatCompletionEntity(OpenAiApi.java:187)
-	at org.springframework.ai.openai.OpenAiChatModel.lambda$internalCall$1(OpenAiChatModel.java:199)
-	at org.springframework.retry.support.RetryTemplate.doExecute(RetryTemplate.java:357)
-	at org.springframework.retry.support.RetryTemplate.execute(RetryTemplate.java:230)
-	at org.springframework.ai.openai.OpenAiChatModel.lambda$internalCall$3(OpenAiChatModel.java:199)
-	at io.micrometer.observation.Observation.observe(Observation.java:564)
-	at org.springframework.ai.openai.OpenAiChatModel.internalCall(OpenAiChatModel.java:196)
-	at org.springframework.ai.openai.OpenAiChatModel.call(OpenAiChatModel.java:181)
-	at org.springframework.ai.chat.client.advisor.ChatModelCallAdvisor.adviseCall(ChatModelCallAdvisor.java:54)
-	at org.springframework.ai.chat.client.advisor.DefaultAroundAdvisorChain.lambda$nextCall$1(DefaultAroundAdvisorChain.java:110)
-	at io.micrometer.observation.Observation.observe(Observation.java:564)
-	at org.springframework.ai.chat.client.advisor.DefaultAroundAdvisorChain.nextCall(DefaultAroundAdvisorChain.java:110)
-	at org.springframework.ai.chat.client.advisor.api.BaseAdvisor.adviseCall(BaseAdvisor.java:52)
-	at org.springframework.ai.chat.client.advisor.DefaultAroundAdvisorChain.lambda$nextCall$1(DefaultAroundAdvisorChain.java:110)
-	at io.micrometer.observation.Observation.observe(Observation.java:564)
-	at org.springframework.ai.chat.client.advisor.DefaultAroundAdvisorChain.nextCall(DefaultAroundAdvisorChain.java:110)
-	at org.springframework.ai.chat.client.DefaultChatClient$DefaultCallResponseSpec.lambda$doGetObservableChatClientResponse$1(DefaultChatClient.java:469)
-	at io.micrometer.observation.Observation.observe(Observation.java:564)
-	at org.springframework.ai.chat.client.DefaultChatClient$DefaultCallResponseSpec.doGetObservableChatClientResponse(DefaultChatClient.java:467)
-	at org.springframework.ai.chat.client.DefaultChatClient$DefaultCallResponseSpec.doGetObservableChatClientResponse(DefaultChatClient.java:446)
-	at org.springframework.ai.chat.client.DefaultChatClient$DefaultCallResponseSpec.content(DefaultChatClient.java:441)
-	at com.ywzai.domain.agent.service.execute.auto.step.Step1AnalyzerNode.doApply(Step1AnalyzerNode.java:69)
-	at com.ywzai.domain.agent.service.execute.auto.step.Step1AnalyzerNode.doApply(Step1AnalyzerNode.java:20)
-	at cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter.apply(AbstractMultiThreadStrategyRouter.java:31)
-	at cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter.router(AbstractMultiThreadStrategyRouter.java:22)
-	at com.ywzai.domain.agent.service.execute.auto.step.RootNode.doApply(RootNode.java:38)
-	at com.ywzai.domain.agent.service.execute.auto.step.RootNode.doApply(RootNode.java:21)
-	at cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter.apply(AbstractMultiThreadStrategyRouter.java:31)
-	at com.ywzai.domain.agent.service.execute.auto.AutoAgentExecuteStrategy.execute(AutoAgentExecuteStrategy.java:42)
-	at com.ywzai.trigger.http.AiAgentController.lambda$autoAgent$0(AiAgentController.java:61)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:842)
-25-09-21.22:21:22.635 [pool-2-thread-7 ] ERROR AiAgentController      - AutoAgent执行异常：403 - {"error":{"code":"AllocationQuota.FreeTierOnly","param":null,"message":"The free tier of the model has been exhausted. If you wish to continue access the model on a paid basis, please disable the \"use free tier only\" mode in the management console.","type":"AllocationQuota.FreeTierOnly"},"id":"chatcmpl-0b4c2244-c156-4c30-85ae-10d47e230efe","request_id":"0b4c2244-c156-4c30-85ae-10d47e230efe"}
-org.springframework.ai.retry.NonTransientAiException: 403 - {"error":{"code":"AllocationQuota.FreeTierOnly","param":null,"message":"The free tier of the model has been exhausted. If you wish to continue access the model on a paid basis, please disable the \"use free tier only\" mode in the management console.","type":"AllocationQuota.FreeTierOnly"},"id":"chatcmpl-0b4c2244-c156-4c30-85ae-10d47e230efe","request_id":"0b4c2244-c156-4c30-85ae-10d47e230efe"}
-	at org.springframework.ai.retry.RetryUtils$1.handleError(RetryUtils.java:63)
-	at org.springframework.web.client.ResponseErrorHandler.handleError(ResponseErrorHandler.java:58)
-	at org.springframework.web.client.StatusHandler.lambda$fromErrorHandler$1(StatusHandler.java:71)
-	at org.springframework.web.client.StatusHandler.handle(StatusHandler.java:146)
-	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.applyStatusHandlers(DefaultRestClient.java:826)
-	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.lambda$readBody$4(DefaultRestClient.java:815)
-	at org.springframework.web.client.DefaultRestClient.readWithMessageConverters(DefaultRestClient.java:215)
-	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.readBody(DefaultRestClient.java:814)
-	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.lambda$toEntityInternal$2(DefaultRestClient.java:770)
-	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.exchangeInternal(DefaultRestClient.java:574)
-	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.exchange(DefaultRestClient.java:535)
-	at org.springframework.web.client.RestClient$RequestHeadersSpec.exchange(RestClient.java:677)
-	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.executeAndExtract(DefaultRestClient.java:809)
-	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.toEntityInternal(DefaultRestClient.java:769)
-	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.toEntity(DefaultRestClient.java:758)
-	at org.springframework.ai.openai.api.OpenAiApi.chatCompletionEntity(OpenAiApi.java:187)
-	at org.springframework.ai.openai.OpenAiChatModel.lambda$internalCall$1(OpenAiChatModel.java:199)
-	at org.springframework.retry.support.RetryTemplate.doExecute(RetryTemplate.java:357)
-	at org.springframework.retry.support.RetryTemplate.execute(RetryTemplate.java:230)
-	at org.springframework.ai.openai.OpenAiChatModel.lambda$internalCall$3(OpenAiChatModel.java:199)
-	at io.micrometer.observation.Observation.observe(Observation.java:564)
-	at org.springframework.ai.openai.OpenAiChatModel.internalCall(OpenAiChatModel.java:196)
-	at org.springframework.ai.openai.OpenAiChatModel.call(OpenAiChatModel.java:181)
-	at org.springframework.ai.chat.client.advisor.ChatModelCallAdvisor.adviseCall(ChatModelCallAdvisor.java:54)
-	at org.springframework.ai.chat.client.advisor.DefaultAroundAdvisorChain.lambda$nextCall$1(DefaultAroundAdvisorChain.java:110)
-	at io.micrometer.observation.Observation.observe(Observation.java:564)
-	at org.springframework.ai.chat.client.advisor.DefaultAroundAdvisorChain.nextCall(DefaultAroundAdvisorChain.java:110)
-	at org.springframework.ai.chat.client.advisor.api.BaseAdvisor.adviseCall(BaseAdvisor.java:52)
-	at org.springframework.ai.chat.client.advisor.DefaultAroundAdvisorChain.lambda$nextCall$1(DefaultAroundAdvisorChain.java:110)
-	at io.micrometer.observation.Observation.observe(Observation.java:564)
-	at org.springframework.ai.chat.client.advisor.DefaultAroundAdvisorChain.nextCall(DefaultAroundAdvisorChain.java:110)
-	at org.springframework.ai.chat.client.DefaultChatClient$DefaultCallResponseSpec.lambda$doGetObservableChatClientResponse$1(DefaultChatClient.java:469)
-	at io.micrometer.observation.Observation.observe(Observation.java:564)
-	at org.springframework.ai.chat.client.DefaultChatClient$DefaultCallResponseSpec.doGetObservableChatClientResponse(DefaultChatClient.java:467)
-	at org.springframework.ai.chat.client.DefaultChatClient$DefaultCallResponseSpec.doGetObservableChatClientResponse(DefaultChatClient.java:446)
-	at org.springframework.ai.chat.client.DefaultChatClient$DefaultCallResponseSpec.content(DefaultChatClient.java:441)
-	at com.ywzai.domain.agent.service.execute.auto.step.Step1AnalyzerNode.doApply(Step1AnalyzerNode.java:69)
-	at com.ywzai.domain.agent.service.execute.auto.step.Step1AnalyzerNode.doApply(Step1AnalyzerNode.java:20)
-	at cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter.apply(AbstractMultiThreadStrategyRouter.java:31)
-	at cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter.router(AbstractMultiThreadStrategyRouter.java:22)
-	at com.ywzai.domain.agent.service.execute.auto.step.RootNode.doApply(RootNode.java:38)
-	at com.ywzai.domain.agent.service.execute.auto.step.RootNode.doApply(RootNode.java:21)
-	at cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter.apply(AbstractMultiThreadStrategyRouter.java:31)
-	at com.ywzai.domain.agent.service.execute.auto.AutoAgentExecuteStrategy.execute(AutoAgentExecuteStrategy.java:42)
-	at com.ywzai.trigger.http.AiAgentController.lambda$autoAgent$0(AiAgentController.java:61)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:842)
-25-09-21.22:22:24.906 [pool-2-thread-8 ] WARN  RetryUtils             - Retry error. Retry count:1
-org.springframework.ai.retry.NonTransientAiException: 403 - {"error":{"code":"AllocationQuota.FreeTierOnly","param":null,"message":"The free tier of the model has been exhausted. If you wish to continue access the model on a paid basis, please disable the \"use free tier only\" mode in the management console.","type":"AllocationQuota.FreeTierOnly"},"id":"chatcmpl-fa669809-45e1-463b-9460-84465e50c6ce","request_id":"fa669809-45e1-463b-9460-84465e50c6ce"}
-	at org.springframework.ai.retry.RetryUtils$1.handleError(RetryUtils.java:63)
-	at org.springframework.web.client.ResponseErrorHandler.handleError(ResponseErrorHandler.java:58)
-	at org.springframework.web.client.StatusHandler.lambda$fromErrorHandler$1(StatusHandler.java:71)
-	at org.springframework.web.client.StatusHandler.handle(StatusHandler.java:146)
-	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.applyStatusHandlers(DefaultRestClient.java:826)
-	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.lambda$readBody$4(DefaultRestClient.java:815)
-	at org.springframework.web.client.DefaultRestClient.readWithMessageConverters(DefaultRestClient.java:215)
-	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.readBody(DefaultRestClient.java:814)
-	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.lambda$toEntityInternal$2(DefaultRestClient.java:770)
-	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.exchangeInternal(DefaultRestClient.java:574)
-	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.exchange(DefaultRestClient.java:535)
-	at org.springframework.web.client.RestClient$RequestHeadersSpec.exchange(RestClient.java:677)
-	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.executeAndExtract(DefaultRestClient.java:809)
-	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.toEntityInternal(DefaultRestClient.java:769)
-	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.toEntity(DefaultRestClient.java:758)
-	at org.springframework.ai.openai.api.OpenAiApi.chatCompletionEntity(OpenAiApi.java:187)
-	at org.springframework.ai.openai.OpenAiChatModel.lambda$internalCall$1(OpenAiChatModel.java:199)
-	at org.springframework.retry.support.RetryTemplate.doExecute(RetryTemplate.java:357)
-	at org.springframework.retry.support.RetryTemplate.execute(RetryTemplate.java:230)
-	at org.springframework.ai.openai.OpenAiChatModel.lambda$internalCall$3(OpenAiChatModel.java:199)
-	at io.micrometer.observation.Observation.observe(Observation.java:564)
-	at org.springframework.ai.openai.OpenAiChatModel.internalCall(OpenAiChatModel.java:196)
-	at org.springframework.ai.openai.OpenAiChatModel.call(OpenAiChatModel.java:181)
-	at org.springframework.ai.chat.client.advisor.ChatModelCallAdvisor.adviseCall(ChatModelCallAdvisor.java:54)
-	at org.springframework.ai.chat.client.advisor.DefaultAroundAdvisorChain.lambda$nextCall$1(DefaultAroundAdvisorChain.java:110)
-	at io.micrometer.observation.Observation.observe(Observation.java:564)
-	at org.springframework.ai.chat.client.advisor.DefaultAroundAdvisorChain.nextCall(DefaultAroundAdvisorChain.java:110)
-	at org.springframework.ai.chat.client.advisor.api.BaseAdvisor.adviseCall(BaseAdvisor.java:52)
-	at org.springframework.ai.chat.client.advisor.DefaultAroundAdvisorChain.lambda$nextCall$1(DefaultAroundAdvisorChain.java:110)
-	at io.micrometer.observation.Observation.observe(Observation.java:564)
-	at org.springframework.ai.chat.client.advisor.DefaultAroundAdvisorChain.nextCall(DefaultAroundAdvisorChain.java:110)
-	at org.springframework.ai.chat.client.DefaultChatClient$DefaultCallResponseSpec.lambda$doGetObservableChatClientResponse$1(DefaultChatClient.java:469)
-	at io.micrometer.observation.Observation.observe(Observation.java:564)
-	at org.springframework.ai.chat.client.DefaultChatClient$DefaultCallResponseSpec.doGetObservableChatClientResponse(DefaultChatClient.java:467)
-	at org.springframework.ai.chat.client.DefaultChatClient$DefaultCallResponseSpec.doGetObservableChatClientResponse(DefaultChatClient.java:446)
-	at org.springframework.ai.chat.client.DefaultChatClient$DefaultCallResponseSpec.content(DefaultChatClient.java:441)
-	at com.ywzai.domain.agent.service.execute.auto.step.Step1AnalyzerNode.doApply(Step1AnalyzerNode.java:69)
-	at com.ywzai.domain.agent.service.execute.auto.step.Step1AnalyzerNode.doApply(Step1AnalyzerNode.java:20)
-	at cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter.apply(AbstractMultiThreadStrategyRouter.java:31)
-	at cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter.router(AbstractMultiThreadStrategyRouter.java:22)
-	at com.ywzai.domain.agent.service.execute.auto.step.RootNode.doApply(RootNode.java:38)
-	at com.ywzai.domain.agent.service.execute.auto.step.RootNode.doApply(RootNode.java:21)
-	at cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter.apply(AbstractMultiThreadStrategyRouter.java:31)
-	at com.ywzai.domain.agent.service.execute.auto.AutoAgentExecuteStrategy.execute(AutoAgentExecuteStrategy.java:42)
-	at com.ywzai.trigger.http.AiAgentController.lambda$autoAgent$0(AiAgentController.java:61)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:842)
-25-09-21.22:22:24.906 [pool-2-thread-8 ] ERROR AiAgentController      - AutoAgent执行异常：403 - {"error":{"code":"AllocationQuota.FreeTierOnly","param":null,"message":"The free tier of the model has been exhausted. If you wish to continue access the model on a paid basis, please disable the \"use free tier only\" mode in the management console.","type":"AllocationQuota.FreeTierOnly"},"id":"chatcmpl-fa669809-45e1-463b-9460-84465e50c6ce","request_id":"fa669809-45e1-463b-9460-84465e50c6ce"}
-org.springframework.ai.retry.NonTransientAiException: 403 - {"error":{"code":"AllocationQuota.FreeTierOnly","param":null,"message":"The free tier of the model has been exhausted. If you wish to continue access the model on a paid basis, please disable the \"use free tier only\" mode in the management console.","type":"AllocationQuota.FreeTierOnly"},"id":"chatcmpl-fa669809-45e1-463b-9460-84465e50c6ce","request_id":"fa669809-45e1-463b-9460-84465e50c6ce"}
-	at org.springframework.ai.retry.RetryUtils$1.handleError(RetryUtils.java:63)
-	at org.springframework.web.client.ResponseErrorHandler.handleError(ResponseErrorHandler.java:58)
-	at org.springframework.web.client.StatusHandler.lambda$fromErrorHandler$1(StatusHandler.java:71)
-	at org.springframework.web.client.StatusHandler.handle(StatusHandler.java:146)
-	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.applyStatusHandlers(DefaultRestClient.java:826)
-	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.lambda$readBody$4(DefaultRestClient.java:815)
-	at org.springframework.web.client.DefaultRestClient.readWithMessageConverters(DefaultRestClient.java:215)
-	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.readBody(DefaultRestClient.java:814)
-	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.lambda$toEntityInternal$2(DefaultRestClient.java:770)
-	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.exchangeInternal(DefaultRestClient.java:574)
-	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.exchange(DefaultRestClient.java:535)
-	at org.springframework.web.client.RestClient$RequestHeadersSpec.exchange(RestClient.java:677)
-	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.executeAndExtract(DefaultRestClient.java:809)
-	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.toEntityInternal(DefaultRestClient.java:769)
-	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.toEntity(DefaultRestClient.java:758)
-	at org.springframework.ai.openai.api.OpenAiApi.chatCompletionEntity(OpenAiApi.java:187)
-	at org.springframework.ai.openai.OpenAiChatModel.lambda$internalCall$1(OpenAiChatModel.java:199)
-	at org.springframework.retry.support.RetryTemplate.doExecute(RetryTemplate.java:357)
-	at org.springframework.retry.support.RetryTemplate.execute(RetryTemplate.java:230)
-	at org.springframework.ai.openai.OpenAiChatModel.lambda$internalCall$3(OpenAiChatModel.java:199)
-	at io.micrometer.observation.Observation.observe(Observation.java:564)
-	at org.springframework.ai.openai.OpenAiChatModel.internalCall(OpenAiChatModel.java:196)
-	at org.springframework.ai.openai.OpenAiChatModel.call(OpenAiChatModel.java:181)
-	at org.springframework.ai.chat.client.advisor.ChatModelCallAdvisor.adviseCall(ChatModelCallAdvisor.java:54)
-	at org.springframework.ai.chat.client.advisor.DefaultAroundAdvisorChain.lambda$nextCall$1(DefaultAroundAdvisorChain.java:110)
-	at io.micrometer.observation.Observation.observe(Observation.java:564)
-	at org.springframework.ai.chat.client.advisor.DefaultAroundAdvisorChain.nextCall(DefaultAroundAdvisorChain.java:110)
-	at org.springframework.ai.chat.client.advisor.api.BaseAdvisor.adviseCall(BaseAdvisor.java:52)
-	at org.springframework.ai.chat.client.advisor.DefaultAroundAdvisorChain.lambda$nextCall$1(DefaultAroundAdvisorChain.java:110)
-	at io.micrometer.observation.Observation.observe(Observation.java:564)
-	at org.springframework.ai.chat.client.advisor.DefaultAroundAdvisorChain.nextCall(DefaultAroundAdvisorChain.java:110)
-	at org.springframework.ai.chat.client.DefaultChatClient$DefaultCallResponseSpec.lambda$doGetObservableChatClientResponse$1(DefaultChatClient.java:469)
-	at io.micrometer.observation.Observation.observe(Observation.java:564)
-	at org.springframework.ai.chat.client.DefaultChatClient$DefaultCallResponseSpec.doGetObservableChatClientResponse(DefaultChatClient.java:467)
-	at org.springframework.ai.chat.client.DefaultChatClient$DefaultCallResponseSpec.doGetObservableChatClientResponse(DefaultChatClient.java:446)
-	at org.springframework.ai.chat.client.DefaultChatClient$DefaultCallResponseSpec.content(DefaultChatClient.java:441)
-	at com.ywzai.domain.agent.service.execute.auto.step.Step1AnalyzerNode.doApply(Step1AnalyzerNode.java:69)
-	at com.ywzai.domain.agent.service.execute.auto.step.Step1AnalyzerNode.doApply(Step1AnalyzerNode.java:20)
-	at cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter.apply(AbstractMultiThreadStrategyRouter.java:31)
-	at cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter.router(AbstractMultiThreadStrategyRouter.java:22)
-	at com.ywzai.domain.agent.service.execute.auto.step.RootNode.doApply(RootNode.java:38)
-	at com.ywzai.domain.agent.service.execute.auto.step.RootNode.doApply(RootNode.java:21)
-	at cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter.apply(AbstractMultiThreadStrategyRouter.java:31)
-	at com.ywzai.domain.agent.service.execute.auto.AutoAgentExecuteStrategy.execute(AutoAgentExecuteStrategy.java:42)
-	at com.ywzai.trigger.http.AiAgentController.lambda$autoAgent$0(AiAgentController.java:61)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:842)
-25-09-21.22:43:15.659 [pool-2-thread-7 ] ERROR AiAgentController      - AutoAgent执行异常：Error calling tool: [TextContent[audience=null, priority=null, text=Error executing tool AIsearch: request_id=2df7abe4-d412-4ecd-bd7f-32d9537ede65 , http status code is 400, body is {"requestId":"2df7abe4-d412-4ecd-bd7f-32d9537ede65","code":"InvalidParameter","message":"Invalid request body","detail":[{"field":"resource_type_filter","message":"Value error, Invalid type 'article'. Must be one of: image, video, web","type":"value_error"}]}]]
-java.lang.IllegalStateException: Error calling tool: [TextContent[audience=null, priority=null, text=Error executing tool AIsearch: request_id=2df7abe4-d412-4ecd-bd7f-32d9537ede65 , http status code is 400, body is {"requestId":"2df7abe4-d412-4ecd-bd7f-32d9537ede65","code":"InvalidParameter","message":"Invalid request body","detail":[{"field":"resource_type_filter","message":"Value error, Invalid type 'article'. Must be one of: image, video, web","type":"value_error"}]}]]
-	at org.springframework.ai.mcp.SyncMcpToolCallback.call(SyncMcpToolCallback.java:118)
-	at org.springframework.ai.mcp.SyncMcpToolCallback.call(SyncMcpToolCallback.java:126)
-	at org.springframework.ai.model.tool.DefaultToolCallingManager.lambda$executeToolCall$5(DefaultToolCallingManager.java:224)
-	at io.micrometer.observation.Observation.observe(Observation.java:564)
-	at org.springframework.ai.model.tool.DefaultToolCallingManager.executeToolCall(DefaultToolCallingManager.java:221)
-	at org.springframework.ai.model.tool.DefaultToolCallingManager.executeToolCalls(DefaultToolCallingManager.java:137)
-	at org.springframework.ai.openai.OpenAiChatModel.internalCall(OpenAiChatModel.java:244)
-	at org.springframework.ai.openai.OpenAiChatModel.call(OpenAiChatModel.java:181)
-	at org.springframework.ai.chat.client.advisor.ChatModelCallAdvisor.adviseCall(ChatModelCallAdvisor.java:54)
-	at org.springframework.ai.chat.client.advisor.DefaultAroundAdvisorChain.lambda$nextCall$1(DefaultAroundAdvisorChain.java:110)
-	at io.micrometer.observation.Observation.observe(Observation.java:564)
-	at org.springframework.ai.chat.client.advisor.DefaultAroundAdvisorChain.nextCall(DefaultAroundAdvisorChain.java:110)
-	at org.springframework.ai.chat.client.advisor.api.BaseAdvisor.adviseCall(BaseAdvisor.java:52)
-	at org.springframework.ai.chat.client.advisor.DefaultAroundAdvisorChain.lambda$nextCall$1(DefaultAroundAdvisorChain.java:110)
-	at io.micrometer.observation.Observation.observe(Observation.java:564)
-	at org.springframework.ai.chat.client.advisor.DefaultAroundAdvisorChain.nextCall(DefaultAroundAdvisorChain.java:110)
-	at org.springframework.ai.chat.client.DefaultChatClient$DefaultCallResponseSpec.lambda$doGetObservableChatClientResponse$1(DefaultChatClient.java:469)
-	at io.micrometer.observation.Observation.observe(Observation.java:564)
-	at org.springframework.ai.chat.client.DefaultChatClient$DefaultCallResponseSpec.doGetObservableChatClientResponse(DefaultChatClient.java:467)
-	at org.springframework.ai.chat.client.DefaultChatClient$DefaultCallResponseSpec.doGetObservableChatClientResponse(DefaultChatClient.java:446)
-	at org.springframework.ai.chat.client.DefaultChatClient$DefaultCallResponseSpec.content(DefaultChatClient.java:441)
-	at com.ywzai.domain.agent.service.execute.auto.step.Step1AnalyzerNode.doApply(Step1AnalyzerNode.java:69)
-	at com.ywzai.domain.agent.service.execute.auto.step.Step1AnalyzerNode.doApply(Step1AnalyzerNode.java:20)
-	at cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter.apply(AbstractMultiThreadStrategyRouter.java:31)
-	at cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter.router(AbstractMultiThreadStrategyRouter.java:22)
-	at com.ywzai.domain.agent.service.execute.auto.step.RootNode.doApply(RootNode.java:38)
-	at com.ywzai.domain.agent.service.execute.auto.step.RootNode.doApply(RootNode.java:21)
-	at cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter.apply(AbstractMultiThreadStrategyRouter.java:31)
-	at com.ywzai.domain.agent.service.execute.auto.AutoAgentExecuteStrategy.execute(AutoAgentExecuteStrategy.java:42)
-	at com.ywzai.trigger.http.AiAgentController.lambda$autoAgent$0(AiAgentController.java:61)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:842)
-25-09-22.14:08:06.576 [ForkJoinPool.commonPool-worker-2] WARN  StdioClientTransport   - Process terminated with code 1
-25-09-22.14:08:23.699 [pool-2-thread-7 ] ERROR AiAgentController      - AutoAgent执行异常：No bean named 'ai_client_4101' available
-org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'ai_client_4101' available
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanDefinition(DefaultListableBeanFactory.java:951)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getMergedLocalBeanDefinition(AbstractBeanFactory.java:1382)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
-	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1272)
-	at com.ywzai.domain.agent.service.execute.auto.step.AbstractExecuteSupport.getChatClientById(AbstractExecuteSupport.java:47)
-	at com.ywzai.domain.agent.service.execute.auto.step.Step1AnalyzerNode.doApply(Step1AnalyzerNode.java:30)
-	at com.ywzai.domain.agent.service.execute.auto.step.Step1AnalyzerNode.doApply(Step1AnalyzerNode.java:21)
-	at cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter.apply(AbstractMultiThreadStrategyRouter.java:31)
-	at cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter.router(AbstractMultiThreadStrategyRouter.java:22)
-	at com.ywzai.domain.agent.service.execute.auto.step.RootNode.doApply(RootNode.java:38)
-	at com.ywzai.domain.agent.service.execute.auto.step.RootNode.doApply(RootNode.java:21)
-	at cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter.apply(AbstractMultiThreadStrategyRouter.java:31)
-	at com.ywzai.domain.agent.service.execute.auto.AutoAgentExecuteStrategy.execute(AutoAgentExecuteStrategy.java:42)
-	at com.ywzai.trigger.http.AiAgentController.lambda$autoAgent$0(AiAgentController.java:61)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:842)
-25-09-22.14:08:52.018 [ForkJoinPool.commonPool-worker-1] WARN  StdioClientTransport   - Process terminated with code 1
-25-09-22.14:09:02.738 [main            ] ERROR LoggingFailureAnalysisReporter - 
-
-***************************
-APPLICATION FAILED TO START
-***************************
-
-Description:
-
-A component required a bean named 'ai_client_model_2003' that could not be found.
-
-
-Action:
-
-Consider defining a bean named 'ai_client_model_2003' in your configuration.
-
-25-09-22.14:09:03.192 [ForkJoinPool.commonPool-worker-1] WARN  StdioClientTransport   - Process terminated with code 1
-25-09-22.14:15:11.894 [main            ] ERROR LoggingFailureAnalysisReporter - 
-
-***************************
-APPLICATION FAILED TO START
-***************************
-
-Description:
-
-A component required a bean named 'ai_client_model_2001' that could not be found.
-
-
-Action:
-
-Consider defining a bean named 'ai_client_model_2001' in your configuration.
-
-25-09-22.14:15:12.356 [ForkJoinPool.commonPool-worker-1] WARN  StdioClientTransport   - Process terminated with code 1
-25-09-22.14:23:02.703 [ForkJoinPool.commonPool-worker-2] WARN  StdioClientTransport   - Process terminated with code 1
-25-09-22.14:28:19.342 [pool-2-thread-7 ] ERROR Step4LogExecutionSummaryNode - 生成最终总结报告时出现异常: Format specifier '%s'
-java.util.MissingFormatArgumentException: Format specifier '%s'
-	at java.base/java.util.Formatter.format(Formatter.java:2688)
-	at java.base/java.util.Formatter.format(Formatter.java:2625)
-	at java.base/java.lang.String.format(String.java:4147)
-	at com.ywzai.domain.agent.service.execute.auto.step.Step4LogExecutionSummaryNode.getSummaryPrompt(Step4LogExecutionSummaryNode.java:103)
-	at com.ywzai.domain.agent.service.execute.auto.step.Step4LogExecutionSummaryNode.generateFinalReport(Step4LogExecutionSummaryNode.java:75)
-	at com.ywzai.domain.agent.service.execute.auto.step.Step4LogExecutionSummaryNode.doApply(Step4LogExecutionSummaryNode.java:35)
-	at com.ywzai.domain.agent.service.execute.auto.step.Step4LogExecutionSummaryNode.doApply(Step4LogExecutionSummaryNode.java:20)
-	at cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter.apply(AbstractMultiThreadStrategyRouter.java:31)
-	at cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter.router(AbstractMultiThreadStrategyRouter.java:22)
-	at com.ywzai.domain.agent.service.execute.auto.step.Step1AnalyzerNode.doApply(Step1AnalyzerNode.java:57)
-	at com.ywzai.domain.agent.service.execute.auto.step.Step1AnalyzerNode.doApply(Step1AnalyzerNode.java:21)
-	at cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter.apply(AbstractMultiThreadStrategyRouter.java:31)
-	at cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter.router(AbstractMultiThreadStrategyRouter.java:22)
-	at com.ywzai.domain.agent.service.execute.auto.step.RootNode.doApply(RootNode.java:38)
-	at com.ywzai.domain.agent.service.execute.auto.step.RootNode.doApply(RootNode.java:21)
-	at cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter.apply(AbstractMultiThreadStrategyRouter.java:31)
-	at com.ywzai.domain.agent.service.execute.auto.AutoAgentExecuteStrategy.execute(AutoAgentExecuteStrategy.java:42)
-	at com.ywzai.trigger.http.AiAgentController.lambda$autoAgent$0(AiAgentController.java:61)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:842)
-25-09-22.14:41:59.167 [ForkJoinPool.commonPool-worker-4] WARN  StdioClientTransport   - Process terminated with code 1
-25-09-22.21:23:45.371 [pool-2-thread-7 ] ERROR AiAgentController      - AutoAgent执行异常：The template string is not valid.
-java.lang.IllegalArgumentException: The template string is not valid.
-	at org.springframework.ai.template.st.StTemplateRenderer.createST(StTemplateRenderer.java:118)
-	at org.springframework.ai.template.st.StTemplateRenderer.apply(StTemplateRenderer.java:103)
-	at org.springframework.ai.chat.prompt.PromptTemplate.render(PromptTemplate.java:121)
-	at com.ywzai.domain.agent.service.armory.factory.element.RagAnswerAdvisor.before(RagAnswerAdvisor.java:47)
-	at com.ywzai.domain.agent.service.armory.factory.element.RagAnswerAdvisor.adviseCall(RagAnswerAdvisor.java:77)
-	at org.springframework.ai.chat.client.advisor.DefaultAroundAdvisorChain.lambda$nextCall$1(DefaultAroundAdvisorChain.java:110)
-	at io.micrometer.observation.Observation.observe(Observation.java:564)
-	at org.springframework.ai.chat.client.advisor.DefaultAroundAdvisorChain.nextCall(DefaultAroundAdvisorChain.java:110)
-	at org.springframework.ai.chat.client.advisor.api.BaseAdvisor.adviseCall(BaseAdvisor.java:52)
-	at org.springframework.ai.chat.client.advisor.DefaultAroundAdvisorChain.lambda$nextCall$1(DefaultAroundAdvisorChain.java:110)
-	at io.micrometer.observation.Observation.observe(Observation.java:564)
-	at org.springframework.ai.chat.client.advisor.DefaultAroundAdvisorChain.nextCall(DefaultAroundAdvisorChain.java:110)
-	at org.springframework.ai.chat.client.DefaultChatClient$DefaultCallResponseSpec.lambda$doGetObservableChatClientResponse$1(DefaultChatClient.java:469)
-	at io.micrometer.observation.Observation.observe(Observation.java:564)
-	at org.springframework.ai.chat.client.DefaultChatClient$DefaultCallResponseSpec.doGetObservableChatClientResponse(DefaultChatClient.java:467)
-	at org.springframework.ai.chat.client.DefaultChatClient$DefaultCallResponseSpec.doGetObservableChatClientResponse(DefaultChatClient.java:446)
-	at org.springframework.ai.chat.client.DefaultChatClient$DefaultCallResponseSpec.content(DefaultChatClient.java:441)
-	at com.ywzai.domain.agent.service.execute.auto.step.Step1AnalyzerNode.doApply(Step1AnalyzerNode.java:47)
-	at com.ywzai.domain.agent.service.execute.auto.step.Step1AnalyzerNode.doApply(Step1AnalyzerNode.java:21)
-	at cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter.apply(AbstractMultiThreadStrategyRouter.java:31)
-	at cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter.router(AbstractMultiThreadStrategyRouter.java:22)
-	at com.ywzai.domain.agent.service.execute.auto.step.RootNode.doApply(RootNode.java:38)
-	at com.ywzai.domain.agent.service.execute.auto.step.RootNode.doApply(RootNode.java:21)
-	at cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter.apply(AbstractMultiThreadStrategyRouter.java:31)
-	at com.ywzai.domain.agent.service.execute.auto.AutoAgentExecuteStrategy.execute(AutoAgentExecuteStrategy.java:42)
-	at com.ywzai.trigger.http.AiAgentController.lambda$autoAgent$0(AiAgentController.java:61)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:842)
-Caused by: org.stringtemplate.v4.compiler.STException: null
-	at org.stringtemplate.v4.compiler.Compiler.reportMessageAndThrowSTException(Compiler.java:224)
-	at org.stringtemplate.v4.compiler.Compiler.compile(Compiler.java:154)
-	at org.stringtemplate.v4.STGroup.compile(STGroup.java:514)
-	at org.stringtemplate.v4.ST.<init>(ST.java:162)
-	at org.stringtemplate.v4.ST.<init>(ST.java:156)
-	at org.springframework.ai.template.st.StTemplateRenderer.createST(StTemplateRenderer.java:115)
-	... 28 common frames omitted
-25-09-22.21:25:47.081 [ForkJoinPool.commonPool-worker-1] WARN  StdioClientTransport   - Process terminated with code 1
-25-09-22.21:26:25.766 [pool-2-thread-7 ] ERROR AiAgentController      - AutoAgent执行异常：The template string is not valid.
-java.lang.IllegalArgumentException: The template string is not valid.
-	at org.springframework.ai.template.st.StTemplateRenderer.createST(StTemplateRenderer.java:118)
-	at org.springframework.ai.template.st.StTemplateRenderer.apply(StTemplateRenderer.java:103)
-	at org.springframework.ai.chat.prompt.PromptTemplate.render(PromptTemplate.java:121)
-	at com.ywzai.domain.agent.service.armory.factory.element.RagAnswerAdvisor.before(RagAnswerAdvisor.java:51)
-	at com.ywzai.domain.agent.service.armory.factory.element.RagAnswerAdvisor.adviseCall(RagAnswerAdvisor.java:81)
-	at org.springframework.ai.chat.client.advisor.DefaultAroundAdvisorChain.lambda$nextCall$1(DefaultAroundAdvisorChain.java:110)
-	at io.micrometer.observation.Observation.observe(Observation.java:564)
-	at org.springframework.ai.chat.client.advisor.DefaultAroundAdvisorChain.nextCall(DefaultAroundAdvisorChain.java:110)
-	at org.springframework.ai.chat.client.advisor.api.BaseAdvisor.adviseCall(BaseAdvisor.java:52)
-	at org.springframework.ai.chat.client.advisor.DefaultAroundAdvisorChain.lambda$nextCall$1(DefaultAroundAdvisorChain.java:110)
-	at io.micrometer.observation.Observation.observe(Observation.java:564)
-	at org.springframework.ai.chat.client.advisor.DefaultAroundAdvisorChain.nextCall(DefaultAroundAdvisorChain.java:110)
-	at org.springframework.ai.chat.client.DefaultChatClient$DefaultCallResponseSpec.lambda$doGetObservableChatClientResponse$1(DefaultChatClient.java:469)
-	at io.micrometer.observation.Observation.observe(Observation.java:564)
-	at org.springframework.ai.chat.client.DefaultChatClient$DefaultCallResponseSpec.doGetObservableChatClientResponse(DefaultChatClient.java:467)
-	at org.springframework.ai.chat.client.DefaultChatClient$DefaultCallResponseSpec.doGetObservableChatClientResponse(DefaultChatClient.java:446)
-	at org.springframework.ai.chat.client.DefaultChatClient$DefaultCallResponseSpec.content(DefaultChatClient.java:441)
-	at com.ywzai.domain.agent.service.execute.auto.step.Step1AnalyzerNode.doApply(Step1AnalyzerNode.java:47)
-	at com.ywzai.domain.agent.service.execute.auto.step.Step1AnalyzerNode.doApply(Step1AnalyzerNode.java:21)
-	at cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter.apply(AbstractMultiThreadStrategyRouter.java:31)
-	at cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter.router(AbstractMultiThreadStrategyRouter.java:22)
-	at com.ywzai.domain.agent.service.execute.auto.step.RootNode.doApply(RootNode.java:38)
-	at com.ywzai.domain.agent.service.execute.auto.step.RootNode.doApply(RootNode.java:21)
-	at cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter.apply(AbstractMultiThreadStrategyRouter.java:31)
-	at com.ywzai.domain.agent.service.execute.auto.AutoAgentExecuteStrategy.execute(AutoAgentExecuteStrategy.java:42)
-	at com.ywzai.trigger.http.AiAgentController.lambda$autoAgent$0(AiAgentController.java:61)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:842)
-Caused by: org.stringtemplate.v4.compiler.STException: null
-	at org.stringtemplate.v4.compiler.Compiler.reportMessageAndThrowSTException(Compiler.java:224)
-	at org.stringtemplate.v4.compiler.Compiler.compile(Compiler.java:154)
-	at org.stringtemplate.v4.STGroup.compile(STGroup.java:514)
-	at org.stringtemplate.v4.ST.<init>(ST.java:162)
-	at org.stringtemplate.v4.ST.<init>(ST.java:156)
-	at org.springframework.ai.template.st.StTemplateRenderer.createST(StTemplateRenderer.java:115)
-	... 28 common frames omitted
-25-09-22.21:34:09.124 [parallel-4      ] WARN  StdioClientTransport   - Process terminated with code 1
-25-09-22.21:34:35.668 [pool-2-thread-7 ] WARN  Step2PrecisionExecutorNode - ⚠️ 分析结果为空，使用默认执行策略
-25-09-22.21:34:39.814 [pool-2-thread-7 ] WARN  Step3QualitySupervisorNode - ⚠️ 执行结果为空，跳过质量监督
-25-09-22.21:37:38.500 [parallel-4      ] WARN  StdioClientTransport   - Process terminated with code 1
-25-09-22.21:39:26.261 [pool-2-thread-7 ] WARN  Step2PrecisionExecutorNode - ⚠️ 分析结果为空，使用默认执行策略
-25-09-22.21:40:25.716 [MainHikariPool housekeeper] WARN  HikariPool             - MainHikariPool - Thread starvation or clock leap detected (housekeeper delta=1m7s112ms556µs).
-25-09-22.21:40:25.716 [PgVectorHikariPool housekeeper] WARN  HikariPool             - PgVectorHikariPool - Thread starvation or clock leap detected (housekeeper delta=1m4s683ms758µs100ns).
-25-09-22.21:49:18.574 [MainHikariPool housekeeper] WARN  HikariPool             - MainHikariPool - Thread starvation or clock leap detected (housekeeper delta=8m52s858ms132µs600ns).
-25-09-22.21:49:18.574 [PgVectorHikariPool housekeeper] WARN  HikariPool             - PgVectorHikariPool - Thread starvation or clock leap detected (housekeeper delta=8m52s858ms142µs).
-25-09-22.21:49:18.590 [pool-2-thread-7 ] WARN  Step3QualitySupervisorNode - ⚠️ 执行结果为空，跳过质量监督
-25-09-22.21:49:19.192 [parallel-4      ] WARN  StdioClientTransport   - Process terminated with code 1
-25-09-22.21:51:07.330 [main            ] ERROR SpringApplication      - Application run failed
+25-10-07.16:26:19.662 [main            ] ERROR SpringApplication      - Application run failed
 java.lang.RuntimeException: java.util.concurrent.CompletionException: org.mybatis.spring.MyBatisSystemException: 
 ### Error querying database.  Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection
-### The error may exist in file [D:\java\ideapublic\ywz-ai-agent-station-study\ywz-ai-agent-station-study-app\target\classes\mybatis\mapper\ai_client_api_mapper.xml]
-### The error may involve com.ywzai.infrastructure.dao.IAiClientApiDao.queryByApiId
+### The error may exist in file [D:\java\ideapublic\ywz-ai-agent-station-study\ywz-ai-agent-station-study-app\target\classes\mybatis\mapper\ai_client_config_mapper.xml]
+### The error may involve com.ywzai.infrastructure.dao.IAiClientConfigDao.queryModelIdByClientId
 ### The error occurred while executing a query
 ### Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection
-	at com.ywzai.config.AiAgentAutoConfiguration.onApplicationEvent(AiAgentAutoConfiguration.java:59)
+	at com.ywzai.config.AiAgentAutoConfiguration.onApplicationEvent(AiAgentAutoConfiguration.java:62)
 	at com.ywzai.config.AiAgentAutoConfiguration.onApplicationEvent(AiAgentAutoConfiguration.java:25)
 	at com.ywzai.config.AiAgentAutoConfiguration$$SpringCGLIB$$0.onApplicationEvent(<generated>)
 	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:185)
@@ -779,8 +25,8 @@ java.lang.RuntimeException: java.util.concurrent.CompletionException: org.mybati
 	at com.ywzai.Application.main(Application.java:12)
 Caused by: java.util.concurrent.CompletionException: org.mybatis.spring.MyBatisSystemException: 
 ### Error querying database.  Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection
-### The error may exist in file [D:\java\ideapublic\ywz-ai-agent-station-study\ywz-ai-agent-station-study-app\target\classes\mybatis\mapper\ai_client_api_mapper.xml]
-### The error may involve com.ywzai.infrastructure.dao.IAiClientApiDao.queryByApiId
+### The error may exist in file [D:\java\ideapublic\ywz-ai-agent-station-study\ywz-ai-agent-station-study-app\target\classes\mybatis\mapper\ai_client_config_mapper.xml]
+### The error may involve com.ywzai.infrastructure.dao.IAiClientConfigDao.queryModelIdByClientId
 ### The error occurred while executing a query
 ### Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection
 	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:315)
@@ -792,8 +38,8 @@ Caused by: java.util.concurrent.CompletionException: org.mybatis.spring.MyBatisS
 	at java.base/java.lang.Thread.run(Thread.java:842)
 Caused by: org.mybatis.spring.MyBatisSystemException: 
 ### Error querying database.  Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection
-### The error may exist in file [D:\java\ideapublic\ywz-ai-agent-station-study\ywz-ai-agent-station-study-app\target\classes\mybatis\mapper\ai_client_api_mapper.xml]
-### The error may involve com.ywzai.infrastructure.dao.IAiClientApiDao.queryByApiId
+### The error may exist in file [D:\java\ideapublic\ywz-ai-agent-station-study\ywz-ai-agent-station-study-app\target\classes\mybatis\mapper\ai_client_config_mapper.xml]
+### The error may involve com.ywzai.infrastructure.dao.IAiClientConfigDao.queryModelIdByClientId
 ### The error occurred while executing a query
 ### Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection
 	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:99)
@@ -803,8 +49,8 @@ Caused by: org.mybatis.spring.MyBatisSystemException:
 	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:87)
 	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:141)
 	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:86)
-	at jdk.proxy2/jdk.proxy2.$Proxy78.queryByApiId(Unknown Source)
-	at com.ywzai.infrastructure.adapter.repository.AgentRepository.getAiClientApiVOListByClientIds(AgentRepository.java:362)
+	at jdk.proxy2/jdk.proxy2.$Proxy80.queryModelIdByClientId(Unknown Source)
+	at com.ywzai.infrastructure.adapter.repository.AgentRepository.getAiClientApiVOListByClientIds(AgentRepository.java:359)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -816,13 +62,13 @@ Caused by: org.mybatis.spring.MyBatisSystemException:
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
 	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:727)
 	at com.ywzai.infrastructure.adapter.repository.AgentRepository$$SpringCGLIB$$0.getAiClientApiVOListByClientIds(<generated>)
-	at com.ywzai.domain.agent.service.armory.business.data.impl.AiClientLoadDataStrategy.lambda$loadData$0(AiClientLoadDataStrategy.java:39)
+	at com.ywzai.domain.agent.service.armory.business.data.impl.AiClientLoadDataStrategy.lambda$0(AiClientLoadDataStrategy.java:39)
 	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run$$$capture(CompletableFuture.java:1768)
 	... 4 common frames omitted
 Caused by: org.apache.ibatis.exceptions.PersistenceException: 
 ### Error querying database.  Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection
-### The error may exist in file [D:\java\ideapublic\ywz-ai-agent-station-study\ywz-ai-agent-station-study-app\target\classes\mybatis\mapper\ai_client_api_mapper.xml]
-### The error may involve com.ywzai.infrastructure.dao.IAiClientApiDao.queryByApiId
+### The error may exist in file [D:\java\ideapublic\ywz-ai-agent-station-study\ywz-ai-agent-station-study-app\target\classes\mybatis\mapper\ai_client_config_mapper.xml]
+### The error may involve com.ywzai.infrastructure.dao.IAiClientConfigDao.queryModelIdByClientId
 ### The error occurred while executing a query
 ### Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection
 	at org.apache.ibatis.exceptions.ExceptionFactory.wrapException(ExceptionFactory.java:30)
@@ -830,7 +76,8 @@ Caused by: org.apache.ibatis.exceptions.PersistenceException:
 	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:147)
 	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:142)
 	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectOne(DefaultSqlSession.java:75)
-	at jdk.internal.reflect.GeneratedMethodAccessor4.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
 	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:333)
@@ -847,70 +94,341 @@ Caused by: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to 
 	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:110)
 	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:90)
 	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:154)
+	... 32 common frames omitted
+Caused by: java.sql.SQLNonTransientConnectionException: Could not create connection to database server. Attempted reconnect 3 times. Giving up.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:110)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:89)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:63)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:73)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectWithRetries(ConnectionImpl.java:899)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:824)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:449)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:242)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:198)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:137)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:360)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:202)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:461)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:550)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:98)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:111)
+	at org.springframework.jdbc.datasource.DataSourceUtils.fetchConnection(DataSourceUtils.java:160)
+	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:118)
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:81)
+	... 42 common frames omitted
+Caused by: com.mysql.cj.exceptions.CJException: Unknown database 'ai-agent-station-study'
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:129)
+	at com.mysql.cj.protocol.a.NativeProtocol.checkErrorMessage(NativeProtocol.java:787)
+	at com.mysql.cj.protocol.a.NativeProtocol.checkErrorMessage(NativeProtocol.java:709)
+	at com.mysql.cj.protocol.a.NativeProtocol.checkErrorMessage(NativeProtocol.java:677)
+	at com.mysql.cj.protocol.a.NativeProtocol.checkErrorMessage(NativeProtocol.java:137)
+	at com.mysql.cj.protocol.a.NativeAuthenticationProvider.proceedHandshakeWithPluggableAuthentication(NativeAuthenticationProvider.java:470)
+	at com.mysql.cj.protocol.a.NativeAuthenticationProvider.connect(NativeAuthenticationProvider.java:211)
+	at com.mysql.cj.protocol.a.NativeProtocol.connect(NativeProtocol.java:1369)
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:133)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectWithRetries(ConnectionImpl.java:843)
+	... 56 common frames omitted
+25-10-07.16:29:00.622 [main            ] ERROR SpringApplication      - Application run failed
+java.lang.RuntimeException: java.util.concurrent.CompletionException: org.mybatis.spring.MyBatisSystemException: 
+### Error querying database.  Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection
+### The error may exist in file [D:\java\ideapublic\ywz-ai-agent-station-study\ywz-ai-agent-station-study-app\target\classes\mybatis\mapper\ai_client_config_mapper.xml]
+### The error may involve com.ywzai.infrastructure.dao.IAiClientConfigDao.queryModelIdByClientId
+### The error occurred while executing a query
+### Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection
+	at com.ywzai.config.AiAgentAutoConfiguration.onApplicationEvent(AiAgentAutoConfiguration.java:62)
+	at com.ywzai.config.AiAgentAutoConfiguration.onApplicationEvent(AiAgentAutoConfiguration.java:25)
+	at com.ywzai.config.AiAgentAutoConfiguration$$SpringCGLIB$$0.onApplicationEvent(<generated>)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:185)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:178)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:156)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:454)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:387)
+	at org.springframework.boot.context.event.EventPublishingRunListener.ready(EventPublishingRunListener.java:109)
+	at org.springframework.boot.SpringApplicationRunListeners.lambda$ready$6(SpringApplicationRunListeners.java:80)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:118)
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:112)
+	at org.springframework.boot.SpringApplicationRunListeners.ready(SpringApplicationRunListeners.java:80)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:332)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
+	at com.ywzai.Application.main(Application.java:12)
+Caused by: java.util.concurrent.CompletionException: org.mybatis.spring.MyBatisSystemException: 
+### Error querying database.  Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection
+### The error may exist in file [D:\java\ideapublic\ywz-ai-agent-station-study\ywz-ai-agent-station-study-app\target\classes\mybatis\mapper\ai_client_config_mapper.xml]
+### The error may involve com.ywzai.infrastructure.dao.IAiClientConfigDao.queryModelIdByClientId
+### The error occurred while executing a query
+### Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection
+	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:315)
+	at java.base/java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:320)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1770)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: org.mybatis.spring.MyBatisSystemException: 
+### Error querying database.  Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection
+### The error may exist in file [D:\java\ideapublic\ywz-ai-agent-station-study\ywz-ai-agent-station-study-app\target\classes\mybatis\mapper\ai_client_config_mapper.xml]
+### The error may involve com.ywzai.infrastructure.dao.IAiClientConfigDao.queryModelIdByClientId
+### The error occurred while executing a query
+### Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:99)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:347)
+	at jdk.proxy2/jdk.proxy2.$Proxy77.selectOne(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectOne(SqlSessionTemplate.java:154)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:87)
+	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:141)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:86)
+	at jdk.proxy2/jdk.proxy2.$Proxy80.queryModelIdByClientId(Unknown Source)
+	at com.ywzai.infrastructure.adapter.repository.AgentRepository.getAiClientApiVOListByClientIds(AgentRepository.java:359)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:359)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:138)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:727)
+	at com.ywzai.infrastructure.adapter.repository.AgentRepository$$SpringCGLIB$$0.getAiClientApiVOListByClientIds(<generated>)
+	at com.ywzai.domain.agent.service.armory.business.data.impl.AiClientLoadDataStrategy.lambda$0(AiClientLoadDataStrategy.java:39)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1768)
+	... 3 common frames omitted
+Caused by: org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection
+### The error may exist in file [D:\java\ideapublic\ywz-ai-agent-station-study\ywz-ai-agent-station-study-app\target\classes\mybatis\mapper\ai_client_config_mapper.xml]
+### The error may involve com.ywzai.infrastructure.dao.IAiClientConfigDao.queryModelIdByClientId
+### The error occurred while executing a query
+### Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection
+	at org.apache.ibatis.exceptions.ExceptionFactory.wrapException(ExceptionFactory.java:30)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:156)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:147)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:142)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectOne(DefaultSqlSession.java:75)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:333)
+	... 23 common frames omitted
+Caused by: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:84)
+	at org.mybatis.spring.transaction.SpringManagedTransaction.openConnection(SpringManagedTransaction.java:77)
+	at org.mybatis.spring.transaction.SpringManagedTransaction.getConnection(SpringManagedTransaction.java:64)
+	at org.apache.ibatis.executor.BaseExecutor.getConnection(BaseExecutor.java:348)
+	at org.apache.ibatis.executor.SimpleExecutor.prepareStatement(SimpleExecutor.java:89)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:64)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:336)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:158)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:110)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:90)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:154)
 	... 31 common frames omitted
-Caused by: java.sql.SQLTransientConnectionException: MainHikariPool - Connection is not available, request timed out after 35508ms (total=3, active=3, idle=0, waiting=0)
-	at com.zaxxer.hikari.pool.HikariPool.createTimeoutException(HikariPool.java:686)
-	at com.zaxxer.hikari.pool.HikariPool.getConnection(HikariPool.java:179)
-	at com.zaxxer.hikari.pool.HikariPool.getConnection(HikariPool.java:144)
-	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:127)
+Caused by: java.sql.SQLNonTransientConnectionException: Could not create connection to database server. Attempted reconnect 3 times. Giving up.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:110)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:89)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:63)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:73)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectWithRetries(ConnectionImpl.java:899)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:824)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:449)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:242)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:198)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:137)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:360)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:202)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:461)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:550)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:98)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:111)
 	at org.springframework.jdbc.datasource.DataSourceUtils.fetchConnection(DataSourceUtils.java:160)
 	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:118)
 	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:81)
 	... 41 common frames omitted
-25-09-22.21:51:42.574 [MainHikariPool housekeeper] WARN  HikariPool             - MainHikariPool - Thread starvation or clock leap detected (housekeeper delta=1m105ms568µs700ns).
-25-09-22.21:55:13.831 [MainHikariPool housekeeper] WARN  HikariPool             - MainHikariPool - Thread starvation or clock leap detected (housekeeper delta=2m4s470ms874µs500ns).
-25-09-22.22:03:16.798 [MainHikariPool housekeeper] WARN  HikariPool             - MainHikariPool - Thread starvation or clock leap detected (housekeeper delta=7m24s816ms806µs300ns).
-25-09-22.22:03:17.672 [parallel-4      ] WARN  StdioClientTransport   - Process terminated with code 1
-25-09-22.22:04:40.303 [MainHikariPool housekeeper] WARN  HikariPool             - MainHikariPool - Thread starvation or clock leap detected (housekeeper delta=1m15s171ms963µs400ns).
-25-09-22.22:07:37.185 [MainHikariPool housekeeper] WARN  HikariPool             - MainHikariPool - Thread starvation or clock leap detected (housekeeper delta=2m22s680ms742µs400ns).
-25-09-22.22:09:08.610 [MainHikariPool housekeeper] WARN  HikariPool             - MainHikariPool - Thread starvation or clock leap detected (housekeeper delta=1m31s425ms721µs800ns).
-25-09-22.22:11:56.661 [MainHikariPool housekeeper] WARN  HikariPool             - MainHikariPool - Thread starvation or clock leap detected (housekeeper delta=2m48s50ms710µs900ns).
-25-09-22.22:12:23.839 [pool-2-thread-7 ] WARN  Step2PrecisionExecutorNode - ⚠️ 分析结果为空，使用默认执行策略
-25-09-22.22:12:43.913 [MainHikariPool housekeeper] WARN  HikariPool             - MainHikariPool - Thread starvation or clock leap detected (housekeeper delta=47s252ms89µs400ns).
-25-09-22.22:22:45.165 [PgVectorHikariPool housekeeper] WARN  HikariPool             - PgVectorHikariPool - Thread starvation or clock leap detected (housekeeper delta=10m25s817ms815µs300ns).
-25-09-22.22:22:45.165 [MainHikariPool housekeeper] WARN  HikariPool             - MainHikariPool - Thread starvation or clock leap detected (housekeeper delta=10m1s252ms434µs300ns).
-25-09-22.22:22:45.170 [pool-2-thread-7 ] WARN  Step3QualitySupervisorNode - ⚠️ 执行结果为空，跳过质量监督
-25-09-22.22:22:45.669 [parallel-4      ] WARN  StdioClientTransport   - Process terminated with code 1
-25-09-22.22:24:52.372 [pool-2-thread-7 ] WARN  Step2PrecisionExecutorNode - ⚠️ 分析结果为空，使用默认执行策略
-25-09-22.22:24:56.374 [pool-2-thread-7 ] WARN  Step3QualitySupervisorNode - ⚠️ 执行结果为空，跳过质量监督
-25-09-22.22:27:26.213 [parallel-4      ] WARN  StdioClientTransport   - Process terminated with code 1
-25-09-22.22:27:45.033 [pool-2-thread-7 ] ERROR AiAgentController      - AutoAgent执行异常：The template string is not valid.
-java.lang.IllegalArgumentException: The template string is not valid.
-	at org.springframework.ai.template.st.StTemplateRenderer.createST(StTemplateRenderer.java:118)
-	at org.springframework.ai.template.st.StTemplateRenderer.apply(StTemplateRenderer.java:103)
-	at org.springframework.ai.chat.prompt.PromptTemplate.render(PromptTemplate.java:137)
-	at com.ywzai.domain.agent.service.armory.factory.element.RagAnswerAdvisor.before(RagAnswerAdvisor.java:65)
-	at com.ywzai.domain.agent.service.armory.factory.element.RagAnswerAdvisor.adviseCall(RagAnswerAdvisor.java:89)
-	at org.springframework.ai.chat.client.advisor.DefaultAroundAdvisorChain.lambda$nextCall$1(DefaultAroundAdvisorChain.java:110)
-	at io.micrometer.observation.Observation.observe(Observation.java:564)
-	at org.springframework.ai.chat.client.advisor.DefaultAroundAdvisorChain.nextCall(DefaultAroundAdvisorChain.java:110)
-	at org.springframework.ai.chat.client.advisor.api.BaseAdvisor.adviseCall(BaseAdvisor.java:52)
-	at org.springframework.ai.chat.client.advisor.DefaultAroundAdvisorChain.lambda$nextCall$1(DefaultAroundAdvisorChain.java:110)
-	at io.micrometer.observation.Observation.observe(Observation.java:564)
-	at org.springframework.ai.chat.client.advisor.DefaultAroundAdvisorChain.nextCall(DefaultAroundAdvisorChain.java:110)
-	at org.springframework.ai.chat.client.DefaultChatClient$DefaultCallResponseSpec.lambda$doGetObservableChatClientResponse$1(DefaultChatClient.java:469)
-	at io.micrometer.observation.Observation.observe(Observation.java:564)
-	at org.springframework.ai.chat.client.DefaultChatClient$DefaultCallResponseSpec.doGetObservableChatClientResponse(DefaultChatClient.java:467)
-	at org.springframework.ai.chat.client.DefaultChatClient$DefaultCallResponseSpec.doGetObservableChatClientResponse(DefaultChatClient.java:446)
-	at org.springframework.ai.chat.client.DefaultChatClient$DefaultCallResponseSpec.content(DefaultChatClient.java:441)
-	at com.ywzai.domain.agent.service.execute.auto.step.Step1AnalyzerNode.doApply(Step1AnalyzerNode.java:47)
-	at com.ywzai.domain.agent.service.execute.auto.step.Step1AnalyzerNode.doApply(Step1AnalyzerNode.java:21)
-	at cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter.apply(AbstractMultiThreadStrategyRouter.java:31)
-	at cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter.router(AbstractMultiThreadStrategyRouter.java:22)
-	at com.ywzai.domain.agent.service.execute.auto.step.RootNode.doApply(RootNode.java:38)
-	at com.ywzai.domain.agent.service.execute.auto.step.RootNode.doApply(RootNode.java:21)
-	at cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter.apply(AbstractMultiThreadStrategyRouter.java:31)
-	at com.ywzai.domain.agent.service.execute.auto.AutoAgentExecuteStrategy.execute(AutoAgentExecuteStrategy.java:42)
-	at com.ywzai.trigger.http.AiAgentController.lambda$autoAgent$0(AiAgentController.java:61)
+Caused by: com.mysql.cj.exceptions.CJException: Unknown database 'ai-agent-station-study'
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:129)
+	at com.mysql.cj.protocol.a.NativeProtocol.checkErrorMessage(NativeProtocol.java:787)
+	at com.mysql.cj.protocol.a.NativeProtocol.checkErrorMessage(NativeProtocol.java:709)
+	at com.mysql.cj.protocol.a.NativeProtocol.checkErrorMessage(NativeProtocol.java:677)
+	at com.mysql.cj.protocol.a.NativeProtocol.checkErrorMessage(NativeProtocol.java:137)
+	at com.mysql.cj.protocol.a.NativeAuthenticationProvider.proceedHandshakeWithPluggableAuthentication(NativeAuthenticationProvider.java:470)
+	at com.mysql.cj.protocol.a.NativeAuthenticationProvider.connect(NativeAuthenticationProvider.java:211)
+	at com.mysql.cj.protocol.a.NativeProtocol.connect(NativeProtocol.java:1369)
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:133)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectWithRetries(ConnectionImpl.java:843)
+	... 55 common frames omitted
+25-10-07.16:32:58.939 [main            ] ERROR SpringApplication      - Application run failed
+java.lang.RuntimeException: java.util.concurrent.CompletionException: com.alibaba.fastjson.JSONException: syntax error, offset 222, char "
+	at com.ywzai.config.AiAgentAutoConfiguration.onApplicationEvent(AiAgentAutoConfiguration.java:62)
+	at com.ywzai.config.AiAgentAutoConfiguration.onApplicationEvent(AiAgentAutoConfiguration.java:25)
+	at com.ywzai.config.AiAgentAutoConfiguration$$SpringCGLIB$$0.onApplicationEvent(<generated>)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:185)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:178)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:156)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:454)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:387)
+	at org.springframework.boot.context.event.EventPublishingRunListener.ready(EventPublishingRunListener.java:109)
+	at org.springframework.boot.SpringApplicationRunListeners.lambda$ready$6(SpringApplicationRunListeners.java:80)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:118)
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:112)
+	at org.springframework.boot.SpringApplicationRunListeners.ready(SpringApplicationRunListeners.java:80)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:332)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
+	at com.ywzai.Application.main(Application.java:12)
+Caused by: java.util.concurrent.CompletionException: com.alibaba.fastjson.JSONException: syntax error, offset 222, char "
+	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:315)
+	at java.base/java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:320)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1770)
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
 	at java.base/java.lang.Thread.run(Thread.java:842)
-Caused by: org.stringtemplate.v4.compiler.STException: null
-	at org.stringtemplate.v4.compiler.Compiler.reportMessageAndThrowSTException(Compiler.java:224)
-	at org.stringtemplate.v4.compiler.Compiler.compile(Compiler.java:154)
-	at org.stringtemplate.v4.STGroup.compile(STGroup.java:514)
-	at org.stringtemplate.v4.ST.<init>(ST.java:162)
-	at org.stringtemplate.v4.ST.<init>(ST.java:156)
-	at org.springframework.ai.template.st.StTemplateRenderer.createST(StTemplateRenderer.java:115)
-	... 28 common frames omitted
-25-09-22.22:38:23.722 [parallel-4      ] WARN  StdioClientTransport   - Process terminated with code 1
+Caused by: com.alibaba.fastjson.JSONException: syntax error, offset 222, char "
+	at com.alibaba.fastjson.JSON.parseObject(JSON.java:574)
+	at com.alibaba.fastjson.JSON.parseObject(JSON.java:488)
+	at com.ywzai.infrastructure.adapter.repository.AgentRepository.getAiClientToolMcpVOListByClientIds(AgentRepository.java:195)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:359)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:138)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:727)
+	at com.ywzai.infrastructure.adapter.repository.AgentRepository$$SpringCGLIB$$0.getAiClientToolMcpVOListByClientIds(<generated>)
+	at com.ywzai.domain.agent.service.armory.business.data.impl.AiClientLoadDataStrategy.lambda$4(AiClientLoadDataStrategy.java:55)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1768)
+	... 3 common frames omitted
+Caused by: com.alibaba.fastjson2.JSONException: syntax error, offset 222, char "
+	at com.alibaba.fastjson2.JSONReader.syntaxError(JSONReader.java:4480)
+	at com.alibaba.fastjson2.JSONReaderASCII.readFieldName(JSONReaderASCII.java:1048)
+	at com.alibaba.fastjson2.reader.ObjectReaderImplMapString.readObject(ObjectReaderImplMapString.java:55)
+	at com.alibaba.fastjson2.reader.ORG_2_3_Stdio.readObject(Unknown Source)
+	at com.alibaba.fastjson2.reader.ObjectReaderImplMapTyped.readObject(ObjectReaderImplMapTyped.java:395)
+	at com.alibaba.fastjson.JSON.parseObject(JSON.java:564)
+	... 18 common frames omitted
+25-10-07.16:35:51.296 [main            ] ERROR SpringApplication      - Application run failed
+java.lang.RuntimeException: java.util.concurrent.CompletionException: org.mybatis.spring.MyBatisSystemException: 
+### Error querying database.  Cause: org.apache.ibatis.binding.BindingException: Parameter 'sourceType' not found. Available parameters are [arg1, arg0, param1, param2]
+### Cause: org.apache.ibatis.binding.BindingException: Parameter 'sourceType' not found. Available parameters are [arg1, arg0, param1, param2]
+	at com.ywzai.config.AiAgentAutoConfiguration.onApplicationEvent(AiAgentAutoConfiguration.java:62)
+	at com.ywzai.config.AiAgentAutoConfiguration.onApplicationEvent(AiAgentAutoConfiguration.java:25)
+	at com.ywzai.config.AiAgentAutoConfiguration$$SpringCGLIB$$0.onApplicationEvent(<generated>)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:185)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:178)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:156)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:454)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:387)
+	at org.springframework.boot.context.event.EventPublishingRunListener.ready(EventPublishingRunListener.java:109)
+	at org.springframework.boot.SpringApplicationRunListeners.lambda$ready$6(SpringApplicationRunListeners.java:80)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:118)
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:112)
+	at org.springframework.boot.SpringApplicationRunListeners.ready(SpringApplicationRunListeners.java:80)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:332)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
+	at com.ywzai.Application.main(Application.java:12)
+Caused by: java.util.concurrent.CompletionException: org.mybatis.spring.MyBatisSystemException: 
+### Error querying database.  Cause: org.apache.ibatis.binding.BindingException: Parameter 'sourceType' not found. Available parameters are [arg1, arg0, param1, param2]
+### Cause: org.apache.ibatis.binding.BindingException: Parameter 'sourceType' not found. Available parameters are [arg1, arg0, param1, param2]
+	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:315)
+	at java.base/java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:320)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1770)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: org.mybatis.spring.MyBatisSystemException: 
+### Error querying database.  Cause: org.apache.ibatis.binding.BindingException: Parameter 'sourceType' not found. Available parameters are [arg1, arg0, param1, param2]
+### Cause: org.apache.ibatis.binding.BindingException: Parameter 'sourceType' not found. Available parameters are [arg1, arg0, param1, param2]
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:99)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:347)
+	at jdk.proxy2/jdk.proxy2.$Proxy77.selectList(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:194)
+	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:147)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:80)
+	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:141)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:86)
+	at jdk.proxy2/jdk.proxy2.$Proxy80.queryBySourceTypeAndId(Unknown Source)
+	at com.ywzai.infrastructure.adapter.repository.AgentRepository.getAiClientVOListByClientIds(AgentRepository.java:103)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:359)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:138)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:727)
+	at com.ywzai.infrastructure.adapter.repository.AgentRepository$$SpringCGLIB$$0.getAiClientVOListByClientIds(<generated>)
+	at com.ywzai.domain.agent.service.armory.business.data.impl.AiClientLoadDataStrategy.lambda$5(AiClientLoadDataStrategy.java:59)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1768)
+	... 3 common frames omitted
+Caused by: org.apache.ibatis.binding.BindingException: Parameter 'sourceType' not found. Available parameters are [arg1, arg0, param1, param2]
+	at org.apache.ibatis.binding.MapperMethod$ParamMap.get(MapperMethod.java:210)
+	at org.apache.ibatis.reflection.wrapper.MapWrapper.get(MapWrapper.java:46)
+	at org.apache.ibatis.reflection.MetaObject.getValue(MetaObject.java:115)
+	at org.apache.ibatis.executor.BaseExecutor.createCacheKey(BaseExecutor.java:225)
+	at org.apache.ibatis.executor.CachingExecutor.createCacheKey(CachingExecutor.java:149)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:89)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:154)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:147)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:142)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:333)
+	... 24 common frames omitted
+25-10-07.16:46:39.177 [pool-2-thread-7 ] WARN  Step3QualitySupervisorNode - ⚠️ 无法识别的质量检查结果: [ANALYSIS] 搜索查询成功执行，返回了38条总结果，显示了20条记录。从搜索结果可以看出，所有命中的日志都包含"限流"关键词，并且明确标识了被限流的用户ID为"ywz01"。日志显示了两种限流类型：1) "限流-黑名单拦截(24h)"，2) "限流-超频次拦截"。同时还有"查询拼团营销配置限流:ywz01"的日志记录。这表明用户"ywz01"确实被限流了，且限流原因包括黑名单拦截和超频次访问。搜索结果完全满足了用户查询被限流用户列表的需求。
+
+[NEXT_STEP]
+- ACTION: 完成监督评估，整理被限流用户列表
+- REASON: 已成功获取到限流日志数据，可以提取出被限流的用户信息
+- COMPLETE: true
+25-10-07.16:47:46.597 [pool-2-thread-7 ] WARN  Step3QualitySupervisorNode - ⚠️ 无法识别的质量检查结果: ```
+🔍 质量评估: 
+- **执行流程完整性检查**: ✅ 完全符合标准流程。执行了list_indices()发现索引，get_mappings()分析字段结构，search()执行查询，所有步骤按正确顺序执行。
+- **工具调用正确性验证**: ✅ 所有MCP工具调用参数正确。search()的queryBody是完整的JSON对象，包含query、size、sort等必需字段，没有出现undefined错误。
+- **查询质量标准评估**: ✅ 关键词完整性良好，使用了"限流"、"rate limit"、"blocked"、"throttle"、"超过限制"、"访问频率过高"等完整关键词集合。查询结构使用bool should合理，参数设置(size=20, 时间倒序)合适。
+- **数据准确性验证**: ✅ 索引选择正确("group-buy-market-log-2025.10.07")，字段映射理解准确(message字段用于搜索)，查询语法正确，结果解读准确(正确识别用户ywz01和限流类型)。
+
+⚠️ 问题识别: 
+- **流程问题**: 无流程问题，执行步骤完整且正确。
+- **技术问题**: 无技术问题，所有工具调用成功，queryBody格式完全正确。
+- **数据质量问题**: 数据质量良好，返回38条相关记录，信息完整包含用户ID、限流类型、时间戳等关键信息。
+- **结果准确性问题**: 结果准确，明确识别出被限流用户为"ywz01"，限流类型包括"黑名单拦截(24h)"和"超频次拦截"。
+
+💡 改进建议: 
+- **流程优化建议**: 当前流程已经很完善，无需重大调整。
+- **查询优化建议**: 可以考虑增加时间范围过滤，避免查询过多历史数据；也可以考虑提取用户ID字段进行精确匹配而非仅依赖message字段的文本搜索。
+- **工具使用改进**: 工具使用已经很规范，符合所有要求。
+- **结果分析改进**: 可以进一步分析限流发生的时间分布和频率，提供更深入的洞察，但当前结果已满足用户基本需求。
+
+📊 质量评分: 95分
+
+🚦 监督结果: PASS
+```
+25-10-07.16:48:43.580 [parallel-8      ] WARN  StdioClientTransport   - Process terminated with code 1

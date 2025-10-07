@@ -10,7 +10,7 @@ CREATE TABLE public.store_openai (
     id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
     content TEXT NOT NULL,
     metadata JSONB,
-    embedding VECTOR(1536)
+    embedding VECTOR(1024)
 );
 
 -- 删除旧的表（如果存在）
@@ -21,5 +21,5 @@ CREATE TABLE public.vector_store_openai (
     id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
     content TEXT NOT NULL,
     metadata JSONB,
-    embedding VECTOR(1536)
+    embedding VECTOR(1024)
 );

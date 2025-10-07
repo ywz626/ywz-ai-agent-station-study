@@ -40,3 +40,4 @@ build/
 /ywz-ai-agent-station-study-app/.local-config
 /ywz-ai-agent-station-study-app/src/main/resources/dev-config.yml
 /ywz-ai-agent-station-study-app/data/
+/data/
