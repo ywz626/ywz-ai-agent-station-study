@@ -43,8 +43,9 @@ public class Step1AnalyzerNode extends AbstractExecuteSupport {
                 .prompt(analysisPrompt)
                 .advisors(a -> a
                         .param(CHAT_MEMORY_CONVERSATION_ID_KEY, executeCommandEntity.getSessionId())
-                        .param(CHAT_MEMORY_RETRIEVE_SIZE_KEY,1024 ))
+                        .param(CHAT_MEMORY_RETRIEVE_SIZE_KEY,1536 ))
                 .call().content();
+        log.info("\n analysisResult: {}", analysisResult);
 
         parseAnalysisResult(dynamicContext, analysisResult,executeCommandEntity.getSessionId());
         dynamicContext.setValue("analysisResult", analysisResult);

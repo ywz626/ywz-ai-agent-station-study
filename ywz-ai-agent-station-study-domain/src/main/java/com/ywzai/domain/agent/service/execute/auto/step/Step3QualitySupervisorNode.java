@@ -40,19 +40,20 @@ public class Step3QualitySupervisorNode extends AbstractExecuteSupport {
                 .prompt(supervisionPrompt)
                 .advisors(a -> a
                         .param(CHAT_MEMORY_CONVERSATION_ID_KEY, executeCommandEntity.getSessionId())
-                        .param(CHAT_MEMORY_RETRIEVE_SIZE_KEY, 1024))
+                        .param(CHAT_MEMORY_RETRIEVE_SIZE_KEY, 1536))
                 .call().content();
+        log.info("\n🔍 步骤3:  Quality Supervisor: {}\n",supervisionResult);
 
         parseSupervisionResult(dynamicContext, supervisionResult,executeCommandEntity.getSessionId());
 
         // 根据监督结果决定是否需要重新执行
-        if (supervisionResult.contains("FAIL") && supervisionResult.contains("是否通过:")) {
+        if (supervisionResult.contains("FAIL") && supervisionResult.contains("评估结果:")) {
             log.info("❌ 质量检查未通过，需要重新执行");
             dynamicContext.setCurrentTask("根据质量监督的建议重新执行任务");
-        } else if (supervisionResult.contains("OPTIMIZE") && supervisionResult.contains("是否通过:")) {
+        } else if (supervisionResult.contains("OPTIMIZE") && supervisionResult.contains("评估结果:")) {
             log.info("🔧 质量检查建议优化，继续改进");
             dynamicContext.setCurrentTask("根据质量监督的建议优化执行结果");
-        } else if (supervisionResult.contains("是否通过:") && supervisionResult.contains("PASS")) {
+        } else if (supervisionResult.contains("评估结果:") && supervisionResult.contains("PASS")) {
             log.info("✅ 质量检查通过");
             dynamicContext.setCompleted(true);
         } else {

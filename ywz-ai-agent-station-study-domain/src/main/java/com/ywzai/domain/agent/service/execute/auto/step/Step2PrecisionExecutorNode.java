@@ -42,8 +42,9 @@ public class Step2PrecisionExecutorNode extends AbstractExecuteSupport {
                 .prompt(executionPrompt)
                 .advisors(a -> a
                         .param(CHAT_MEMORY_CONVERSATION_ID_KEY, executeCommandEntity.getSessionId())
-                        .param(CHAT_MEMORY_RETRIEVE_SIZE_KEY, 1024))
+                        .param(CHAT_MEMORY_RETRIEVE_SIZE_KEY, 1536))
                 .call().content();
+        log.info("\n⚡ 阶段2: 精准任务执行结果: {}\n%s", executionResult);
 
         parseExecutionResult(dynamicContext, executionResult, executeCommandEntity.getSessionId());
         dynamicContext.setValue("executionResult", executionResult);

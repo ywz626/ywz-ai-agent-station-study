@@ -1,6 +1,7 @@
 package com.ywzai.domain.agent.service.armory.factory.element;
 
 import com.alibaba.fastjson.JSON;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.ai.chat.client.ChatClientRequest;
 import org.springframework.ai.chat.client.ChatClientResponse;
 import org.springframework.ai.chat.client.advisor.api.AdvisorChain;
@@ -25,6 +26,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
+@Slf4j
 public class RagAnswerAdvisor implements BaseAdvisor {
 
     private final VectorStore vectorStore;
@@ -39,7 +41,7 @@ public class RagAnswerAdvisor implements BaseAdvisor {
 
     @Override
     public ChatClientRequest before(ChatClientRequest chatClientRequest, AdvisorChain advisorChain) {
-        HashMap<String, Object> context = new HashMap(chatClientRequest.context());
+        HashMap<String, Object> context = new HashMap<>(chatClientRequest.context());
 
         String userText = chatClientRequest.prompt().getUserMessage().getText();
 //        String advisedUserText = userText + System.lineSeparator() + this.userTextAdvise;
@@ -51,9 +53,9 @@ public class RagAnswerAdvisor implements BaseAdvisor {
         context.put("qa_retrieved_documents", documents);
 
         String documentContext = documents.stream().map(Document::getText).collect(Collectors.joining(System.lineSeparator()));
-        Map<String, Object> advisedUserParams = new HashMap(context);
+        Map<String, Object> advisedUserParams = new HashMap<>(context);
         advisedUserParams.put("question_answer_context", documentContext);
-        String advisedUserText = new PromptTemplate(userText + this.userTextAdvise)
+        String advisedUserText = new PromptTemplate(this.userTextAdvise)
                 .render(advisedUserParams);
 
 
@@ -77,6 +79,14 @@ public class RagAnswerAdvisor implements BaseAdvisor {
 
     @Override
     public ChatClientResponse adviseCall(ChatClientRequest chatClientRequest, CallAdvisorChain callAdvisorChain) {
+        Map<String, Object> context = chatClientRequest.context();
+        if(context.containsKey("end time")){
+            log.info("找到end time 标签");
+            Object endTime = context.get("end time");
+            if(endTime == null || endTime.toString().trim().isEmpty()){
+                context.put("end time", "now");
+            }
+        }
         ChatClientResponse chatClientResponse = callAdvisorChain.nextCall(this.before(chatClientRequest, callAdvisorChain));
         return this.after(chatClientResponse, callAdvisorChain);
     }

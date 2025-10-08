@@ -46,6 +46,12 @@ public class AgentRepository implements IAgentRepository {
     private IAiAgentFlowConfigDao aiAgentFlowConfigDao;
 
 
+    /**
+     * 根据AI代理ID获取客户端流程配置映射表
+     *
+     * @param aiAgentId AI代理ID
+     * @return 客户端类型到客户端流程配置VO的映射表，如果aiAgentId为空或查询结果为空则返回空映射表
+     */
     @Override
     public Map<String, AiAgentClientFlowConfigVO> getAiAgentFlowConfigMapByAgentId(String aiAgentId) {
         if (aiAgentId == null || aiAgentId.trim().isEmpty()) {
@@ -68,6 +74,7 @@ public class AgentRepository implements IAgentRepository {
                         )
                 ));
     }
+
 
 
     /**
