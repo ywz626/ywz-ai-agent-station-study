@@ -26,8 +26,6 @@ import java.util.List;
 @Configuration
 @EnableConfigurationProperties(AiAgentAutoConfigProperties.class)
 @ConditionalOnProperty(prefix = "spring.ai.agent.auto-config", name = "enabled", havingValue = "true")
-
-
 public class AiAgentAutoConfiguration implements ApplicationListener<ApplicationReadyEvent> {
 
     @Resource

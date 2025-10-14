@@ -9,7 +9,7 @@ services:
     restart: always
     environment:
       TZ: Asia/Shanghai
-      MYSQL_ROOT_PASSWORD: 123456
+      MYSQL_ROOT_PASSWORD: 123456ywz
     ports:
       - "13306:3306"
     volumes:
@@ -24,22 +24,22 @@ services:
     networks:
       - my-network
 
-  # phpmyadmin https://hub.docker.com/_/phpmyadmin
-  phpmyadmin:
-    image: registry.cn-hangzhou.aliyuncs.com/xfg-studio/phpmyadmin:5.2.1
-    container_name: phpmyadmin
-    hostname: phpmyadmin
-    ports:
-      - 8899:80
-    environment:
-      - PMA_HOST=mysql
-      - PMA_PORT=3306
-      - MYSQL_ROOT_PASSWORD=123qwe!@#QWE
-    depends_on:
-      mysql:
-        condition: service_healthy
-    networks:
-      - my-network
+#  # phpmyadmin https://hub.docker.com/_/phpmyadmin
+#  phpmyadmin:
+#    image: registry.cn-hangzhou.aliyuncs.com/xfg-studio/phpmyadmin:5.2.1
+#    container_name: phpmyadmin
+#    hostname: phpmyadmin
+#    ports:
+#      - 8899:80
+#    environment:
+#      - PMA_HOST=mysql
+#      - PMA_PORT=3306
+#      - MYSQL_ROOT_PASSWORD=123qwe!@#QWE
+#    depends_on:
+#      mysql:
+#        condition: service_healthy
+#    networks:
+#      - my-network
 
   # Redis
   redis:
@@ -61,27 +61,27 @@ services:
       timeout: 5s
       retries: 3
 
-  # RedisAdmin https://github.com/joeferner/redis-commander
-  # 账密 admin/admin
-  redis-admin:
-    image: registry.cn-hangzhou.aliyuncs.com/xfg-studio/redis-commander:0.8.0
-    container_name: redis-admin
-    hostname: redis-commander
-    restart: always
-    ports:
-      - 8081:8081
-    environment:
-      - REDIS_HOSTS=local:redis:6379
-      - HTTP_USER=admin
-      - HTTP_PASSWORD=admin
-      - LANG=C.UTF-8
-      - LANGUAGE=C.UTF-8
-      - LC_ALL=C.UTF-8
-    networks:
-      - my-network
-    depends_on:
-      redis:
-        condition: service_healthy
+#  # RedisAdmin https://github.com/joeferner/redis-commander
+#  # 账密 admin/admin
+#  redis-admin:
+#    image: registry.cn-hangzhou.aliyuncs.com/xfg-studio/redis-commander:0.8.0
+#    container_name: redis-admin
+#    hostname: redis-commander
+#    restart: always
+#    ports:
+#      - 8081:8081
+#    environment:
+#      - REDIS_HOSTS=local:redis:6379
+#      - HTTP_USER=admin
+#      - HTTP_PASSWORD=admin
+#      - LANG=C.UTF-8
+#      - LANGUAGE=C.UTF-8
+#      - LC_ALL=C.UTF-8
+#    networks:
+#      - my-network
+#    depends_on:
+#      redis:
+#        condition: service_healthy
 
   # 软件；https://www.postgresql.org/ftp/pgadmin/pgadmin4
   vector_db:
@@ -109,20 +109,20 @@ services:
     networks:
       - my-network
 
-  # pg 管理工具
-  pgadmin:
-    image: dpage/pgadmin4:9.1.0
-    container_name: vector_db_admin
-    restart: always
-    ports:
-      - "5050:80"
-    environment:
-      PGADMIN_DEFAULT_EMAIL: admin@qq.com
-      PGADMIN_DEFAULT_PASSWORD: admin
-    depends_on:
-      - vector_db
-    networks:
-      - my-network
+#  # pg 管理工具
+#  pgadmin:
+#    image: dpage/pgadmin4:9.1.0
+#    container_name: vector_db_admin
+#    restart: always
+#    ports:
+#      - "5050:80"
+#    environment:
+#      PGADMIN_DEFAULT_EMAIL: admin@qq.com
+#      PGADMIN_DEFAULT_PASSWORD: admin
+#    depends_on:
+#      - vector_db
+#    networks:
+#      - my-network
 
 networks:
   my-network:

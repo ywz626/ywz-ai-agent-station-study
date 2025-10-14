@@ -1,7 +1,6 @@
 package com.ywzai.infrastructure.dao;
 
 import com.ywzai.infrastructure.dao.po.AiClientConfig;
-import com.ywzai.infrastructure.dao.po.AiClientToolMcp;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
