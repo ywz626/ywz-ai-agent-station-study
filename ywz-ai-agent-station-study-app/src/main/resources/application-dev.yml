@@ -20,7 +20,7 @@ spring:
     mysql:
       username: root
       password: ${datasource.mysql.password}
-      url: jdbc:mysql://${myip}:13306/ywz-ai-agent-station-study?useUnicode=true&characterEncoding=utf8&autoReconnect=true&zeroDateTimeBehavior=convertToNull&serverTimezone=Asia/Shanghai&useSSL=true
+      url: jdbc:mysql://${myip}:13306/ai-agent-station-study?useUnicode=true&characterEncoding=utf8&autoReconnect=true&zeroDateTimeBehavior=convertToNull&serverTimezone=Asia/Shanghai&useSSL=true
       driver-class-name: com.mysql.cj.jdbc.Driver
       type: com.zaxxer.hikari.HikariDataSource
       hikari:
@@ -61,8 +61,9 @@ spring:
     agent:
       auto-config:
         enabled: true
+        client-ids: 2101,2102,2103
 #        client-ids: 4101,4102,4103,4104
-        client-ids: 5101,5102,5103,5104
+#        client-ids: 5101,5102,5103,5104
 #        client-ids: 3101,3102,3103,3104,4101,4102,4103,4104
 
 # MyBatis 配置【如需使用记得打开】
