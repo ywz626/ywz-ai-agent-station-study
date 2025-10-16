@@ -43,6 +43,8 @@ public class AgentRepository implements IAgentRepository {
     private ObjectMapper mapper;
     @Resource
     private IAiAgentFlowConfigDao aiAgentFlowConfigDao;
+    @Resource
+    private IAiAgentDao aiAgentDao;
 
 
     /**
@@ -74,6 +76,14 @@ public class AgentRepository implements IAgentRepository {
                 ));
     }
 
+    @Override
+    public AiAgentVO getAiAgentConfigByAgentId(String agentId) {
+        AiAgent aiAgent = aiAgentDao.queryByAgentId(agentId);
+        return AiAgentVO.builder()
+                .agentId(aiAgent.getAgentId())
+                .strategy(aiAgent.getStrategy())
+                .build();
+    }
 
 
     /**

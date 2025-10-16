@@ -25,6 +25,7 @@ public class AiAgent {
     private String agentName;
     private String description;
     private String channel;
+    private String strategy;
     private Integer status;
     private LocalDateTime createTime;
     private LocalDateTime updateTime;

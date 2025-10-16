@@ -23,4 +23,6 @@ public interface IAgentRepository {
     List<AiClientVO> getAiClientVOListByClientIds(List<String> clientIds);
 
     Map<String, AiAgentClientFlowConfigVO> getAiAgentFlowConfigMapByAgentId(String aiAgentId);
+
+    AiAgentVO getAiAgentConfigByAgentId(String agentId);
 }
