@@ -75,7 +75,7 @@ public class DaoTest {
         log.info("查询所有启用任务调度结果: {}", taskSchedules);
 
         // 测试根据智能体ID查询任务调度
-        List<AiAgentTaskSchedule> agentTaskSchedules = aiAgentTaskScheduleDao.queryByAgentId(1L);
+        List<AiAgentTaskSchedule> agentTaskSchedules = aiAgentTaskScheduleDao.queryByAgentId("1");
         log.info("查询智能体任务调度结果: {}", agentTaskSchedules);
     }
 

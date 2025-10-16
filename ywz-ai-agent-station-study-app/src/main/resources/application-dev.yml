@@ -35,7 +35,7 @@ spring:
     pgvector:
       username: postgres
       password: ${datasource.pgvector.password}
-      url: jdbc:postgresql://${myip}:15432/ai-rag-knowledge
+      url: jdbc:postgresql://${myip}:15432/postgres
       driver-class-name: org.postgresql.Driver
       type: com.zaxxer.hikari.HikariDataSource
       hikari:
@@ -61,15 +61,34 @@ spring:
     agent:
       auto-config:
         enabled: true
-        client-ids: 2101,2102,2103
+        client-ids: 6101
+#        client-ids: 2101,2102,2103
 #        client-ids: 4101,4102,4103,4104
 #        client-ids: 5101,5102,5103,5104
 #        client-ids: 3101,3102,3103,3104,4101,4102,4103,4104
 
 # MyBatis 配置【如需使用记得打开】
 mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
   mapper-locations: classpath:/mybatis/mapper/*.xml
   config-location:  classpath:/mybatis/config/mybatis-config.xml
+
+# 小傅哥扳手通用组件配置
+xfg:
+  wrench:
+    # 任务调度配置
+    task:
+      job:
+        enabled: true
+        pool-size: 5
+        thread-name-prefix: "test-task-scheduler-"
+        wait-for-tasks-to-complete-on-shutdown: true
+        await-termination-seconds: 30
+        refresh-interval: 30000
+        clean-invalid-tasks-cron: "0 0/5 * * * ?"
+
+
 
 baidu:
   api-key: ${baidu.apikey}

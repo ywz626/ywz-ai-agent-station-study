@@ -2,7 +2,7 @@ package com.ywzai.test;
 
 
 import com.ywzai.domain.agent.model.entity.ExecuteCommandEntity;
-import com.ywzai.domain.agent.service.execute.IExecuteStrategy;
+import com.ywzai.domain.agent.service.IExecuteStrategy;
 import jakarta.annotation.Resource;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;

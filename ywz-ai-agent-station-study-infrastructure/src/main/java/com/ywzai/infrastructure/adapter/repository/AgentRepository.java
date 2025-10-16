@@ -13,6 +13,7 @@ import jakarta.annotation.Resource;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Repository;
 
+import java.sql.Array;
 import java.util.*;
 import java.util.stream.Collectors;
 
@@ -45,6 +46,8 @@ public class AgentRepository implements IAgentRepository {
     private IAiAgentFlowConfigDao aiAgentFlowConfigDao;
     @Resource
     private IAiAgentDao aiAgentDao;
+    @Resource
+    private IAiAgentTaskScheduleDao aiAgentTaskScheduleDao;
 
 
     /**
@@ -83,6 +86,41 @@ public class AgentRepository implements IAgentRepository {
                 .agentId(aiAgent.getAgentId())
                 .strategy(aiAgent.getStrategy())
                 .build();
+    }
+
+    @Override
+    public List<AiAgentTaskScheduleVO> queryAllActivityTaskSchedule() {
+        List<AiAgentTaskSchedule> aiAgentTaskSchedules = aiAgentTaskScheduleDao.queryActivity();
+        ArrayList<AiAgentTaskScheduleVO> aiAgentTaskScheduleVOS = new ArrayList<>();
+        for (AiAgentTaskSchedule aiAgentTaskSchedule : aiAgentTaskSchedules){
+            aiAgentTaskScheduleVOS.add(new AiAgentTaskScheduleVO(
+                    aiAgentTaskSchedule.getId(),
+                    aiAgentTaskSchedule.getAgentId(),
+                    aiAgentTaskSchedule.getDescription(),
+                    aiAgentTaskSchedule.getCronExpression(),
+                    aiAgentTaskSchedule.getTaskParam()
+            ));
+        }
+        return aiAgentTaskScheduleVOS;
+    }
+
+    @Override
+    public List<Long> queryAllInvalidTaskSchedule() {
+        return aiAgentTaskScheduleDao.queryInvalid();
+    }
+
+    @Override
+    public List<AiAgentClientFlowConfigVO> getAiAgentFlowConfigListByAgentId(String agentId) {
+        List<AiAgentFlowConfig> aiAgentFlowConfigs = aiAgentFlowConfigDao.queryByAgentId(agentId);
+        return aiAgentFlowConfigs.stream()
+                .map(config -> new AiAgentClientFlowConfigVO(
+                        config.getClientId(),
+                        config.getClientName(),
+                        config.getClientType(),
+                        config.getStepPrompt(),
+                        config.getSequence()
+                ))
+                .collect(Collectors.toList());
     }
 
 

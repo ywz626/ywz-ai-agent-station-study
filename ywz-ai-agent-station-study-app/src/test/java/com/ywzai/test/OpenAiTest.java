@@ -114,12 +114,12 @@ public class OpenAiTest {
     @Test
     public void upload() {
         // textResource、articlePromptWordsResource
-        TikaDocumentReader reader = new TikaDocumentReader(grafanaMcpToolsGuideResource);
+        TikaDocumentReader reader = new TikaDocumentReader(articlePromptWordsResource);
 
         List<Document> documents = reader.get();
         List<Document> documentSplitterList = tokenTextSplitter.apply(documents);
 
-        documentSplitterList.forEach(doc -> doc.getMetadata().put("knowledge", "grafana-mcp-tools-guide"));
+        documentSplitterList.forEach(doc -> doc.getMetadata().put("knowledge", "article"));
 
         pgVectorStore.accept(documentSplitterList);
 

@@ -33,7 +33,7 @@ public interface IAiAgentTaskScheduleDao {
      * @param agentId 智能体ID
      * @return 任务调度列表
      */
-    List<AiAgentTaskSchedule> queryByAgentId(Long agentId);
+    List<AiAgentTaskSchedule> queryByAgentId(String agentId);
 
     /**
      * 查询所有启用的任务调度
@@ -54,4 +54,8 @@ public interface IAiAgentTaskScheduleDao {
      * @return 影响行数
      */
     int deleteById(Long id);
+
+    List<AiAgentTaskSchedule> queryActivity();
+
+    List<Long> queryInvalid();
 }

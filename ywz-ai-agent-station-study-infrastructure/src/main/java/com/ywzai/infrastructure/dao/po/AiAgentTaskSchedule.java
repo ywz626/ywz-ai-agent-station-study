@@ -20,7 +20,7 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 public class AiAgentTaskSchedule {
     private Long id;
-    private Long agentId;
+    private String agentId;
     private String taskName;
     private String description;
     private String cronExpression;

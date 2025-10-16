@@ -1,4 +1,4 @@
-package com.ywzai.domain.agent.service.execute;
+package com.ywzai.domain.agent.service;
 
 import com.ywzai.domain.agent.model.entity.ExecuteCommandEntity;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseBodyEmitter;
