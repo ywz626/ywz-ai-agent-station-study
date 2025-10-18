@@ -4,6 +4,8 @@ package com.ywzai.infrastructure.dao;
 import com.ywzai.infrastructure.dao.po.AiAgentDrawConfig;
 import org.apache.ibatis.annotations.Mapper;
 
+import java.util.List;
+
 /**
  * @Author: ywz
  * @CreateTime: 2025-10-17
@@ -20,4 +22,12 @@ public interface IAiAgentDrawConfigDao {
 
 
     int deleteByConfigId(String configId);
+
+    List<AiAgentDrawConfig> queryByConfigName(String configName);
+
+    AiAgentDrawConfig queryByAgentId(String agentId);
+
+    List<AiAgentDrawConfig> queryEnabledConfigs();
+
+    List<AiAgentDrawConfig> queryAll();
 }

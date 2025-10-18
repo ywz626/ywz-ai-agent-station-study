@@ -41,7 +41,7 @@ public class FixedAgentExecuteStrategy implements IExecuteStrategy {
      * 固定执行智能体对话命令
      *
      * @param requestParameter 包含用户请求信息、会话ID和AI代理ID的执行命令实体
-     * @param emitter 用于异步响应的响应体发射器
+     * @param emitter          用于异步响应的响应体发射器
      * @throws Exception 执行过程中可能抛出的异常
      */
     @Override
@@ -63,6 +63,13 @@ public class FixedAgentExecuteStrategy implements IExecuteStrategy {
             log.info("智能体对话进行，客户端ID {}", requestParameter.getAiAgentId());
         }
         log.info("智能体对话结束，客户端ID {},结果:{}", requestParameter.getAiAgentId(), message);
+        // 发送最终结果通知（确保 content 不为空）
+        if (message != null && !message.trim().isEmpty()) {
+            sendFinalResult(emitter, message, requestParameter.getSessionId());
+        }
+
+        // 发送完成标识
+        sendCompleteResult(emitter, requestParameter.getSessionId());
 
     }
 
@@ -88,6 +95,35 @@ public class FixedAgentExecuteStrategy implements IExecuteStrategy {
 
     protected <T> T getBean(String beanName) {
         return (T) applicationContext.getBean(beanName);
+    }
+
+
+    /**
+     * 发送最终结果到流式输出
+     */
+    private void sendFinalResult(ResponseBodyEmitter emitter, String content, String sessionId) {
+        try {
+            AutoAgentExecuteResultEntity result = AutoAgentExecuteResultEntity.createSummaryResult(content, sessionId);
+            String sseData = "data: " + com.alibaba.fastjson2.JSON.toJSONString(result) + "\n\n";
+            emitter.send(sseData);
+            log.info("✅ 已发送最终结果");
+        } catch (Exception e) {
+            log.error("发送最终结果失败：{}", e.getMessage(), e);
+        }
+    }
+
+    /**
+     * 发送完成标识到流式输出
+     */
+    private void sendCompleteResult(ResponseBodyEmitter emitter, String sessionId) {
+        try {
+            AutoAgentExecuteResultEntity result = AutoAgentExecuteResultEntity.createCompleteResult(sessionId);
+            String sseData = "data: " + com.alibaba.fastjson2.JSON.toJSONString(result) + "\n\n";
+            emitter.send(sseData);
+            log.info("✅ 已发送完成标识");
+        } catch (Exception e) {
+            log.error("发送完成标识失败：{}", e.getMessage(), e);
+        }
     }
 }
 

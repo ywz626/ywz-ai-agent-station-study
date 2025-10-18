@@ -9,48 +9,38 @@ import java.io.Serial;
 import java.io.Serializable;
 import java.time.LocalDateTime;
 
-/**
- * AI客户端模型配置响应 DTO
- *
- * @author bugstack虫洞栈
- * @description AI客户端模型配置响应数据传输对象
- */
+
 @Data
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class AiClientModelResponseDTO implements Serializable {
+public class AiClientRagOrderResponseDTO implements Serializable {
 
     @Serial
     private static final long serialVersionUID = 1L;
 
     /**
-     * 自增主键ID
+     * 主键ID
      */
     private Long id;
 
     /**
-     * 全局唯一模型ID
+     * 知识库ID
      */
-    private String modelId;
+    private String ragId;
 
     /**
-     * 关联的API配置ID
+     * 知识库名称
      */
-    private String apiId;
+    private String ragName;
 
     /**
-     * 模型名称
+     * 知识标签
      */
-    private String modelName;
+    private String knowledgeTag;
 
     /**
-     * 模型类型：openai、deepseek、claude
-     */
-    private String modelType;
-
-    /**
-     * 状态：0-禁用，1-启用
+     * 状态(0:禁用,1:启用)
      */
     private Integer status;
 
@@ -58,8 +48,6 @@ public class AiClientModelResponseDTO implements Serializable {
      * 创建时间
      */
     private LocalDateTime createTime;
-
-    private String modelUsage;
 
     /**
      * 更新时间

@@ -2,7 +2,7 @@ package com.ywzai.domain.agent.model.valobj.enums;
 
 
 import com.ywzai.domain.agent.model.valobj.AiClientAdvisorVO;
-import com.ywzai.domain.agent.service.armory.factory.element.RagAnswerAdvisor;
+import com.ywzai.domain.agent.service.armory.node.factory.element.RagAnswerAdvisor;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

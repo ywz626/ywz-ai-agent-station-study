@@ -5,6 +5,7 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.ywzai.api.IAiAgentDrawAdminService;
+import com.ywzai.api.dto.AiAgentDrawConfigQueryRequestDTO;
 import com.ywzai.api.dto.AiAgentDrawConfigRequestDTO;
 import com.ywzai.api.dto.AiAgentDrawConfigResponseDTO;
 import com.ywzai.api.response.Response;
@@ -51,6 +52,82 @@ public class AiAgentDrawAdminController implements IAiAgentDrawAdminService {
     @Resource
     private IAiAgentFlowConfigDao aiAgentFlowConfigDao;
 
+
+        /**
+     * 查询拖拉拽流程图配置列表接口
+     *
+     * 根据传入的查询条件（如configId、configName、agentId、status等）从数据库中查询符合条件的配置信息，
+     * 并支持内存分页处理。最终将结果转换为DTO对象并封装成统一响应格式返回。
+     *
+     * @param request 包含查询条件的数据传输对象，包括configId、configName、agentId、status以及分页参数pageNum和pageSize
+     * @return 返回一个包含AiAgentDrawConfigResponseDTO列表的统一响应对象，若发生异常则返回错误码和提示信息
+     */
+    @Override
+    @PostMapping("/query-list")
+    public Response<List<AiAgentDrawConfigResponseDTO>> queryDrawConfigList(@RequestBody AiAgentDrawConfigQueryRequestDTO request) {
+        try {
+            log.info("查询拖拉拽流程图配置列表请求：{}", request);
+
+            List<AiAgentDrawConfig> configs;
+
+            // 条件查询：根据不同的查询字段优先级依次进行查询
+            if (StringUtils.hasText(request.getConfigId())) {
+                AiAgentDrawConfig cfg = aiAgentDrawConfigDao.getByConfigId(request.getConfigId());
+                configs = cfg != null ? List.of(cfg) : List.of();
+            } else if (StringUtils.hasText(request.getConfigName())) {
+                configs = aiAgentDrawConfigDao.queryByConfigName(request.getConfigName());
+            } else if (StringUtils.hasText(request.getAgentId())) {
+                AiAgentDrawConfig cfg = aiAgentDrawConfigDao.queryByAgentId(request.getAgentId());
+                configs = cfg != null ? List.of(cfg) : List.of();
+            } else if (request.getStatus() != null) {
+                if (request.getStatus() == 1) {
+                    configs = aiAgentDrawConfigDao.queryEnabledConfigs();
+                } else {
+                    configs = aiAgentDrawConfigDao.queryAll();
+                }
+            } else {
+                configs = aiAgentDrawConfigDao.queryAll();
+            }
+
+            // 简单分页（内存分页）：在内存中对查询结果进行分页截取
+            if (request.getPageNum() != null && request.getPageSize() != null) {
+                int pageNum = Math.max(1, request.getPageNum());
+                int pageSize = Math.max(1, request.getPageSize());
+                int start = (pageNum - 1) * pageSize;
+                int end = Math.min(start + pageSize, configs.size());
+                if (start < configs.size()) {
+                    configs = configs.subList(start, end);
+                } else {
+                    configs = List.of();
+                }
+            }
+
+            // PO 转 DTO：将查询到的实体对象转换为对外暴露的响应数据传输对象
+            List<AiAgentDrawConfigResponseDTO> responseDTOs = new ArrayList<>();
+            for (AiAgentDrawConfig config : configs) {
+                AiAgentDrawConfigResponseDTO dto = new AiAgentDrawConfigResponseDTO();
+                BeanUtils.copyProperties(config, dto);
+                responseDTOs.add(dto);
+            }
+
+            return Response.<List<AiAgentDrawConfigResponseDTO>>builder()
+                    .code(ResponseCode.SUCCESS.getCode())
+                    .info(ResponseCode.SUCCESS.getInfo())
+                    .data(responseDTOs)
+                    .build();
+        } catch (Exception e) {
+            log.error("查询拖拉拽流程图配置列表失败", e);
+            return Response.<List<AiAgentDrawConfigResponseDTO>>builder()
+                    .code(ResponseCode.UN_ERROR.getCode())
+                    .info(ResponseCode.UN_ERROR.getInfo())
+                    .data(null)
+                    .build();
+        }
+    }
+
+
+
+
     /**
      * 保存AI Agent画布配置信息接口。
      * <p>
@@ -72,11 +149,6 @@ public class AiAgentDrawAdminController implements IAiAgentDrawAdminService {
     public Response<String> saveDrawConfig(@RequestBody AiAgentDrawConfigRequestDTO request) {
         try {
             log.info("开始保存画布信息: {}", request.getConfigName());
-            String agentId = request.getAgentId();
-            if (!StringUtils.hasText(agentId)) {
-                agentId = String.format("%08d", System.currentTimeMillis() % 100000000L);
-                request.setAgentId(agentId);
-            }
             // 参数校验：配置名称不能为空
             if (!StringUtils.hasText(request.getConfigName())) {
                 return Response.<String>builder()
@@ -91,20 +163,26 @@ public class AiAgentDrawAdminController implements IAiAgentDrawAdminService {
                         .info("配置数据不能为空")
                         .build();
             }
-            // 解析配置数据中的agent基本信息，并插入ai_agent表
-            String[] agentInfo = parseAgentInfoFromJson(request.getConfigData());
-            String agentName = agentInfo[0];
-            String description = agentInfo[1];
-            String channel = agentInfo[2];
-            String strategy = agentInfo[3];
-            aiAgentDao.insert(AiAgent.builder()
-                    .agentId(agentId)
-                    .agentName(agentName)
-                    .description(description)
-                    .channel(channel)
-                    .strategy(strategy)
-                    .status(1)
-                    .build());
+            String agentId = request.getAgentId();
+            AiAgent aiAgent = aiAgentDao.queryByAgentId(agentId);
+            if (aiAgent == null) {
+                // 解析配置数据中的agent基本信息，并插入ai_agent表
+                String[] agentInfo = parseAgentInfoFromJson(request.getConfigData());
+                String agentName = agentInfo[0];
+                String description = agentInfo[1];
+                String channel = agentInfo[2];
+                String strategy = agentInfo[3];
+                aiAgentDao.insert(AiAgent.builder()
+                        .agentId(agentId)
+                        .agentName(agentName)
+                        .description(description)
+                        .channel(channel)
+                        .strategy(strategy)
+                        .status(1)
+                        .build());
+            }
+
+
             /*
              * 处理画布配置表(ai_agent_draw_config)的操作逻辑：
              * - 如果没有传入configId，则生成一个新的UUID作为configId；
@@ -370,7 +448,7 @@ public class AiAgentDrawAdminController implements IAiAgentDrawAdminService {
 
     @Override
     @GetMapping("/get-config/{configId}")
-    public Response<AiAgentDrawConfigResponseDTO> getDrawConfig(@PathVariable String configId) {
+    public Response<AiAgentDrawConfigResponseDTO> getDrawConfig(@PathVariable("configId") String configId) {
         try {
             log.info("获取流程图配置请求，configId: {}", configId);
 
@@ -410,7 +488,8 @@ public class AiAgentDrawAdminController implements IAiAgentDrawAdminService {
 
     @Override
     @DeleteMapping("/delete-config/{configId}")
-    public Response<String> deleteDrawConfig(@PathVariable String configId) {
+    @Transactional(rollbackFor = Exception.class)
+    public Response<String> deleteDrawConfig(@PathVariable("configId") String configId) {
         try {
             log.info("删除流程图配置请求，configId: {}", configId);
 
@@ -421,9 +500,33 @@ public class AiAgentDrawAdminController implements IAiAgentDrawAdminService {
                         .build();
             }
 
-            int result = aiAgentDrawConfigDao.deleteByConfigId(configId);
+            // 1. 先查询配置详情获取agentId
+            AiAgentDrawConfig drawConfig = aiAgentDrawConfigDao.getByConfigId(configId);
+            if (drawConfig == null) {
+                return Response.<String>builder()
+                        .code(ResponseCode.UN_ERROR.getCode())
+                        .info("删除失败，配置不存在")
+                        .build();
+            }
 
-            if (result > 0) {
+            String agentId = drawConfig.getAgentId();
+            log.info("删除流程图配置，configId: {}, agentId: {}", configId, agentId);
+
+            // 2. 删除拖拉拽配置
+            int drawConfigResult = aiAgentDrawConfigDao.deleteByConfigId(configId);
+            log.info("删除拖拉拽配置结果: {}", drawConfigResult);
+
+            // 3. 删除智能体配置
+            if (StringUtils.hasText(agentId)) {
+                int agentResult = aiAgentDao.deleteByAgentId(agentId);
+                log.info("删除智能体配置结果: {}", agentResult);
+
+                // 4. 删除智能体流程配置
+                int flowConfigResult = aiAgentFlowConfigDao.deleteByAgentId(agentId);
+                log.info("删除智能体流程配置结果: {}", flowConfigResult);
+            }
+
+            if (drawConfigResult > 0) {
                 return Response.<String>builder()
                         .code(ResponseCode.SUCCESS.getCode())
                         .info(ResponseCode.SUCCESS.getInfo())

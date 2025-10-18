@@ -25,6 +25,22 @@
             update_time = NOW()
         WHERE id = #{id}
     </update>
+    <update id="updateById">
+        UPDATE ai_client_rag_order SET
+            rag_name = #{ragName},
+            knowledge_tag = #{knowledgeTag},
+            status = #{status},
+            update_time = #{updateTime}
+        WHERE id = #{id}
+    </update>
+    <update id="updateByRagId">
+        UPDATE ai_client_rag_order SET
+            rag_name = #{ragName},
+            knowledge_tag = #{knowledgeTag},
+            status = #{status},
+            update_time = NOW()
+        WHERE rag_id = #{ragId}
+    </update>
 
     <select id="queryByRagId" parameterType="java.lang.String" resultMap="AiClientRagOrderMap">
         SELECT id, rag_id, rag_name, knowledge_tag, status, create_time, update_time
@@ -46,8 +62,27 @@
         ORDER BY create_time DESC
     </select>
 
+    <select id="queryById" resultType="com.ywzai.infrastructure.dao.po.AiClientRagOrder">
+        SELECT id, rag_id, rag_name, knowledge_tag, status, create_time, update_time
+        FROM ai_client_rag_order
+        WHERE id = #{id}
+    </select>
+    <select id="queryEnabledRagOrders" resultType="com.ywzai.infrastructure.dao.po.AiClientRagOrder">
+        SELECT id, rag_id, rag_name, knowledge_tag, status, create_time, update_time
+        FROM ai_client_rag_order
+        WHERE status = 1
+    </select>
+    <select id="queryAll" resultType="com.ywzai.infrastructure.dao.po.AiClientRagOrder">
+        SELECT id, rag_id, rag_name, knowledge_tag, status, create_time, update_time
+        FROM ai_client_rag_order
+        ORDER BY create_time DESC
+    </select>
+
     <delete id="deleteById" parameterType="java.lang.Long">
         DELETE FROM ai_client_rag_order WHERE id = #{id}
+    </delete>
+    <delete id="deleteByRagId">
+        DELETE FROM ai_client_rag_order WHERE rag_id = #{ragId}
     </delete>
 
 </mapper>

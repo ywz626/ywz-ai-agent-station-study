@@ -54,5 +54,72 @@
         FROM ai_agent_draw_config
         WHERE config_id = #{configId}
     </select>
+    <select id="queryByConfigName" resultType="com.ywzai.infrastructure.dao.po.AiAgentDrawConfig">
+        SELECT id,
+               config_id,
+               config_name,
+               description,
+               agent_id,
+               config_data,
+               version,
+               status,
+               create_by,
+               update_by,
+               create_time,
+               update_time
+        FROM ai_agent_draw_config
+        WHERE config_name LIKE CONCAT('%', #{configName}, '%')
+        ORDER BY create_time DESC
+    </select>
+    <select id="queryByAgentId" resultType="com.ywzai.infrastructure.dao.po.AiAgentDrawConfig">
+        SELECT id,
+               config_id,
+               config_name,
+               description,
+               agent_id,
+               config_data,
+               version,
+               status,
+               create_by,
+               update_by,
+               create_time,
+               update_time
+        FROM ai_agent_draw_config
+        WHERE agent_id = #{agentId}
+        ORDER BY create_time DESC
+    </select>
+    <select id="queryEnabledConfigs" resultType="com.ywzai.infrastructure.dao.po.AiAgentDrawConfig">
+        SELECT id,
+               config_id,
+               config_name,
+               description,
+               agent_id,
+               config_data,
+               version,
+               status,
+               create_by,
+               update_by,
+               create_time,
+               update_time
+        FROM ai_agent_draw_config
+        WHERE status = 1
+        ORDER BY create_time DESC
+    </select>
+    <select id="queryAll" resultType="com.ywzai.infrastructure.dao.po.AiAgentDrawConfig">
+        SELECT id,
+               config_id,
+               config_name,
+               description,
+               agent_id,
+               config_data,
+               version,
+               status,
+               create_by,
+               update_by,
+               create_time,
+               update_time
+        FROM ai_agent_draw_config
+        ORDER BY create_time DESC
+    </select>
 
 </mapper>

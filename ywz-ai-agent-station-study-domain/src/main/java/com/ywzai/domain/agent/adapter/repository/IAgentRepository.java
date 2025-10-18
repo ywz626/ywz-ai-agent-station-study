@@ -31,4 +31,13 @@ public interface IAgentRepository {
     List<Long> queryAllInvalidTaskSchedule();
 
     List<AiAgentClientFlowConfigVO> getAiAgentFlowConfigListByAgentId(String agentId);
+
+    void createTagOrder(AiRagOrderVO aiRagOrderVO);
+
+    /**
+     * 查询可用的智能体列表
+     * @return 可用的智能体列表
+     */
+    List<AiAgentVO> queryAvailableAgents();
+
 }

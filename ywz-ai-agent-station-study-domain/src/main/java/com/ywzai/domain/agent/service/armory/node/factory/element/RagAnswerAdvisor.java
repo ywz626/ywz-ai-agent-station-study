@@ -1,4 +1,4 @@
-package com.ywzai.domain.agent.service.armory.factory.element;
+package com.ywzai.domain.agent.service.armory.node.factory.element;
 
 import com.alibaba.fastjson.JSON;
 import lombok.extern.slf4j.Slf4j;

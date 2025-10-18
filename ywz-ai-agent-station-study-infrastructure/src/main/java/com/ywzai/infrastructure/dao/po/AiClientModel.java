@@ -25,6 +25,10 @@ public class AiClientModel {
     private String modelType;
     private String apiId;
     private Integer status;
+    /**
+     * 模型用途
+     */
+    private String modelUsage;
     private LocalDateTime createTime;
     private LocalDateTime updateTime;
 }

@@ -47,9 +47,22 @@
         WHERE status = 1
         ORDER BY create_time DESC
     </select>
+    <select id="queryEnabledAgents" resultType="com.ywzai.infrastructure.dao.po.AiAgent">
+        SELECT id, agent_id, agent_name, description, channel, status, create_time, update_time
+        FROM ai_agent
+        WHERE status = 1
+    </select>
+    <select id="queryAll" resultType="com.ywzai.infrastructure.dao.po.AiAgent">
+        SELECT id, agent_id, agent_name, description, channel, status, create_time, update_time
+        FROM ai_agent
+        ORDER BY create_time DESC
+    </select>
 
     <delete id="deleteById" parameterType="java.lang.Long">
         DELETE FROM ai_agent WHERE id = #{id}
+    </delete>
+    <delete id="deleteByAgentId">
+        DELETE FROM ai_agent WHERE agent_id = #{agentId}
     </delete>
 
 </mapper>

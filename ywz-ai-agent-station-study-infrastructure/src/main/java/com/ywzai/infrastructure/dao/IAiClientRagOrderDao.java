@@ -54,4 +54,16 @@ public interface IAiClientRagOrderDao {
      * @return 影响行数
      */
     int deleteById(Long id);
+
+    List<AiClientRagOrder> queryAll();
+
+    int updateById(AiClientRagOrder aiClientRagOrder);
+
+    int updateByRagId(AiClientRagOrder aiClientRagOrder);
+
+    int deleteByRagId(String ragId);
+
+    AiClientRagOrder queryById(Long id);
+
+    List<AiClientRagOrder> queryEnabledRagOrders();
 }

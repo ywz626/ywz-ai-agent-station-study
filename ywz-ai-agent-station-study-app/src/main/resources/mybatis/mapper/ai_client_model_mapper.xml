@@ -9,13 +9,14 @@
         <result column="model_type" property="modelType"/>
         <result column="api_id" property="apiId"/>
         <result column="status" property="status"/>
+        <result column="model_usage" property="modelUsage"/>
         <result column="create_time" property="createTime"/>
         <result column="update_time" property="updateTime"/>
     </resultMap>
 
     <insert id="insert" parameterType="com.ywzai.infrastructure.dao.po.AiClientModel">
-        INSERT INTO ai_client_model(model_id, model_name, model_type, api_id, status, create_time, update_time)
-        VALUES (#{modelId}, #{modelName}, #{modelType}, #{apiId}, #{status}, NOW(), NOW())
+        INSERT INTO ai_client_model(model_id, model_name, model_type, api_id, status, model_usage,create_time, update_time)
+        VALUES (#{modelId}, #{modelName}, #{modelType}, #{apiId}, #{status},#{modelUsage}, NOW(), NOW())
     </insert>
 
     <update id="update" parameterType="com.ywzai.infrastructure.dao.po.AiClientModel">
@@ -24,6 +25,7 @@
             model_type  = #{modelType},
             api_id      = #{apiId},
             status      = #{status},
+            model_usage = #{modelUsage},
             update_time = NOW()
         WHERE id = #{id}
     </update>
@@ -33,6 +35,7 @@
             model_type  = #{modelType},
             api_id      = #{apiId},
             status      = #{status},
+            model_usage = #{modelUsage},
             update_time = #{updateTime}
         WHERE id = #{id}
     </update>
@@ -42,6 +45,7 @@
             model_type  = #{modelType},
             api_id      = #{apiId},
             status      = #{status},
+            model_usage = #{modelUsage},
             update_time = #{updateTime}
         WHERE model_id = #{modelId}
     </update>
@@ -53,6 +57,7 @@
                model_type,
                api_id,
                status,
+               model_usage,
                create_time,
                update_time
         FROM ai_client_model
@@ -66,6 +71,7 @@
                model_type,
                api_id,
                status,
+               model_usage,
                create_time,
                update_time
         FROM ai_client_model
@@ -80,6 +86,7 @@
                model_type,
                api_id,
                status,
+               model_usage,
                create_time,
                update_time
         FROM ai_client_model
@@ -94,6 +101,7 @@
                model_type,
                api_id,
                status,
+               model_usage,
                create_time,
                update_time
         FROM ai_client_model
@@ -107,6 +115,7 @@
                model_type,
                api_id,
                status,
+               model_usage,
                create_time,
                update_time
         FROM ai_client_model
@@ -119,6 +128,8 @@
                model_type,
                api_id,
                status,
+               model_usage,
+               model_usage,
                create_time,
                update_time
         FROM ai_client_model
@@ -131,6 +142,7 @@
                model_type,
                api_id,
                status,
+               model_usage,
                create_time,
                update_time
         FROM ai_client_model

@@ -54,4 +54,10 @@ public interface IAiAgentDao {
      * @return 影响行数
      */
     int deleteById(Long id);
+
+    int deleteByAgentId(String agentId);
+
+    List<AiAgent> queryEnabledAgents();
+
+    List<AiAgent> queryAll();
 }

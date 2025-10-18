@@ -1,10 +1,10 @@
 package com.ywzai.config;
 
 
-import cn.bugstack.wrench.design.framework.tree.StrategyHandler;
-import com.ywzai.domain.agent.model.entity.ArmoryCommandEntity;
-import com.ywzai.domain.agent.service.armory.factory.DefaultArmoryStrategyFactory;
-import com.ywzai.types.common.Constants;
+import com.alibaba.fastjson.JSON;
+import com.ywzai.domain.agent.model.valobj.AiAgentVO;
+import com.ywzai.domain.agent.service.IArmoryService;
+import com.ywzai.domain.agent.service.armory.node.DefaultArmoryStrategyFactory;
 import jakarta.annotation.Resource;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
@@ -13,7 +13,6 @@ import org.springframework.boot.context.properties.EnableConfigurationProperties
 import org.springframework.context.ApplicationListener;
 import org.springframework.context.annotation.Configuration;
 
-import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -33,31 +32,28 @@ public class AiAgentAutoConfiguration implements ApplicationListener<Application
     @Resource
     private DefaultArmoryStrategyFactory defaultArmoryStrategyFactory;
 
+
+    @Resource
+    private IArmoryService armoryService;
+
     @Override
     public void onApplicationEvent(ApplicationReadyEvent event) {
-        List<String> clientIds = aiAgentAutoConfigProperties.getClientIds();
-        List<String> clientIdList;
-        if (clientIds == null || clientIds.isEmpty()) {
-            return ;
-        }
-        if (clientIds.size() == 1 && clientIds.get(0).contains(Constants.SPLIT)) {
-            clientIdList = Arrays.stream(clientIds.get(0).split(Constants.SPLIT))
-                    .map(String::trim)
-                    .filter(id -> !id.isEmpty())
-                    .toList();
-        } else {
-            clientIdList = clientIds;
-        }
-
-        StrategyHandler<ArmoryCommandEntity, DefaultArmoryStrategyFactory.DynamicContext, String> rootNode = defaultArmoryStrategyFactory.get();
         try {
-            String apply = rootNode.apply(ArmoryCommandEntity.builder()
-                    .commendList(clientIdList)
-                    .commendType("client")
-                    .build(), new DefaultArmoryStrategyFactory.DynamicContext());
-            log.info("【AI-AGENT】启动成功，已加载客户端：{}", apply);
+            log.info("AI Agent 自动装配开始，配置: {}", aiAgentAutoConfigProperties);
+
+            // 检查配置是否有效
+            if (!aiAgentAutoConfigProperties.isEnabled()) {
+                log.info("AI Agent 自动装配未启用");
+                return;
+            }
+
+            List<AiAgentVO> aiAgentVOS = armoryService.acceptArmoryAllAvailableAgents();
+
+            log.info("AI Agent 自动装配完成 {}", JSON.toJSONString(aiAgentVOS));
         } catch (Exception e) {
-            throw new RuntimeException(e);
+            log.error("AI Agent 自动装配失败", e);
         }
     }
 }
+
+

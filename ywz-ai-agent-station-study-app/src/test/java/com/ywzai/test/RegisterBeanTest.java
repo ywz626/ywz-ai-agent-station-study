@@ -4,7 +4,7 @@ package com.ywzai.test;
 import cn.bugstack.wrench.design.framework.tree.StrategyHandler;
 import com.ywzai.domain.agent.model.entity.ArmoryCommandEntity;
 import com.ywzai.domain.agent.model.valobj.enums.AiAgentEnumVO;
-import com.ywzai.domain.agent.service.armory.factory.DefaultArmoryStrategyFactory;
+import com.ywzai.domain.agent.service.armory.node.DefaultArmoryStrategyFactory;
 import jakarta.annotation.Resource;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;

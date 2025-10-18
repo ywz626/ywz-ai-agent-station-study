@@ -1,25 +1,27 @@
-package com.ywzai.domain.agent.model.valobj;
-
+package com.ywzai.api.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-/**
- * @Author: ywz
- * @CreateTime: 2025-10-16
- * @Description: AIAgent对应VO
- * @Version: 1.0
- */
+import java.io.Serial;
+import java.io.Serializable;
+
 @Data
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class AiAgentVO {
+public class AiAgentResponseDTO implements Serializable {
+
+    @Serial
+    private static final long serialVersionUID = 1L;
+
+    /**
+     * 智能体ID
+     */
     private String agentId;
 
-    private String strategy;
     /**
      * 智能体名称
      */
@@ -35,9 +37,14 @@ public class AiAgentVO {
      */
     private String channel;
 
+    /**
+     * 执行策略(auto、flow)
+     */
+    private String strategy;
 
     /**
      * 状态(0:禁用,1:启用)
      */
     private Integer status;
+
 }

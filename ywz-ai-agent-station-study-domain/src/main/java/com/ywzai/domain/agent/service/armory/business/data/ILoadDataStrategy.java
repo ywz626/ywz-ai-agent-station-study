@@ -2,7 +2,7 @@ package com.ywzai.domain.agent.service.armory.business.data;
 
 
 import com.ywzai.domain.agent.model.entity.ArmoryCommandEntity;
-import com.ywzai.domain.agent.service.armory.factory.DefaultArmoryStrategyFactory;
+import com.ywzai.domain.agent.service.armory.node.DefaultArmoryStrategyFactory;
 
 /**
  * @Author: ywz

@@ -50,5 +50,5 @@ public interface IAiAgentFlowConfigDao {
      */
     int deleteById(Long id);
 
-    void deleteByAgentId(String agentId);
+    int deleteByAgentId(String agentId);
 }
