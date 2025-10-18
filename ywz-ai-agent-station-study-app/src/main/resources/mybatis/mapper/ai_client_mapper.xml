@@ -14,15 +14,31 @@
 
     <insert id="insert" parameterType="com.ywzai.infrastructure.dao.po.AiClient">
         INSERT INTO ai_client(client_id, client_name, description, status, create_time, update_time)
-        VALUES(#{clientId}, #{clientName}, #{description}, #{status}, NOW(), NOW())
+        VALUES (#{clientId}, #{clientName}, #{description}, #{status}, NOW(), NOW())
     </insert>
 
     <update id="update" parameterType="com.ywzai.infrastructure.dao.po.AiClient">
-        UPDATE ai_client SET
-            client_name = #{clientName},
+        UPDATE ai_client
+        SET client_name = #{clientName},
             description = #{description},
-            status = #{status},
+            status      = #{status},
             update_time = NOW()
+        WHERE id = #{id}
+    </update>
+    <update id="updateByClientId">
+        UPDATE ai_client
+        SET client_name = #{clientName},
+            description = #{description},
+            status      = #{status},
+            update_time = #{updateTime}
+        WHERE client_id = #{clientId}
+    </update>
+    <update id="updateById">
+        UPDATE ai_client
+        SET client_name = #{clientName},
+            description = #{description},
+            status      = #{status},
+            update_time = #{updateTime}
         WHERE id = #{id}
     </update>
 
@@ -44,9 +60,32 @@
         WHERE status = 1
         ORDER BY create_time DESC
     </select>
+    <select id="queryAll" resultType="com.ywzai.infrastructure.dao.po.AiClient">
+        SELECT id, client_id, client_name, description, status, create_time, update_time
+        FROM ai_client
+        ORDER BY create_time DESC
+    </select>
+    <select id="queryByClientName" resultType="com.ywzai.infrastructure.dao.po.AiClient">
+        SELECT id, client_id, client_name, description, status, create_time, update_time
+        FROM ai_client
+        WHERE client_name = #{clientName}
+    </select>
+    <select id="queryEnabledClients" resultType="com.ywzai.infrastructure.dao.po.AiClient">
+        SELECT id, client_id, client_name, description, status, create_time, update_time
+        FROM ai_client
+        WHERE status = 1
+        ORDER BY create_time DESC
+    </select>
 
     <delete id="deleteById" parameterType="java.lang.Long">
-        DELETE FROM ai_client WHERE id = #{id}
+        DELETE
+        FROM ai_client
+        WHERE id = #{id}
+    </delete>
+    <delete id="deleteByClientId">
+        DELETE
+        FROM ai_client
+        WHERE client_id = #{clientId}
     </delete>
 
 </mapper>

@@ -66,4 +66,8 @@ public interface IAiClientConfigDao {
     List<String> queryAdvisorsByClientId(String clientId);
 
     List<String> queryToolMcpIdsByModelId(String modelId);
+
+    List<AiClientConfig> queryByConditions(String sourceType, String sourceId, String targetType, String targetId);
+
+    List<String> queryToolMcpIdsByClientId(String clientId);
 }

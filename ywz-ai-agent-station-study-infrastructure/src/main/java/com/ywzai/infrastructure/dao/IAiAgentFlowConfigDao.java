@@ -49,4 +49,6 @@ public interface IAiAgentFlowConfigDao {
      * @return 影响行数
      */
     int deleteById(Long id);
+
+    void deleteByAgentId(String agentId);
 }

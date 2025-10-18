@@ -15,8 +15,8 @@
     </resultMap>
 
     <insert id="insert" parameterType="com.ywzai.infrastructure.dao.po.AiAgent">
-        INSERT INTO ai_agent(agent_id, agent_name, description, channel, status, create_time, update_time)
-        VALUES(#{agentId}, #{agentName}, #{description}, #{channel}, #{status}, NOW(), NOW())
+        INSERT INTO ai_agent(agent_id, agent_name, description, channel, strategy,status, create_time, update_time)
+        VALUES(#{agentId}, #{agentName}, #{description}, #{channel},#{strategy}, #{status}, NOW(), NOW())
     </insert>
 
     <update id="update" parameterType="com.ywzai.infrastructure.dao.po.AiAgent">

@@ -13,9 +13,9 @@ import jakarta.annotation.Resource;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Repository;
 
-import java.sql.Array;
 import java.util.*;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 /**
  * @Author: ywz
@@ -219,7 +219,12 @@ public class AgentRepository implements IAgentRepository {
             // 1. 通过clientId查询关联的model配置
             String modelId = aiClientConfigDao.queryModelIdByClientId(clientId);
             // 2. 通过modelId查询关联的tool_mcp配置
-            List<String> toolMcpIds = aiClientConfigDao.queryToolMcpIdsByModelId(modelId);
+            List<String> toolMcpIds = Stream.concat(
+                            aiClientConfigDao.queryToolMcpIdsByModelId(modelId).stream(),
+                            aiClientConfigDao.queryToolMcpIdsByClientId(clientId).stream()
+                    )
+                    .distinct()
+                    .collect(Collectors.toList());
             log.info("查询modelId对应的mcpId列表 {}", toolMcpIds);
             for (String toolMcpId : toolMcpIds) {
 

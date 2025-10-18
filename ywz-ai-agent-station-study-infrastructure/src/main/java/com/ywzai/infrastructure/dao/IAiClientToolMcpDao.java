@@ -54,4 +54,18 @@ public interface IAiClientToolMcpDao {
      * @return 影响行数
      */
     int deleteById(Long id);
+
+    int updateById(AiClientToolMcp aiClientToolMcp);
+
+    int updateByMcpId(AiClientToolMcp aiClientToolMcp);
+
+    int deleteByMcpId(String mcpId);
+
+    AiClientToolMcp queryById(Long id);
+
+    List<AiClientToolMcp> queryAll();
+
+    List<AiClientToolMcp> queryByStatus(Integer status);
+
+    List<AiClientToolMcp> queryEnabledMcps();
 }

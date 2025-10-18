@@ -15,66 +15,134 @@
     </resultMap>
 
     <insert id="insert" parameterType="com.ywzai.infrastructure.dao.po.AiClientConfig">
-        INSERT INTO ai_client_config(source_type, source_id, target_type, target_id, ext_param, status, create_time, update_time)
-        VALUES(#{sourceType}, #{sourceId}, #{targetType}, #{targetId}, #{extParam}, #{status}, NOW(), NOW())
+        INSERT INTO ai_client_config(source_type, source_id, target_type, target_id, ext_param, status, create_time,
+                                     update_time)
+        VALUES (#{sourceType}, #{sourceId}, #{targetType}, #{targetId}, #{extParam}, #{status}, NOW(), NOW())
     </insert>
 
     <update id="update" parameterType="com.ywzai.infrastructure.dao.po.AiClientConfig">
-        UPDATE ai_client_config SET
-            source_type = #{sourceType},
-            source_id = #{sourceId},
+        UPDATE ai_client_config
+        SET source_type = #{sourceType},
+            source_id   = #{sourceId},
             target_type = #{targetType},
-            target_id = #{targetId},
-            ext_param = #{extParam},
-            status = #{status},
+            target_id   = #{targetId},
+            ext_param   = #{extParam},
+            status      = #{status},
             update_time = NOW()
         WHERE id = #{id}
     </update>
 
     <select id="queryBySourceId" parameterType="java.lang.String" resultMap="AiClientConfigMap">
-        SELECT id, source_type, source_id, target_type, target_id, ext_param, status, create_time, update_time
+        SELECT id,
+               source_type,
+               source_id,
+               target_type,
+               target_id,
+               ext_param,
+               status,
+               create_time,
+               update_time
         FROM ai_client_config
         WHERE source_id = #{sourceId}
         ORDER BY create_time DESC
     </select>
 
     <select id="queryBySourceTypeAndId" resultMap="AiClientConfigMap">
-        SELECT id, source_type, source_id, target_type, target_id, ext_param, status, create_time, update_time
+        SELECT id,
+               source_type,
+               source_id,
+               target_type,
+               target_id,
+               ext_param,
+               status,
+               create_time,
+               update_time
         FROM ai_client_config
-        WHERE source_type = #{sourceType} AND source_id = #{sourceId}
+        WHERE source_type = #{sourceType}
+          AND source_id = #{sourceId}
         ORDER BY create_time DESC
     </select>
 
     <select id="queryByTargetTypeAndId" resultMap="AiClientConfigMap">
-        SELECT id, source_type, source_id, target_type, target_id, ext_param, status, create_time, update_time
+        SELECT id,
+               source_type,
+               source_id,
+               target_type,
+               target_id,
+               ext_param,
+               status,
+               create_time,
+               update_time
         FROM ai_client_config
-        WHERE target_type = #{targetType} AND target_id = #{targetId}
+        WHERE target_type = #{targetType}
+          AND target_id = #{targetId}
         ORDER BY create_time DESC
     </select>
     <select id="queryModelIdByClientId" resultType="java.lang.String">
         select target_id
         from ai_client_config
-        where source_id = #{clientId} and source_type = 'client' and target_type = 'model' and status = 1
+        where source_id = #{clientId}
+          and source_type = 'client'
+          and target_type = 'model'
+          and status = 1
+        order by create_time desc
+        limit 1
     </select>
     <select id="queryPromptIdsByClientId" resultType="java.lang.String">
         select target_id
         from ai_client_config
-        where source_id = #{clientId} and source_type = 'client' and target_type = 'prompt' and status = 1
+        where source_id = #{clientId}
+          and source_type = 'client'
+          and target_type = 'prompt'
+          and status = 1
     </select>
     <select id="queryAdvisorsByClientId" resultType="java.lang.String">
         select target_id
         from ai_client_config
-        where source_id = #{clientId} and source_type = 'client' and target_type = 'advisor' and status = 1
+        where source_id = #{clientId}
+          and source_type = 'client'
+          and target_type = 'advisor'
+          and status = 1
     </select>
     <select id="queryToolMcpIdsByModelId" resultType="java.lang.String">
         select target_id
         from ai_client_config
-        where source_id = #{modelId} and status = 1 and target_type = 'tool_mcp' and source_type = 'model'
+        where source_id = #{modelId}
+          and status = 1
+          and target_type = 'tool_mcp'
+          and source_type = 'model'
+    </select>
+    <select id="queryByConditions" resultType="com.ywzai.infrastructure.dao.po.AiClientConfig">
+        SELECT id,
+               source_type,
+               source_id,
+               target_type,
+               target_id,
+               ext_param,
+               status,
+               create_time,
+               update_time
+        FROM ai_client_config
+        WHERE source_type = #{sourceType}
+          AND source_id = #{sourceId}
+          and target_type = #{targetType}
+          and target_id = #{targetId}
+        ORDER BY create_time DESC
+    </select>
+    <select id="queryToolMcpIdsByClientId" resultType="java.lang.String">
+        select target_id
+        from ai_client_config
+        where source_id = #{clientId}
+          and status = 1
+          and target_type = 'tool_mcp'
+          and source_type = 'client'
     </select>
 
 
     <delete id="deleteById" parameterType="java.lang.Long">
-        DELETE FROM ai_client_config WHERE id = #{id}
+        DELETE
+        FROM ai_client_config
+        WHERE id = #{id}
     </delete>
 
 </mapper>

@@ -63,4 +63,15 @@ public interface IAiClientModelDao {
     int deleteById(Long id);
 
 
+    int updateById(AiClientModel aiClientModel);
+
+    int updateByModelId(AiClientModel aiClientModel);
+
+    int deleteByModelId(String modelId);
+
+    AiClientModel queryById(Long id);
+
+    List<AiClientModel> queryEnabledModels();
+
+    List<AiClientModel> queryAll();
 }

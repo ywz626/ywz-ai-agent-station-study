@@ -54,6 +54,8 @@ public class AiAgentFlowConfig {
      */
     private Integer sequence;
 
+    private int status;
+
     /**
      * 创建时间，记录配置的创建时间
      */

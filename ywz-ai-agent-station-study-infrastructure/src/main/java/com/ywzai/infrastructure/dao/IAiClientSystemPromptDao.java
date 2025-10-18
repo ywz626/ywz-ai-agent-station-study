@@ -40,7 +40,7 @@ public interface IAiClientSystemPromptDao {
      * @param promptName 提示词名称
      * @return 提示词对象
      */
-    AiClientSystemPrompt queryByPromptName(String promptName);
+    List<AiClientSystemPrompt> queryByPromptName(String promptName);
 
     /**
      * 查询所有启用的系统提示词
@@ -54,4 +54,16 @@ public interface IAiClientSystemPromptDao {
      * @return 影响行数
      */
     int deleteById(Long id);
+
+    int updateById(AiClientSystemPrompt aiClientSystemPrompt);
+
+    int updateByPromptId(AiClientSystemPrompt aiClientSystemPrompt);
+
+    int deleteByPromptId(String promptId);
+
+    AiClientSystemPrompt queryById(Long id);
+
+    List<AiClientSystemPrompt> queryAll();
+
+    List<AiClientSystemPrompt> queryEnabledPrompts();
 }

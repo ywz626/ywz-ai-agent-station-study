@@ -11,21 +11,22 @@ import java.io.Serializable;
 
 /**
  * @Author: ywz
- * @CreateTime: 2025-09-21
- * @Description:
+ * @CreateTime: 2025-10-17
+ * @Description: 画布配置入参
  * @Version: 1.0
  */
 @Data
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class AutoAgentRequestDTO implements Serializable {
-
+public class AiAgentDrawConfigRequestDTO implements Serializable {
     @Serial
     private static final long serialVersionUID = 1L;
-
-    private String aiAgentId;
-    private String sessionId;
-    private String message;
-    private Integer maxStep;
+    private String configId;
+    private String configData;
+    private String agentId;
+    private String configName;
+    private String createBy;
+    private String description;
+    private String updateBy;
 }

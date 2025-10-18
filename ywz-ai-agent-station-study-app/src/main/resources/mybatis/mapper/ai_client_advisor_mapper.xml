@@ -15,43 +15,134 @@
     </resultMap>
 
     <insert id="insert" parameterType="com.ywzai.infrastructure.dao.po.AiClientAdvisor">
-        INSERT INTO ai_client_advisor(advisor_id, advisor_name, advisor_type, order_num, ext_param, status, create_time, update_time)
-        VALUES(#{advisorId}, #{advisorName}, #{advisorType}, #{orderNum}, #{extParam}, #{status}, NOW(), NOW())
+        INSERT INTO ai_client_advisor(advisor_id, advisor_name, advisor_type, order_num, ext_param, status, create_time,
+                                      update_time)
+        VALUES (#{advisorId}, #{advisorName}, #{advisorType}, #{orderNum}, #{extParam}, #{status}, NOW(), NOW())
     </insert>
 
     <update id="update" parameterType="com.ywzai.infrastructure.dao.po.AiClientAdvisor">
-        UPDATE ai_client_advisor SET
-            advisor_name = #{advisorName},
+        UPDATE ai_client_advisor
+        SET advisor_name = #{advisorName},
             advisor_type = #{advisorType},
-            order_num = #{orderNum},
-            ext_param = #{extParam},
-            status = #{status},
-            update_time = NOW()
+            order_num    = #{orderNum},
+            ext_param    = #{extParam},
+            status       = #{status},
+            update_time  = NOW()
         WHERE id = #{id}
+    </update>
+    <update id="updateById">
+        UPDATE ai_client_advisor
+        SET advisor_name = #{advisorName},
+            advisor_type = #{advisorType},
+            order_num    = #{orderNum},
+            ext_param    = #{extParam},
+            status       = #{status},
+            update_time  = #{updateTime}
+        WHERE id = #{id}
+    </update>
+    <update id="updateByAdvisorId">
+        UPDATE ai_client_advisor
+        SET advisor_name = #{advisorName},
+            advisor_type = #{advisorType},
+            order_num    = #{orderNum},
+            ext_param    = #{extParam},
+            status       = #{status},
+            update_time  = #{updateTime}
+        WHERE advisor_id = #{advisorId}
     </update>
 
     <select id="queryByAdvisorId" parameterType="java.lang.String" resultMap="AiClientAdvisorMap">
-        SELECT id, advisor_id, advisor_name, advisor_type, order_num, ext_param, status, create_time, update_time
+        SELECT id,
+               advisor_id,
+               advisor_name,
+               advisor_type,
+               order_num,
+               ext_param,
+               status,
+               create_time,
+               update_time
         FROM ai_client_advisor
         WHERE advisor_id = #{advisorId}
     </select>
 
     <select id="queryByAdvisorType" parameterType="java.lang.String" resultMap="AiClientAdvisorMap">
-        SELECT id, advisor_id, advisor_name, advisor_type, order_num, ext_param, status, create_time, update_time
+        SELECT id,
+               advisor_id,
+               advisor_name,
+               advisor_type,
+               order_num,
+               ext_param,
+               status,
+               create_time,
+               update_time
         FROM ai_client_advisor
         WHERE advisor_type = #{advisorType}
         ORDER BY order_num ASC
     </select>
 
     <select id="queryAllEnabled" resultMap="AiClientAdvisorMap">
-        SELECT id, advisor_id, advisor_name, advisor_type, order_num, ext_param, status, create_time, update_time
+        SELECT id,
+               advisor_id,
+               advisor_name,
+               advisor_type,
+               order_num,
+               ext_param,
+               status,
+               create_time,
+               update_time
         FROM ai_client_advisor
         WHERE status = 1
         ORDER BY order_num ASC
     </select>
+    <select id="queryById" resultType="com.ywzai.infrastructure.dao.po.AiClientAdvisor">
+        SELECT id,
+               advisor_id,
+               advisor_name,
+               advisor_type,
+               order_num,
+               ext_param,
+               status,
+               create_time,
+               update_time
+        FROM ai_client_advisor
+        WHERE id = #{id}
+    </select>
+    <select id="queryByStatus" resultType="com.ywzai.infrastructure.dao.po.AiClientAdvisor">
+        SELECT id,
+               advisor_id,
+               advisor_name,
+               advisor_type,
+               order_num,
+               ext_param,
+               status,
+               create_time,
+               update_time
+        FROM ai_client_advisor
+        WHERE status = #{status}
+    </select>
+    <select id="queryAll" resultType="com.ywzai.infrastructure.dao.po.AiClientAdvisor">
+        SELECT id,
+               advisor_id,
+               advisor_name,
+               advisor_type,
+               order_num,
+               ext_param,
+               status,
+               create_time,
+               update_time
+        FROM ai_client_advisor
+        ORDER BY create_time desc
+    </select>
 
     <delete id="deleteById" parameterType="java.lang.Long">
-        DELETE FROM ai_client_advisor WHERE id = #{id}
+        DELETE
+        FROM ai_client_advisor
+        WHERE id = #{id}
+    </delete>
+    <delete id="deleteByAdvisorId">
+        DELETE
+        FROM ai_client_advisor
+        WHERE advisor_id = #{advisorId}
     </delete>
 
 </mapper>

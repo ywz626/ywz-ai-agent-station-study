@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.ywzai.infrastructure.dao.IAiAgentDrawConfigDao">
+    <resultMap id="AiAgentDrawConfigMap" type="com.ywzai.infrastructure.dao.po.AiAgentDrawConfig">
+        <id column="id" property="id"/>
+        <result column="config_id" property="configId"/>
+        <result column="config_name" property="configName"/>
+        <result column="description" property="description"/>
+        <result column="agent_id" property="agentId"/>
+        <result column="config_data" property="configData"/>
+        <result column="version" property="version"/>
+        <result column="status" property="status"/>
+        <result column="create_by" property="createBy"/>
+        <result column="update_by" property="updateBy"/>
+        <result column="create_time" property="createTime"/>
+        <result column="update_time" property="updateTime"/>
+    </resultMap>
+    <insert id="insert">
+        INSERT INTO ai_agent_draw_config (
+            config_id, config_name, description, agent_id, config_data, version, status, create_by, update_by, create_time, update_time
+        ) VALUES (
+                     #{configId}, #{configName}, #{description}, #{agentId}, #{configData}, #{version}, #{status}, #{createBy}, #{updateBy}, #{createTime}, #{updateTime}
+                 )
+    </insert>
+    <update id="updateByConfigId">
+        UPDATE ai_agent_draw_config
+        SET config_name = #{configName},
+            description = #{description},
+            agent_id    = #{agentId},
+            config_data = #{configData},
+            version     = #{version},
+            status      = #{status},
+            update_by   = #{updateBy},
+            update_time = #{updateTime}
+        WHERE config_id = #{configId}
+    </update>
+    <delete id="deleteByConfigId">
+        DELETE FROM ai_agent_draw_config
+        WHERE config_id = #{configId}
+    </delete>
+    <select id="getByConfigId" resultType="com.ywzai.infrastructure.dao.po.AiAgentDrawConfig">
+        SELECT id,
+               config_id,
+               config_name,
+               description,
+               agent_id,
+               config_data,
+               version,
+               status,
+               create_by,
+               update_by,
+               create_time,
+               update_time
+        FROM ai_agent_draw_config
+        WHERE config_id = #{configId}
+    </select>
+
+</mapper>

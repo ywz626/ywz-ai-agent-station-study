@@ -15,48 +15,136 @@
 
     <insert id="insert" parameterType="com.ywzai.infrastructure.dao.po.AiClientModel">
         INSERT INTO ai_client_model(model_id, model_name, model_type, api_id, status, create_time, update_time)
-        VALUES(#{modelId}, #{modelName}, #{modelType}, #{apiId}, #{status}, NOW(), NOW())
+        VALUES (#{modelId}, #{modelName}, #{modelType}, #{apiId}, #{status}, NOW(), NOW())
     </insert>
 
     <update id="update" parameterType="com.ywzai.infrastructure.dao.po.AiClientModel">
-        UPDATE ai_client_model SET
-            model_name = #{modelName},
-            model_type = #{modelType},
-            api_id = #{apiId},
-            status = #{status},
+        UPDATE ai_client_model
+        SET model_name  = #{modelName},
+            model_type  = #{modelType},
+            api_id      = #{apiId},
+            status      = #{status},
             update_time = NOW()
         WHERE id = #{id}
     </update>
+    <update id="updateById">
+        UPDATE ai_client_model
+        SET model_name  = #{modelName},
+            model_type  = #{modelType},
+            api_id      = #{apiId},
+            status      = #{status},
+            update_time = #{updateTime}
+        WHERE id = #{id}
+    </update>
+    <update id="updateByModelId">
+        UPDATE ai_client_model
+        SET model_name  = #{modelName},
+            model_type  = #{modelType},
+            api_id      = #{apiId},
+            status      = #{status},
+            update_time = #{updateTime}
+        WHERE model_id = #{modelId}
+    </update>
 
     <select id="queryByModelId" parameterType="java.lang.String" resultMap="AiClientModelMap">
-        SELECT id, model_id, model_name, model_type, api_id, status, create_time, update_time
+        SELECT id,
+               model_id,
+               model_name,
+               model_type,
+               api_id,
+               status,
+               create_time,
+               update_time
         FROM ai_client_model
         WHERE model_id = #{modelId}
     </select>
 
     <select id="queryByApiId" parameterType="java.lang.String" resultMap="AiClientModelMap">
-        SELECT id, model_id, model_name, model_type, api_id, status, create_time, update_time
+        SELECT id,
+               model_id,
+               model_name,
+               model_type,
+               api_id,
+               status,
+               create_time,
+               update_time
         FROM ai_client_model
         WHERE api_id = #{apiId}
         ORDER BY create_time DESC
     </select>
 
     <select id="queryByModelType" parameterType="java.lang.String" resultMap="AiClientModelMap">
-        SELECT id, model_id, model_name, model_type, api_id, status, create_time, update_time
+        SELECT id,
+               model_id,
+               model_name,
+               model_type,
+               api_id,
+               status,
+               create_time,
+               update_time
         FROM ai_client_model
         WHERE model_type = #{modelType}
         ORDER BY create_time DESC
     </select>
 
     <select id="queryAllEnabled" resultMap="AiClientModelMap">
-        SELECT id, model_id, model_name, model_type, api_id, status, create_time, update_time
+        SELECT id,
+               model_id,
+               model_name,
+               model_type,
+               api_id,
+               status,
+               create_time,
+               update_time
         FROM ai_client_model
         WHERE status = 1
         ORDER BY create_time DESC
     </select>
+    <select id="queryById" resultType="com.ywzai.infrastructure.dao.po.AiClientModel">
+        SELECT id,
+               model_id,
+               model_name,
+               model_type,
+               api_id,
+               status,
+               create_time,
+               update_time
+        FROM ai_client_model
+        WHERE id = #{id}
+    </select>
+    <select id="queryEnabledModels" resultType="com.ywzai.infrastructure.dao.po.AiClientModel">
+        SELECT id,
+               model_id,
+               model_name,
+               model_type,
+               api_id,
+               status,
+               create_time,
+               update_time
+        FROM ai_client_model
+        WHERE status = 1
+    </select>
+    <select id="queryAll" resultType="com.ywzai.infrastructure.dao.po.AiClientModel">
+        SELECT id,
+               model_id,
+               model_name,
+               model_type,
+               api_id,
+               status,
+               create_time,
+               update_time
+        FROM ai_client_model
+    </select>
 
     <delete id="deleteById" parameterType="java.lang.Long">
-        DELETE FROM ai_client_model WHERE id = #{id}
+        DELETE
+        FROM ai_client_model
+        WHERE id = #{id}
+    </delete>
+    <delete id="deleteByModelId">
+        DELETE
+        FROM ai_client_model
+        WHERE model_id = #{modelId}
     </delete>
 
 </mapper>

@@ -29,6 +29,26 @@
             update_time = NOW()
         WHERE id = #{id}
     </update>
+    <update id="updateById">
+        UPDATE ai_client_tool_mcp SET
+            mcp_name = #{mcpName},
+            transport_type = #{transportType},
+            transport_config = #{transportConfig},
+            request_timeout = #{requestTimeout},
+            status = #{status},
+            update_time = #{updateTime}
+        WHERE id = #{id}
+    </update>
+    <update id="updateByMcpId">
+        UPDATE ai_client_tool_mcp SET
+            mcp_name = #{mcpName},
+            transport_type = #{transportType},
+            transport_config = #{transportConfig},
+            request_timeout = #{requestTimeout},
+            status = #{status},
+            update_time = #{updateTime}
+        WHERE mcp_id = #{mcpId}
+    </update>
 
     <select id="queryByMcpId" parameterType="java.lang.String" resultMap="AiClientToolMcpMap">
         SELECT id, mcp_id, mcp_name, transport_type, transport_config, request_timeout, status, create_time, update_time
@@ -49,9 +69,31 @@
         WHERE status = 1
         ORDER BY create_time DESC
     </select>
+    <select id="queryById" resultType="com.ywzai.infrastructure.dao.po.AiClientToolMcp">
+        SELECT id, mcp_id, mcp_name, transport_type, transport_config, request_timeout, status, create_time, update_time
+        FROM ai_client_tool_mcp
+        WHERE id = #{id}
+    </select>
+    <select id="queryAll" resultType="com.ywzai.infrastructure.dao.po.AiClientToolMcp">
+        SELECT id, mcp_id, mcp_name, transport_type, transport_config, request_timeout, status, create_time, update_time
+        FROM ai_client_tool_mcp
+    </select>
+    <select id="queryByStatus" resultType="com.ywzai.infrastructure.dao.po.AiClientToolMcp">
+        SELECT id, mcp_id, mcp_name, transport_type, transport_config, request_timeout, status, create_time, update_time
+        FROM ai_client_tool_mcp
+        WHERE status = #{status}
+    </select>
+    <select id="queryEnabledMcps" resultType="com.ywzai.infrastructure.dao.po.AiClientToolMcp">
+        SELECT id, mcp_id, mcp_name, transport_type, transport_config, request_timeout, status, create_time, update_time
+        FROM ai_client_tool_mcp
+        WHERE status = 1
+    </select>
 
     <delete id="deleteById" parameterType="java.lang.Long">
         DELETE FROM ai_client_tool_mcp WHERE id = #{id}
+    </delete>
+    <delete id="deleteByMcpId">
+        DELETE FROM ai_client_tool_mcp WHERE mcp_id = #{mcpId}
     </delete>
 
 </mapper>

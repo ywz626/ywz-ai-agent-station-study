@@ -54,4 +54,16 @@ public interface IAiClientDao {
      * @return 影响行数
      */
     int deleteById(Long id);
+
+    List<AiClient> queryAll();
+
+    List<AiClient> queryByClientName(String clientName);
+
+    List<AiClient> queryEnabledClients();
+
+    int deleteByClientId(String clientId);
+
+    int updateByClientId(AiClient aiClient);
+
+    int updateById(AiClient aiClient);
 }

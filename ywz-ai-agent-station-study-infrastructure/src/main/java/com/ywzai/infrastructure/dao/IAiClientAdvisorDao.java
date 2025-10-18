@@ -54,4 +54,16 @@ public interface IAiClientAdvisorDao {
      * @return 影响行数
      */
     int deleteById(Long id);
+
+    int updateById(AiClientAdvisor aiClientAdvisor);
+
+    int updateByAdvisorId(AiClientAdvisor aiClientAdvisor);
+
+    int deleteByAdvisorId(String advisorId);
+
+    AiClientAdvisor queryById(Long id);
+
+    List<AiClientAdvisor> queryByStatus(int i);
+
+    List<AiClientAdvisor> queryAll();
 }
