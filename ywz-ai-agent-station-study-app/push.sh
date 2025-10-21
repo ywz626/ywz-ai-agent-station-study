@@ -6,10 +6,12 @@
 set -e
 
 # Define variables for the registry and image
-ALIYUN_REGISTRY="registry.cn-hangzhou.aliyuncs.com"
-NAMESPACE="system"
+# ALIYUN_USERNAME=xxx
+# ALIYUN_PASSWORD=xxxx
+ALIYUN_REGISTRY="crpi-4j8ze5kd1bgpvqbe.cn-beijing.personal.cr.aliyuncs.com"
+NAMESPACE="ywz626"
 IMAGE_NAME="ywz-ai-agent-station-study-app"
-IMAGE_TAG="1.0-SNAPSHOT"
+IMAGE_TAG="1.0"
 
 # 读取本地配置文件
 if [ -f ".local-config" ]; then

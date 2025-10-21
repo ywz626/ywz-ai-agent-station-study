@@ -2,6 +2,7 @@ package com.ywzai.infrastructure.dao;
 
 import com.ywzai.infrastructure.dao.po.AiAgentFlowConfig;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
@@ -41,7 +42,7 @@ public interface IAiAgentFlowConfigDao {
      * @param clientId 客户端ID
      * @return 流程配置对象
      */
-    AiAgentFlowConfig queryByAgentIdAndClientId(Long agentId, Long clientId);
+    AiAgentFlowConfig queryByAgentIdAndClientId(@Param("agentId")Long agentId, @Param("clientId") Long clientId);
 
     /**
      * 删除流程配置
