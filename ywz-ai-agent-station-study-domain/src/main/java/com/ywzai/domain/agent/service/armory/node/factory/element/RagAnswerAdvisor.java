@@ -1,6 +1,5 @@
 package com.ywzai.domain.agent.service.armory.node.factory.element;
 
-import com.alibaba.fastjson.JSON;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.ai.chat.client.ChatClientRequest;
 import org.springframework.ai.chat.client.ChatClientResponse;
@@ -8,11 +7,10 @@ import org.springframework.ai.chat.client.advisor.api.AdvisorChain;
 import org.springframework.ai.chat.client.advisor.api.BaseAdvisor;
 import org.springframework.ai.chat.client.advisor.api.CallAdvisorChain;
 import org.springframework.ai.chat.client.advisor.api.StreamAdvisorChain;
-import org.springframework.ai.chat.messages.AssistantMessage;
+import org.springframework.ai.chat.messages.SystemMessage;
 import org.springframework.ai.chat.messages.UserMessage;
 import org.springframework.ai.chat.model.ChatResponse;
 import org.springframework.ai.chat.prompt.Prompt;
-import org.springframework.ai.chat.prompt.PromptTemplate;
 import org.springframework.ai.document.Document;
 import org.springframework.ai.vectorstore.SearchRequest;
 import org.springframework.ai.vectorstore.VectorStore;
@@ -36,7 +34,7 @@ public class RagAnswerAdvisor implements BaseAdvisor {
     public RagAnswerAdvisor(VectorStore vectorStore, SearchRequest searchRequest) {
         this.vectorStore = vectorStore;
         this.searchRequest = searchRequest;
-        this.userTextAdvise = "\nContext information is below, surrounded by ---------------------\n\n---------------------\n{question_answer_context}\n---------------------\n\nGiven the context and provided history information and not prior knowledge,\nreply to the user comment. If the answer is not in the context, inform\nthe user that you can't answer the question.\n";
+        this.userTextAdvise = "\nContext information is below, surrounded by ---------------------\n\n---------------------\n%s\n---------------------\n\nGiven the context and provided history information and not prior knowledge,\nreply to the user comment. If the answer is not in the context, inform\nthe user that you can't answer the question.\n";
     }
 
     /**
@@ -64,16 +62,15 @@ public class RagAnswerAdvisor implements BaseAdvisor {
         String documentContext = documents.stream().map(Document::getText).collect(Collectors.joining(System.lineSeparator()));
 
         // 创建用于模板渲染的参数映射，包含原始上下文和文档上下文
-        Map<String, Object> advisedUserParams = new HashMap<>(context);
+        Map<String, Object> advisedUserParams = new HashMap<>(chatClientRequest.context());
         advisedUserParams.put("question_answer_context", documentContext);
 
-        // 使用模板渲染增强后的用户消息文本
-        String advisedUserText = new PromptTemplate(this.userTextAdvise)
-                .render(advisedUserParams);
+//        String advisedUserText = userText + System.lineSeparator() + this.userTextAdvise;
         // 构建并返回新的聊天客户端请求，包含增强后的用户消息和更新的上下文
+        String RAGText = String.format(userTextAdvise, documentContext);
         return ChatClientRequest.builder()
-                .prompt(Prompt.builder().messages(new UserMessage(advisedUserText), new AssistantMessage(JSON.toJSONString(advisedUserParams))).build())
-                .context(advisedUserParams)
+                .prompt(Prompt.builder().messages(new SystemMessage(RAGText),new UserMessage(userText)).build())
+                .context(context)
                 .build();
     }
 
