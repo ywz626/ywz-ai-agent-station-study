@@ -205,6 +205,33 @@
                     </execution>
                 </executions>
             </plugin>
+            <plugin>
+                <groupId>com.diffplug.spotless</groupId>
+                <artifactId>spotless-maven-plugin</artifactId>
+                <version>2.43.0</version> <!-- 请去 Maven Central 检查最新版本 -->
+                <configuration>
+                    <java>
+                        <!-- 核心功能：删除未使用的 import -->
+                        <removeUnusedImports />
+
+                        <!-- 可选：按照 Google 风格排序 import -->
+                        <importOrder />
+
+                        <!-- 可选：使用 Google Java Format 格式化代码 -->
+                        <googleJavaFormat />
+                    </java>
+                </configuration>
+                <!-- 自动绑定到编译阶段（可选） -->
+                <executions>
+                    <execution>
+                        <id>spotless-apply</id>
+                        <phase>compile</phase> <!-- 在编译时自动执行 -->
+                        <goals>
+                            <goal>apply</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
         </plugins>
     </build>
 

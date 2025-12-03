@@ -1,11 +1,11 @@
 package com.ywzai.test;
 
-
 import cn.bugstack.wrench.design.framework.tree.StrategyHandler;
 import com.ywzai.domain.agent.model.entity.ArmoryCommandEntity;
 import com.ywzai.domain.agent.model.valobj.enums.AiAgentEnumVO;
 import com.ywzai.domain.agent.service.armory.node.DefaultArmoryStrategyFactory;
 import jakarta.annotation.Resource;
+import java.util.Arrays;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -19,75 +19,74 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.context.ApplicationContext;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import java.util.Arrays;
-
 /**
- * @Author: ywz
- * @CreateTime: 2025-09-19
- * @Description: 注册bean测试
- * @Version: 1.0
+ * @Author: ywz @CreateTime: 2025-09-19 @Description: 注册bean测试 @Version: 1.0
  */
 @SpringBootTest
 @Slf4j
 @RunWith(SpringRunner.class)
 public class RegisterBeanTest {
 
-    @Resource
-    private DefaultArmoryStrategyFactory defaultArmoryStrategyFactory;
-    @Resource
-    private ApplicationContext applicationContext;
+  @Resource private DefaultArmoryStrategyFactory defaultArmoryStrategyFactory;
+  @Resource private ApplicationContext applicationContext;
 
-    @Test
-    public void testAiClientApiNode() throws Exception {
-        StrategyHandler<ArmoryCommandEntity, DefaultArmoryStrategyFactory.DynamicContext, String> rootNode = defaultArmoryStrategyFactory.get();
-        String apply = rootNode.apply(
-                ArmoryCommandEntity.builder()
-                        .commendType(AiAgentEnumVO.AI_CLIENT.getCode())
-                        .commendList(Arrays.asList("3001"))
-                        .build(),
-                new DefaultArmoryStrategyFactory.DynamicContext()
-        );
-        System.out.println(apply);
-        OpenAiApi openAiApi = (OpenAiApi) applicationContext.getBean(AiAgentEnumVO.AI_CLIENT_API.getBeanName("1001"));
-        System.out.println("测试结果: " + openAiApi);
-    }
+  @Test
+  public void testAiClientApiNode() throws Exception {
+    StrategyHandler<ArmoryCommandEntity, DefaultArmoryStrategyFactory.DynamicContext, String>
+        rootNode = defaultArmoryStrategyFactory.get();
+    String apply =
+        rootNode.apply(
+            ArmoryCommandEntity.builder()
+                .commendType(AiAgentEnumVO.AI_CLIENT.getCode())
+                .commendList(Arrays.asList("3001"))
+                .build(),
+            new DefaultArmoryStrategyFactory.DynamicContext());
+    System.out.println(apply);
+    OpenAiApi openAiApi =
+        (OpenAiApi) applicationContext.getBean(AiAgentEnumVO.AI_CLIENT_API.getBeanName("1001"));
+    System.out.println("测试结果: " + openAiApi);
+  }
 
-    @Test
-    public void testAiClientModelNode() throws Exception {
-        StrategyHandler<ArmoryCommandEntity, DefaultArmoryStrategyFactory.DynamicContext, String> rootNode = defaultArmoryStrategyFactory.get();
-        String apply = rootNode.apply(
-                ArmoryCommandEntity.builder()
-                        .commendType(AiAgentEnumVO.AI_CLIENT.getCode())
-                        .commendList(Arrays.asList("3001"))
-                        .build(),
-                new DefaultArmoryStrategyFactory.DynamicContext()
-        );
-        Prompt prompt = Prompt.builder()
-                .messages(new UserMessage("告诉我辽宁省丹东市凤城市今日天气"))
-                .build();
-        System.out.println(apply);
-        OpenAiChatModel chatModel = (OpenAiChatModel) applicationContext.getBean(AiAgentEnumVO.AI_CLIENT_MODEL.getBeanName("2001"));
+  @Test
+  public void testAiClientModelNode() throws Exception {
+    StrategyHandler<ArmoryCommandEntity, DefaultArmoryStrategyFactory.DynamicContext, String>
+        rootNode = defaultArmoryStrategyFactory.get();
+    String apply =
+        rootNode.apply(
+            ArmoryCommandEntity.builder()
+                .commendType(AiAgentEnumVO.AI_CLIENT.getCode())
+                .commendList(Arrays.asList("3001"))
+                .build(),
+            new DefaultArmoryStrategyFactory.DynamicContext());
+    Prompt prompt = Prompt.builder().messages(new UserMessage("告诉我辽宁省丹东市凤城市今日天气")).build();
+    System.out.println(apply);
+    OpenAiChatModel chatModel =
+        (OpenAiChatModel)
+            applicationContext.getBean(AiAgentEnumVO.AI_CLIENT_MODEL.getBeanName("2001"));
 
-        System.out.println("测试结果: " + chatModel);
-        ChatResponse call = chatModel.call(prompt);
-        log.info("输出内容:{}",call.getResult().getOutput().getText());
-    }
-    @Test
-    public void testAiClientAdvisorNode() throws Exception {
-        StrategyHandler<ArmoryCommandEntity, DefaultArmoryStrategyFactory.DynamicContext, String> rootNode = defaultArmoryStrategyFactory.get();
-        String apply = rootNode.apply(
-                ArmoryCommandEntity.builder()
-                        .commendType(AiAgentEnumVO.AI_CLIENT.getCode())
-                        .commendList(Arrays.asList("10101"))
-                        .build(),
-                new DefaultArmoryStrategyFactory.DynamicContext()
-        );
-        ChatClient chatClient = (ChatClient) applicationContext.getBean(AiAgentEnumVO.AI_CLIENT.getBeanName("10101"));
-        String content = chatClient.prompt(Prompt.builder()
-                        .messages(new UserMessage("给我讲讲GrafanaMcp工具的使用"))
-                        .build())
-                .call().content();
-        System.out.println("测试结果: " + content);
-    }
+    System.out.println("测试结果: " + chatModel);
+    ChatResponse call = chatModel.call(prompt);
+    log.info("输出内容:{}", call.getResult().getOutput().getText());
+  }
 
+  @Test
+  public void testAiClientAdvisorNode() throws Exception {
+    StrategyHandler<ArmoryCommandEntity, DefaultArmoryStrategyFactory.DynamicContext, String>
+        rootNode = defaultArmoryStrategyFactory.get();
+    String apply =
+        rootNode.apply(
+            ArmoryCommandEntity.builder()
+                .commendType(AiAgentEnumVO.AI_CLIENT.getCode())
+                .commendList(Arrays.asList("10101"))
+                .build(),
+            new DefaultArmoryStrategyFactory.DynamicContext());
+    ChatClient chatClient =
+        (ChatClient) applicationContext.getBean(AiAgentEnumVO.AI_CLIENT.getBeanName("10101"));
+    String content =
+        chatClient
+            .prompt(Prompt.builder().messages(new UserMessage("给我讲讲GrafanaMcp工具的使用")).build())
+            .call()
+            .content();
+    System.out.println("测试结果: " + content);
+  }
 }

@@ -1,33 +1,27 @@
 package com.ywzai.infrastructure.dao;
 
-
 import com.ywzai.infrastructure.dao.po.AiAgentDrawConfig;
+import java.util.List;
 import org.apache.ibatis.annotations.Mapper;
 
-import java.util.List;
-
 /**
- * @Author: ywz
- * @CreateTime: 2025-10-17
- * @Description: 画布DAO
- * @Version: 1.0
+ * @Author: ywz @CreateTime: 2025-10-17 @Description: 画布DAO @Version: 1.0
  */
 @Mapper
 public interface IAiAgentDrawConfigDao {
-    AiAgentDrawConfig getByConfigId(String configId);
+  AiAgentDrawConfig getByConfigId(String configId);
 
-    int updateByConfigId(AiAgentDrawConfig aiAgentDrawConfig);
+  int updateByConfigId(AiAgentDrawConfig aiAgentDrawConfig);
 
-    int insert(AiAgentDrawConfig aiAgentDrawConfig);
+  int insert(AiAgentDrawConfig aiAgentDrawConfig);
 
+  int deleteByConfigId(String configId);
 
-    int deleteByConfigId(String configId);
+  List<AiAgentDrawConfig> queryByConfigName(String configName);
 
-    List<AiAgentDrawConfig> queryByConfigName(String configName);
+  AiAgentDrawConfig queryByAgentId(String agentId);
 
-    AiAgentDrawConfig queryByAgentId(String agentId);
+  List<AiAgentDrawConfig> queryEnabledConfigs();
 
-    List<AiAgentDrawConfig> queryEnabledConfigs();
-
-    List<AiAgentDrawConfig> queryAll();
+  List<AiAgentDrawConfig> queryAll();
 }

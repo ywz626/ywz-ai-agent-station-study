@@ -5,6 +5,5 @@ import org.springframework.web.servlet.mvc.method.annotation.ResponseBodyEmitter
 
 public interface IExecuteStrategy {
 
-    void execute(ExecuteCommandEntity requestParameter, ResponseBodyEmitter emitter) throws Exception;
-
+  void execute(ExecuteCommandEntity requestParameter, ResponseBodyEmitter emitter) throws Exception;
 }

@@ -8,13 +8,12 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 @Configurable
 @MapperScan(
-        basePackages = "com.ywzai.infrastructure.dao",
-        sqlSessionFactoryRef = "sqlSessionFactoryBean"  // 必须指向你的 Bean 名
-)
+    basePackages = "com.ywzai.infrastructure.dao",
+    sqlSessionFactoryRef = "sqlSessionFactoryBean" // 必须指向你的 Bean 名
+    )
 public class Application {
 
-    public static void main(String[] args){
-        SpringApplication.run(Application.class);
-    }
-
+  public static void main(String[] args) {
+    SpringApplication.run(Application.class);
+  }
 }
